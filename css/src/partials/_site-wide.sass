@@ -1,0 +1,88 @@
+/* Non-grid Layout and styling --------------------------------------------------------------
+
+body
+  background: $brown image_url("dirt.jpg") fixed repeat top center
+  position: relative  
+
+header
+  background: $main-color
+  +linear-gradient(color-stops($main-color-dark, $main-color), "bottom")
+  border-top: 6px solid $main-color-dark
+  border-bottom: 6px solid mix($main-color-dark, $black, 80%)
+  +leader(1)
+  +padding-leader(1)
+  text-align: center
+  +transform(1, 0deg, 0, 0, 0deg, -5deg, false, false)
+  position: relative
+  z-index: 100
+  overflow: hidden
+  // -webkit-background-clip: padding-box
+  // -moz-background-clip: padding-box
+  // background-clip: padding-box
+  +background-clip(padding-box)
+  #site-name
+    position: relative
+    +transform(1, -5deg, 0, 0, 0deg, 5deg, false, false)
+    .tcd
+      display: block
+      @extend .script
+      +adjust-font-size-to($ms4, 1)
+      color: $tan
+      position: relative
+      z-index: 1
+      +text-shadow($main-color, 1px, 2px, 0)
+    .sk
+      display: block
+      +adjust-font-size-to($ms2)
+      text-transform: uppercase
+      font-weight: 700
+      position: relative
+      top: -$baseline
+      color: $white
+      z-index: 0
+  h2.tag
+    @extend .script-alt
+    position: relative
+    top: -$baseline-half
+    // +adjust-font-size-to($ms4)
+    +transform(1, -5deg, 0, 0, 0deg, 5deg, false, false)
+
+#container
+  +padding-leader(2)
+  background-color: $brown
+  background-color: transparentize($brown, 0.3)
+  position: relative
+  z-index: 99
+  top: -$baseline * 2
+  +border-bottom-radius($ms0)
+  #main
+    h1
+      +leader(1)
+      +trailer(0.5)
+  aside
+    +leader(6)
+    a#download
+      +fancy-button
+      +trailer(1)
+    h2
+      @extend h4
+    ul
+      +no-bullets
+      margin-left: 0  
+p
+  +adjust-font-size-to($ms1)
+  
+  
+footer
+  +padding-leader(1)
+  +padding-trailer(1)
+  background-color: $brown
+  +border-bottom-radius($ms0)
+  +adjust-font-size-to($ms1)
+  text-transform: uppercase
+  letter-spacing: 1px
+  @extend .headers
+  .amp
+    +adjust-font-size-to($ms3, 1, $ms1)
+    position: relative
+    top: 4px  
