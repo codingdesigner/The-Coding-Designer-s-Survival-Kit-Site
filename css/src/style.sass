@@ -31,39 +31,49 @@
 
 // --> 4. PICK A CSS RESET
 // html5 boilerplate reset
-@import partials/boilerplate/_boilerplate-reset
+// @import partials/boilerplate/_boilerplate-reset
 // compass reset
 // @import compass/reset
 // susy reset
-// @import susy/reset
+@import susy/reset
 
 // -->  5. COMPASS PLUG-INS
 // Fancy Buttons
-@import fancy-buttons
+// @import fancy-buttons
+// Sassy Buttons
+// @import sassybuttons
 
 // -->  6. DEFAULTS
 // Set your overall site defaults
-@import partials/defaults
+@import partials/defaults/_defaults
 // @import partials/boilerplate/_boilerplate-setup
 // @import partials/boilerplate/_boilerplate-helpers
+@import partials/defaults/_elements
+@import partials/ui-patterns/_ui-patterns-common
+
+// --> 7. Styles just for working in the Survival Kit
+// remove these in production
+@import partials/survival_kit/_survival-kit
 
 
-// --> 7. CMS-specific overrides and mixins
+// --> 8. CMS-specific overrides and mixins
 // DRUPAL
-@import partials/cms/drupal/drupal
+// @import partials/cms/drupal/drupal
+@import partials/ui-patterns/_ui-patterns-drupal
 
-// -->  8. STYLES FOR THIS SITE --------------------------------------------------
+// -->  9. STYLES FOR THIS SITE --------------------------------------------------
 @import partials/grids/_grids_susy.sass
 @import partials/_site-wide.sass
 
+// -->  10. RESPONSIVE --------------------------------------------------
+// @import partials/media/_responsive.sass
 
-
-// -->  9. Modernizr & Browser Support -------------------------------------------
+// -->  11. Modernizr & Browser Support -------------------------------------------
 // @import partials/browser_adjustments/_modernizr.sass
 // @import partials/browser_adjustments/_ie.sass
 
 
-// -->  10. Print -------------------------------------------
+// -->  12. Print -------------------------------------------
 // @import partials/print
 
 

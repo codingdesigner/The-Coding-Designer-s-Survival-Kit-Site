@@ -29,60 +29,29 @@
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
  
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="js/libs/modernizr-1.6.min.js"></script>
+  <script src="js/libs/modernizr-1.7.min.js"></script>
   
   <!-- Also put Selectivizr at the top -->
   <script type="text/javascript" src="js/libs/mootools-core-1.3.1-full-compat-yc.js"></script>
   <!--[if (gte IE 6)&(lte IE 8)]>
-    
     <script type="text/javascript" src="js/libs/selectivizr.js"></script>
     <noscript><link rel="stylesheet" href="css/selectivizr.css" /></noscript>
   <![endif]-->
   
-  <script type="text/javascript" src="http://use.typekit.com/ncb6xkd.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 </head>
 
-<body lang="en" >
-  <header>
-    <h1 id="site-name"><span class="tcd">The Coding Designer's</span> <span class="sk">Survival Kit</span></h1>
-    <h2 class="tag">The Anti-GUI</h2>
-    
-  </header>
+<body>
+
   <div id="container">
+    <header>
+
+    </header>
     
-    
-    <div id="middle">
-      <section id="main" role="main">
-        <h1 class="description">A starter set of code and design tools<br/>
-        All bundled up and ready to rock</h1>
-        <p>When you design web sites in the browser you're left alone in the dark without any of your familiar design tools. By nature there's no application you can load up and start building your design. Well, this isn't that. However I think it's the next best thing. </p>
-        <p>Instead of starting from square one everytime you begin a project I think we need a collection of good starting values in markup and css to start designing, and a library of javascript tools to help us rapidly prototype as we think creatively. In the Kit you'll find HTML inspired by HTML5 Boilerplate, a system for writing highly flexible and powerful css with Sass, Compass, Susy, and other frameworks, and a bevy of javascript libraries at your disposal. </p>
-        <p>Please <a href="https://github.com/canarymason/The-Coding-Designers-Survival-Kit">check it out</a>, and start using it to flex your creative muscles as you design your next site in the browser.</p>
-      </section>
-      <aside class="includes">
-        <a href="https://github.com/canarymason/The-Coding-Designers-Survival-Kit" id="download">Go Get It</a>
-        
-        <h2>Includes:</h2>
-        <ul>
-          <li>HTML5 Boilerplate</li>
-          <li>Sass/Compass tools and workflow</li>
-          <li>Formalize</li>
-          <li>Modernizr</li>
-          <li>Selectivizr</li>
-          <li>Lettering.js</li>
-          <li>PaintbrushJS</li>
-          <li>jQuery UI</li>
-          <li>more, more, more</li>
-        </ul>
-        
-      </aside>
-      
+    <div id="main" role="main">
     </div>
     
     <footer>
-      Brought to you by <a href="http://birdsandmonkeys.com">Birds and Monkeys</a> <span class="amp">&amp;</span> <a href="http://zivtech.com">Zivtech</a>.
 
     </footer>
   </div> <!--! end of #container -->
@@ -91,14 +60,14 @@
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.2.min.js"%3E%3C/script%3E'))</script>
   
   <!-- Formalize (http://formalize.me) -->
   <script src="js/libs/formalize/jquery.formalize.js"></script>
   
-  <!-- Also put Lettering.js at the top -->
-  <script src="js/libs/jquery.lettering.js"></script>
+  <!-- Lettering.js -->
+  <!-- <script src="js/libs/jquery.lettering.js"></script> -->
   
   <!-- scripts concatenated and minified via ant build script-->
   <script src="js/plugins.js"></script>
@@ -114,7 +83,7 @@
 
   <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
   <script>
-    var _gaq=[['_setAccount','UA-22235767-1'],['_trackPageview']];
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));

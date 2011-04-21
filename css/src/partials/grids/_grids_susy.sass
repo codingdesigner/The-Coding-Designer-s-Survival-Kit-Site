@@ -15,15 +15,8 @@
 body
   #container
     @extend .container
-    #middle
-      +full
-      +pie-clearfix
-      #main
-        +columns(4)
-      .includes
-        +columns(2)
-        +omega(6)
-    footer
-      padding-left: $side-gutter-width
-      padding-right: $side-gutter-width
+    > 
+      header, #main, footer
+        +full
+
 
