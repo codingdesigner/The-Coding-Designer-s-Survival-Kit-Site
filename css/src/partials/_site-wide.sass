@@ -26,15 +26,12 @@ header
     // padding-top: $baseline * 1.5
     position: relative
     z-index: 1
-    
     #{headers(all)}
       @extend .logo-type
       font-weight: 700
       font-family: $font-proxima-nova-condensed
-      // +adjust-font-size-to($ms4)
     h2
       margin-bottom: 0
-      // background-color: $red
       position: relative
       left: 60px
       top: -9px
@@ -44,6 +41,16 @@ header
       +adjust-font-size-to($ms8)
       position: relative
       top: -$baseline-half
+
+.no-typekit
+  header
+    hgroup
+      h2
+        font-size: $ms3
+        top: -3px
+      h1
+        font-size: $ms7
+        top: -3px
       
 #container
   background-color: transparentize($white, 0.2)
