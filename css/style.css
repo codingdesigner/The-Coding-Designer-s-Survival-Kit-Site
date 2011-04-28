@@ -59,7 +59,7 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 /* The following classes are for use with @extend. */
-.serif, body {
+.serif {
   font-family: Georgia, serif; }
 
 .sans, .textinput, textarea, input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=time], input[type=number], input[type=range], input[type=search], input[type=color] {
@@ -70,6 +70,9 @@ html {
 
 .caps, .allcaps, caption, .smallcaps {
   letter-spacing: 0.1em; }
+
+.body, body {
+  font-family: ff-meta-serif-web-pro-1, ff-meta-serif-web-pro-2, Georgia, serif; }
 
 .headers, h1, h2, h3, h4, h5, h6 {
   font-family: refrigerator-deluxe-1, refrigerator-deluxe-2, sans-serif; }
