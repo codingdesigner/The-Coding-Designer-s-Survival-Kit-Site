@@ -60,7 +60,7 @@ html {
 
 /* The following classes are for use with @extend. */
 .serif, body {
-  font-family: ff-meta-serif-web-pro-1, ff-meta-serif-web-pro-2, Georgia, serif; }
+  font-family: Georgia, serif; }
 
 .sans, .textinput, textarea, input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=time], input[type=number], input[type=range], input[type=search], input[type=color] {
   font-family: sans-serif; }
@@ -75,13 +75,13 @@ html {
   font-family: refrigerator-deluxe-1, refrigerator-deluxe-2, sans-serif; }
 
 .logo-type, body:before, header hgroup h1, header hgroup h2, header hgroup h3, header hgroup h4, header hgroup h5, header hgroup h6 {
-  font-family: proxima-nova-1, proxima-nova-2, refrigerator-deluxe-1, refrigerator-deluxe-2, sans-serif; }
+  font-family: proxima-nova-1, proxima-nova-2, sans-serif, refrigerator-deluxe-1, refrigerator-deluxe-2, sans-serif; }
 
 .allcaps, caption {
   text-transform: uppercase; }
 
 .amp {
-  font-family: GoudyBookletter1911Regular, Goudy Old Style, Baskerville, Palatino, ff-meta-serif-web-pro-1, ff-meta-serif-web-pro-2, Georgia, serif; }
+  font-family: GoudyBookletter1911Regular, Goudy Old Style, Baskerville, Palatino, Georgia, serif; }
 
 .smallcaps {
   font-variant: small-caps; }
@@ -1063,14 +1063,14 @@ header {
     z-index: 1; }
     header hgroup h1, header hgroup h2, header hgroup h3, header hgroup h4, header hgroup h5, header hgroup h6 {
       font-weight: 700;
-      font-family: proxima-nova-condensed-1, proxima-nova-condensed-2; }
+      font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif; }
     header hgroup h2 {
       margin-bottom: 0;
       position: relative;
       left: 60px;
       top: -9px; }
     header hgroup h1 {
-      font-family: proxima-nova-1, proxima-nova-2;
+      font-family: proxima-nova-1, proxima-nova-2, sans-serif;
       font-weight: 800;
       font-size: 5.063em;
       line-height: 1.016em;
