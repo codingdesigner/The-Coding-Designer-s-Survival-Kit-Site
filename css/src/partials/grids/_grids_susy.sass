@@ -16,13 +16,13 @@ body
   #container
     @extend .container
     > 
-      header, #main, footer
+      #main, footer
         +full
 
 article#main
   .content
     +columns(4)
-    +alpha
+    // +alpha
   aside.includes
     +columns(2)
     +omega
