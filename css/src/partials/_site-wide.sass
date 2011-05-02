@@ -63,20 +63,24 @@ header
     z-index: 3
     top: -130px
     right: -30px
+    $card-total: 6
+    $card-total-half: $card-total / 2
     @for $i from 1 through 5
       // @debug $i
-      $degree: (($i - 3) * 12)
+      $degree: (($i - $card-total-half) * -12)
       $deg: $degree + deg
       @if $degree < 0
         $degree: $degree * -1
-      $offset: ($degree * ($degree * 0.1)) + px
+      $offset: ($degree * ($degree * -0.1)) + 18 + px
+      $offset-x: (($i - $card-total-half) * -30) + px
       // $offset-shadow: ($degree * ($degree * 0.009)) + px
       // @debug $degree
+      @debug $offset-x
       // @debug $deg 
       // @debug $offset 
       img
         &:nth-of-type(#{$i}n-#{$i})
-          +transform(0.9,$deg,0,$offset,0deg,0deg,center,center)
+          +transform(0.9,$deg,$offset-x,$offset,0deg,0deg,center,center)
           +box-shadow(transparentize($black, 0.7), 2px, 1px, 2px)
     &:hover
       img
