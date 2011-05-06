@@ -1,5 +1,8 @@
 /* Links --------------------------------------------------------------
-+better-links
+a
+  +link-colors($alt-color, complement($alt-color), complement($alt-color), $alt-color, false)
+  +better-links($alt-color, complement($alt-color), complement($alt-color), $alt-color, false)
+  // +link-transitions
 
 
 /* Headings --------------------------------------------------------------
@@ -7,7 +10,6 @@
 #{headers(all)}
   @extend .headers
   font-weight: normal
-  text-transform: uppercase
 
 h1
   +adjust-font-size-to($ms6)
