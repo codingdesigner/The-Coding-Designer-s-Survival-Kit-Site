@@ -838,6 +838,12 @@ body.markup-elements article.element .example .markup + .show-source + p {
   margin: auto;
   width: 984px;
   max-width: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(1.22%, rgba(0, 0, 0, 0)), color-stop(1.22%, rgba(100, 100, 225, 0.25)), color-stop(15.447%, rgba(100, 100, 225, 0.25)), color-stop(15.447%, rgba(0, 0, 0, 0)), color-stop(17.886%, rgba(0, 0, 0, 0)), color-stop(17.886%, rgba(100, 100, 225, 0.25)), color-stop(32.114%, rgba(100, 100, 225, 0.25)), color-stop(32.114%, rgba(0, 0, 0, 0)), color-stop(34.553%, rgba(0, 0, 0, 0)), color-stop(34.553%, rgba(100, 100, 225, 0.25)), color-stop(48.78%, rgba(100, 100, 225, 0.25)), color-stop(48.78%, rgba(0, 0, 0, 0)), color-stop(51.22%, rgba(0, 0, 0, 0)), color-stop(51.22%, rgba(100, 100, 225, 0.25)), color-stop(65.447%, rgba(100, 100, 225, 0.25)), color-stop(65.447%, rgba(0, 0, 0, 0)), color-stop(67.886%, rgba(0, 0, 0, 0)), color-stop(67.886%, rgba(100, 100, 225, 0.25)), color-stop(82.114%, rgba(100, 100, 225, 0.25)), color-stop(82.114%, rgba(0, 0, 0, 0)), color-stop(84.553%, rgba(0, 0, 0, 0)), color-stop(84.553%, rgba(100, 100, 225, 0.25)), color-stop(98.78%, rgba(100, 100, 225, 0.25)), color-stop(98.78%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 1.22%, rgba(100, 100, 225, 0.25) 1.22%, rgba(100, 100, 225, 0.25) 15.447%, rgba(0, 0, 0, 0) 15.447%, rgba(0, 0, 0, 0) 17.886%, rgba(100, 100, 225, 0.25) 17.886%, rgba(100, 100, 225, 0.25) 32.114%, rgba(0, 0, 0, 0) 32.114%, rgba(0, 0, 0, 0) 34.553%, rgba(100, 100, 225, 0.25) 34.553%, rgba(100, 100, 225, 0.25) 48.78%, rgba(0, 0, 0, 0) 48.78%, rgba(0, 0, 0, 0) 51.22%, rgba(100, 100, 225, 0.25) 51.22%, rgba(100, 100, 225, 0.25) 65.447%, rgba(0, 0, 0, 0) 65.447%, rgba(0, 0, 0, 0) 67.886%, rgba(100, 100, 225, 0.25) 67.886%, rgba(100, 100, 225, 0.25) 82.114%, rgba(0, 0, 0, 0) 82.114%, rgba(0, 0, 0, 0) 84.553%, rgba(100, 100, 225, 0.25) 84.553%, rgba(100, 100, 225, 0.25) 98.78%, rgba(0, 0, 0, 0) 98.78%, rgba(0, 0, 0, 0) 100%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 1.22%, rgba(100, 100, 225, 0.25) 1.22%, rgba(100, 100, 225, 0.25) 15.447%, rgba(0, 0, 0, 0) 15.447%, rgba(0, 0, 0, 0) 17.886%, rgba(100, 100, 225, 0.25) 17.886%, rgba(100, 100, 225, 0.25) 32.114%, rgba(0, 0, 0, 0) 32.114%, rgba(0, 0, 0, 0) 34.553%, rgba(100, 100, 225, 0.25) 34.553%, rgba(100, 100, 225, 0.25) 48.78%, rgba(0, 0, 0, 0) 48.78%, rgba(0, 0, 0, 0) 51.22%, rgba(100, 100, 225, 0.25) 51.22%, rgba(100, 100, 225, 0.25) 65.447%, rgba(0, 0, 0, 0) 65.447%, rgba(0, 0, 0, 0) 67.886%, rgba(100, 100, 225, 0.25) 67.886%, rgba(100, 100, 225, 0.25) 82.114%, rgba(0, 0, 0, 0) 82.114%, rgba(0, 0, 0, 0) 84.553%, rgba(100, 100, 225, 0.25) 84.553%, rgba(100, 100, 225, 0.25) 98.78%, rgba(0, 0, 0, 0) 98.78%, rgba(0, 0, 0, 0) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 1.22%, rgba(100, 100, 225, 0.25) 1.22%, rgba(100, 100, 225, 0.25) 15.447%, rgba(0, 0, 0, 0) 15.447%, rgba(0, 0, 0, 0) 17.886%, rgba(100, 100, 225, 0.25) 17.886%, rgba(100, 100, 225, 0.25) 32.114%, rgba(0, 0, 0, 0) 32.114%, rgba(0, 0, 0, 0) 34.553%, rgba(100, 100, 225, 0.25) 34.553%, rgba(100, 100, 225, 0.25) 48.78%, rgba(0, 0, 0, 0) 48.78%, rgba(0, 0, 0, 0) 51.22%, rgba(100, 100, 225, 0.25) 51.22%, rgba(100, 100, 225, 0.25) 65.447%, rgba(0, 0, 0, 0) 65.447%, rgba(0, 0, 0, 0) 67.886%, rgba(100, 100, 225, 0.25) 67.886%, rgba(100, 100, 225, 0.25) 82.114%, rgba(0, 0, 0, 0) 82.114%, rgba(0, 0, 0, 0) 84.553%, rgba(100, 100, 225, 0.25) 84.553%, rgba(100, 100, 225, 0.25) 98.78%, rgba(0, 0, 0, 0) 98.78%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 1.22%, rgba(100, 100, 225, 0.25) 1.22%, rgba(100, 100, 225, 0.25) 15.447%, rgba(0, 0, 0, 0) 15.447%, rgba(0, 0, 0, 0) 17.886%, rgba(100, 100, 225, 0.25) 17.886%, rgba(100, 100, 225, 0.25) 32.114%, rgba(0, 0, 0, 0) 32.114%, rgba(0, 0, 0, 0) 34.553%, rgba(100, 100, 225, 0.25) 34.553%, rgba(100, 100, 225, 0.25) 48.78%, rgba(0, 0, 0, 0) 48.78%, rgba(0, 0, 0, 0) 51.22%, rgba(100, 100, 225, 0.25) 51.22%, rgba(100, 100, 225, 0.25) 65.447%, rgba(0, 0, 0, 0) 65.447%, rgba(0, 0, 0, 0) 67.886%, rgba(100, 100, 225, 0.25) 67.886%, rgba(100, 100, 225, 0.25) 82.114%, rgba(0, 0, 0, 0) 82.114%, rgba(0, 0, 0, 0) 84.553%, rgba(100, 100, 225, 0.25) 84.553%, rgba(100, 100, 225, 0.25) 98.78%, rgba(0, 0, 0, 0) 98.78%, rgba(0, 0, 0, 0) 100%);
+  background-position: left top;
 }
 .container:after, body #container:after, header hgroup:after {
   content: "\0020";
@@ -848,7 +854,7 @@ body.markup-elements article.element .example .markup + .show-source + p {
   visibility: hidden;
 }
 
-.wireframe {
+.wireframe, #main aside.samples {
   outline: 1px dashed red;
 }
 
@@ -944,13 +950,9 @@ header hgroup h1 {
 #main aside.samples {
   position: absolute;
   z-index: 3;
-  top: -130px;
-  right: -30px;
-  -moz-transform: rotate(24deg) translate(54px, -24px);
-  -webkit-transform: rotate(24deg) translate(54px, -24px);
-  -o-transform: rotate(24deg) translate(54px, -24px);
-  -ms-transform: rotate(24deg) translate(54px, -24px);
-  transform: rotate(24deg) translate(54px, -24px);
+  top: -150px;
+  right: -18px;
+  width: 510px;
   -moz-transition-property: all;
   -webkit-transition-property: all;
   -o-transition-property: all;
@@ -960,60 +962,70 @@ header hgroup h1 {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-#main aside.samples img:nth-of-type(1n-1) {
-  -moz-transform: scale(0.9) rotate(24deg) translate(60px, -39.6px);
-  -webkit-transform: scale(0.9) rotate(24deg) translate(60px, -39.6px);
-  -o-transform: scale(0.9) rotate(24deg) translate(60px, -39.6px);
-  -ms-transform: scale(0.9) rotate(24deg) translate(60px, -39.6px);
-  transform: scale(0.9) rotate(24deg) translate(60px, -39.6px);
+#main aside.samples img {
   -moz-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
 }
-#main aside.samples img:nth-of-type(2n-2) {
-  -moz-transform: scale(0.9) rotate(12deg) translate(30px, 3.6px);
-  -webkit-transform: scale(0.9) rotate(12deg) translate(30px, 3.6px);
-  -o-transform: scale(0.9) rotate(12deg) translate(30px, 3.6px);
-  -ms-transform: scale(0.9) rotate(12deg) translate(30px, 3.6px);
-  transform: scale(0.9) rotate(12deg) translate(30px, 3.6px);
+#main aside.samples img {
   -moz-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
 }
-#main aside.samples img:nth-of-type(3n-3) {
-  -moz-transform: scale(0.9) rotate(0deg) translate(0px, 18px);
-  -webkit-transform: scale(0.9) rotate(0deg) translate(0px, 18px);
-  -o-transform: scale(0.9) rotate(0deg) translate(0px, 18px);
-  -ms-transform: scale(0.9) rotate(0deg) translate(0px, 18px);
-  transform: scale(0.9) rotate(0deg) translate(0px, 18px);
+#main aside.samples img {
   -moz-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
 }
-#main aside.samples img:nth-of-type(4n-4) {
-  -moz-transform: scale(0.9) rotate(-12deg) translate(-30px, 3.6px);
-  -webkit-transform: scale(0.9) rotate(-12deg) translate(-30px, 3.6px);
-  -o-transform: scale(0.9) rotate(-12deg) translate(-30px, 3.6px);
-  -ms-transform: scale(0.9) rotate(-12deg) translate(-30px, 3.6px);
-  transform: scale(0.9) rotate(-12deg) translate(-30px, 3.6px);
+#main aside.samples img {
   -moz-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
 }
-#main aside.samples img:nth-of-type(5n-5) {
-  -moz-transform: scale(0.9) rotate(-24deg) translate(-60px, -39.6px);
-  -webkit-transform: scale(0.9) rotate(-24deg) translate(-60px, -39.6px);
-  -o-transform: scale(0.9) rotate(-24deg) translate(-60px, -39.6px);
-  -ms-transform: scale(0.9) rotate(-24deg) translate(-60px, -39.6px);
-  transform: scale(0.9) rotate(-24deg) translate(-60px, -39.6px);
+#main aside.samples img {
   -moz-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+}
+#main aside.samples img {
+  -moz-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+}
+#main aside.samples img {
+  -moz-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+}
+#main aside.samples img {
+  -moz-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+}
+#main aside.samples img {
+  -moz-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+}
+#main aside.samples img {
+  float: left;
+  margin-right: 6px;
+}
+#main aside.samples img:nth-of-type(6n+6) {
+  clear: left;
+  margin-left: 50.5px;
+}
+#main aside.samples img:nth-of-type(1n+6) {
+  top: -12px;
 }
 #main aside.samples:hover {
   -moz-transform: scale(1) rotate(0deg) translate(0, 0);
@@ -1034,12 +1046,12 @@ header hgroup h1 {
   position: relative;
   z-index: 4;
   border: 1px solid #a52a2a;
-  -moz-border-radius: 14px;
-  -webkit-border-radius: 14px;
-  -o-border-radius: 14px;
-  -ms-border-radius: 14px;
-  -khtml-border-radius: 14px;
-  border-radius: 14px;
+  -moz-border-radius: 93.333px;
+  -webkit-border-radius: 93.333px;
+  -o-border-radius: 93.333px;
+  -ms-border-radius: 93.333px;
+  -khtml-border-radius: 93.333px;
+  border-radius: 93.333px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding;
   -o-background-clip: padding-box;
@@ -1065,10 +1077,4 @@ header hgroup h1 {
   -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
   -o-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
-  -moz-border-radius: 9.333px;
-  -webkit-border-radius: 9.333px;
-  -o-border-radius: 9.333px;
-  -ms-border-radius: 9.333px;
-  -khtml-border-radius: 9.333px;
-  border-radius: 9.333px;
 }

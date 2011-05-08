@@ -68,13 +68,15 @@ header
   aside.samples
     position: absolute
     z-index: 3
-    top: -130px
-    right: -30px
-    +transform2d(rotate(24deg) translate(54px, -24px))
+    top: -150px
+    right: -18px
+    width: 510px
+    @extend .wireframe
+    // +transform2d(rotate(24deg) translate(54px, -24px))
     +transition(all,0.5s)
-    $card-total: 6
+    $card-total: 10
     $card-total-half: $card-total / 2
-    @for $i from 1 through 5
+    @for $i from 1 through 9
       $degree: (($i - $card-total-half) * -12)
       $deg: $degree + deg
       @if $degree < 0
@@ -86,9 +88,21 @@ header
       // @debug $deg 
       // @debug $offset 
       img
+        +box-shadow(transparentize($black, 0.7), 2px, 1px, 2px)
         &:nth-of-type(#{$i}n-#{$i})
-          +transform2d(scale(0.9) rotate($deg) translate($offset-x, $offset-y))
-          +box-shadow(transparentize($black, 0.7), 2px, 1px, 2px)
+          // +transform2d(scale(0.9) rotate($deg) translate($offset-x, $offset-y))
+          // +transform2d(scale(0.9))
+          
+    img
+      float: left
+      margin-right: 6px
+      &:nth-of-type(6n+6)
+        clear: left
+        margin-left: 93px * 0.5 + 4
+      &:nth-of-type(1n+6)
+        top: -12px
+      // .no-csstransforms &
+        //
     &:hover
       +transform2d(scale(1) rotate(0deg) translate(0, 0))
       img
@@ -98,12 +112,13 @@ header
       position: relative
       z-index: 4
       border: 1px solid $brown
-      +border-radius($ms0)
+      // +border-radius($ms0)
+      +border-radius($ms9)
       +background-clip(padding-box)
       +transition(all,0.5s)
       &:hover
         +transform2d(scale(1) rotate(0deg) translate(0, 0))
         +box-shadow(transparentize($black, 0.5), 3px, 3px, 4px)
-        +border-radius($ms-2)
+        // +border-radius($ms-2)
         
         
