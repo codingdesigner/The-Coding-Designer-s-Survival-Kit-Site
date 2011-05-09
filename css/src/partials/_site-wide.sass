@@ -74,10 +74,10 @@ header
     right: 200px
     +transform2d(scale(0.9))
     +transition(all,0.5s)
-    $card-total: 8
-    @for $i from 1 through ($card-total + 1)
+    $badge-total: 8
+    @for $i from 1 through ($badge-total + 1)
       $radius: 70.875
-      $position: 360 / ($card-total + 1) * $i
+      $position: 360 / ($badge-total + 1) * $i
       $rotation: $position
       @if $rotation > 180
         $rotation: -360 + $rotation
@@ -93,9 +93,9 @@ header
           left: $x-translate
     &:hover
       +transform2d(scale(1) translate(0px, 0px))
-      @for $i from 1 through ($card-total + 1)
+      @for $i from 1 through ($badge-total + 1)
         $radius: 93.333
-        $position: 360 / ($card-total + 1) * $i
+        $position: 360 / ($badge-total + 1) * $i
         $rotation: $position
         @if $rotation > 180
           $rotation: -360 + $rotation
