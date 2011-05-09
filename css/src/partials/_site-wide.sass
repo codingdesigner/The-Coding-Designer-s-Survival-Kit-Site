@@ -5,6 +5,11 @@ body
   width: 100%
   overflow: hidden
   background: $brown image_url('dirt.jpg')
+  
+    
+    
+header 
+  background-color: $white
   &:before
     content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈"
     @extend .logo-type
@@ -15,16 +20,13 @@ body
     // top: -$baseline-half
     top: 12px
     z-index: 0
-    
-    
-header 
-  background-color: $white
   hgroup
     @extend .container
     background: transparent image_url('logo.png') no-repeat 0 ($baseline * 1.5)
     padding-top: $baseline * 1.5
     // padding-top: $baseline * 1.5
     position: relative
+    left: 9px
     z-index: 1
     #{headers(all)}
       @extend .logo-type
@@ -37,13 +39,13 @@ header
       // top: -3px
       // font-size: 36px
       // line-height: 36px
-      font-size: 33px
+      font-size: 32.8px
       top: 0px
       left: 55px
       .wf-active &
         +adjust-font-size-to($ms5)
         top: -9px
-        left: 59px
+        left: 57px
     h1
       font-family: $font-proxima-nova
       font-weight: 800
@@ -68,7 +70,7 @@ header
   aside.samples
     position: absolute
     z-index: 3
-    top: -60px
+    top: -90px
     right: 200px
     +transform2d(scale(0.9))
     +transition(all,0.5s)
@@ -76,7 +78,10 @@ header
     @for $i from 1 through ($card-total + 1)
       $radius: 70.875
       $position: 360 / ($card-total + 1) * $i
-      $rotation: $position + deg      
+      $rotation: $position
+      @if $rotation > 180
+        $rotation: -360 + $rotation
+      $rotation: $rotation + deg 
       $cos: cos($position * (pi() / 180))
       $x-translate: $radius * $cos + px
       $sin: sin($position * (pi() / 180))
@@ -87,11 +92,14 @@ header
           top: $y-translate
           left: $x-translate
     &:hover
-      +transform2d(scale(1))
+      +transform2d(scale(1) translate(0px, 0px))
       @for $i from 1 through ($card-total + 1)
         $radius: 93.333
         $position: 360 / ($card-total + 1) * $i
-        $rotation: $position + deg      
+        $rotation: $position
+        @if $rotation > 180
+          $rotation: -360 + $rotation
+        $rotation: $rotation + deg
         $cos: cos($position * (pi() / 180))
         $x-translate: $radius * $cos + px
         $sin: sin($position * (pi() / 180))
