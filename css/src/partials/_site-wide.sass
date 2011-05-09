@@ -74,10 +74,11 @@ header
     @extend .wireframe
     // +transform2d(rotate(24deg) translate(54px, -24px))
     +transition(all,0.5s)
-    $card-total: 10
+    $card-total: 6
     $card-total-half: $card-total / 2
-    @for $i from 1 through 9
+    @for $i from 1 through 5
       $degree: (($i - $card-total-half) * -12)
+      @debug $degree
       $deg: $degree + deg
       @if $degree < 0
         $degree: $degree * -1
@@ -90,8 +91,29 @@ header
       img
         +box-shadow(transparentize($black, 0.7), 2px, 1px, 2px)
         &:nth-of-type(#{$i}n-#{$i})
-          // +transform2d(scale(0.9) rotate($deg) translate($offset-x, $offset-y))
-          // +transform2d(scale(0.9))
+          +transform2d(scale(0.9) rotate($deg) translate($offset-x, $offset-y))
+    @debug '----------------'
+    $card-total-two: 4
+    $card-total-two-half: $card-total-two / 2
+    @debug $card-total-two-half
+    @for $j from 6 through 9
+      $degree-two: (($j - ($card-total-two-half + 6)) * -12)
+      @debug $degree-two
+      $deg-two: $degree-two + deg
+      @debug $deg-two
+      @if $degree-two < 0
+        $degree-two: $degree-two * -1
+        @debug $degree-two
+      $offset-y-two: ($degree-two * ($degree-two * -0.1)) + 18 + px
+      $offset-x-two: (($j - $card-total-two-half) * -30) + px
+      // @debug $degree
+      // @debug $offset-x
+      // @debug $deg 
+      // @debug $offset
+      img
+        &:nth-of-type(#{$j}n-#{$j})
+          +transform2d(scale(0.9) rotate($deg-two) translate($offset-x-two, $offset-y-two))
+          border-color: $green
           
     img
       float: left
