@@ -885,7 +885,6 @@ article#main aside.includes {
 body {
   position: relative;
   width: 100%;
-  overflow: hidden;
   background: #a52a2a url('images/dirt.jpg?1300250432');
 }
 
@@ -900,6 +899,8 @@ header:before {
   color: #f5f7fb;
   position: absolute;
   top: 12px;
+  width: 100%;
+  overflow: hidden;
   z-index: 0;
 }
 header hgroup {
@@ -1190,8 +1191,4 @@ header hgroup h1 {
   -webkit-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
-  -moz-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
 }
