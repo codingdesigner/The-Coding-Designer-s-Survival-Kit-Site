@@ -1211,16 +1211,6 @@ header hgroup h1 {
 #main aside.samples li a:hover {
   border-bottom: none;
 }
-#main aside.samples li a {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('images/badge-color.png?1305557962');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 116px;
-  height: 116px;
-}
 #main aside.samples li.color a {
   text-indent: -119988px;
   overflow: hidden;

@@ -133,21 +133,13 @@ header
       a
         +remove-link-underlines
         display: block
-      &
-        // border: none
-        a
-          +replace-text-with-dimensions('badge-color.png')
-      &.color
-        a
-          +replace-text-with-dimensions('badge-color.png')
-      &.fonts
-        a
-          +replace-text-with-dimensions('badge-fonts.png')
-      &.html5
-        a
-          +replace-text-with-dimensions('badge-html5.png')
-        
-          
-    
+      // &
+      //   a
+      //     +replace-text-with-dimensions('badge-color.png')
+      @each $badge in color, fonts, html5
+        &.#{$badge}
+          a
+            +replace-text-with-dimensions('badge-#{$badge}.png')
+
         
         
