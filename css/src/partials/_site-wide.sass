@@ -88,7 +88,7 @@ header
       $x-translate: $radius * $cos + px
       $sin: sin($position * (pi() / 180))
       $y-translate: $radius * $sin + px
-      img        
+      li        
         &:nth-of-type(#{$i}n-#{$i})      
           +transform2d(scale(0.9) rotate($rotation) )
           top: $y-translate
@@ -106,23 +106,45 @@ header
         $x-translate: $radius * $cos + px
         $sin: sin($position * (pi() / 180))
         $y-translate: $radius * $sin + px
-        img        
+        li        
           &:nth-of-type(#{$i}n-#{$i})
             top: $y-translate
             left: $x-translate
             &:hover
               +transform2d(scale(1) rotate(0))
               z-index: 50
-    img
+    ul
+      margin-bottom: 0
+      margin-left: 0
+    li
+      +no-bullets
       position: absolute
       top: 0
       left: 0
-      max-width: 93px
+      width: 116px
+      height: 116px
       z-index: 4
-      border: 1px solid $brown
+      // border: 1px solid $gray
+      // border: none
       +border-radius($ms9)
       +background-clip(padding-box)
       +transition(all,0.5s)
       // +box-shadow(transparentize($black, 0.7), 2px, 1px, 2px)
+      a
+        +remove-link-underlines
+        display: block
+      &
+        // border: none
+        a
+          +replace-text-with-dimensions('badge-color.png')
+      &.color
+        a
+          +replace-text-with-dimensions('badge-color.png')
+      &.fonts
+        a
+          +replace-text-with-dimensions('badge-fonts.png')
+        
+          
+    
         
         

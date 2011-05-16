@@ -885,7 +885,7 @@ article#main aside.includes {
 body {
   position: relative;
   width: 100%;
-  background: #a52a2a url('images/dirt.jpg?1300250432');
+  background: #a52a2a url('images/dirt.jpg?1305037698');
 }
 
 header {
@@ -904,7 +904,7 @@ header:before {
   z-index: 0;
 }
 header hgroup {
-  background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1305037698') no-repeat 0 36px;
   padding-top: 36px;
   position: relative;
   left: 9px;
@@ -968,7 +968,7 @@ header hgroup h1 {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-#main aside.samples img:nth-of-type(1n-1) {
+#main aside.samples li:nth-of-type(1n-1) {
   -moz-transform: scale(0.9) rotate(40deg);
   -webkit-transform: scale(0.9) rotate(40deg);
   -o-transform: scale(0.9) rotate(40deg);
@@ -977,7 +977,7 @@ header hgroup h1 {
   top: 45.558px;
   left: 54.293px;
 }
-#main aside.samples img:nth-of-type(2n-2) {
+#main aside.samples li:nth-of-type(2n-2) {
   -moz-transform: scale(0.9) rotate(80deg);
   -webkit-transform: scale(0.9) rotate(80deg);
   -o-transform: scale(0.9) rotate(80deg);
@@ -986,7 +986,7 @@ header hgroup h1 {
   top: 69.798px;
   left: 12.307px;
 }
-#main aside.samples img:nth-of-type(3n-3) {
+#main aside.samples li:nth-of-type(3n-3) {
   -moz-transform: scale(0.9) rotate(120deg);
   -webkit-transform: scale(0.9) rotate(120deg);
   -o-transform: scale(0.9) rotate(120deg);
@@ -995,7 +995,7 @@ header hgroup h1 {
   top: 61.38px;
   left: -35.437px;
 }
-#main aside.samples img:nth-of-type(4n-4) {
+#main aside.samples li:nth-of-type(4n-4) {
   -moz-transform: scale(0.9) rotate(160deg);
   -webkit-transform: scale(0.9) rotate(160deg);
   -o-transform: scale(0.9) rotate(160deg);
@@ -1004,7 +1004,7 @@ header hgroup h1 {
   top: 24.241px;
   left: -66.601px;
 }
-#main aside.samples img:nth-of-type(5n-5) {
+#main aside.samples li:nth-of-type(5n-5) {
   -moz-transform: scale(0.9) rotate(-160deg);
   -webkit-transform: scale(0.9) rotate(-160deg);
   -o-transform: scale(0.9) rotate(-160deg);
@@ -1013,7 +1013,7 @@ header hgroup h1 {
   top: -24.241px;
   left: -66.601px;
 }
-#main aside.samples img:nth-of-type(6n-6) {
+#main aside.samples li:nth-of-type(6n-6) {
   -moz-transform: scale(0.9) rotate(-120deg);
   -webkit-transform: scale(0.9) rotate(-120deg);
   -o-transform: scale(0.9) rotate(-120deg);
@@ -1022,7 +1022,7 @@ header hgroup h1 {
   top: -61.38px;
   left: -35.438px;
 }
-#main aside.samples img:nth-of-type(7n-7) {
+#main aside.samples li:nth-of-type(7n-7) {
   -moz-transform: scale(0.9) rotate(-80deg);
   -webkit-transform: scale(0.9) rotate(-80deg);
   -o-transform: scale(0.9) rotate(-80deg);
@@ -1031,7 +1031,7 @@ header hgroup h1 {
   top: -69.798px;
   left: 12.307px;
 }
-#main aside.samples img:nth-of-type(8n-8) {
+#main aside.samples li:nth-of-type(8n-8) {
   -moz-transform: scale(0.9) rotate(-40deg);
   -webkit-transform: scale(0.9) rotate(-40deg);
   -o-transform: scale(0.9) rotate(-40deg);
@@ -1040,7 +1040,7 @@ header hgroup h1 {
   top: -45.558px;
   left: 54.293px;
 }
-#main aside.samples img:nth-of-type(9n-9) {
+#main aside.samples li:nth-of-type(9n-9) {
   -moz-transform: scale(0.9) rotate(0deg);
   -webkit-transform: scale(0.9) rotate(0deg);
   -o-transform: scale(0.9) rotate(0deg);
@@ -1056,11 +1056,11 @@ header hgroup h1 {
   -ms-transform: scale(1) translate(0px, 0px);
   transform: scale(1) translate(0px, 0px);
 }
-#main aside.samples:hover img:nth-of-type(1n-1) {
+#main aside.samples:hover li:nth-of-type(1n-1) {
   top: 59.993px;
   left: 71.497px;
 }
-#main aside.samples:hover img:nth-of-type(1n-1):hover {
+#main aside.samples:hover li:nth-of-type(1n-1):hover {
   -moz-transform: scale(1) rotate(0);
   -webkit-transform: scale(1) rotate(0);
   -o-transform: scale(1) rotate(0);
@@ -1068,11 +1068,11 @@ header hgroup h1 {
   transform: scale(1) rotate(0);
   z-index: 50;
 }
-#main aside.samples:hover img:nth-of-type(2n-2) {
+#main aside.samples:hover li:nth-of-type(2n-2) {
   top: 91.915px;
   left: 16.207px;
 }
-#main aside.samples:hover img:nth-of-type(2n-2):hover {
+#main aside.samples:hover li:nth-of-type(2n-2):hover {
   -moz-transform: scale(1) rotate(0);
   -webkit-transform: scale(1) rotate(0);
   -o-transform: scale(1) rotate(0);
@@ -1080,11 +1080,11 @@ header hgroup h1 {
   transform: scale(1) rotate(0);
   z-index: 50;
 }
-#main aside.samples:hover img:nth-of-type(3n-3) {
+#main aside.samples:hover li:nth-of-type(3n-3) {
   top: 80.829px;
   left: -46.666px;
 }
-#main aside.samples:hover img:nth-of-type(3n-3):hover {
+#main aside.samples:hover li:nth-of-type(3n-3):hover {
   -moz-transform: scale(1) rotate(0);
   -webkit-transform: scale(1) rotate(0);
   -o-transform: scale(1) rotate(0);
@@ -1092,11 +1092,11 @@ header hgroup h1 {
   transform: scale(1) rotate(0);
   z-index: 50;
 }
-#main aside.samples:hover img:nth-of-type(4n-4) {
+#main aside.samples:hover li:nth-of-type(4n-4) {
   top: 31.922px;
   left: -87.704px;
 }
-#main aside.samples:hover img:nth-of-type(4n-4):hover {
+#main aside.samples:hover li:nth-of-type(4n-4):hover {
   -moz-transform: scale(1) rotate(0);
   -webkit-transform: scale(1) rotate(0);
   -o-transform: scale(1) rotate(0);
@@ -1104,11 +1104,11 @@ header hgroup h1 {
   transform: scale(1) rotate(0);
   z-index: 50;
 }
-#main aside.samples:hover img:nth-of-type(5n-5) {
+#main aside.samples:hover li:nth-of-type(5n-5) {
   top: -31.922px;
   left: -87.704px;
 }
-#main aside.samples:hover img:nth-of-type(5n-5):hover {
+#main aside.samples:hover li:nth-of-type(5n-5):hover {
   -moz-transform: scale(1) rotate(0);
   -webkit-transform: scale(1) rotate(0);
   -o-transform: scale(1) rotate(0);
@@ -1116,11 +1116,11 @@ header hgroup h1 {
   transform: scale(1) rotate(0);
   z-index: 50;
 }
-#main aside.samples:hover img:nth-of-type(6n-6) {
+#main aside.samples:hover li:nth-of-type(6n-6) {
   top: -80.829px;
   left: -46.667px;
 }
-#main aside.samples:hover img:nth-of-type(6n-6):hover {
+#main aside.samples:hover li:nth-of-type(6n-6):hover {
   -moz-transform: scale(1) rotate(0);
   -webkit-transform: scale(1) rotate(0);
   -o-transform: scale(1) rotate(0);
@@ -1128,11 +1128,11 @@ header hgroup h1 {
   transform: scale(1) rotate(0);
   z-index: 50;
 }
-#main aside.samples:hover img:nth-of-type(7n-7) {
+#main aside.samples:hover li:nth-of-type(7n-7) {
   top: -91.915px;
   left: 16.207px;
 }
-#main aside.samples:hover img:nth-of-type(7n-7):hover {
+#main aside.samples:hover li:nth-of-type(7n-7):hover {
   -moz-transform: scale(1) rotate(0);
   -webkit-transform: scale(1) rotate(0);
   -o-transform: scale(1) rotate(0);
@@ -1140,11 +1140,11 @@ header hgroup h1 {
   transform: scale(1) rotate(0);
   z-index: 50;
 }
-#main aside.samples:hover img:nth-of-type(8n-8) {
+#main aside.samples:hover li:nth-of-type(8n-8) {
   top: -59.993px;
   left: 71.497px;
 }
-#main aside.samples:hover img:nth-of-type(8n-8):hover {
+#main aside.samples:hover li:nth-of-type(8n-8):hover {
   -moz-transform: scale(1) rotate(0);
   -webkit-transform: scale(1) rotate(0);
   -o-transform: scale(1) rotate(0);
@@ -1152,11 +1152,11 @@ header hgroup h1 {
   transform: scale(1) rotate(0);
   z-index: 50;
 }
-#main aside.samples:hover img:nth-of-type(9n-9) {
+#main aside.samples:hover li:nth-of-type(9n-9) {
   top: 0.0px;
   left: 93.333px;
 }
-#main aside.samples:hover img:nth-of-type(9n-9):hover {
+#main aside.samples:hover li:nth-of-type(9n-9):hover {
   -moz-transform: scale(1) rotate(0);
   -webkit-transform: scale(1) rotate(0);
   -o-transform: scale(1) rotate(0);
@@ -1164,13 +1164,18 @@ header hgroup h1 {
   transform: scale(1) rotate(0);
   z-index: 50;
 }
-#main aside.samples img {
+#main aside.samples ul {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+#main aside.samples li {
+  list-style: none;
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 93px;
+  width: 116px;
+  height: 116px;
   z-index: 4;
-  border: 1px solid #a52a2a;
   -moz-border-radius: 93.333px;
   -webkit-border-radius: 93.333px;
   -o-border-radius: 93.333px;
@@ -1191,4 +1196,48 @@ header hgroup h1 {
   -webkit-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
+}
+#main aside.samples li li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+}
+#main aside.samples li a {
+  display: block;
+}
+#main aside.samples li a {
+  border-bottom: none;
+}
+#main aside.samples li a:hover {
+  border-bottom: none;
+}
+#main aside.samples li a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('images/badge-color.png?1305557962');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 116px;
+  height: 116px;
+}
+#main aside.samples li.color a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('images/badge-color.png?1305557962');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 116px;
+  height: 116px;
+}
+#main aside.samples li.fonts a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('images/badge-fonts.png?1305557951');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 116px;
+  height: 116px;
 }
