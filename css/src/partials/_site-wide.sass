@@ -72,44 +72,43 @@ header
   aside.samples
     position: absolute
     z-index: 3
-    top: -90px
-    right: 200px
+    top: -55px
+    right: 205px
     +transform2d(scale(0.9))
     +transition(all,0.5s)
     $badge-total: 8
     @for $i from 1 through ($badge-total + 1)
-      $radius: 70.875
+      $radius: 93.333
       $position: 360 / ($badge-total + 1) * $i
       $rotation: $position
       @if $rotation > 180
         $rotation: -360 + $rotation
+      @if $rotation == 0
+        $rotation: $rotation + 20
       $rotation: $rotation + deg 
+      @debug $rotation
       $cos: cos($position * (pi() / 180))
-      $x-translate: $radius * $cos + px
+      $x-position: $radius * $cos + px
       $sin: sin($position * (pi() / 180))
-      $y-translate: $radius * $sin + px
+      $y-position: $radius * $sin + px
       li        
         &:nth-of-type(#{$i}n-#{$i})      
           +transform2d(scale(0.9) rotate($rotation) )
-          top: $y-translate
-          left: $x-translate
+          top: $y-position
+          left: $x-position
     &:hover
       +transform2d(scale(1) translate(0px, 0px))
       @for $i from 1 through ($badge-total + 1)
-        $radius: 93.333
+        $radius: 117
         $position: 360 / ($badge-total + 1) * $i
-        $rotation: $position
-        @if $rotation > 180
-          $rotation: -360 + $rotation
-        $rotation: $rotation + deg
         $cos: cos($position * (pi() / 180))
-        $x-translate: $radius * $cos + px
+        $x-position: $radius * $cos + px
         $sin: sin($position * (pi() / 180))
-        $y-translate: $radius * $sin + px
+        $y-position: $radius * $sin + px
         li        
           &:nth-of-type(#{$i}n-#{$i})
-            top: $y-translate
-            left: $x-translate
+            top: $y-position
+            left: $x-position
             &:hover
               +transform2d(scale(1) rotate(0))
               z-index: 50
@@ -136,7 +135,7 @@ header
       // &
       //   a
       //     +replace-text-with-dimensions('badge-color.png')
-      @each $badge in color, fonts, html5
+      @each $badge in color, clean-start, step-by-step, html5, fonts, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
         &.#{$badge}
           a
             +replace-text-with-dimensions('badge-#{$badge}.png')

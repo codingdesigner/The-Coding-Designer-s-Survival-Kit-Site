@@ -885,7 +885,7 @@ article#main aside.includes {
 body {
   position: relative;
   width: 100%;
-  background: #a52a2a url('images/dirt.jpg?1305037698');
+  background: #a52a2a url('images/dirt.jpg?1300250432');
 }
 
 header {
@@ -904,7 +904,7 @@ header:before {
   z-index: 0;
 }
 header hgroup {
-  background: transparent url('images/logo.png?1305037698') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
   padding-top: 36px;
   position: relative;
   left: 9px;
@@ -952,8 +952,8 @@ header hgroup h1 {
 #main aside.samples {
   position: absolute;
   z-index: 3;
-  top: -90px;
-  right: 200px;
+  top: -55px;
+  right: 205px;
   -moz-transform: scale(0.9);
   -webkit-transform: scale(0.9);
   -o-transform: scale(0.9);
@@ -974,8 +974,8 @@ header hgroup h1 {
   -o-transform: scale(0.9) rotate(40deg);
   -ms-transform: scale(0.9) rotate(40deg);
   transform: scale(0.9) rotate(40deg);
-  top: 45.558px;
-  left: 54.293px;
+  top: 59.993px;
+  left: 71.497px;
 }
 #main aside.samples li:nth-of-type(2n-2) {
   -moz-transform: scale(0.9) rotate(80deg);
@@ -983,8 +983,8 @@ header hgroup h1 {
   -o-transform: scale(0.9) rotate(80deg);
   -ms-transform: scale(0.9) rotate(80deg);
   transform: scale(0.9) rotate(80deg);
-  top: 69.798px;
-  left: 12.307px;
+  top: 91.915px;
+  left: 16.207px;
 }
 #main aside.samples li:nth-of-type(3n-3) {
   -moz-transform: scale(0.9) rotate(120deg);
@@ -992,8 +992,8 @@ header hgroup h1 {
   -o-transform: scale(0.9) rotate(120deg);
   -ms-transform: scale(0.9) rotate(120deg);
   transform: scale(0.9) rotate(120deg);
-  top: 61.38px;
-  left: -35.437px;
+  top: 80.829px;
+  left: -46.666px;
 }
 #main aside.samples li:nth-of-type(4n-4) {
   -moz-transform: scale(0.9) rotate(160deg);
@@ -1001,8 +1001,8 @@ header hgroup h1 {
   -o-transform: scale(0.9) rotate(160deg);
   -ms-transform: scale(0.9) rotate(160deg);
   transform: scale(0.9) rotate(160deg);
-  top: 24.241px;
-  left: -66.601px;
+  top: 31.922px;
+  left: -87.704px;
 }
 #main aside.samples li:nth-of-type(5n-5) {
   -moz-transform: scale(0.9) rotate(-160deg);
@@ -1010,8 +1010,8 @@ header hgroup h1 {
   -o-transform: scale(0.9) rotate(-160deg);
   -ms-transform: scale(0.9) rotate(-160deg);
   transform: scale(0.9) rotate(-160deg);
-  top: -24.241px;
-  left: -66.601px;
+  top: -31.922px;
+  left: -87.704px;
 }
 #main aside.samples li:nth-of-type(6n-6) {
   -moz-transform: scale(0.9) rotate(-120deg);
@@ -1019,8 +1019,8 @@ header hgroup h1 {
   -o-transform: scale(0.9) rotate(-120deg);
   -ms-transform: scale(0.9) rotate(-120deg);
   transform: scale(0.9) rotate(-120deg);
-  top: -61.38px;
-  left: -35.438px;
+  top: -80.829px;
+  left: -46.667px;
 }
 #main aside.samples li:nth-of-type(7n-7) {
   -moz-transform: scale(0.9) rotate(-80deg);
@@ -1028,8 +1028,8 @@ header hgroup h1 {
   -o-transform: scale(0.9) rotate(-80deg);
   -ms-transform: scale(0.9) rotate(-80deg);
   transform: scale(0.9) rotate(-80deg);
-  top: -69.798px;
-  left: 12.307px;
+  top: -91.915px;
+  left: 16.207px;
 }
 #main aside.samples li:nth-of-type(8n-8) {
   -moz-transform: scale(0.9) rotate(-40deg);
@@ -1037,17 +1037,17 @@ header hgroup h1 {
   -o-transform: scale(0.9) rotate(-40deg);
   -ms-transform: scale(0.9) rotate(-40deg);
   transform: scale(0.9) rotate(-40deg);
-  top: -45.558px;
-  left: 54.293px;
+  top: -59.993px;
+  left: 71.497px;
 }
 #main aside.samples li:nth-of-type(9n-9) {
-  -moz-transform: scale(0.9) rotate(0deg);
-  -webkit-transform: scale(0.9) rotate(0deg);
-  -o-transform: scale(0.9) rotate(0deg);
-  -ms-transform: scale(0.9) rotate(0deg);
-  transform: scale(0.9) rotate(0deg);
+  -moz-transform: scale(0.9) rotate(20deg);
+  -webkit-transform: scale(0.9) rotate(20deg);
+  -o-transform: scale(0.9) rotate(20deg);
+  -ms-transform: scale(0.9) rotate(20deg);
+  transform: scale(0.9) rotate(20deg);
   top: 0.0px;
-  left: 70.875px;
+  left: 93.333px;
 }
 #main aside.samples:hover {
   -moz-transform: scale(1) translate(0px, 0px);
@@ -1057,8 +1057,8 @@ header hgroup h1 {
   transform: scale(1) translate(0px, 0px);
 }
 #main aside.samples:hover li:nth-of-type(1n-1) {
-  top: 59.993px;
-  left: 71.497px;
+  top: 75.206px;
+  left: 89.627px;
 }
 #main aside.samples:hover li:nth-of-type(1n-1):hover {
   -moz-transform: scale(1) rotate(0);
@@ -1069,8 +1069,8 @@ header hgroup h1 {
   z-index: 50;
 }
 #main aside.samples:hover li:nth-of-type(2n-2) {
-  top: 91.915px;
-  left: 16.207px;
+  top: 115.223px;
+  left: 20.317px;
 }
 #main aside.samples:hover li:nth-of-type(2n-2):hover {
   -moz-transform: scale(1) rotate(0);
@@ -1081,8 +1081,8 @@ header hgroup h1 {
   z-index: 50;
 }
 #main aside.samples:hover li:nth-of-type(3n-3) {
-  top: 80.829px;
-  left: -46.666px;
+  top: 101.325px;
+  left: -58.5px;
 }
 #main aside.samples:hover li:nth-of-type(3n-3):hover {
   -moz-transform: scale(1) rotate(0);
@@ -1093,8 +1093,8 @@ header hgroup h1 {
   z-index: 50;
 }
 #main aside.samples:hover li:nth-of-type(4n-4) {
-  top: 31.922px;
-  left: -87.704px;
+  top: 40.016px;
+  left: -109.944px;
 }
 #main aside.samples:hover li:nth-of-type(4n-4):hover {
   -moz-transform: scale(1) rotate(0);
@@ -1105,8 +1105,8 @@ header hgroup h1 {
   z-index: 50;
 }
 #main aside.samples:hover li:nth-of-type(5n-5) {
-  top: -31.922px;
-  left: -87.704px;
+  top: -40.016px;
+  left: -109.944px;
 }
 #main aside.samples:hover li:nth-of-type(5n-5):hover {
   -moz-transform: scale(1) rotate(0);
@@ -1117,8 +1117,8 @@ header hgroup h1 {
   z-index: 50;
 }
 #main aside.samples:hover li:nth-of-type(6n-6) {
-  top: -80.829px;
-  left: -46.667px;
+  top: -101.325px;
+  left: -58.5px;
 }
 #main aside.samples:hover li:nth-of-type(6n-6):hover {
   -moz-transform: scale(1) rotate(0);
@@ -1129,8 +1129,8 @@ header hgroup h1 {
   z-index: 50;
 }
 #main aside.samples:hover li:nth-of-type(7n-7) {
-  top: -91.915px;
-  left: 16.207px;
+  top: -115.223px;
+  left: 20.317px;
 }
 #main aside.samples:hover li:nth-of-type(7n-7):hover {
   -moz-transform: scale(1) rotate(0);
@@ -1141,8 +1141,8 @@ header hgroup h1 {
   z-index: 50;
 }
 #main aside.samples:hover li:nth-of-type(8n-8) {
-  top: -59.993px;
-  left: 71.497px;
+  top: -75.206px;
+  left: 89.627px;
 }
 #main aside.samples:hover li:nth-of-type(8n-8):hover {
   -moz-transform: scale(1) rotate(0);
@@ -1154,7 +1154,7 @@ header hgroup h1 {
 }
 #main aside.samples:hover li:nth-of-type(9n-9) {
   top: 0.0px;
-  left: 93.333px;
+  left: 117px;
 }
 #main aside.samples:hover li:nth-of-type(9n-9):hover {
   -moz-transform: scale(1) rotate(0);
@@ -1215,27 +1215,87 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-color.png?1305557962');
+  background-image: url('images/badge-color.png?1305602935');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  width: 116px;
-  height: 116px;
+  width: 115px;
+  height: 115px;
 }
-#main aside.samples li.fonts a {
+#main aside.samples li.clean-start a {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-fonts.png?1305557951');
+  background-image: url('images/badge-clean-start.png?1305603033');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  width: 116px;
-  height: 116px;
+  width: 115px;
+  height: 115px;
+}
+#main aside.samples li.step-by-step a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('images/badge-step-by-step.png?1305603210');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 115px;
+  height: 115px;
 }
 #main aside.samples li.html5 a {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-html5.png?1305573785');
+  background-image: url('images/badge-html5.png?1305599834');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 115px;
+  height: 115px;
+}
+#main aside.samples li.fonts a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('images/badge-fonts.png?1305603078');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 115px;
+  height: 115px;
+}
+#main aside.samples li.sass-mixins a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('images/badge-sass-mixins.png?1305603114');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 115px;
+  height: 115px;
+}
+#main aside.samples li.ui-patterns a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('images/badge-ui-patterns.png?1305603274');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 115px;
+  height: 115px;
+}
+#main aside.samples li.drupal-ui-patterns a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('images/badge-drupal-ui-patterns.png?1305603334');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 115px;
+  height: 115px;
+}
+#main aside.samples li.code-viewer a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('images/badge-code-viewer.png?1305603155');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
