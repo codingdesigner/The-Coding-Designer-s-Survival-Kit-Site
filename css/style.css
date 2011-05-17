@@ -885,7 +885,8 @@ article#main aside.includes {
 body {
   position: relative;
   width: 100%;
-  background: #a52a2a url('images/dirt.jpg?1300250432');
+  background-color: #a52a2a;
+  background-image: url('images/dirt.jpg?1300250432');
 }
 
 header {
@@ -952,7 +953,7 @@ header hgroup h1 {
 #main aside.samples {
   position: absolute;
   z-index: 3;
-  top: -55px;
+  top: -64px;
   right: 205px;
   -moz-transform: scale(0.9);
   -webkit-transform: scale(0.9);
