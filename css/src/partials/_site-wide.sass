@@ -86,7 +86,6 @@ header
       @if $rotation == 0
         $rotation: $rotation + 20
       $rotation: $rotation + deg 
-      @debug $rotation
       $cos: cos($position * (pi() / 180))
       $x-position: $radius * $cos + px
       $sin: sin($position * (pi() / 180))
