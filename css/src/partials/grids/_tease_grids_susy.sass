@@ -1,0 +1,49 @@
+// BUILD THE GRID FOR YOUR SITE
+
+// HELPER CLASSES INTENDED FOR USE IN @EXTEND
+.container
+  +container
+  // uncomment to show grid background
+  +susy-grid-background
+.wireframe
+  outline: 1px dashed $white
+
+// BUILD THE GRID BY CALLING SUSY MIXINS ON DOM ELEMENTS
+body
+  #container
+    // @extend .container
+    > 
+      #main, footer
+        // +full
+
+article#main
+  .content
+    // +columns(4)
+    // +alpha
+  aside.includes
+    // +columns(2)
+    // +omega
+
+html
+  height: 100%
+body
+  +display-box
+  +box-orient(vertical)
+  +box-pack(center)
+  +box-align(stretch)
+  width: 100%
+  // min-width: 100%
+  padding-top: 10%
+  height: 90%
+  // @extend .wireframe
+  header
+    // +display-box
+    display: block
+    // +box-flex
+    // height: 200px
+    // width: 10000px
+  #container
+    // +display-box
+    // +box-flex
+    // height: 200px
+    display: block

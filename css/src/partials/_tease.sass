@@ -1,0 +1,125 @@
+/* Non-grid Layout and styling --------------------------------------------------------------
+
+body
+  // position: relative
+  // width: 100%
+  background-color: $brown 
+  // background-image: image_url('dirt-6.png'), image_url('dirt-5.png'), image_url('dirt-4.png'), image_url('dirt-3.png'), image_url('dirt-2.png'), image_url('dirt-1.jpg')
+  background-image: image_url('dirt.jpg')
+  
+    
+    
+header 
+  background-color: $white
+  position: relative
+  &:before
+    content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈"
+    @extend .logo-type
+    letter-spacing: -4px
+    +adjust-font-size-to($ms7)
+    color: $blue-ice
+    position: absolute
+    // top: -$baseline-half
+    top: 12px
+    width: 100%
+    overflow: hidden
+    z-index: 0
+  hgroup
+    // @extend .container
+    background: transparent image_url('logo.png') no-repeat 0 ($baseline * 1.5)
+    padding-top: $baseline * 1.5
+    // padding-top: $baseline * 1.5
+    position: relative
+    left: 9px
+    z-index: 1
+    margin: 0 auto
+    width: 475px
+    #{headers(all)}
+      @extend .logo-type
+      font-weight: 700
+      font-family: $font-proxima-nova-condensed
+    h2
+      margin-bottom: 0
+      position: relative
+      // left: 60px
+      // top: -3px
+      // font-size: 36px
+      // line-height: 36px
+      font-size: 32.8px
+      top: 0px
+      left: 55px
+      .wf-active &
+        +adjust-font-size-to($ms5)
+        top: -9px
+        left: 57px
+    h1
+      font-family: $font-proxima-nova
+      font-weight: 800
+      +adjust-font-size-to(69px)
+      position: relative
+      // top: -3px
+      // font-size: $ms7
+      // font-size: 69px
+      top: 0px
+      .wf-active &
+        +adjust-font-size-to($ms8)
+        top: -$baseline-half
+        
+
+      
+#container
+  background-color: transparentize($white, 0.2)
+  
+#main
+  position: relative
+  +padding-leader(2)
+  aside.samples
+    position: absolute
+    z-index: -3
+    top: -100px
+    left: 50%
+    +transform2d(scale(0.9))
+    +transition(all,0.5s)
+    $badge-total: 8
+    @for $i from 1 through ($badge-total + 1)
+      $radius: 230
+      $position: 360 / ($badge-total + 1) * $i
+      $rotation: $position
+      @if $rotation > 180
+        $rotation: -360 + $rotation
+      @if $rotation == 0
+        $rotation: $rotation + 20
+      $rotation: $rotation + deg 
+      $cos: cos($position * (pi() / 180))
+      $x-position: $radius * $cos + px
+      $sin: sin($position * (pi() / 180))
+      $y-position: $radius * $sin + px
+      li        
+        &:nth-of-type(#{$i}n-#{$i})      
+          +transform2d(rotate($rotation) )
+          top: $y-position
+          left: $x-position
+    ul
+      margin-bottom: 0
+      margin-left: 0
+    li
+      +no-bullets
+      position: absolute
+      top: 0
+      left: 0
+      width: 115px
+      height: 115px
+      z-index: 4
+      +border-radius($ms9)
+      +background-clip(padding-box)
+      +transition(all,0.5s)
+      a
+        +remove-link-underlines
+        display: block
+      @each $badge in color, clean-start, step-by-step, html5, fonts, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
+        &.#{$badge}
+          a
+            +replace-text-with-dimensions('badge-#{$badge}.png')
+
+        
+        

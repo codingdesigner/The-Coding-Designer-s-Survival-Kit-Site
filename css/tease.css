@@ -833,7 +833,7 @@ body.markup-elements article.element .example .markup + .show-source + p {
   clear: both;
 }
 
-.container, body #container, header hgroup {
+.container {
   *zoom: 1;
   margin: auto;
   width: 984px;
@@ -845,7 +845,7 @@ body.markup-elements article.element .example .markup + .show-source + p {
   background-image: linear-gradient(left, rgba(0, 0, 0, 0) 1.22%, rgba(100, 100, 225, 0.25) 1.22%, rgba(100, 100, 225, 0.25) 15.447%, rgba(0, 0, 0, 0) 15.447%, rgba(0, 0, 0, 0) 17.886%, rgba(100, 100, 225, 0.25) 17.886%, rgba(100, 100, 225, 0.25) 32.114%, rgba(0, 0, 0, 0) 32.114%, rgba(0, 0, 0, 0) 34.553%, rgba(100, 100, 225, 0.25) 34.553%, rgba(100, 100, 225, 0.25) 48.78%, rgba(0, 0, 0, 0) 48.78%, rgba(0, 0, 0, 0) 51.22%, rgba(100, 100, 225, 0.25) 51.22%, rgba(100, 100, 225, 0.25) 65.447%, rgba(0, 0, 0, 0) 65.447%, rgba(0, 0, 0, 0) 67.886%, rgba(100, 100, 225, 0.25) 67.886%, rgba(100, 100, 225, 0.25) 82.114%, rgba(0, 0, 0, 0) 82.114%, rgba(0, 0, 0, 0) 84.553%, rgba(100, 100, 225, 0.25) 84.553%, rgba(100, 100, 225, 0.25) 98.78%, rgba(0, 0, 0, 0) 98.78%, rgba(0, 0, 0, 0) 100%);
   background-position: left top;
 }
-.container:after, body #container:after, header hgroup:after {
+.container:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -855,42 +855,46 @@ body.markup-elements article.element .example .markup + .show-source + p {
 }
 
 .wireframe {
-  outline: 1px dashed red;
+  outline: 1px dashed white;
 }
 
-body #container > #main, body #container > footer {
-  clear: both;
-  margin-left: 1.22%;
-  margin-right: 1.22%;
+html {
+  height: 100%;
 }
 
-article#main .content {
-  display: inline;
-  float: left;
-  width: 64.228%;
-  margin-right: 2.439%;
+body {
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -moz-box-pack: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+  -moz-box-align: stretch;
+  -webkit-box-align: stretch;
+  box-align: stretch;
+  width: 100%;
+  padding-top: 10%;
+  height: 90%;
 }
-article#main aside.includes {
-  display: inline;
-  float: left;
-  width: 30.894%;
-  margin-right: 2.439%;
-  display: inline;
-  float: right;
-  margin-right: 1.22%;
-  #margin-left: -24px;
+body header {
+  display: block;
+}
+body #container {
+  display: block;
 }
 
 /* Non-grid Layout and styling -------------------------------------------------------------- */
 body {
-  position: relative;
-  width: 100%;
   background-color: #a52a2a;
   background-image: url('images/dirt.jpg?1300250432');
 }
 
 header {
   background-color: white;
+  position: relative;
 }
 header:before {
   content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
@@ -910,6 +914,8 @@ header hgroup {
   position: relative;
   left: 9px;
   z-index: 1;
+  margin: 0 auto;
+  width: 475px;
 }
 header hgroup h1, header hgroup h2, header hgroup h3, header hgroup h4, header hgroup h5, header hgroup h6 {
   font-weight: 700;
@@ -952,9 +958,9 @@ header hgroup h1 {
 }
 #main aside.samples {
   position: absolute;
-  z-index: 3;
-  top: -64px;
-  right: 205px;
+  z-index: -3;
+  top: -100px;
+  left: 50%;
   -moz-transform: scale(0.9);
   -webkit-transform: scale(0.9);
   -o-transform: scale(0.9);
@@ -970,200 +976,85 @@ header hgroup h1 {
   transition-duration: 0.5s;
 }
 #main aside.samples li:nth-of-type(1n-1) {
-  -moz-transform: scale(0.9) rotate(40deg);
-  -webkit-transform: scale(0.9) rotate(40deg);
-  -o-transform: scale(0.9) rotate(40deg);
-  -ms-transform: scale(0.9) rotate(40deg);
-  transform: scale(0.9) rotate(40deg);
-  top: 59.993px;
-  left: 71.497px;
+  -moz-transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+  top: 147.841px;
+  left: 176.19px;
 }
 #main aside.samples li:nth-of-type(2n-2) {
-  -moz-transform: scale(0.9) rotate(80deg);
-  -webkit-transform: scale(0.9) rotate(80deg);
-  -o-transform: scale(0.9) rotate(80deg);
-  -ms-transform: scale(0.9) rotate(80deg);
-  transform: scale(0.9) rotate(80deg);
-  top: 91.915px;
-  left: 16.207px;
+  -moz-transform: rotate(80deg);
+  -webkit-transform: rotate(80deg);
+  -o-transform: rotate(80deg);
+  -ms-transform: rotate(80deg);
+  transform: rotate(80deg);
+  top: 226.506px;
+  left: 39.939px;
 }
 #main aside.samples li:nth-of-type(3n-3) {
-  -moz-transform: scale(0.9) rotate(120deg);
-  -webkit-transform: scale(0.9) rotate(120deg);
-  -o-transform: scale(0.9) rotate(120deg);
-  -ms-transform: scale(0.9) rotate(120deg);
-  transform: scale(0.9) rotate(120deg);
-  top: 80.829px;
-  left: -46.666px;
+  -moz-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+  top: 199.186px;
+  left: -115.0px;
 }
 #main aside.samples li:nth-of-type(4n-4) {
-  -moz-transform: scale(0.9) rotate(160deg);
-  -webkit-transform: scale(0.9) rotate(160deg);
-  -o-transform: scale(0.9) rotate(160deg);
-  -ms-transform: scale(0.9) rotate(160deg);
-  transform: scale(0.9) rotate(160deg);
-  top: 31.922px;
-  left: -87.704px;
+  -moz-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  -o-transform: rotate(160deg);
+  -ms-transform: rotate(160deg);
+  transform: rotate(160deg);
+  top: 78.665px;
+  left: -216.129px;
 }
 #main aside.samples li:nth-of-type(5n-5) {
-  -moz-transform: scale(0.9) rotate(-160deg);
-  -webkit-transform: scale(0.9) rotate(-160deg);
-  -o-transform: scale(0.9) rotate(-160deg);
-  -ms-transform: scale(0.9) rotate(-160deg);
-  transform: scale(0.9) rotate(-160deg);
-  top: -31.922px;
-  left: -87.704px;
+  -moz-transform: rotate(-160deg);
+  -webkit-transform: rotate(-160deg);
+  -o-transform: rotate(-160deg);
+  -ms-transform: rotate(-160deg);
+  transform: rotate(-160deg);
+  top: -78.665px;
+  left: -216.129px;
 }
 #main aside.samples li:nth-of-type(6n-6) {
-  -moz-transform: scale(0.9) rotate(-120deg);
-  -webkit-transform: scale(0.9) rotate(-120deg);
-  -o-transform: scale(0.9) rotate(-120deg);
-  -ms-transform: scale(0.9) rotate(-120deg);
-  transform: scale(0.9) rotate(-120deg);
-  top: -80.829px;
-  left: -46.667px;
+  -moz-transform: rotate(-120deg);
+  -webkit-transform: rotate(-120deg);
+  -o-transform: rotate(-120deg);
+  -ms-transform: rotate(-120deg);
+  transform: rotate(-120deg);
+  top: -199.186px;
+  left: -115.0px;
 }
 #main aside.samples li:nth-of-type(7n-7) {
-  -moz-transform: scale(0.9) rotate(-80deg);
-  -webkit-transform: scale(0.9) rotate(-80deg);
-  -o-transform: scale(0.9) rotate(-80deg);
-  -ms-transform: scale(0.9) rotate(-80deg);
-  transform: scale(0.9) rotate(-80deg);
-  top: -91.915px;
-  left: 16.207px;
+  -moz-transform: rotate(-80deg);
+  -webkit-transform: rotate(-80deg);
+  -o-transform: rotate(-80deg);
+  -ms-transform: rotate(-80deg);
+  transform: rotate(-80deg);
+  top: -226.506px;
+  left: 39.939px;
 }
 #main aside.samples li:nth-of-type(8n-8) {
-  -moz-transform: scale(0.9) rotate(-40deg);
-  -webkit-transform: scale(0.9) rotate(-40deg);
-  -o-transform: scale(0.9) rotate(-40deg);
-  -ms-transform: scale(0.9) rotate(-40deg);
-  transform: scale(0.9) rotate(-40deg);
-  top: -59.993px;
-  left: 71.497px;
+  -moz-transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+  -o-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+  top: -147.841px;
+  left: 176.19px;
 }
 #main aside.samples li:nth-of-type(9n-9) {
-  -moz-transform: scale(0.9) rotate(20deg);
-  -webkit-transform: scale(0.9) rotate(20deg);
-  -o-transform: scale(0.9) rotate(20deg);
-  -ms-transform: scale(0.9) rotate(20deg);
-  transform: scale(0.9) rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
   top: 0.0px;
-  left: 93.333px;
-}
-#main aside.samples:hover {
-  -moz-transform: scale(1) translate(0px, 0px);
-  -webkit-transform: scale(1) translate(0px, 0px);
-  -o-transform: scale(1) translate(0px, 0px);
-  -ms-transform: scale(1) translate(0px, 0px);
-  transform: scale(1) translate(0px, 0px);
-}
-#main aside.samples:hover li:nth-of-type(1n-1) {
-  top: 75.206px;
-  left: 89.627px;
-}
-#main aside.samples:hover li:nth-of-type(1n-1):hover {
-  -moz-transform: scale(1) rotate(0);
-  -webkit-transform: scale(1) rotate(0);
-  -o-transform: scale(1) rotate(0);
-  -ms-transform: scale(1) rotate(0);
-  transform: scale(1) rotate(0);
-  z-index: 50;
-}
-#main aside.samples:hover li:nth-of-type(2n-2) {
-  top: 115.223px;
-  left: 20.317px;
-}
-#main aside.samples:hover li:nth-of-type(2n-2):hover {
-  -moz-transform: scale(1) rotate(0);
-  -webkit-transform: scale(1) rotate(0);
-  -o-transform: scale(1) rotate(0);
-  -ms-transform: scale(1) rotate(0);
-  transform: scale(1) rotate(0);
-  z-index: 50;
-}
-#main aside.samples:hover li:nth-of-type(3n-3) {
-  top: 101.325px;
-  left: -58.5px;
-}
-#main aside.samples:hover li:nth-of-type(3n-3):hover {
-  -moz-transform: scale(1) rotate(0);
-  -webkit-transform: scale(1) rotate(0);
-  -o-transform: scale(1) rotate(0);
-  -ms-transform: scale(1) rotate(0);
-  transform: scale(1) rotate(0);
-  z-index: 50;
-}
-#main aside.samples:hover li:nth-of-type(4n-4) {
-  top: 40.016px;
-  left: -109.944px;
-}
-#main aside.samples:hover li:nth-of-type(4n-4):hover {
-  -moz-transform: scale(1) rotate(0);
-  -webkit-transform: scale(1) rotate(0);
-  -o-transform: scale(1) rotate(0);
-  -ms-transform: scale(1) rotate(0);
-  transform: scale(1) rotate(0);
-  z-index: 50;
-}
-#main aside.samples:hover li:nth-of-type(5n-5) {
-  top: -40.016px;
-  left: -109.944px;
-}
-#main aside.samples:hover li:nth-of-type(5n-5):hover {
-  -moz-transform: scale(1) rotate(0);
-  -webkit-transform: scale(1) rotate(0);
-  -o-transform: scale(1) rotate(0);
-  -ms-transform: scale(1) rotate(0);
-  transform: scale(1) rotate(0);
-  z-index: 50;
-}
-#main aside.samples:hover li:nth-of-type(6n-6) {
-  top: -101.325px;
-  left: -58.5px;
-}
-#main aside.samples:hover li:nth-of-type(6n-6):hover {
-  -moz-transform: scale(1) rotate(0);
-  -webkit-transform: scale(1) rotate(0);
-  -o-transform: scale(1) rotate(0);
-  -ms-transform: scale(1) rotate(0);
-  transform: scale(1) rotate(0);
-  z-index: 50;
-}
-#main aside.samples:hover li:nth-of-type(7n-7) {
-  top: -115.223px;
-  left: 20.317px;
-}
-#main aside.samples:hover li:nth-of-type(7n-7):hover {
-  -moz-transform: scale(1) rotate(0);
-  -webkit-transform: scale(1) rotate(0);
-  -o-transform: scale(1) rotate(0);
-  -ms-transform: scale(1) rotate(0);
-  transform: scale(1) rotate(0);
-  z-index: 50;
-}
-#main aside.samples:hover li:nth-of-type(8n-8) {
-  top: -75.206px;
-  left: 89.627px;
-}
-#main aside.samples:hover li:nth-of-type(8n-8):hover {
-  -moz-transform: scale(1) rotate(0);
-  -webkit-transform: scale(1) rotate(0);
-  -o-transform: scale(1) rotate(0);
-  -ms-transform: scale(1) rotate(0);
-  transform: scale(1) rotate(0);
-  z-index: 50;
-}
-#main aside.samples:hover li:nth-of-type(9n-9) {
-  top: 0.0px;
-  left: 117px;
-}
-#main aside.samples:hover li:nth-of-type(9n-9):hover {
-  -moz-transform: scale(1) rotate(0);
-  -webkit-transform: scale(1) rotate(0);
-  -o-transform: scale(1) rotate(0);
-  -ms-transform: scale(1) rotate(0);
-  transform: scale(1) rotate(0);
-  z-index: 50;
+  left: 230px;
 }
 #main aside.samples ul {
   margin-bottom: 0;
