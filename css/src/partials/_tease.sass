@@ -10,17 +10,21 @@ body
     
     
 header 
-  background-color: $white
+  // background-color: $white
   position: relative
   &:before
     content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈"
     @extend .logo-type
     letter-spacing: -4px
     +adjust-font-size-to($ms7)
-    color: $blue-ice
+    // color: $blue-ice
+    color: mix($brown, $black)
+    color: change-color(mix($brown, $black), $alpha: 0.5)
+    color: change-color($red, $alpha: 0.2)
+    +text-shadow(rgba($black, 0.6) 1px 1px)
     position: absolute
     // top: -$baseline-half
-    top: 12px
+    top: 34px
     width: 100%
     overflow: hidden
     z-index: 0
@@ -31,9 +35,16 @@ header
     // padding-top: $baseline * 1.5
     position: relative
     left: 9px
-    z-index: 1
+    z-index: 5
     margin: 0 auto
-    width: 475px
+    width: 500px
+    color: $white
+    color: change-color($white, $alpha: 0.7)
+    
+    // +text-shadow(rgba($black, 0.5) -1px 0, rgba($black, 0.3) 0 -1px, rgba($white, 0.5) 0 1px, rgba($white, 0.5) 0 1px, rgba($white, 0.5) 0 1px, rgba($black, 0.3) -1px -2px)
+    //)
+    //, rgba($black, .2) 2px 2px 0, rgba($black, .2) 3px 3px 0)
+    @extend .wireframe
     #{headers(all)}
       @extend .logo-type
       font-weight: 700
@@ -72,10 +83,11 @@ header
   
 #main
   position: relative
+  z-index: 3
   +padding-leader(2)
   aside.samples
     position: absolute
-    z-index: -3
+    z-index: 2
     top: -100px
     left: 50%
     +transform2d(scale(0.9))
@@ -83,6 +95,7 @@ header
     $badge-total: 8
     @for $i from 1 through ($badge-total + 1)
       $radius: 230
+      // $radius: 100
       $position: 360 / ($badge-total + 1) * $i
       $rotation: $position
       @if $rotation > 180
@@ -92,6 +105,8 @@ header
       $rotation: $rotation + deg 
       $cos: cos($position * (pi() / 180))
       $x-position: $radius * $cos + px
+      // @debug $radius * $cos + '%'
+      // @debug $radius * $cos + px
       $sin: sin($position * (pi() / 180))
       $y-position: $radius * $sin + px
       li        
