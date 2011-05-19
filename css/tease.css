@@ -1,5 +1,4 @@
 /* Links -------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000317}}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,110 +20,90 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000320}}
 body {
   line-height: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000322}}
 ol, ul {
   list-style: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000324}}
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000326}}
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000328}}
 q, blockquote {
   quotes: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003101}}
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000330}}
 a img {
   border: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003115}}
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
 /* Typography -------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000311}}
 html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
 /* The following classes are for use with @extend. */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000316}}
 .serif {
   font-family: Georgia, serif;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000319}}
 .sans, .textinput, textarea, input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=time], input[type=number], input[type=range], input[type=search], input[type=color] {
   font-family: sans-serif;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000322}}
 .mono, pre, code, tt, body.markup-elements article.element .example .markup + .show-source {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000325}}
 .caps, .allcaps, caption, .smallcaps {
   letter-spacing: 0.1em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000328}}
 .body, body {
   font-family: ff-meta-serif-web-pro-1, ff-meta-serif-web-pro-2, Georgia, serif;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000331}}
 .headers, h1, h2, h3, h4, h5, h6 {
   font-family: refrigerator-deluxe-1, refrigerator-deluxe-2, sans-serif;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000335}}
-.logo-type, header:before, header hgroup h1, header hgroup h2, header hgroup h3, header hgroup h4, header hgroup h5, header hgroup h6 {
+.logo-type, #container:before, header hgroup h1, header hgroup h2, header hgroup h3, header hgroup h4, header hgroup h5, header hgroup h6 {
   font-family: proxima-nova-1, proxima-nova-2, sans-serif, refrigerator-deluxe-1, refrigerator-deluxe-2, sans-serif;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000338}}
 .allcaps, caption {
   text-transform: uppercase;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000342}}
 .amp {
   font-family: GoudyBookletter1911Regular, Goudy Old Style, Baskerville, Palatino, Georgia, serif;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000345}}
 .smallcaps {
   font-variant: small-caps;
 }
 
 /* Body -------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000352}}
 body {
   color: black;
   background: white;
@@ -132,14 +111,12 @@ body {
 
 /* Selected Text -------------------------------------------------------------- */
 /* -moz- must be declared separately */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000361}}
 ::-moz-selection {
   color: black;
   background: #ff69b4;
   text-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_defaults\.sass}line{font-family:\0000366}}
 ::selection {
   color: black;
   background: #ff69b4;
@@ -148,183 +125,200 @@ body {
 
 /* Establish baseline rhythm
  * from compass/typography/_vertical_rhythm */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/typography\/_vertical_rhythm\.scss}line{font-family:\0000326}}
 body {
   font-size: 87.5%;
   line-height: 1.714em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/typography\/_vertical_rhythm\.scss}line{font-family:\0000330}}
 html > body {
   font-size: 14px;
 }
 
+/* Non-semantic helper classes */
+/* for image replacement */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+/* Hide for both screenreaders and browsers
+ * css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden, #main .content, #main > footer {
+  display: none;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders
+ * www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+
+/* >> The Magnificent CLEARFIX: Updated to prevent margin-collapsing on child elements << j.mp/bestclearfix */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 /* Links -------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\000032}}
 a {
   color: #ff69b4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/typography\/links\/_link-colors\.scss}line{font-family:\0000318}}
 a:visited {
   color: #ff69b4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/typography\/links\/_link-colors\.scss}line{font-family:\0000324}}
 a:hover {
   color: #69ffb4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/typography\/links\/_link-colors\.scss}line{font-family:\0000327}}
 a:active {
   color: #69ffb4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\000037}}
 a {
   text-decoration: none;
   border-bottom: 1px solid #ff69b4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000311}}
 a:visited {
   border-bottom-color: #ff69b4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000317}}
 a:hover {
   border-bottom-color: #69ffb4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000320}}
 a:active {
   border-bottom-color: #69ffb4;
 }
 
 /* Headings -------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000310}}
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   text-transform: uppercase;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000315}}
 h1 {
   font-size: 3.375em;
   line-height: 1.016em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000318}}
 h2 {
   font-size: 2.963em;
   line-height: 1.157em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000321}}
 h3 {
   font-size: 2.25em;
   line-height: 1.524em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000324}}
 h4 {
   font-size: 1.975em;
   line-height: 1.736em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000327}}
 h5 {
   font-size: 1.5em;
   line-height: 1.143em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000330}}
 h6 {
   font-size: 1.317em;
   line-height: 1.302em;
 }
 
 /* Inline -------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000335}}
 cite, em, dfn, address, i {
   font-style: italic;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000338}}
 strong, dfn, b {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000341}}
 sup, sub {
   font-size: smaller;
   line-height: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000345}}
 sup {
   vertical-align: super;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000348}}
 sub {
   vertical-align: sub;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000351}}
 abbr, acronym {
   border-bottom: 1px dotted;
   cursor: help;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000355}}
 ins {
   text-decoration: none;
   border-bottom: 1px solid black;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000359}}
 del {
   text-decoration: line-through;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000362}}
 mark {
   background: red;
   background-color: rgba(255, 255, 0, 0.5);
   text-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000367}}
 small {
   font-size: 0.878em;
   line-height: 1.953em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000370}}
 q {
   font-style: italic;
   quotes: "“" "”";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000373}}
 q:before {
   content: open-quote;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000375}}
 q:after {
   content: close-quote;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000378}}
 q em {
   font-style: normal;
 }
 
 /* Block -------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000389}}
 p {
   margin-bottom: 1.714em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000392}}
 pre {
   margin: 1.714em;
   white-space: pre;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\0000396}}
 blockquote {
   margin: 1.714em 24px;
   font-style: italic;
@@ -332,50 +326,41 @@ blockquote {
 }
 
 /* Lists -------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003104}}
 ol, ul, dl {
   margin-bottom: 1.714em;
   margin-left: 24px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003108}}
 dl {
   margin-left: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003111}}
 ol {
   list-style: decimal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003114}}
 ul {
   list-style: disc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003116}}
 li ul {
   list-style-type: circle;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003119}}
 dt {
   margin-top: 1.714em;
   font-style: italic;
   color: black;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003123}}
 dt:first-of-type {
   margin-top: 0em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003126}}
 dd {
   padding-left: 24px;
 }
 
 /* Tables -------------------------------------------------------------- */
 /* tables still need 'cellspacing="0"' in the markup */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003133}}
 table {
   margin-bottom: 1.714em;
   width: 100%;
@@ -383,23 +368,19 @@ table {
   border-spacing: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003139}}
 table, td, th {
   vertical-align: top;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003142}}
 th, thead th {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003145}}
 th, td, caption {
   padding: 0.857em;
   text-align: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003149}}
 table, th {
   border-bottom-style: solid;
   border-bottom-width: 0.071em;
@@ -408,69 +389,56 @@ table, th {
   border-style: dotted;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003155}}
 tr.even td {
   background-color: gray;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003158}}
 tfoot {
   font-weight: bold;
 }
 
 /* Forms -------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\000038}}
 .input_tiny {
   width: 50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000311}}
 .input_small {
   width: 100px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000314}}
 .input_medium {
   width: 150px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000317}}
 .input_large {
   width: 200px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000320}}
 .input_xlarge {
   width: 250px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000323}}
 .input_xxlarge {
   width: 300px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000326}}
 .input_full {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000331}}
 .input_full_wrap {
   display: block;
   padding-right: 8px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000338}}
 ::-moz-focus-inner {
   border: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000341}}
 input[type="search"]::-webkit-search-decoration {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000344}}
 input,
 button,
 select,
@@ -482,7 +450,6 @@ textarea {
   vertical-align: middle;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000354}}
 button,
 input[type="reset"],
 input[type="submit"],
@@ -514,13 +481,11 @@ input[type="button"] {
   *padding-bottom: 0px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000377}}
 button {
   *padding-top: 1px;
   *padding-bottom: 1px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000382}}
 button[disabled],
 input[type="reset"][disabled],
 input[type="submit"][disabled],
@@ -528,7 +493,6 @@ input[type="button"][disabled] {
   color: #888888;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\0000388}}
 textarea,
 select,
 input[type="date"],
@@ -569,18 +533,15 @@ input[type="week"] {
   *height: auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003125}}
 input.placeholder-text,
 textarea.placeholder-text {
   color: #888888;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003129}}
 ::-webkit-input-placeholder {
   color: #888888;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003132}}
 textarea[disabled],
 select[disabled],
 input[type="date"][disabled],
@@ -600,7 +561,6 @@ input[type="week"][disabled] {
   color: #888888;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003150}}
 button:focus,
 button:active,
 input:focus,
@@ -615,7 +575,6 @@ textarea:active {
   z-index: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003165}}
 input[type="radio"]:focus,
 input[type="radio"]:active,
 input[type="checkbox"]:focus,
@@ -625,7 +584,6 @@ input[type="checkbox"]:active {
   box-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003173}}
 .is_webkit select {
   background-image: url(../images/select_arrow.gif);
   background-repeat: no-repeat;
@@ -633,20 +591,17 @@ input[type="checkbox"]:active {
   padding-right: 20px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003181}}
 textarea,
 select[multiple] {
   height: auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003185}}
 select[multiple],
 .is_webkit select[multiple] {
   background-image: none;
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003190}}
 textarea {
   min-height: 40px;
   overflow: auto;
@@ -654,14 +609,12 @@ textarea {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003196}}
 optgroup {
   color: black;
   font-style: normal;
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003224}}
 .ie6_button,
 * html button {
   background: #dddddd url(../images/button.png) repeat-x;
@@ -675,13 +628,11 @@ optgroup {
   width: auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003236}}
 * html button {
   padding-top: 1px;
   padding-bottom: 1px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003240}}
 .ie6_input,
 * html textarea,
 * html select {
@@ -695,24 +646,20 @@ optgroup {
   vertical-align: top;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003252}}
 * html select {
   margin-top: 1px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003255}}
 .placeholder_text,
 .ie6_input_disabled,
 .ie6_button_disabled {
   color: #888888;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_formalize\.sass}line{font-family:\00003260}}
 .ie6_input_disabled {
   background: #eeeeee;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_form-defaults\.sass}line{font-family:\000036}}
 fieldset {
   margin-bottom: 1.714em;
   border-style: solid;
@@ -722,23 +669,19 @@ fieldset {
   border-style: dotted;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_form-defaults\.sass}line{font-family:\0000312}}
 legend {
   padding: 0 0.25em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_form-defaults\.sass}line{font-family:\0000315}}
 label, input[type=button], input[type=submit], button {
   cursor: pointer;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_form-defaults\.sass}line{font-family:\0000318}}
 label {
   font-weight: bold;
   margin-right: 0.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_form-defaults\.sass}line{font-family:\0000322}}
 .textinput, textarea, input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=time], input[type=number], input[type=range], input[type=search], input[type=color] {
   font-size: 1em;
   line-height: 1.714em;
@@ -758,27 +701,22 @@ label {
   height: 2.571;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_form-defaults\.sass}line{font-family:\0000335}}
 textarea {
   height: 11.143;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_form-defaults\.sass}line{font-family:\0000345}}
 input[type=search] {
   -webkit-appearance: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_form-defaults\.sass}line{font-family:\0000347}}
 input[type=search]::-webkit-search-decoration {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_form-defaults\.sass}line{font-family:\0000350}}
 button, input[type=button], input[type=submit] {
   width: auto;
   overflow: visible;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_form-defaults\.sass}line{font-family:\0000355}}
 textarea {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -787,36 +725,30 @@ textarea {
   width: 304px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_form-defaults\.sass}line{font-family:\0000360}}
 input[type="radio"], input[type="checkbox"] {
   margin-left: 0.25em;
   margin-right: 0.25em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/forms\/_form-defaults\.sass}line{font-family:\0000364}}
 textarea, input:not([type="radio"]) {
   max-width: 100%;
 }
 
 /* Images -------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003173}}
 img {
   vertical-align: text-bottom;
   max-width: 100%;
   -ms-interpolation-mode: bicubic;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003177}}
 img.left {
   float: left;
   margin: 12px 24px 12px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/defaults\/_elements\.sass}line{font-family:\00003180}}
 img.right {
   float: right;
   margin: 12px 0 12px 24px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/survival_kit\/_survival-kit\.sass}line{font-family:\000035}}
 body.markup-elements h1.section-title {
   font-size: 2.25em;
   line-height: 1.524em;
@@ -824,47 +756,37 @@ body.markup-elements h1.section-title {
   text-transform: uppercase;
   padding-left: 12px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/survival_kit\/_survival-kit\.sass}line{font-family:\0000310}}
 body.markup-elements h1.section-title a {
   color: black;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/typography\/links\/_link-colors\.scss}line{font-family:\0000318}}
 body.markup-elements h1.section-title a:visited {
   color: black;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/typography\/links\/_link-colors\.scss}line{font-family:\0000324}}
 body.markup-elements h1.section-title a:hover {
   color: #ff69b4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/typography\/links\/_link-colors\.scss}line{font-family:\0000327}}
 body.markup-elements h1.section-title a:active {
   color: #ff69b4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\000037}}
 body.markup-elements h1.section-title a {
   text-decoration: none;
   border-bottom: 1px solid black;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000311}}
 body.markup-elements h1.section-title a:visited {
   border-bottom-color: black;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000317}}
 body.markup-elements h1.section-title a:hover {
   border-bottom-color: #ff69b4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000320}}
 body.markup-elements h1.section-title a:active {
   border-bottom-color: #ff69b4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/survival_kit\/_survival-kit\.sass}line{font-family:\0000313}}
 body.markup-elements article.element {
   *zoom: 1;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 24px;
   padding-bottom: 23px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000322}}
 body.markup-elements article.element:after {
   content: "\0020";
   display: block;
@@ -873,13 +795,11 @@ body.markup-elements article.element:after {
   overflow: hidden;
   visibility: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000355}}
 body.markup-elements article.element:last-child {
   padding-bottom: 0;
   border-bottom-width: 0;
   margin-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/survival_kit\/_survival-kit\.sass}line{font-family:\0000315}}
 body.markup-elements article.element h2.element-title {
   font-size: 1em;
   line-height: 1.714em;
@@ -888,40 +808,31 @@ body.markup-elements article.element h2.element-title {
   text-transform: uppercase;
   padding-left: 12px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/survival_kit\/_survival-kit\.sass}line{font-family:\0000321}}
 body.markup-elements article.element h2.element-title a {
   color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/typography\/links\/_link-colors\.scss}line{font-family:\0000318}}
 body.markup-elements article.element h2.element-title a:visited {
   color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/typography\/links\/_link-colors\.scss}line{font-family:\0000324}}
 body.markup-elements article.element h2.element-title a:hover {
   color: #ff69b4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/typography\/links\/_link-colors\.scss}line{font-family:\0000327}}
 body.markup-elements article.element h2.element-title a:active {
   color: #ff69b4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\000037}}
 body.markup-elements article.element h2.element-title a {
   text-decoration: none;
   border-bottom: 1px solid white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000311}}
 body.markup-elements article.element h2.element-title a:visited {
   border-bottom-color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000317}}
 body.markup-elements article.element h2.element-title a:hover {
   border-bottom-color: #ff69b4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000320}}
 body.markup-elements article.element h2.element-title a:active {
   border-bottom-color: #ff69b4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/survival_kit\/_survival-kit\.sass}line{font-family:\0000324}}
 body.markup-elements article.element .example {
   *zoom: 1;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
@@ -929,7 +840,6 @@ body.markup-elements article.element .example {
   padding-bottom: 11px;
   *zoom: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000322}}
 body.markup-elements article.element .example:after {
   content: "\0020";
   display: block;
@@ -938,13 +848,11 @@ body.markup-elements article.element .example:after {
   overflow: hidden;
   visibility: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000355}}
 body.markup-elements article.element .example:last-child {
   padding-bottom: 0;
   border-bottom-width: 0;
   margin-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000322}}
 body.markup-elements article.element .example:after {
   content: "\0020";
   display: block;
@@ -953,14 +861,12 @@ body.markup-elements article.element .example:after {
   overflow: hidden;
   visibility: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/survival_kit\/_survival-kit\.sass}line{font-family:\0000327}}
 body.markup-elements article.element .example .markup {
   display: inline;
   float: left;
   width: 64.228%;
   margin-right: 2.439%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/survival_kit\/_survival-kit\.sass}line{font-family:\0000329}}
 body.markup-elements article.element .example .markup + .show-source {
   display: inline;
   float: left;
@@ -971,16 +877,13 @@ body.markup-elements article.element .example .markup + .show-source {
   margin-right: 0;
   #margin-left: -24px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/survival_kit\/_survival-kit\.sass}line{font-family:\0000333}}
 body.markup-elements article.element .example .markup + .show-source .show-hide {
   text-align: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/survival_kit\/_survival-kit\.sass}line{font-family:\0000335}}
 body.markup-elements article.element .example .markup + .show-source + p {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/grids\/_tease_grids_susy\.sass}line{font-family:\000034}}
 .container {
   *zoom: 1;
   margin: auto;
@@ -993,7 +896,6 @@ body.markup-elements article.element .example .markup + .show-source + p {
   background-image: linear-gradient(left, rgba(0, 0, 0, 0) 1.22%, rgba(100, 100, 225, 0.25) 1.22%, rgba(100, 100, 225, 0.25) 15.447%, rgba(0, 0, 0, 0) 15.447%, rgba(0, 0, 0, 0) 17.886%, rgba(100, 100, 225, 0.25) 17.886%, rgba(100, 100, 225, 0.25) 32.114%, rgba(0, 0, 0, 0) 32.114%, rgba(0, 0, 0, 0) 34.553%, rgba(100, 100, 225, 0.25) 34.553%, rgba(100, 100, 225, 0.25) 48.78%, rgba(0, 0, 0, 0) 48.78%, rgba(0, 0, 0, 0) 51.22%, rgba(100, 100, 225, 0.25) 51.22%, rgba(100, 100, 225, 0.25) 65.447%, rgba(0, 0, 0, 0) 65.447%, rgba(0, 0, 0, 0) 67.886%, rgba(100, 100, 225, 0.25) 67.886%, rgba(100, 100, 225, 0.25) 82.114%, rgba(0, 0, 0, 0) 82.114%, rgba(0, 0, 0, 0) 84.553%, rgba(100, 100, 225, 0.25) 84.553%, rgba(100, 100, 225, 0.25) 98.78%, rgba(0, 0, 0, 0) 98.78%, rgba(0, 0, 0, 0) 100%);
   background-position: left top;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000322}}
 .container:after {
   content: "\0020";
   display: block;
@@ -1003,17 +905,14 @@ body.markup-elements article.element .example .markup + .show-source + p {
   visibility: hidden;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/grids\/_tease_grids_susy\.sass}line{font-family:\000038}}
-.wireframe, header hgroup {
+.wireframe {
   outline: 1px dashed red;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/grids\/_tease_grids_susy\.sass}line{font-family:\0000327}}
 html {
   height: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/grids\/_tease_grids_susy\.sass}line{font-family:\0000329}}
 body {
   display: -moz-box;
   display: -webkit-box;
@@ -1028,78 +927,86 @@ body {
   -webkit-box-align: stretch;
   box-align: stretch;
   width: 100%;
-  padding-top: 10%;
-  height: 90%;
+  height: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/grids\/_tease_grids_susy\.sass}line{font-family:\0000339}}
-body header {
-  display: block;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/grids\/_tease_grids_susy\.sass}line{font-family:\0000345}}
 body #container {
   display: block;
 }
 
 /* Non-grid Layout and styling -------------------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\000033}}
 body {
   background-color: #a52a2a;
-  background-image: url('images/dirt.jpg?1300250432');
+  background-image: url('images/dirt.jpg?1305037698');
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\0000312}}
-header {
-  position: relative;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\0000315}}
-header:before {
+#container:before {
   content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
   letter-spacing: -4px;
-  font-size: 4.444em;
-  line-height: 1.157em;
+  font-size: 3.375em;
+  line-height: 1.016em;
   color: #521515;
   color: rgba(82, 21, 21, 0.5);
   color: rgba(255, 0, 0, 0.2);
   text-shadow: rgba(0, 0, 0, 0.6) 1px 1px;
   position: absolute;
-  top: 34px;
+  top: 50%;
   width: 100%;
   overflow: hidden;
   z-index: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\0000331}}
+
+header {
+  position: relative;
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -moz-box-pack: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+  -moz-box-align: center;
+  -webkit-box-align: center;
+  box-align: center;
+}
 header hgroup {
-  background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1305037698') no-repeat 0 36px;
   padding-top: 36px;
   position: relative;
-  left: 9px;
+  margin-left: 101px;
   z-index: 5;
-  margin: 0 auto;
-  width: 500px;
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -moz-box-pack: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+  -moz-box-align: end;
+  -webkit-box-align: end;
+  box-align: end;
   color: white;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\0000348}}
 header hgroup h1, header hgroup h2, header hgroup h3, header hgroup h4, header hgroup h5, header hgroup h6 {
   font-weight: 700;
   font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\0000352}}
 header hgroup h2 {
   margin-bottom: 0;
   position: relative;
   font-size: 32.8px;
   top: 0px;
-  left: 55px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\0000362}}
 .wf-active header hgroup h2 {
   font-size: 2.963em;
   line-height: 1.157em;
   top: -9px;
-  left: 57px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\0000366}}
 header hgroup h1 {
   font-family: proxima-nova-1, proxima-nova-2, sans-serif;
   font-weight: 800;
@@ -1108,30 +1015,45 @@ header hgroup h1 {
   position: relative;
   top: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\0000375}}
 .wf-active header hgroup h1 {
   font-size: 5.063em;
   line-height: 1.016em;
   top: -12px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\0000381}}
-#container {
-  background-color: rgba(255, 255, 255, 0.8);
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\0000384}}
 #main {
   position: relative;
   z-index: 3;
-  padding-top: 3.429em;
+  width: 1px;
+  margin: 0 auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\0000388}}
 #main aside.samples {
   position: absolute;
   z-index: 2;
   top: -100px;
-  left: 50%;
+  background-color: rgba(255, 0, 0, 0.2);
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 40s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
   -moz-transform: scale(0.9);
   -webkit-transform: scale(0.9);
   -o-transform: scale(0.9);
@@ -1146,102 +1068,109 @@ header hgroup h1 {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003113}}
 #main aside.samples li:nth-of-type(1n-1) {
+  top: 212.12px;
+  left: 252.795px;
+}
+#main aside.samples li:nth-of-type(1n-1) a {
   -moz-transform: rotate(40deg);
   -webkit-transform: rotate(40deg);
   -o-transform: rotate(40deg);
   -ms-transform: rotate(40deg);
   transform: rotate(40deg);
-  top: 147.841px;
-  left: 176.19px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003113}}
 #main aside.samples li:nth-of-type(2n-2) {
+  top: 324.987px;
+  left: 57.304px;
+}
+#main aside.samples li:nth-of-type(2n-2) a {
   -moz-transform: rotate(80deg);
   -webkit-transform: rotate(80deg);
   -o-transform: rotate(80deg);
   -ms-transform: rotate(80deg);
   transform: rotate(80deg);
-  top: 226.506px;
-  left: 39.939px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003113}}
 #main aside.samples li:nth-of-type(3n-3) {
+  top: 285.788px;
+  left: -165.0px;
+}
+#main aside.samples li:nth-of-type(3n-3) a {
   -moz-transform: rotate(120deg);
   -webkit-transform: rotate(120deg);
   -o-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
   transform: rotate(120deg);
-  top: 199.186px;
-  left: -115.0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003113}}
 #main aside.samples li:nth-of-type(4n-4) {
+  top: 112.867px;
+  left: -310.099px;
+}
+#main aside.samples li:nth-of-type(4n-4) a {
   -moz-transform: rotate(160deg);
   -webkit-transform: rotate(160deg);
   -o-transform: rotate(160deg);
   -ms-transform: rotate(160deg);
   transform: rotate(160deg);
-  top: 78.665px;
-  left: -216.129px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003113}}
 #main aside.samples li:nth-of-type(5n-5) {
+  top: -112.867px;
+  left: -310.099px;
+}
+#main aside.samples li:nth-of-type(5n-5) a {
   -moz-transform: rotate(-160deg);
   -webkit-transform: rotate(-160deg);
   -o-transform: rotate(-160deg);
   -ms-transform: rotate(-160deg);
   transform: rotate(-160deg);
-  top: -78.665px;
-  left: -216.129px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003113}}
 #main aside.samples li:nth-of-type(6n-6) {
+  top: -285.788px;
+  left: -165.0px;
+}
+#main aside.samples li:nth-of-type(6n-6) a {
   -moz-transform: rotate(-120deg);
   -webkit-transform: rotate(-120deg);
   -o-transform: rotate(-120deg);
   -ms-transform: rotate(-120deg);
   transform: rotate(-120deg);
-  top: -199.186px;
-  left: -115.0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003113}}
 #main aside.samples li:nth-of-type(7n-7) {
+  top: -324.987px;
+  left: 57.304px;
+}
+#main aside.samples li:nth-of-type(7n-7) a {
   -moz-transform: rotate(-80deg);
   -webkit-transform: rotate(-80deg);
   -o-transform: rotate(-80deg);
   -ms-transform: rotate(-80deg);
   transform: rotate(-80deg);
-  top: -226.506px;
-  left: 39.939px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003113}}
 #main aside.samples li:nth-of-type(8n-8) {
+  top: -212.12px;
+  left: 252.795px;
+}
+#main aside.samples li:nth-of-type(8n-8) a {
   -moz-transform: rotate(-40deg);
   -webkit-transform: rotate(-40deg);
   -o-transform: rotate(-40deg);
   -ms-transform: rotate(-40deg);
   transform: rotate(-40deg);
-  top: -147.841px;
-  left: 176.19px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003113}}
 #main aside.samples li:nth-of-type(9n-9) {
+  top: 0.0px;
+  left: 330px;
+}
+#main aside.samples li:nth-of-type(9n-9) a {
   -moz-transform: rotate(20deg);
   -webkit-transform: rotate(20deg);
   -o-transform: rotate(20deg);
   -ms-transform: rotate(20deg);
   transform: rotate(20deg);
-  top: 0.0px;
-  left: 230px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003117}}
 #main aside.samples ul {
   margin-bottom: 0;
   margin-left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003120}}
 #main aside.samples li {
   list-style: none;
   position: absolute;
@@ -1270,119 +1199,125 @@ header hgroup h1 {
   -webkit-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
+  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/1\.8\/gems\/compass-0\.11\.1\/frameworks\/compass\/stylesheets\/compass\/typography\/lists\/_bullets\.scss}line{font-family:\0000311}}
 #main aside.samples li li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003131}}
 #main aside.samples li a {
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000332}}
 #main aside.samples li a {
   border-bottom: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/mixins\/_helpers\.sass}line{font-family:\0000334}}
 #main aside.samples li a:hover {
   border-bottom: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003136}}
+#main aside.samples li a:hover {
+  -moz-transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -o-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
 #main aside.samples li.color a {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-color.png?1305613384');
+  background-image: url('images/badge-color.png?1305653998');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
   height: 115px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003136}}
 #main aside.samples li.clean-start a {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-clean-start.png?1305686022');
+  background-image: url('images/badge-clean-start.png?1305654290');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
   height: 115px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003136}}
 #main aside.samples li.step-by-step a {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-step-by-step.png?1305686022');
+  background-image: url('images/badge-step-by-step.png?1305654237');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
   height: 115px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003136}}
 #main aside.samples li.html5 a {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-html5.png?1305613384');
+  background-image: url('images/badge-html5.png?1305653998');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
   height: 115px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003136}}
 #main aside.samples li.fonts a {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-fonts.png?1305686022');
+  background-image: url('images/badge-fonts.png?1305654280');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
   height: 115px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003136}}
 #main aside.samples li.sass-mixins a {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-sass-mixins.png?1305686022');
+  background-image: url('images/badge-sass-mixins.png?1305654266');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
   height: 115px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003136}}
 #main aside.samples li.ui-patterns a {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-ui-patterns.png?1305686022');
+  background-image: url('images/badge-ui-patterns.png?1305654208');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
   height: 115px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003136}}
 #main aside.samples li.drupal-ui-patterns a {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-drupal-ui-patterns.png?1305686022');
+  background-image: url('images/badge-drupal-ui-patterns.png?1305654180');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
   height: 115px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mason\/www\/coding_designer_site\/work\/css\/src\/partials\/_tease\.sass}line{font-family:\00003136}}
 #main aside.samples li.code-viewer a {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-code-viewer.png?1305686022');
+  background-image: url('images/badge-code-viewer.png?1305654253');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;

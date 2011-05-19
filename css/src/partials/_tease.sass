@@ -7,16 +7,13 @@ body
   // background-image: image_url('dirt-6.png'), image_url('dirt-5.png'), image_url('dirt-4.png'), image_url('dirt-3.png'), image_url('dirt-2.png'), image_url('dirt-1.jpg')
   background-image: image_url('dirt.jpg')
   
-    
-    
-header 
-  // background-color: $white
-  position: relative
+  
+#container
   &:before
     content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈"
     @extend .logo-type
     letter-spacing: -4px
-    +adjust-font-size-to($ms7)
+    +adjust-font-size-to($ms6)
     // color: $blue-ice
     color: mix($brown, $black)
     color: change-color(mix($brown, $black), $alpha: 0.5)
@@ -24,31 +21,52 @@ header
     +text-shadow(rgba($black, 0.6) 1px 1px)
     position: absolute
     // top: -$baseline-half
-    top: 34px
+    // top: 46px
+    top: 50%
     width: 100%
     overflow: hidden
     z-index: 0
+    // +display-box
+  
+    
+    
+header 
+  // background-color: $white
+  position: relative
+  +display-box
+  +box-orient(vertical)
+  +box-pack(center)
+  +box-align(center)
+  
   hgroup
     // @extend .container
     background: transparent image_url('logo.png') no-repeat 0 ($baseline * 1.5)
     padding-top: $baseline * 1.5
     // padding-top: $baseline * 1.5
     position: relative
-    left: 9px
+    margin-left: 101px
     z-index: 5
-    margin: 0 auto
-    width: 500px
+    // margin: 0 auto
+    // width: 500px
+    +display-box
+    +box-orient(vertical)
+    +box-pack(center)
+    +box-align(end)
     color: $white
-    color: change-color($white, $alpha: 0.7)
-    
+    color: change-color($white, $alpha: 0.8)
+    +text-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
     // +text-shadow(rgba($black, 0.5) -1px 0, rgba($black, 0.3) 0 -1px, rgba($white, 0.5) 0 1px, rgba($white, 0.5) 0 1px, rgba($white, 0.5) 0 1px, rgba($black, 0.3) -1px -2px)
     //)
     //, rgba($black, .2) 2px 2px 0, rgba($black, .2) 3px 3px 0)
-    @extend .wireframe
+    // @extend .wireframe
     #{headers(all)}
       @extend .logo-type
       font-weight: 700
       font-family: $font-proxima-nova-condensed
+      // display: inline-block
+      // +background-clip(padding-box)
+      // border: 1px solid $white
+      // @extend .wireframe
     h2
       margin-bottom: 0
       position: relative
@@ -58,11 +76,11 @@ header
       // line-height: 36px
       font-size: 32.8px
       top: 0px
-      left: 55px
+      // left: 55px
       .wf-active &
         +adjust-font-size-to($ms5)
         top: -9px
-        left: 57px
+        // left: 57px
     h1
       font-family: $font-proxima-nova
       font-weight: 800
@@ -79,22 +97,42 @@ header
 
       
 #container
-  background-color: transparentize($white, 0.2)
+  // background-color: transparentize($white, 0.2)
   
+  
+// define animation
+@-webkit-keyframes spin
+  0%
+    +transform2d(rotate(0deg))
+  100%
+    +transform2d(rotate(360deg))
+      
+
 #main
+  // display: none
   position: relative
   z-index: 3
-  +padding-leader(2)
+  // +padding-leader(2)
+  width: 1px
+  margin: 0 auto
+  // background-color: rgba($red, 0.2)
+  // &:before
+  //   content: 'foo'
   aside.samples
     position: absolute
     z-index: 2
     top: -100px
-    left: 50%
+    // left: 50%
+    background-color: rgba($red, 0.2)
+    -webkit-animation-name: spin
+    -webkit-animation-duration: 40s
+    -webkit-animation-timing-function: linear
+    -webkit-animation-iteration-count: infinite
     +transform2d(scale(0.9))
     +transition(all,0.5s)
     $badge-total: 8
     @for $i from 1 through ($badge-total + 1)
-      $radius: 230
+      $radius: 330
       // $radius: 100
       $position: 360 / ($badge-total + 1) * $i
       $rotation: $position
@@ -111,9 +149,10 @@ header
       $y-position: $radius * $sin + px
       li        
         &:nth-of-type(#{$i}n-#{$i})      
-          +transform2d(rotate($rotation) )
           top: $y-position
           left: $x-position
+          a
+            +transform2d(rotate($rotation) )
     ul
       margin-bottom: 0
       margin-left: 0
@@ -128,13 +167,21 @@ header
       +border-radius($ms9)
       +background-clip(padding-box)
       +transition(all,0.5s)
+      +box-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
       a
+        +transition(all,0.5s)
         +remove-link-underlines
         display: block
+        &:hover
+          +transform2d(rotate(0) )
       @each $badge in color, clean-start, step-by-step, html5, fonts, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
         &.#{$badge}
           a
             +replace-text-with-dimensions('badge-#{$badge}.png')
 
-        
+#main
+  .content
+    @extend .hidden  
+  > footer  
+    @extend .hidden  
         
