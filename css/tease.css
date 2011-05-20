@@ -974,7 +974,6 @@ header hgroup {
   background: transparent url('images/logo.png?1305037698') no-repeat 0 36px;
   padding-top: 36px;
   position: relative;
-  margin-left: 101px;
   z-index: 5;
   display: -moz-box;
   display: -webkit-box;
@@ -1039,6 +1038,24 @@ header hgroup h1 {
   }
 }
 
+@-webkit-keyframes spin-back {
+  0% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
 #main {
   position: relative;
   z-index: 3;
@@ -1048,10 +1065,9 @@ header hgroup h1 {
 #main aside.samples {
   position: absolute;
   z-index: 2;
-  top: -100px;
-  background-color: rgba(255, 0, 0, 0.2);
+  top: -57.5px;
   -webkit-animation-name: spin;
-  -webkit-animation-duration: 40s;
+  -webkit-animation-duration: 80s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -moz-transform: scale(0.9);
@@ -1072,107 +1088,55 @@ header hgroup h1 {
   top: 212.12px;
   left: 252.795px;
 }
-#main aside.samples li:nth-of-type(1n-1) a {
-  -moz-transform: rotate(40deg);
-  -webkit-transform: rotate(40deg);
-  -o-transform: rotate(40deg);
-  -ms-transform: rotate(40deg);
-  transform: rotate(40deg);
-}
 #main aside.samples li:nth-of-type(2n-2) {
   top: 324.987px;
   left: 57.304px;
-}
-#main aside.samples li:nth-of-type(2n-2) a {
-  -moz-transform: rotate(80deg);
-  -webkit-transform: rotate(80deg);
-  -o-transform: rotate(80deg);
-  -ms-transform: rotate(80deg);
-  transform: rotate(80deg);
 }
 #main aside.samples li:nth-of-type(3n-3) {
   top: 285.788px;
   left: -165.0px;
 }
-#main aside.samples li:nth-of-type(3n-3) a {
-  -moz-transform: rotate(120deg);
-  -webkit-transform: rotate(120deg);
-  -o-transform: rotate(120deg);
-  -ms-transform: rotate(120deg);
-  transform: rotate(120deg);
-}
 #main aside.samples li:nth-of-type(4n-4) {
   top: 112.867px;
   left: -310.099px;
-}
-#main aside.samples li:nth-of-type(4n-4) a {
-  -moz-transform: rotate(160deg);
-  -webkit-transform: rotate(160deg);
-  -o-transform: rotate(160deg);
-  -ms-transform: rotate(160deg);
-  transform: rotate(160deg);
 }
 #main aside.samples li:nth-of-type(5n-5) {
   top: -112.867px;
   left: -310.099px;
 }
-#main aside.samples li:nth-of-type(5n-5) a {
-  -moz-transform: rotate(-160deg);
-  -webkit-transform: rotate(-160deg);
-  -o-transform: rotate(-160deg);
-  -ms-transform: rotate(-160deg);
-  transform: rotate(-160deg);
-}
 #main aside.samples li:nth-of-type(6n-6) {
   top: -285.788px;
   left: -165.0px;
-}
-#main aside.samples li:nth-of-type(6n-6) a {
-  -moz-transform: rotate(-120deg);
-  -webkit-transform: rotate(-120deg);
-  -o-transform: rotate(-120deg);
-  -ms-transform: rotate(-120deg);
-  transform: rotate(-120deg);
 }
 #main aside.samples li:nth-of-type(7n-7) {
   top: -324.987px;
   left: 57.304px;
 }
-#main aside.samples li:nth-of-type(7n-7) a {
-  -moz-transform: rotate(-80deg);
-  -webkit-transform: rotate(-80deg);
-  -o-transform: rotate(-80deg);
-  -ms-transform: rotate(-80deg);
-  transform: rotate(-80deg);
-}
 #main aside.samples li:nth-of-type(8n-8) {
   top: -212.12px;
   left: 252.795px;
-}
-#main aside.samples li:nth-of-type(8n-8) a {
-  -moz-transform: rotate(-40deg);
-  -webkit-transform: rotate(-40deg);
-  -o-transform: rotate(-40deg);
-  -ms-transform: rotate(-40deg);
-  transform: rotate(-40deg);
 }
 #main aside.samples li:nth-of-type(9n-9) {
   top: 0.0px;
   left: 330px;
 }
-#main aside.samples li:nth-of-type(9n-9) a {
-  -moz-transform: rotate(20deg);
-  -webkit-transform: rotate(20deg);
-  -o-transform: rotate(20deg);
-  -ms-transform: rotate(20deg);
-  transform: rotate(20deg);
-}
 #main aside.samples ul {
-  margin-bottom: 0;
-  margin-left: 0;
+  margin: 0 0 0 0;
+  list-style: none;
+  position: absolute;
+  top: -57.5px;
+  left: -57.5px;
+}
+#main aside.samples ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
 }
 #main aside.samples li {
-  list-style: none;
+  -webkit-animation-name: spin-back;
+  -webkit-animation-duration: 80s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
   position: absolute;
   top: 0;
   left: 0;
@@ -1203,11 +1167,6 @@ header hgroup h1 {
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
   -o-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
-}
-#main aside.samples li li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0px;
 }
 #main aside.samples li a {
   -moz-transition-property: all;
