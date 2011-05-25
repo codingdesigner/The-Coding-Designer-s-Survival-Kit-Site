@@ -936,7 +936,7 @@ body #container {
 /* Non-grid Layout and styling -------------------------------------------------------------- */
 body {
   background-color: #a52a2a;
-  background-image: url('images/dirt.jpg?1300250432');
+  background-image: url('images/dirt.jpg?1305037698');
 }
 
 #container:before {
@@ -971,7 +971,7 @@ header {
   box-align: center;
 }
 header hgroup {
-  background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1305037698') no-repeat 0 36px;
   padding-top: 36px;
   position: relative;
   z-index: 5;
@@ -1178,6 +1178,14 @@ header hgroup h1 {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
   display: block;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('images/badge-color.png?1305653998');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 115px;
+  height: 115px;
 }
 #main aside.samples li a {
   border-bottom: none;
@@ -1193,92 +1201,29 @@ header hgroup h1 {
   transform: rotate(0);
 }
 #main aside.samples li.color a {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('images/badge-color.png?1305613384');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 115px;
-  height: 115px;
+  background-image: url('images/badge-color.png?1305653998');
 }
 #main aside.samples li.clean-start a {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('images/badge-clean-start.png?1306297606');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 115px;
-  height: 115px;
+  background-image: url('images/badge-clean-start.png?1306329188');
 }
 #main aside.samples li.step-by-step a {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('images/badge-step-by-step.png?1305686022');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 115px;
-  height: 115px;
+  background-image: url('images/badge-step-by-step.png?1305654237');
 }
 #main aside.samples li.html5 a {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('images/badge-html5.png?1305613384');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 115px;
-  height: 115px;
+  background-image: url('images/badge-html5.png?1305653998');
 }
 #main aside.samples li.fonts a {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('images/badge-fonts.png?1306278324');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 115px;
-  height: 115px;
+  background-image: url('images/badge-fonts.png?1306329188');
 }
 #main aside.samples li.sass-mixins a {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('images/badge-sass-mixins.png?1305686022');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 115px;
-  height: 115px;
+  background-image: url('images/badge-sass-mixins.png?1305654266');
 }
 #main aside.samples li.ui-patterns a {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('images/badge-ui-patterns.png?1305686022');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 115px;
-  height: 115px;
+  background-image: url('images/badge-ui-patterns.png?1305654208');
 }
 #main aside.samples li.drupal-ui-patterns a {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('images/badge-drupal-ui-patterns.png?1305686022');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 115px;
-  height: 115px;
+  background-image: url('images/badge-drupal-ui-patterns.png?1305654180');
 }
 #main aside.samples li.code-viewer a {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('images/badge-code-viewer.png?1306279372');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 115px;
-  height: 115px;
+  background-image: url('images/badge-code-viewer.png?1306329188');
 }

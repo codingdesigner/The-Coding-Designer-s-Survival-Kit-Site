@@ -5,6 +5,7 @@ body
   // width: 100%
   background-color: $brown 
   // background-image: image_url('dirt-6.png'), image_url('dirt-5.png'), image_url('dirt-4.png'), image_url('dirt-3.png'), image_url('dirt-2.png'), image_url('dirt-1.jpg')
+  // background-image: image_url('dirt-3.png'), image_url('dirt-2.png'), image_url('dirt-1.jpg')
   background-image: image_url('dirt.jpg')
   
   
@@ -164,12 +165,14 @@ $badge-size-neg-half: -$badge-size * 0.5
         +transition(all,0.5s)
         +remove-link-underlines
         display: block
+        +replace-text-with-dimensions('badge-color.png')
         &:hover
           +transform2d(rotate(0) )
       @each $badge in color, clean-start, step-by-step, html5, fonts, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
         &.#{$badge}
           a
-            +replace-text-with-dimensions('badge-#{$badge}.png')
+            // +replace-text-with-dimensions('badge-#{$badge}.png')
+            background-image: image_url('badge-#{$badge}.png')
 
 #main
   .content
