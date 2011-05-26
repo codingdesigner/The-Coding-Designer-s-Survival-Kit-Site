@@ -147,7 +147,7 @@ html > body {
 
 /* Hide for both screenreaders and browsers
  * css-discuss.incutio.com/wiki/Screenreader_Visibility */
-.hidden, #main .content, #main > footer {
+.hidden {
   display: none;
   visibility: hidden;
 }
@@ -936,7 +936,7 @@ body #container {
 /* Non-grid Layout and styling -------------------------------------------------------------- */
 body {
   background-color: #a52a2a;
-  background-image: url('images/dirt.jpg?1305037698');
+  background-image: url('images/dirt.jpg?1300250432');
 }
 
 #container:before {
@@ -971,7 +971,7 @@ header {
   box-align: center;
 }
 header hgroup {
-  background: transparent url('images/logo.png?1305037698') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
   padding-top: 36px;
   position: relative;
   z-index: 5;
@@ -1056,13 +1056,13 @@ header hgroup h1 {
   }
 }
 
-#main {
+#wrapper {
   position: relative;
   z-index: 3;
   width: 1px;
   margin: 0 auto;
 }
-#main aside.samples {
+#wrapper nav.samples {
   position: absolute;
   z-index: 2;
   top: -57.5px;
@@ -1084,55 +1084,55 @@ header hgroup h1 {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-#main aside.samples li:nth-of-type(1n-1) {
+#wrapper nav.samples li:nth-of-type(1n-1) {
   top: 212.12px;
   left: 252.795px;
 }
-#main aside.samples li:nth-of-type(2n-2) {
+#wrapper nav.samples li:nth-of-type(2n-2) {
   top: 324.987px;
   left: 57.304px;
 }
-#main aside.samples li:nth-of-type(3n-3) {
+#wrapper nav.samples li:nth-of-type(3n-3) {
   top: 285.788px;
   left: -165.0px;
 }
-#main aside.samples li:nth-of-type(4n-4) {
+#wrapper nav.samples li:nth-of-type(4n-4) {
   top: 112.867px;
   left: -310.099px;
 }
-#main aside.samples li:nth-of-type(5n-5) {
+#wrapper nav.samples li:nth-of-type(5n-5) {
   top: -112.867px;
   left: -310.099px;
 }
-#main aside.samples li:nth-of-type(6n-6) {
+#wrapper nav.samples li:nth-of-type(6n-6) {
   top: -285.788px;
   left: -165.0px;
 }
-#main aside.samples li:nth-of-type(7n-7) {
+#wrapper nav.samples li:nth-of-type(7n-7) {
   top: -324.987px;
   left: 57.304px;
 }
-#main aside.samples li:nth-of-type(8n-8) {
+#wrapper nav.samples li:nth-of-type(8n-8) {
   top: -212.12px;
   left: 252.795px;
 }
-#main aside.samples li:nth-of-type(9n-9) {
+#wrapper nav.samples li:nth-of-type(9n-9) {
   top: 0.0px;
   left: 330px;
 }
-#main aside.samples ul {
+#wrapper nav.samples ul {
   margin: 0 0 0 0;
   list-style: none;
   position: absolute;
   top: -57.5px;
   left: -57.5px;
 }
-#main aside.samples ul li {
+#wrapper nav.samples ul li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0px;
 }
-#main aside.samples li {
+#wrapper nav.samples li {
   -webkit-animation-name: spin-back;
   -webkit-animation-duration: 80s;
   -webkit-animation-timing-function: linear;
@@ -1168,7 +1168,7 @@ header hgroup h1 {
   -o-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
 }
-#main aside.samples li a {
+#wrapper nav.samples li a {
   -moz-transition-property: all;
   -webkit-transition-property: all;
   -o-transition-property: all;
@@ -1181,49 +1181,49 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-color.png?1305653998');
+  background-image: url('images/badge-color.png?1305613384');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
   height: 115px;
 }
-#main aside.samples li a {
+#wrapper nav.samples li a {
   border-bottom: none;
 }
-#main aside.samples li a:hover {
+#wrapper nav.samples li a:hover {
   border-bottom: none;
 }
-#main aside.samples li a:hover {
+#wrapper nav.samples li a:hover {
   -moz-transform: rotate(0);
   -webkit-transform: rotate(0);
   -o-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
 }
-#main aside.samples li.color a {
-  background-image: url('images/badge-color.png?1305653998');
+#wrapper nav.samples li#color-badge a {
+  background-image: url('images/badge-color.png?1305613384');
 }
-#main aside.samples li.clean-start a {
-  background-image: url('images/badge-clean-start.png?1306329188');
+#wrapper nav.samples li#clean-start-badge a {
+  background-image: url('images/badge-clean-start.png?1306297606');
 }
-#main aside.samples li.step-by-step a {
-  background-image: url('images/badge-step-by-step.png?1305654237');
+#wrapper nav.samples li#step-by-step-badge a {
+  background-image: url('images/badge-step-by-step.png?1305686022');
 }
-#main aside.samples li.html5 a {
-  background-image: url('images/badge-html5.png?1305653998');
+#wrapper nav.samples li#html5-badge a {
+  background-image: url('images/badge-html5.png?1305613384');
 }
-#main aside.samples li.fonts a {
-  background-image: url('images/badge-fonts.png?1306329188');
+#wrapper nav.samples li#fonts-badge a {
+  background-image: url('images/badge-fonts.png?1306278324');
 }
-#main aside.samples li.sass-mixins a {
-  background-image: url('images/badge-sass-mixins.png?1305654266');
+#wrapper nav.samples li#sass-mixins-badge a {
+  background-image: url('images/badge-sass-mixins.png?1305686022');
 }
-#main aside.samples li.ui-patterns a {
-  background-image: url('images/badge-ui-patterns.png?1305654208');
+#wrapper nav.samples li#ui-patterns-badge a {
+  background-image: url('images/badge-ui-patterns.png?1305686022');
 }
-#main aside.samples li.drupal-ui-patterns a {
-  background-image: url('images/badge-drupal-ui-patterns.png?1305654180');
+#wrapper nav.samples li#drupal-ui-patterns-badge a {
+  background-image: url('images/badge-drupal-ui-patterns.png?1305686022');
 }
-#main aside.samples li.code-viewer a {
-  background-image: url('images/badge-code-viewer.png?1306329188');
+#wrapper nav.samples li#code-viewer-badge a {
+  background-image: url('images/badge-code-viewer.png?1306279372');
 }

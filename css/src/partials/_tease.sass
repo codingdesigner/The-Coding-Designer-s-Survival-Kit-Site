@@ -90,12 +90,12 @@ header
 $badge-size: 115px
 $badge-size-neg-half: -$badge-size * 0.5
 
-#main
+#wrapper
   position: relative
   z-index: 3
   width: 1px
   margin: 0 auto
-  aside.samples
+  nav.samples
     position: absolute
     z-index: 2
     top: $badge-size-neg-half
@@ -169,14 +169,14 @@ $badge-size-neg-half: -$badge-size * 0.5
         &:hover
           +transform2d(rotate(0) )
       @each $badge in color, clean-start, step-by-step, html5, fonts, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
-        &.#{$badge}
+        &##{$badge}-badge
           a
             // +replace-text-with-dimensions('badge-#{$badge}.png')
             background-image: image_url('badge-#{$badge}.png')
 
-#main
-  .content
-    @extend .hidden  
-  > footer  
-    @extend .hidden
+// #main
+//   .content
+//     @extend .hidden  
+//   > footer  
+//     @extend .hidden
     
