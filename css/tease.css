@@ -1133,40 +1133,40 @@ header hgroup h1 {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
 }
 #wrapper nav.samples ul li:nth-of-type(1n-1) {
-  top: 212.12px;
-  left: 252.795px;
+  top: 205.692px;
+  left: 245.134px;
 }
 #wrapper nav.samples ul li:nth-of-type(2n-2) {
-  top: 324.987px;
-  left: 57.304px;
+  top: 315.138px;
+  left: 55.567px;
 }
 #wrapper nav.samples ul li:nth-of-type(3n-3) {
-  top: 285.788px;
-  left: -165.0px;
+  top: 277.128px;
+  left: -160.0px;
 }
 #wrapper nav.samples ul li:nth-of-type(4n-4) {
-  top: 112.867px;
-  left: -310.099px;
+  top: 109.446px;
+  left: -300.702px;
 }
 #wrapper nav.samples ul li:nth-of-type(5n-5) {
-  top: -112.867px;
-  left: -310.099px;
+  top: -109.446px;
+  left: -300.702px;
 }
 #wrapper nav.samples ul li:nth-of-type(6n-6) {
-  top: -285.788px;
-  left: -165.0px;
+  top: -277.128px;
+  left: -160.0px;
 }
 #wrapper nav.samples ul li:nth-of-type(7n-7) {
-  top: -324.987px;
-  left: 57.304px;
+  top: -315.138px;
+  left: 55.567px;
 }
 #wrapper nav.samples ul li:nth-of-type(8n-8) {
-  top: -212.12px;
-  left: 252.795px;
+  top: -205.692px;
+  left: 245.134px;
 }
 #wrapper nav.samples ul li:nth-of-type(9n-9) {
   top: 0.0px;
-  left: 330px;
+  left: 320px;
 }
 #wrapper nav.samples ul li a {
   -moz-transition-property: all;
@@ -1226,6 +1226,42 @@ header hgroup h1 {
 }
 #wrapper nav.samples ul li#code-viewer-badge a {
   background-image: url('images/badge-code-viewer.png?1306329188');
+}
+#wrapper nav.samples:hover ul li:nth-of-type(1n-1) {
+  top: 221.762px;
+  left: 264.285px;
+}
+#wrapper nav.samples:hover ul li:nth-of-type(2n-2) {
+  top: 339.759px;
+  left: 59.909px;
+}
+#wrapper nav.samples:hover ul li:nth-of-type(3n-3) {
+  top: 298.779px;
+  left: -172.5px;
+}
+#wrapper nav.samples:hover ul li:nth-of-type(4n-4) {
+  top: 117.997px;
+  left: -324.194px;
+}
+#wrapper nav.samples:hover ul li:nth-of-type(5n-5) {
+  top: -117.997px;
+  left: -324.194px;
+}
+#wrapper nav.samples:hover ul li:nth-of-type(6n-6) {
+  top: -298.779px;
+  left: -172.5px;
+}
+#wrapper nav.samples:hover ul li:nth-of-type(7n-7) {
+  top: -339.759px;
+  left: 59.909px;
+}
+#wrapper nav.samples:hover ul li:nth-of-type(8n-8) {
+  top: -221.762px;
+  left: 264.285px;
+}
+#wrapper nav.samples:hover ul li:nth-of-type(9n-9) {
+  top: 0.0px;
+  left: 345px;
 }
 
 #main {

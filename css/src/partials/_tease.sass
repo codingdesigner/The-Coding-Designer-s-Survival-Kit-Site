@@ -136,7 +136,7 @@ $badge-size-neg-half: -$badge-size * 0.5
         +box-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
         $badge-total: 8
         @for $i from 1 through ($badge-total + 1)
-          $radius: 330
+          $radius: 320
           $position: 360 / ($badge-total + 1) * $i
           $rotation: $position
           @if $rotation > 180
@@ -175,8 +175,6 @@ $badge-size-neg-half: -$badge-size * 0.5
                 // +transform2d(rotate($rotation + 180 + deg) translate($x-origin, $y-origin))
                 // +transform2d( translate($x-origin, $y-origin))
                 // +transform-origin(0, 0)
-              a
-                // +transform2d(rotate($rotation) )
         a
           +transition(all,0.5s)
           +remove-link-underlines
@@ -189,6 +187,27 @@ $badge-size-neg-half: -$badge-size * 0.5
             a
               // +replace-text-with-dimensions('badge-#{$badge}.png')
               background-image: image_url('badge-#{$badge}.png')
+    &:hover
+      ul
+        li
+          $badge-total: 8
+          @for $i from 1 through ($badge-total + 1)
+            $radius: 345
+            $position: 360 / ($badge-total + 1) * $i
+            $rotation: $position
+            @if $rotation > 180
+              $rotation: -360 + $rotation
+            @if $rotation == 0
+              $rotation: $rotation + 20
+            $rotation: $rotation
+            $cos: cos($position * (pi() / 180))
+            $x-position: $radius * $cos + px
+            $sin: sin($position * (pi() / 180))
+            $y-position: $radius * $sin + px
+            &        
+              &:nth-of-type(#{$i}n-#{$i})      
+                top: $y-position
+                left: $x-position
 
 
 #main
