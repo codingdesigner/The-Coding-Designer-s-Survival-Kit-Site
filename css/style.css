@@ -886,7 +886,7 @@ body {
   position: relative;
   width: 100%;
   background-color: #a52a2a;
-  background-image: url('images/dirt.jpg?1305037698');
+  background-image: url('images/dirt.jpg?1300250432');
 }
 
 header {
@@ -905,7 +905,7 @@ header:before {
   z-index: 0;
 }
 header hgroup {
-  background: transparent url('images/logo.png?1305037698') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
   padding-top: 36px;
   position: relative;
   left: 9px;
@@ -1216,7 +1216,7 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-color.png?1305653998');
+  background-image: url('images/badge-color.png?1305613384');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1226,7 +1226,7 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-clean-start.png?1306329188');
+  background-image: url('images/badge-clean-start.png?1306297606');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1236,7 +1236,7 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-step-by-step.png?1305654237');
+  background-image: url('images/badge-step-by-step.png?1305686022');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1246,7 +1246,7 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-html5.png?1305653998');
+  background-image: url('images/badge-html5.png?1305613384');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1256,7 +1256,7 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-fonts.png?1306329188');
+  background-image: url('images/badge-fonts.png?1306278324');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1266,7 +1266,7 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-sass-mixins.png?1305654266');
+  background-image: url('images/badge-sass-mixins.png?1305686022');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1276,7 +1276,7 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-ui-patterns.png?1305654208');
+  background-image: url('images/badge-ui-patterns.png?1305686022');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1286,7 +1286,7 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-drupal-ui-patterns.png?1305654180');
+  background-image: url('images/badge-drupal-ui-patterns.png?1305686022');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1296,7 +1296,7 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-code-viewer.png?1306329188');
+  background-image: url('images/badge-code-viewer.png?1306279372');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;

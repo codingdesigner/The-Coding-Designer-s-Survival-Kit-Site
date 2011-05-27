@@ -147,7 +147,7 @@ html > body {
 
 /* Hide for both screenreaders and browsers
  * css-discuss.incutio.com/wiki/Screenreader_Visibility */
-.hidden {
+.hidden, #main > footer {
   display: none;
   visibility: hidden;
 }
@@ -936,7 +936,6 @@ body #container {
 /* Non-grid Layout and styling -------------------------------------------------------------- */
 body {
   background-color: #a52a2a;
-  background-image: url('images/dirt.jpg?1300250432');
 }
 
 #container:before {
@@ -1226,4 +1225,29 @@ header hgroup h1 {
 }
 #wrapper nav.samples li#code-viewer-badge a {
   background-image: url('images/badge-code-viewer.png?1306279372');
+}
+
+#main {
+  position: relative;
+  width: 404px;
+  margin: 0 auto;
+}
+#main article {
+  position: absolute;
+  height: 160px;
+  -moz-border-radius-bottomleft: 160px;
+  -webkit-border-bottom-left-radius: 160px;
+  -o-border-bottom-left-radius: 160px;
+  -ms-border-bottom-left-radius: 160px;
+  -khtml-border-bottom-left-radius: 160px;
+  border-bottom-left-radius: 160px;
+  -moz-border-radius-bottomright: 160px;
+  -webkit-border-bottom-right-radius: 160px;
+  -o-border-bottom-right-radius: 160px;
+  -ms-border-bottom-right-radius: 160px;
+  -khtml-border-bottom-right-radius: 160px;
+  border-bottom-right-radius: 160px;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.75);
+  text-align: center;
 }

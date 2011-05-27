@@ -6,7 +6,7 @@ body
   background-color: $brown 
   // background-image: image_url('dirt-6.png'), image_url('dirt-5.png'), image_url('dirt-4.png'), image_url('dirt-3.png'), image_url('dirt-2.png'), image_url('dirt-1.jpg')
   // background-image: image_url('dirt-3.png'), image_url('dirt-2.png'), image_url('dirt-1.jpg')
-  background-image: image_url('dirt.jpg')
+  // background-image: image_url('dirt.jpg')
   
   
 #container
@@ -95,6 +95,7 @@ $badge-size-neg-half: -$badge-size * 0.5
   z-index: 3
   width: 1px
   margin: 0 auto
+  
   nav.samples
     position: absolute
     z-index: 2
@@ -174,9 +175,33 @@ $badge-size-neg-half: -$badge-size * 0.5
             // +replace-text-with-dimensions('badge-#{$badge}.png')
             background-image: image_url('badge-#{$badge}.png')
 
-// #main
-//   .content
-//     @extend .hidden  
-//   > footer  
-//     @extend .hidden
+#main
+  // .content
+  // @extend .hidden  
+  position: relative
+  // +display-box
+  //   +box-orient(vertical)
+  //   +box-pack(center)
+  //   +box-align(center)
+  //   width: 100%
+  width: 404px
+  margin: 0 auto
+  article
+    position: absolute
+    // border: 1px solid $white
+    height: 160px
+    // width: 404px
+    // margin: 0 auto
+    +border-bottom-radius(160px)
+    background-color: $white
+    background-color: change-color($white, $alpha:  0.75)
+    text-align: center
+    // top: 0
+    // width: 300px
+    // +display-box
+    // margin: 0 auto
+    
+  // ar
+  > footer  
+    @extend .hidden
     
