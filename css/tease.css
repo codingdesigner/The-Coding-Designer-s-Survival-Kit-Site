@@ -80,7 +80,7 @@ html {
 }
 
 .body, body {
-  font-family: ff-meta-serif-web-pro-1, ff-meta-serif-web-pro-2, Georgia, serif;
+  font-family: proxima-nova-1, proxima-nova-2, sans-serif;
 }
 
 .headers, h1, h2, h3, #main article h1, h4, h5, h6 {
@@ -936,7 +936,7 @@ body #container {
 /* Non-grid Layout and styling -------------------------------------------------------------- */
 body {
   background-color: #a52a2a;
-  background-image: url('images/dirt.jpg?1305037698');
+  background-image: url('images/dirt.jpg?1300250432');
 }
 
 #container:before {
@@ -971,7 +971,7 @@ header {
   box-align: center;
 }
 header hgroup {
-  background: transparent url('images/logo.png?1305037698') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
   padding-top: 36px;
   position: relative;
   z-index: 5;
@@ -1181,7 +1181,7 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-color.png?1305653998');
+  background-image: url('images/badge-color.png?1305613384');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1201,31 +1201,31 @@ header hgroup h1 {
   transform: rotate(0) scale(1.2);
 }
 #wrapper nav.samples ul li#color-badge a {
-  background-image: url('images/badge-color.png?1305653998');
+  background-image: url('images/badge-color.png?1305613384');
 }
 #wrapper nav.samples ul li#clean-start-badge a {
-  background-image: url('images/badge-clean-start.png?1306329188');
+  background-image: url('images/badge-clean-start.png?1306297606');
 }
 #wrapper nav.samples ul li#step-by-step-badge a {
-  background-image: url('images/badge-step-by-step.png?1305654237');
+  background-image: url('images/badge-step-by-step.png?1305686022');
 }
 #wrapper nav.samples ul li#html5-badge a {
-  background-image: url('images/badge-html5.png?1305653998');
+  background-image: url('images/badge-html5.png?1305613384');
 }
 #wrapper nav.samples ul li#fonts-badge a {
-  background-image: url('images/badge-fonts.png?1306329188');
+  background-image: url('images/badge-fonts.png?1306278324');
 }
 #wrapper nav.samples ul li#sass-mixins-badge a {
-  background-image: url('images/badge-sass-mixins.png?1305654266');
+  background-image: url('images/badge-sass-mixins.png?1305686022');
 }
 #wrapper nav.samples ul li#ui-patterns-badge a {
-  background-image: url('images/badge-ui-patterns.png?1305654208');
+  background-image: url('images/badge-ui-patterns.png?1305686022');
 }
 #wrapper nav.samples ul li#drupal-ui-patterns-badge a {
-  background-image: url('images/badge-drupal-ui-patterns.png?1305654180');
+  background-image: url('images/badge-drupal-ui-patterns.png?1305686022');
 }
 #wrapper nav.samples ul li#code-viewer-badge a {
-  background-image: url('images/badge-code-viewer.png?1306329188');
+  background-image: url('images/badge-code-viewer.png?1306279372');
 }
 #wrapper nav.samples:hover ul li:nth-of-type(1n-1) {
   top: 221.762px;
@@ -1272,7 +1272,7 @@ header hgroup h1 {
 #main article {
   position: absolute;
   height: 190px;
-  width: 350px;
+  width: 410px;
   -moz-border-radius-bottomleft: 180px;
   -webkit-border-bottom-left-radius: 180px;
   -o-border-bottom-left-radius: 180px;
@@ -1290,13 +1290,31 @@ header hgroup h1 {
   color: #d3d3d3;
   text-align: center;
   left: 0px;
-  overflow: hidden;
-  padding: 0 30px;
+}
+#main article:before {
+  content: "\0020";
+  position: absolute;
+  width: 410px;
+  height: 800px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.5)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  z-index: -10;
+  bottom: 190px;
 }
 #main article h1 {
-  border-bottom: 1px dashed white;
-  margin-bottom: 0.25em;
+  border-bottom: 1px dashed #b7d2eb;
+  margin: 0 5px 0.25em;
   color: #7bacdb;
+}
+#main article p {
+  font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
+  font-size: 1.317em;
+  line-height: 1.302em;
+  font-weight: bold;
+  padding: 0 45px;
 }
 #main article:target {
   display: block;

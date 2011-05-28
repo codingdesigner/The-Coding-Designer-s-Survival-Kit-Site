@@ -227,26 +227,39 @@ $badge-size-neg-half: -$badge-size * 0.5
     height: 190px
     // width: 404px
     // margin: 0 auto
-    width: 350px
+    width: 410px
     +border-bottom-radius(180px)
     background-color: $black
     background-color: change-color($black, $alpha:  0.5)
     color: $lightgray
     text-align: center
     left: 0px
-    overflow: hidden
-    padding: 0 30px
+    // overflow: hidden
+    
     // top: 0
     // width: 300px
     // +display-box
     // margin: 0 auto
+    &:before
+      content: '\0020'
+      position: absolute
+      width: 410px
+      height: 800px
+      // background-color: change-color($black, $alpha:  0.5)
+      // background-image: linear-gradient(top, change-color($black, $alpha:  0), change-color($black, $alpha:  0.5))
+      +background-image(linear-gradient(top, change-color($black, $alpha:  0), change-color($black, $alpha:  0.5)))
+      z-index: -10
+      bottom: 190px
     h1
       @extend h3
-      border-bottom: 1px dashed $white
-      margin-bottom: 0.25em
+      border-bottom: 1px dashed adjust-color($blue, $lightness: +45 )
+      margin: 0 5px 0.25em
       color: adjust-color($blue, $lightness: +30)
     p
-      // +adjust-font-size-to($ms0)
+      font-family: $font-proxima-nova-condensed
+      +adjust-font-size-to($ms1)
+      font-weight: bold
+      padding: 0 45px
     @extend .hidden
     // &:first-child
     //   display: block
