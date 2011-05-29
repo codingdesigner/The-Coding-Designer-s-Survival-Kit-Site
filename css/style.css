@@ -262,6 +262,9 @@ q em {
 p {
   margin-bottom: 1.714em;
 }
+p:last-child {
+  margin-bottom: 0em;
+}
 
 pre {
   margin: 1.714em;
