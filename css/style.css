@@ -1,6 +1,6 @@
 /* Links -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, #intro #teasers article h1, #main article h1, h4, h5, #main-nav ul li a, h6, p, blockquote, pre,
+h1, h2, h3, #intro #teasers article h1, h4, h5, #main-nav ul li a, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -83,11 +83,11 @@ html {
   font-family: proxima-nova-1, proxima-nova-2, sans-serif;
 }
 
-.headers, h1, h2, h3, #intro #teasers article h1, #main article h1, h4, h5, #main-nav ul li a, h6 {
+.headers, h1, h2, h3, #intro #teasers article h1, h4, h5, #main-nav ul li a, h6 {
   font-family: refrigerator-deluxe-1, refrigerator-deluxe-2, sans-serif;
 }
 
-.logo-type, header:before, header h1, header h2, header h3, header #intro #teasers article h1, #intro #teasers article header h1, header #main article h1, #main article header h1, header h4, header h5, header #main-nav ul li a, #main-nav ul li header a, header h6 {
+.logo-type, header:before, header h1, header h2, header h3, header #intro #teasers article h1, #intro #teasers article header h1, header h4, header h5, header #main-nav ul li a, #main-nav ul li header a, header h6 {
   font-family: proxima-nova-1, proxima-nova-2, sans-serif, refrigerator-deluxe-1, refrigerator-deluxe-2, sans-serif;
 }
 
@@ -150,7 +150,7 @@ html > body {
 .hidden, #learn,
 #tools,
 #survivors,
-#start, #intro > h2, #intro nav.samples h3, #intro nav.samples #teasers article h1, #intro #teasers article nav.samples h1, #intro nav.samples #main article h1, #main article #intro nav.samples h1, #intro #teasers > h3, #intro #teasers > article h1, #intro #teasers > #main article h1, #main article #intro #teasers > h1, #intro #teasers article {
+#start, #intro > h2, #intro nav.samples h3, #intro nav.samples #teasers article h1, #intro #teasers article nav.samples h1, #intro #teasers > h3, #intro #teasers > article h1, #intro #teasers article {
   display: none;
   visibility: hidden;
 }
@@ -216,7 +216,7 @@ a:active {
 }
 
 /* Headings -------------------------------------------------------------- */
-h1, h2, h3, #intro #teasers article h1, #main article h1, h4, h5, #main-nav ul li a, h6 {
+h1, h2, h3, #intro #teasers article h1, h4, h5, #main-nav ul li a, h6 {
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -231,7 +231,7 @@ h2 {
   line-height: 1.157em;
 }
 
-h3, #intro #teasers article h1, #main article h1 {
+h3, #intro #teasers article h1 {
   font-size: 2.25em;
   line-height: 1.524em;
 }
@@ -984,7 +984,7 @@ header .wrapper {
   color: rgba(255, 255, 255, 0.8);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
 }
-header h1, header h2, header h3, header #intro #teasers article h1, #intro #teasers article header h1, header #main article h1, #main article header h1, header h4, header h5, header #main-nav ul li a, #main-nav ul li header a, header h6 {
+header h1, header h2, header h3, header #intro #teasers article h1, #intro #teasers article header h1, header h4, header h5, header #main-nav ul li a, #main-nav ul li header a, header h6 {
   font-weight: 700;
   font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
 }
@@ -1341,64 +1341,6 @@ header h2 {
   visibility: visible;
 }
 #intro #teasers article:first-of-type {
-  display: block;
-  visibility: visible;
-}
-
-#main {
-  position: relative;
-  width: 404px;
-  margin: 0 auto;
-}
-#main article {
-  position: absolute;
-  height: 190px;
-  width: 410px;
-  -moz-border-radius-bottomleft: 180px;
-  -webkit-border-bottom-left-radius: 180px;
-  -o-border-bottom-left-radius: 180px;
-  -ms-border-bottom-left-radius: 180px;
-  -khtml-border-bottom-left-radius: 180px;
-  border-bottom-left-radius: 180px;
-  -moz-border-radius-bottomright: 180px;
-  -webkit-border-bottom-right-radius: 180px;
-  -o-border-bottom-right-radius: 180px;
-  -ms-border-bottom-right-radius: 180px;
-  -khtml-border-bottom-right-radius: 180px;
-  border-bottom-right-radius: 180px;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #d3d3d3;
-  text-align: center;
-  left: 0px;
-}
-#main article:before {
-  content: "\0020";
-  position: absolute;
-  width: 410px;
-  height: 800px;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.5)));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-  z-index: -10;
-  bottom: 190px;
-  left: 0;
-}
-#main article h1 {
-  border-bottom: 1px dashed #b7d2eb;
-  margin: 0 5px 0.25em;
-  color: #7bacdb;
-}
-#main article p {
-  font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
-  font-size: 1.317em;
-  line-height: 1.302em;
-  font-weight: bold;
-  padding: 0 45px;
-}
-#main article:target {
   display: block;
   visibility: visible;
 }
