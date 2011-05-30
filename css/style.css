@@ -1328,6 +1328,8 @@ header h2 {
   border-bottom: 1px dashed #b7d2eb;
   margin: 0 5px 0.25em;
   color: #7bacdb;
+  display: block;
+  visibility: visible;
 }
 #intro #teasers article p {
   font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
