@@ -26,8 +26,9 @@ header
   // +box-orient(vertical)
   // +box-pack(center)
   // +box-align(center)
-  padding-top: 277px
-  padding-bottom: 277px
+  padding-top: 372px
+  padding-bottom: 248px
+  
   background-image: image_url('dirt.jpg')
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   &:before
@@ -40,7 +41,7 @@ header
     // color: change-color($white, $alpha: 0.2)
     +text-shadow(rgba($black, 0.6) 1px 1px)
     position: absolute
-    top: 301px
+    top: 362px
     // top: 26px
     left: 0
     width: 100%
@@ -50,6 +51,7 @@ header
   .wrapper
     background: transparent image_url('logo.png') no-repeat 0 ($baseline * 1.5)
     padding-top: $baseline * 1.5
+    top: -$baseline * 1.5
     position: relative
     z-index: 5
     // +display-box
@@ -133,7 +135,7 @@ $intro-width: 404px
   width: $intro-width
   max-width: $intro-width
   // padding-bottom: 292px
-  top: -277px
+  top: -300px
   > h2
     @extend .hidden
   nav.samples
@@ -288,7 +290,8 @@ $intro-width: 404px
         content: '\0020'
         position: absolute
         width: 410px
-        height: 434px
+        height: 476px
+        // background-color: $red
         +background-image(linear-gradient(top, change-color($black, $alpha:  0), change-color($black, $alpha:  0.5)))
         z-index: -10
         bottom: 190px
@@ -316,16 +319,30 @@ $intro-width: 404px
 
 // LEARN
 #learn
-  
+  +padding-leader(1)
+  +padding-trailer(1)
   // width: 100%
-  background-color: $chartreuse
+  // background-color: $brown
+  // background:
+  //   radial-gradient(black 15%, transparent 16%) 0 0,
+  //   radial-gradient(black 15%, transparent 16%) 8px 8px,
+  //   radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  //   radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px
+  // +background-image(radial-gradient(50% 50%, $red 10%, $blue 50%))  
+  +background-image(radial-gradient(0 0, $black 15%, rgba($black, 0) 16%), radial-gradient(8px 8px, $black 15%, rgba($black, 0) 16%), radial-gradient(0 1px, rgba($white, .1) 15%, rgba($black, 0) 20%), radial-gradient(8px 9px, rgba($white, .1) 15%, rgba($black, 0) 20%))
+  background-color: #282828
+  background-size: 16px 16px
   .inner
     @extend .container
     > h1
       +full
     #walkthru
-      +columns(4)
+      +columns(3)
       +alpha
+      iframe
+        width: 558px
+        height: 376.65px
+        max-width: 100%
     #podcast-videos
       +columns(2)
       +omega
