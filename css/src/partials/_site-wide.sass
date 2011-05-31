@@ -2,19 +2,18 @@
 html
   height: 100%
 body
-  +display-box
-  +box-orient(vertical)
-  +box-pack(start)
-  +box-align(stretch)
+  // +display-box
+  // +box-orient(vertical)
+  // +box-pack(start)
+  // +box-align(center)
   width: 100%
   height: 100%
   background-color: $red 
   // background-image: image_url('dirt-6.png'), image_url('dirt-5.png'), image_url('dirt-4.png'), image_url('dirt-3.png'), image_url('dirt-2.png'), image_url('dirt-1.jpg')
   // background-image: image_url('dirt-3.png'), image_url('dirt-2.png'), image_url('dirt-1.jpg')
   // background-image: image_url('dirt.jpg')
-
+  
 // SECTIONS TO HIDE
-#learn, 
 #tools, 
 #survivors, 
 #start
@@ -23,11 +22,14 @@ body
 // PAGE HEADER    
 header 
   position: relative
-  +display-box
+  // +display-box
   // +box-orient(vertical)
-  +box-pack(center)
+  // +box-pack(center)
   // +box-align(center)
-  margin-top: 277px
+  padding-top: 277px
+  padding-bottom: 277px
+  background-image: image_url('dirt.jpg')
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   &:before
     content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈"
     @extend .logo-type
@@ -38,20 +40,25 @@ header
     // color: change-color($white, $alpha: 0.2)
     +text-shadow(rgba($black, 0.6) 1px 1px)
     position: absolute
-    top: 50%
+    top: 301px
+    // top: 26px
     left: 0
     width: 100%
     overflow: hidden
     z-index: 0
+  
   .wrapper
     background: transparent image_url('logo.png') no-repeat 0 ($baseline * 1.5)
     padding-top: $baseline * 1.5
     position: relative
     z-index: 5
-    +display-box
-    +box-orient(vertical)
-    +box-pack(center)
-    +box-align(end)
+    // +display-box
+    // +box-orient(vertical)
+    // +box-pack(center)
+    // +box-align(end)
+    width: 480px
+    margin: 0 auto
+    // border: 1px dashed $white
     color: $white
     color: change-color($white, $alpha: 0.8)
     +text-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
@@ -64,6 +71,9 @@ header
     position: relative
     font-size: 32.8px
     top: 0px
+    // left: 50px
+    text-align: right
+    padding-right: 6px
     .wf-active &
       +adjust-font-size-to($ms5)
       top: -9px
@@ -98,7 +108,7 @@ header
         +remove-link-underlines
   
 // INTRODUCTION
-// define animation
+// define animations
 @-webkit-keyframes spin
   0%
     +transform2d(rotate(0deg))
@@ -114,17 +124,23 @@ header
 $badge-size: 115px
 $badge-size-neg-half: -$badge-size * 0.5
 $badge-total: 8
+$intro-width: 404px
 #intro
   position: relative
   z-index: 3
-  width: 1px
+  display: block
   margin: 0 auto
+  width: $intro-width
+  max-width: $intro-width
+  // padding-bottom: 292px
+  top: -277px
   > h2
     @extend .hidden
   nav.samples
     position: absolute
     z-index: 2
     top: $badge-size-neg-half
+    left: $intro-width * 0.5
     -webkit-animation-name: spin
     -webkit-animation-duration: 80s
     -webkit-animation-timing-function: linear
@@ -183,7 +199,7 @@ $badge-total: 8
           +remove-link-underlines
           display: block
           +replace-text-with-dimensions('badge-color.png')
-          
+
         @each $badge in color, clean-start, step-by-step, html5, fonts, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
           &##{$badge}-badge
             a
@@ -233,7 +249,7 @@ $badge-total: 8
     &:hover
       ul
         li
-          
+
           @for $i from 1 through ($badge-total + 1)
             $radius: 345
             $position: 360 / ($badge-total + 1) * $i
@@ -253,8 +269,9 @@ $badge-total: 8
                 left: $x-position
   #teasers
     position: relative
-    width: 404px
+    width: $intro-width
     margin: 0 auto
+    // left: -$intro-width * 0.5
     > h3
       @extend .hidden
     article
@@ -271,7 +288,7 @@ $badge-total: 8
         content: '\0020'
         position: absolute
         width: 410px
-        height: 800px
+        height: 434px
         +background-image(linear-gradient(top, change-color($black, $alpha:  0), change-color($black, $alpha:  0.5)))
         z-index: -10
         bottom: 190px
@@ -297,7 +314,24 @@ $badge-total: 8
         visibility: visible
 
 
-
+// LEARN
+#learn
+  
+  // width: 100%
+  background-color: $chartreuse
+  .inner
+    @extend .container
+    > h1
+      +full
+    #walkthru
+      +columns(4)
+      +alpha
+    #podcast-videos
+      +columns(2)
+      +omega
+      article
+        h1
+          @extend h3
 
 
 
@@ -308,9 +342,9 @@ $badge-total: 8
 
 
 
-footer  
-  background: $white
-  bottom: 0
-  position: absolute
-  text-align: center
-  width: 100%
+// footer  
+//   background: $white
+//   bottom: 0
+//   position: absolute
+//   text-align: center
+//   width: 100%
