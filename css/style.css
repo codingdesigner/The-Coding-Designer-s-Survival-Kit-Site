@@ -923,7 +923,7 @@ header {
   position: relative;
   padding-top: 372px;
   padding-bottom: 248px;
-  background-image: url('images/dirt.jpg?1305037698');
+  background-image: url('images/dirt.jpg?1300250432');
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
@@ -945,7 +945,7 @@ header:before {
   z-index: 0;
 }
 header .wrapper {
-  background: transparent url('images/logo.png?1305037698') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
   padding-top: 36px;
   top: -36px;
   position: relative;
@@ -1150,7 +1150,7 @@ header h2 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-color.png?1305653998');
+  background-image: url('images/badge-color.png?1305613384');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1163,31 +1163,31 @@ header h2 {
   border-bottom: none;
 }
 #intro nav.samples ul li#color-badge a {
-  background-image: url('images/badge-color.png?1305653998');
+  background-image: url('images/badge-color.png?1305613384');
 }
 #intro nav.samples ul li#clean-start-badge a {
-  background-image: url('images/badge-clean-start.png?1306329188');
+  background-image: url('images/badge-clean-start.png?1306297606');
 }
 #intro nav.samples ul li#step-by-step-badge a {
-  background-image: url('images/badge-step-by-step.png?1305654237');
+  background-image: url('images/badge-step-by-step.png?1305686022');
 }
 #intro nav.samples ul li#html5-badge a {
-  background-image: url('images/badge-html5.png?1305653998');
+  background-image: url('images/badge-html5.png?1305613384');
 }
 #intro nav.samples ul li#fonts-badge a {
-  background-image: url('images/badge-fonts.png?1306329188');
+  background-image: url('images/badge-fonts.png?1306278324');
 }
 #intro nav.samples ul li#sass-mixins-badge a {
-  background-image: url('images/badge-sass-mixins.png?1305654266');
+  background-image: url('images/badge-sass-mixins.png?1305686022');
 }
 #intro nav.samples ul li#ui-patterns-badge a {
-  background-image: url('images/badge-ui-patterns.png?1305654208');
+  background-image: url('images/badge-ui-patterns.png?1305686022');
 }
 #intro nav.samples ul li#drupal-ui-patterns-badge a {
-  background-image: url('images/badge-drupal-ui-patterns.png?1305654180');
+  background-image: url('images/badge-drupal-ui-patterns.png?1305686022');
 }
 #intro nav.samples ul li#code-viewer-badge a {
-  background-image: url('images/badge-code-viewer.png?1306329188');
+  background-image: url('images/badge-code-viewer.png?1306279372');
 }
 #intro nav.samples ul li:nth-of-type(1n-1) {
   top: 205.692px;
@@ -1328,12 +1328,12 @@ header h2 {
 #learn {
   padding-top: 1.714em;
   padding-bottom: 1.714em;
-  background-image: -webkit-gradient(radial, 0 0, 0, 0 0, 16, color-stop(15%, #000000), color-stop(16%, rgba(0, 0, 0, 0))), -webkit-gradient(radial, 8px 8px, 0, 8px 8px, 16, color-stop(15%, #000000), color-stop(16%, rgba(0, 0, 0, 0))), -webkit-gradient(radial, 0 1px, 0, 0 1px, 20, color-stop(15%, rgba(255, 255, 255, 0.1)), color-stop(20%, rgba(0, 0, 0, 0))), -webkit-gradient(radial, 8px 9px, 0, 8px 9px, 20, color-stop(15%, rgba(255, 255, 255, 0.1)), color-stop(20%, rgba(0, 0, 0, 0)));
-  background-image: -webkit-radial-gradient(0 0, #000000 15%, rgba(0, 0, 0, 0) 16%), -webkit-radial-gradient(8px 8px, #000000 15%, rgba(0, 0, 0, 0) 16%), -webkit-radial-gradient(0 1px, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%), -webkit-radial-gradient(8px 9px, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%);
-  background-image: -moz-radial-gradient(0 0, #000000 15%, rgba(0, 0, 0, 0) 16%), -moz-radial-gradient(8px 8px, #000000 15%, rgba(0, 0, 0, 0) 16%), -moz-radial-gradient(0 1px, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%), -moz-radial-gradient(8px 9px, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%);
-  background-image: -o-radial-gradient(0 0, #000000 15%, rgba(0, 0, 0, 0) 16%), -o-radial-gradient(8px 8px, #000000 15%, rgba(0, 0, 0, 0) 16%), -o-radial-gradient(0 1px, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%), -o-radial-gradient(8px 9px, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%);
-  background-image: radial-gradient(0 0, #000000 15%, rgba(0, 0, 0, 0) 16%), radial-gradient(8px 8px, #000000 15%, rgba(0, 0, 0, 0) 16%), radial-gradient(0 1px, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%), radial-gradient(8px 9px, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%);
-  background-color: #282828;
+  background: -webkit-gradient(radial, 0 0, 0, 0 0, 16, color-stop(15%, #1b110c), color-stop(16%, rgba(0, 0, 0, 0))), -webkit-gradient(radial, 8px 8px, 0, 8px 8px, 16, color-stop(15%, #1b110c), color-stop(16%, rgba(0, 0, 0, 0))), -webkit-gradient(radial, 0 1px, 0, 0 1px, 20, color-stop(15%, rgba(255, 255, 255, 0.1)), color-stop(20%, rgba(0, 0, 0, 0))), -webkit-gradient(radial, 8px 9px, 0, 8px 9px, 20, color-stop(15%, rgba(255, 255, 255, 0.1)), color-stop(20%, rgba(0, 0, 0, 0)));
+  background: -webkit-radial-gradient(#1b110c 15%, rgba(0, 0, 0, 0) 16%) 0 0, -webkit-radial-gradient(#1b110c 15%, rgba(0, 0, 0, 0) 16%) 8px 8px, -webkit-radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 0 1px, -webkit-radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 8px 9px;
+  background: -moz-radial-gradient(#1b110c 15%, rgba(0, 0, 0, 0) 16%) 0 0, -moz-radial-gradient(#1b110c 15%, rgba(0, 0, 0, 0) 16%) 8px 8px, -moz-radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 0 1px, -moz-radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 8px 9px;
+  background: -o-radial-gradient(0 0, #1b110c 15%, rgba(0, 0, 0, 0) 16%), -o-radial-gradient(8px 8px, #1b110c 15%, rgba(0, 0, 0, 0) 16%), -o-radial-gradient(0 1px, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%), -o-radial-gradient(8px 9px, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%);
+  background: radial-gradient(#1b110c 15%, rgba(0, 0, 0, 0) 16%) 0 0, radial-gradient(#1b110c 15%, rgba(0, 0, 0, 0) 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 8px 9px;
+  background-color: #372218;
   background-size: 16px 16px;
 }
 #learn .inner > h1 {

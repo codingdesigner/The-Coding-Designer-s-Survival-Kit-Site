@@ -941,7 +941,7 @@ body header {
 /* Non-grid Layout and styling -------------------------------------------------------------- */
 body {
   background-color: #372218;
-  background-image: url('images/dirt.jpg?1305037698');
+  background-image: url('images/dirt.jpg?1300250432');
 }
 
 header {
@@ -977,7 +977,7 @@ header:before {
   z-index: 0;
 }
 header hgroup {
-  background: transparent url('images/logo.png?1305037698') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
   padding-top: 36px;
   position: relative;
   z-index: 5;
@@ -1187,7 +1187,7 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-color.png?1305653998');
+  background-image: url('images/badge-color.png?1305613384');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1207,31 +1207,31 @@ header hgroup h1 {
   transform: rotate(0) scale(1.2);
 }
 #wrapper nav.samples ul li#color-badge a {
-  background-image: url('images/badge-color.png?1305653998');
+  background-image: url('images/badge-color.png?1305613384');
 }
 #wrapper nav.samples ul li#clean-start-badge a {
-  background-image: url('images/badge-clean-start.png?1306329188');
+  background-image: url('images/badge-clean-start.png?1306297606');
 }
 #wrapper nav.samples ul li#step-by-step-badge a {
-  background-image: url('images/badge-step-by-step.png?1305654237');
+  background-image: url('images/badge-step-by-step.png?1305686022');
 }
 #wrapper nav.samples ul li#html5-badge a {
-  background-image: url('images/badge-html5.png?1305653998');
+  background-image: url('images/badge-html5.png?1305613384');
 }
 #wrapper nav.samples ul li#fonts-badge a {
-  background-image: url('images/badge-fonts.png?1306329188');
+  background-image: url('images/badge-fonts.png?1306278324');
 }
 #wrapper nav.samples ul li#sass-mixins-badge a {
-  background-image: url('images/badge-sass-mixins.png?1305654266');
+  background-image: url('images/badge-sass-mixins.png?1305686022');
 }
 #wrapper nav.samples ul li#ui-patterns-badge a {
-  background-image: url('images/badge-ui-patterns.png?1305654208');
+  background-image: url('images/badge-ui-patterns.png?1305686022');
 }
 #wrapper nav.samples ul li#drupal-ui-patterns-badge a {
-  background-image: url('images/badge-drupal-ui-patterns.png?1305654180');
+  background-image: url('images/badge-drupal-ui-patterns.png?1305686022');
 }
 #wrapper nav.samples ul li#code-viewer-badge a {
-  background-image: url('images/badge-code-viewer.png?1306329188');
+  background-image: url('images/badge-code-viewer.png?1306279372');
 }
 #wrapper nav.samples:hover ul li:nth-of-type(1n-1) {
   top: 221.762px;
