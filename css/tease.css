@@ -867,14 +867,14 @@ body.markup-elements article.element .example:after {
 body.markup-elements article.element .example .markup {
   display: inline;
   float: left;
-  width: 77.526%;
-  margin-right: 2.474%;
+  width: 75.654%;
+  margin-right: 2.414%;
 }
 body.markup-elements article.element .example .markup + .show-source {
   display: inline;
   float: left;
-  width: 37.526%;
-  margin-right: 2.474%;
+  width: 36.62%;
+  margin-right: 2.414%;
   display: inline;
   float: right;
   margin-right: 0;
@@ -890,13 +890,13 @@ body.markup-elements article.element .example .markup + .show-source + p {
 .container {
   *zoom: 1;
   margin: auto;
-  width: 970px;
+  width: 994px;
   max-width: 100%;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(1.237%, rgba(0, 0, 0, 0)), color-stop(1.237%, rgba(100, 100, 225, 0.25)), color-stop(18.763%, rgba(100, 100, 225, 0.25)), color-stop(18.763%, rgba(0, 0, 0, 0)), color-stop(21.237%, rgba(0, 0, 0, 0)), color-stop(21.237%, rgba(100, 100, 225, 0.25)), color-stop(38.763%, rgba(100, 100, 225, 0.25)), color-stop(38.763%, rgba(0, 0, 0, 0)), color-stop(41.237%, rgba(0, 0, 0, 0)), color-stop(41.237%, rgba(100, 100, 225, 0.25)), color-stop(58.763%, rgba(100, 100, 225, 0.25)), color-stop(58.763%, rgba(0, 0, 0, 0)), color-stop(61.237%, rgba(0, 0, 0, 0)), color-stop(61.237%, rgba(100, 100, 225, 0.25)), color-stop(78.763%, rgba(100, 100, 225, 0.25)), color-stop(78.763%, rgba(0, 0, 0, 0)), color-stop(81.237%, rgba(0, 0, 0, 0)), color-stop(81.237%, rgba(100, 100, 225, 0.25)), color-stop(98.763%, rgba(100, 100, 225, 0.25)), color-stop(98.763%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 1.237%, rgba(100, 100, 225, 0.25) 1.237%, rgba(100, 100, 225, 0.25) 18.763%, rgba(0, 0, 0, 0) 18.763%, rgba(0, 0, 0, 0) 21.237%, rgba(100, 100, 225, 0.25) 21.237%, rgba(100, 100, 225, 0.25) 38.763%, rgba(0, 0, 0, 0) 38.763%, rgba(0, 0, 0, 0) 41.237%, rgba(100, 100, 225, 0.25) 41.237%, rgba(100, 100, 225, 0.25) 58.763%, rgba(0, 0, 0, 0) 58.763%, rgba(0, 0, 0, 0) 61.237%, rgba(100, 100, 225, 0.25) 61.237%, rgba(100, 100, 225, 0.25) 78.763%, rgba(0, 0, 0, 0) 78.763%, rgba(0, 0, 0, 0) 81.237%, rgba(100, 100, 225, 0.25) 81.237%, rgba(100, 100, 225, 0.25) 98.763%, rgba(0, 0, 0, 0) 98.763%, rgba(0, 0, 0, 0) 100%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 1.237%, rgba(100, 100, 225, 0.25) 1.237%, rgba(100, 100, 225, 0.25) 18.763%, rgba(0, 0, 0, 0) 18.763%, rgba(0, 0, 0, 0) 21.237%, rgba(100, 100, 225, 0.25) 21.237%, rgba(100, 100, 225, 0.25) 38.763%, rgba(0, 0, 0, 0) 38.763%, rgba(0, 0, 0, 0) 41.237%, rgba(100, 100, 225, 0.25) 41.237%, rgba(100, 100, 225, 0.25) 58.763%, rgba(0, 0, 0, 0) 58.763%, rgba(0, 0, 0, 0) 61.237%, rgba(100, 100, 225, 0.25) 61.237%, rgba(100, 100, 225, 0.25) 78.763%, rgba(0, 0, 0, 0) 78.763%, rgba(0, 0, 0, 0) 81.237%, rgba(100, 100, 225, 0.25) 81.237%, rgba(100, 100, 225, 0.25) 98.763%, rgba(0, 0, 0, 0) 98.763%, rgba(0, 0, 0, 0) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 1.237%, rgba(100, 100, 225, 0.25) 1.237%, rgba(100, 100, 225, 0.25) 18.763%, rgba(0, 0, 0, 0) 18.763%, rgba(0, 0, 0, 0) 21.237%, rgba(100, 100, 225, 0.25) 21.237%, rgba(100, 100, 225, 0.25) 38.763%, rgba(0, 0, 0, 0) 38.763%, rgba(0, 0, 0, 0) 41.237%, rgba(100, 100, 225, 0.25) 41.237%, rgba(100, 100, 225, 0.25) 58.763%, rgba(0, 0, 0, 0) 58.763%, rgba(0, 0, 0, 0) 61.237%, rgba(100, 100, 225, 0.25) 61.237%, rgba(100, 100, 225, 0.25) 78.763%, rgba(0, 0, 0, 0) 78.763%, rgba(0, 0, 0, 0) 81.237%, rgba(100, 100, 225, 0.25) 81.237%, rgba(100, 100, 225, 0.25) 98.763%, rgba(0, 0, 0, 0) 98.763%, rgba(0, 0, 0, 0) 100%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 1.237%, rgba(100, 100, 225, 0.25) 1.237%, rgba(100, 100, 225, 0.25) 18.763%, rgba(0, 0, 0, 0) 18.763%, rgba(0, 0, 0, 0) 21.237%, rgba(100, 100, 225, 0.25) 21.237%, rgba(100, 100, 225, 0.25) 38.763%, rgba(0, 0, 0, 0) 38.763%, rgba(0, 0, 0, 0) 41.237%, rgba(100, 100, 225, 0.25) 41.237%, rgba(100, 100, 225, 0.25) 58.763%, rgba(0, 0, 0, 0) 58.763%, rgba(0, 0, 0, 0) 61.237%, rgba(100, 100, 225, 0.25) 61.237%, rgba(100, 100, 225, 0.25) 78.763%, rgba(0, 0, 0, 0) 78.763%, rgba(0, 0, 0, 0) 81.237%, rgba(100, 100, 225, 0.25) 81.237%, rgba(100, 100, 225, 0.25) 98.763%, rgba(0, 0, 0, 0) 98.763%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(2.414%, rgba(0, 0, 0, 0)), color-stop(2.414%, rgba(100, 100, 225, 0.25)), color-stop(19.517%, rgba(100, 100, 225, 0.25)), color-stop(19.517%, rgba(0, 0, 0, 0)), color-stop(21.932%, rgba(0, 0, 0, 0)), color-stop(21.932%, rgba(100, 100, 225, 0.25)), color-stop(39.034%, rgba(100, 100, 225, 0.25)), color-stop(39.034%, rgba(0, 0, 0, 0)), color-stop(41.449%, rgba(0, 0, 0, 0)), color-stop(41.449%, rgba(100, 100, 225, 0.25)), color-stop(58.551%, rgba(100, 100, 225, 0.25)), color-stop(58.551%, rgba(0, 0, 0, 0)), color-stop(60.966%, rgba(0, 0, 0, 0)), color-stop(60.966%, rgba(100, 100, 225, 0.25)), color-stop(78.068%, rgba(100, 100, 225, 0.25)), color-stop(78.068%, rgba(0, 0, 0, 0)), color-stop(80.483%, rgba(0, 0, 0, 0)), color-stop(80.483%, rgba(100, 100, 225, 0.25)), color-stop(97.586%, rgba(100, 100, 225, 0.25)), color-stop(97.586%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 2.414%, rgba(100, 100, 225, 0.25) 2.414%, rgba(100, 100, 225, 0.25) 19.517%, rgba(0, 0, 0, 0) 19.517%, rgba(0, 0, 0, 0) 21.932%, rgba(100, 100, 225, 0.25) 21.932%, rgba(100, 100, 225, 0.25) 39.034%, rgba(0, 0, 0, 0) 39.034%, rgba(0, 0, 0, 0) 41.449%, rgba(100, 100, 225, 0.25) 41.449%, rgba(100, 100, 225, 0.25) 58.551%, rgba(0, 0, 0, 0) 58.551%, rgba(0, 0, 0, 0) 60.966%, rgba(100, 100, 225, 0.25) 60.966%, rgba(100, 100, 225, 0.25) 78.068%, rgba(0, 0, 0, 0) 78.068%, rgba(0, 0, 0, 0) 80.483%, rgba(100, 100, 225, 0.25) 80.483%, rgba(100, 100, 225, 0.25) 97.586%, rgba(0, 0, 0, 0) 97.586%, rgba(0, 0, 0, 0) 100%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 2.414%, rgba(100, 100, 225, 0.25) 2.414%, rgba(100, 100, 225, 0.25) 19.517%, rgba(0, 0, 0, 0) 19.517%, rgba(0, 0, 0, 0) 21.932%, rgba(100, 100, 225, 0.25) 21.932%, rgba(100, 100, 225, 0.25) 39.034%, rgba(0, 0, 0, 0) 39.034%, rgba(0, 0, 0, 0) 41.449%, rgba(100, 100, 225, 0.25) 41.449%, rgba(100, 100, 225, 0.25) 58.551%, rgba(0, 0, 0, 0) 58.551%, rgba(0, 0, 0, 0) 60.966%, rgba(100, 100, 225, 0.25) 60.966%, rgba(100, 100, 225, 0.25) 78.068%, rgba(0, 0, 0, 0) 78.068%, rgba(0, 0, 0, 0) 80.483%, rgba(100, 100, 225, 0.25) 80.483%, rgba(100, 100, 225, 0.25) 97.586%, rgba(0, 0, 0, 0) 97.586%, rgba(0, 0, 0, 0) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 2.414%, rgba(100, 100, 225, 0.25) 2.414%, rgba(100, 100, 225, 0.25) 19.517%, rgba(0, 0, 0, 0) 19.517%, rgba(0, 0, 0, 0) 21.932%, rgba(100, 100, 225, 0.25) 21.932%, rgba(100, 100, 225, 0.25) 39.034%, rgba(0, 0, 0, 0) 39.034%, rgba(0, 0, 0, 0) 41.449%, rgba(100, 100, 225, 0.25) 41.449%, rgba(100, 100, 225, 0.25) 58.551%, rgba(0, 0, 0, 0) 58.551%, rgba(0, 0, 0, 0) 60.966%, rgba(100, 100, 225, 0.25) 60.966%, rgba(100, 100, 225, 0.25) 78.068%, rgba(0, 0, 0, 0) 78.068%, rgba(0, 0, 0, 0) 80.483%, rgba(100, 100, 225, 0.25) 80.483%, rgba(100, 100, 225, 0.25) 97.586%, rgba(0, 0, 0, 0) 97.586%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 2.414%, rgba(100, 100, 225, 0.25) 2.414%, rgba(100, 100, 225, 0.25) 19.517%, rgba(0, 0, 0, 0) 19.517%, rgba(0, 0, 0, 0) 21.932%, rgba(100, 100, 225, 0.25) 21.932%, rgba(100, 100, 225, 0.25) 39.034%, rgba(0, 0, 0, 0) 39.034%, rgba(0, 0, 0, 0) 41.449%, rgba(100, 100, 225, 0.25) 41.449%, rgba(100, 100, 225, 0.25) 58.551%, rgba(0, 0, 0, 0) 58.551%, rgba(0, 0, 0, 0) 60.966%, rgba(100, 100, 225, 0.25) 60.966%, rgba(100, 100, 225, 0.25) 78.068%, rgba(0, 0, 0, 0) 78.068%, rgba(0, 0, 0, 0) 80.483%, rgba(100, 100, 225, 0.25) 80.483%, rgba(100, 100, 225, 0.25) 97.586%, rgba(0, 0, 0, 0) 97.586%, rgba(0, 0, 0, 0) 100%);
   background-position: left top;
 }
 .container:after {
@@ -941,7 +941,7 @@ body header {
 /* Non-grid Layout and styling -------------------------------------------------------------- */
 body {
   background-color: #372218;
-  background-image: url('images/dirt.jpg?1300250432');
+  background-image: url('images/dirt.jpg?1305037698');
 }
 
 header {
@@ -977,7 +977,7 @@ header:before {
   z-index: 0;
 }
 header hgroup {
-  background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1305037698') no-repeat 0 36px;
   padding-top: 36px;
   position: relative;
   z-index: 5;
@@ -1187,7 +1187,7 @@ header hgroup h1 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badge-color.png?1305613384');
+  background-image: url('images/badge-color.png?1305653998');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1207,31 +1207,31 @@ header hgroup h1 {
   transform: rotate(0) scale(1.2);
 }
 #wrapper nav.samples ul li#color-badge a {
-  background-image: url('images/badge-color.png?1305613384');
+  background-image: url('images/badge-color.png?1305653998');
 }
 #wrapper nav.samples ul li#clean-start-badge a {
-  background-image: url('images/badge-clean-start.png?1306297606');
+  background-image: url('images/badge-clean-start.png?1306329188');
 }
 #wrapper nav.samples ul li#step-by-step-badge a {
-  background-image: url('images/badge-step-by-step.png?1305686022');
+  background-image: url('images/badge-step-by-step.png?1305654237');
 }
 #wrapper nav.samples ul li#html5-badge a {
-  background-image: url('images/badge-html5.png?1305613384');
+  background-image: url('images/badge-html5.png?1305653998');
 }
 #wrapper nav.samples ul li#fonts-badge a {
-  background-image: url('images/badge-fonts.png?1306278324');
+  background-image: url('images/badge-fonts.png?1306329188');
 }
 #wrapper nav.samples ul li#sass-mixins-badge a {
-  background-image: url('images/badge-sass-mixins.png?1305686022');
+  background-image: url('images/badge-sass-mixins.png?1305654266');
 }
 #wrapper nav.samples ul li#ui-patterns-badge a {
-  background-image: url('images/badge-ui-patterns.png?1305686022');
+  background-image: url('images/badge-ui-patterns.png?1305654208');
 }
 #wrapper nav.samples ul li#drupal-ui-patterns-badge a {
-  background-image: url('images/badge-drupal-ui-patterns.png?1305686022');
+  background-image: url('images/badge-drupal-ui-patterns.png?1305654180');
 }
 #wrapper nav.samples ul li#code-viewer-badge a {
-  background-image: url('images/badge-code-viewer.png?1306279372');
+  background-image: url('images/badge-code-viewer.png?1306329188');
 }
 #wrapper nav.samples:hover ul li:nth-of-type(1n-1) {
   top: 221.762px;

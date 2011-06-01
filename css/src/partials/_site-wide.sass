@@ -319,10 +319,6 @@ $intro-width: 404px
 
 // LEARN
 #learn
-  +padding-leader(1)
-  +padding-trailer(1)
-  // width: 100%
-  // background-color: $brown
   // +background-image(radial-gradient(0 0, $black 15%, rgba($black, 0) 16%), radial-gradient(8px 8px, $black 15%, rgba($black, 0) 16%), radial-gradient(0 1px, rgba($white, .1) 15%, rgba($black, 0) 20%), radial-gradient(8px 9px, rgba($white, .1) 15%, rgba($black, 0) 20%))
   background: -webkit-gradient(radial, 0 0, 0, 0 0, 16, color-stop(15%, $brown-dark), color-stop(16%, rgba($black, 0))), -webkit-gradient(radial, 8px 8px, 0, 8px 8px, 16, color-stop(15%, $brown-dark), color-stop(16%, rgba($black, 0))), -webkit-gradient(radial, 0 1px, 0, 0 1px, 20, color-stop(15%, rgba($white, 0.1)), color-stop(20%, rgba($black, 0))), -webkit-gradient(radial, 8px 9px, 0, 8px 9px, 20, color-stop(15%, rgba($white, 0.1)), color-stop(20%, rgba($black, 0)))
   background: -webkit-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 0 0, -webkit-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 8px 8px, -webkit-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 0 1px, -webkit-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 8px 9px
@@ -333,6 +329,11 @@ $intro-width: 404px
   background-size: 16px 16px
   .inner
     @extend .container
+    +padding-leader(1)
+    +padding-trailer(1)
+    background-color: rgba($black, 0.4)
+    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+    color: $blue-ice
     > h1
       +full
     #walkthru
