@@ -185,11 +185,12 @@ $intro-width: 404px
           +remove-link-underlines
           display: block
           +replace-text-with-dimensions('badge-color.png')
-
         @each $badge in color, clean-start, step-by-step, html5, fonts, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
           &##{$badge}-badge
             a
               background-image: image_url('badge-#{$badge}.png')
+              &:hover, &.selected
+                background-image: image_url('badge-#{$badge}-selected.png')
         // calculate circle of badges
         @for $i from 1 through ($badge-total + 1)
           $radius: 320

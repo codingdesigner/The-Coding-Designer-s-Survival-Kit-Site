@@ -19,14 +19,10 @@ $(document).ready(function () {
     badgeClick(this);
     return false;
   }).filter(':first').click();
-  $('#intro nav.samples ul li a').hover(
+  $('#intro nav.samples ul li a').mouseenter(
     function () {
       badgeClick(this);
-    }, 
-    function () {
-      badgeClick(this);
-    }
-  );
+    });
   //
   $('#intro #teasers article h1').lettering();
   $('#learn h1, #learn h2, #learn h3').lettering();
