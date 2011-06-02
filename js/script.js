@@ -28,6 +28,7 @@ $(document).ready(function () {
     }
   );
   //
+  $('#intro #teasers article h1').lettering();
   $('#learn h1, #learn h2, #learn h3').lettering();
 });
 
