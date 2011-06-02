@@ -253,7 +253,7 @@ $intro-width: 404px
         li
 
           @for $i from 1 through ($badge-total + 1)
-            $radius: 345
+            $radius: 330
             $position: 360 / ($badge-total + 1) * $i
             $rotation: $position
             @if $rotation > 180
@@ -297,19 +297,19 @@ $intro-width: 404px
         bottom: 190px
         left: 0
       h1
-        @extend h3
+        @extend h4
         border-bottom: 1px dashed adjust-color($blue, $lightness: +45 )
         margin: 0 5px 0.25em
         color: adjust-color($blue, $lightness: +30)
         display: block
         visibility: visible
       p
-        font-family: $font-proxima-nova-condensed
-        +adjust-font-size-to($ms1)
+        // font-family: $font-proxima-nova-condensed
+        // +adjust-font-size-to($ms1)
         font-weight: bold
         padding: 0 45px
       @extend .hidden
-      &:target
+      &:target, &.selected
         display: block
         visibility: visible
       &:first-of-type
@@ -332,10 +332,23 @@ $intro-width: 404px
     +padding-leader(1)
     +padding-trailer(1)
     background-color: rgba($black, 0.4)
+    //
+      $total          : $grid-background-total-columns,
+      $column         : $grid-background-column-width,
+      $gutter         : $grid-background-gutter-width,
+      $baseline       : $grid-background-baseline-height,
+      $offset         : $grid-background-offset,
+      $column-color   : $grid-background-column-color,
+      $gutter-color   : $grid-background-gutter-color,
+      $baseline-color : $grid-background-baseline-color,
+      $force-fluid    : $grid-background-force-fluid
+    // @debug $grid-background-column-width
+    +column-grid-background(5, 170px, 24px, 24px, $green, rgba(0, 0, 0, 0), true)
     +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
     color: $blue-ice
     > h1
       +full
+      @extend .visuallyhidden
     #walkthru
       +columns(3)
       +alpha
@@ -344,12 +357,53 @@ $intro-width: 404px
         height: 376.65px
         max-width: 100%
     #podcast-videos
+      +leader(1)
       +columns(2)
       +omega
+      > h2
+        +adjust-font-size-to($ms2)
+        text-align: right
+        +trailer
       article
+        +vertical-separation
         h1
           @extend h3
+          line-height: 1em
+          +columns(1,2)
+        img
+          +columns(1,2)
+          +omega(2)
+          margin: 12px 0
 
+
+
+// fun
+#learn
+  h1, h2, h3
+    position: relative
+    span
+      position: relative
+      &:nth-of-type(2n-2)
+        // opacity: 0.6
+        // top: -1px
+      &:nth-of-type(3n-3)
+        opacity: 0.7
+        // top: -0.3em
+        // font-size: 0.7em
+        // top: 1px
+      &:nth-of-type(5n-5)
+        opacity: 0.8
+        // top: -0.2em
+        // font-size: 0.8em
+        // top: -1px
+        +rotate(2deg)
+      &:nth-of-type(7n-7)
+        opacity: 0.9
+        // top: -0.1em
+        // font-size: 0.9em
+        // top: 1px
+        +rotate(-2deg)
+      
 
 
 

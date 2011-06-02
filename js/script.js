@@ -4,19 +4,31 @@
 
 
 $(document).ready(function () {
-  // $('nav.samples li a').hover(
-  //   function () {
-  //     console.log(this.hash);
-  //     console.log($(this));
-  //     console.log($(this).attr("href"));
-  //     $(this).click();
-  //   }, 
-  //   function () {
-  //     
-  //   }
-  //   );
-  // console.log($('nav.samples li a'));
-  // $('#main article p').lettering('lines');
+  var tabContainers = $('#intro #teasers article');
+  tabContainers.hide().filter(':first').show();
+  
+  function badgeClick (el) {
+    tabContainers.hide().removeClass('selected');
+    tabContainers.filter(el.hash).show().addClass('selected');
+    $('#intro nav.samples ul li a').removeClass('selected');
+    $(el).addClass('selected');
+    return false;
+  }
+
+  $('#intro nav.samples ul li a').click(function () {
+    badgeClick(this);
+    return false;
+  }).filter(':first').click();
+  $('#intro nav.samples ul li a').hover(
+    function () {
+      badgeClick(this);
+    }, 
+    function () {
+      badgeClick(this);
+    }
+  );
+  //
+  $('#learn h1, #learn h2, #learn h3').lettering();
 });
 
 
