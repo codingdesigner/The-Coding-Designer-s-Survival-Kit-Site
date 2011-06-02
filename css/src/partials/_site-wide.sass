@@ -2,33 +2,23 @@
 html
   height: 100%
 body
-  // +display-box
-  // +box-orient(vertical)
-  // +box-pack(start)
-  // +box-align(center)
   width: 100%
   height: 100%
-  background-color: $red 
+  // background-color: $red 
   // background-image: image_url('dirt-6.png'), image_url('dirt-5.png'), image_url('dirt-4.png'), image_url('dirt-3.png'), image_url('dirt-2.png'), image_url('dirt-1.jpg')
   // background-image: image_url('dirt-3.png'), image_url('dirt-2.png'), image_url('dirt-1.jpg')
   // background-image: image_url('dirt.jpg')
   
 // SECTIONS TO HIDE
-#tools, 
 #survivors, 
 #start
   @extend .hidden
 
-// PAGE HEADER    
+/* PAGE HEADER    
 header 
   position: relative
-  // +display-box
-  // +box-orient(vertical)
-  // +box-pack(center)
-  // +box-align(center)
   padding-top: 372px
-  padding-bottom: 248px
-  
+  padding-bottom: 248px  
   background-image: image_url('dirt.jpg')
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   &:before
@@ -47,20 +37,14 @@ header
     width: 100%
     overflow: hidden
     z-index: 0
-  
   .wrapper
     background: transparent image_url('logo.png') no-repeat 0 ($baseline * 1.5)
     padding-top: $baseline * 1.5
     top: -$baseline * 1.5
     position: relative
     z-index: 5
-    // +display-box
-    // +box-orient(vertical)
-    // +box-pack(center)
-    // +box-align(end)
     width: 480px
     margin: 0 auto
-    // border: 1px dashed $white
     color: $white
     color: change-color($white, $alpha: 0.8)
     +text-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
@@ -89,7 +73,7 @@ header
       +adjust-font-size-to($ms8)
       top: -$baseline-half
   
-// MASTER NAVIGATION
+/* MASTER NAVIGATION
 #main-nav
   position: fixed
   top: 0
@@ -109,7 +93,7 @@ header
         @extend h5
         +remove-link-underlines
   
-// INTRODUCTION
+/* INTRODUCTION
 // define animations
 @-webkit-keyframes spin
   0%
@@ -194,8 +178,8 @@ $intro-width: 404px
         +background-clip(padding-box)
         +transition(all,0.5s)
         +box-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
-        &:hover
-          +transform2d(scale(1.2))
+        // &:hover
+        //   +transform2d(scale(1.2))
         a
           +transition(all,0.5s)
           +remove-link-underlines
@@ -291,7 +275,6 @@ $intro-width: 404px
         position: absolute
         width: 410px
         height: 476px
-        // background-color: $red
         +background-image(linear-gradient(top, change-color($black, $alpha:  0), change-color($black, $alpha:  0.5)))
         z-index: -10
         bottom: 190px
@@ -304,8 +287,6 @@ $intro-width: 404px
         display: block
         visibility: visible
       p
-        // font-family: $font-proxima-nova-condensed
-        // +adjust-font-size-to($ms1)
         font-weight: bold
         padding: 0 45px
       @extend .hidden
@@ -317,9 +298,10 @@ $intro-width: 404px
         visibility: visible
 
 
-// LEARN
+/* LEARN
 #learn
-  // +background-image(radial-gradient(0 0, $black 15%, rgba($black, 0) 16%), radial-gradient(8px 8px, $black 15%, rgba($black, 0) 16%), radial-gradient(0 1px, rgba($white, .1) 15%, rgba($black, 0) 20%), radial-gradient(8px 9px, rgba($white, .1) 15%, rgba($black, 0) 20%))
+  // START background pattern
+  /* BACKGROUND PATTERN: http://leaverou.me/css3patterns/#carbon-fibre THANKS!
   background: -webkit-gradient(radial, 0 0, 0, 0 0, 16, color-stop(15%, $brown-dark), color-stop(16%, rgba($black, 0))), -webkit-gradient(radial, 8px 8px, 0, 8px 8px, 16, color-stop(15%, $brown-dark), color-stop(16%, rgba($black, 0))), -webkit-gradient(radial, 0 1px, 0, 0 1px, 20, color-stop(15%, rgba($white, 0.1)), color-stop(20%, rgba($black, 0))), -webkit-gradient(radial, 8px 9px, 0, 8px 9px, 20, color-stop(15%, rgba($white, 0.1)), color-stop(20%, rgba($black, 0)))
   background: -webkit-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 0 0, -webkit-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 8px 8px, -webkit-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 0 1px, -webkit-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 8px 9px
   background: -moz-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 0 0, -moz-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 8px 8px, -moz-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 0 1px, -moz-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 8px 9px
@@ -327,23 +309,14 @@ $intro-width: 404px
   background: radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 0 0, radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 8px 8px, radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 0 1px, radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 8px 9px
   background-color: $brown
   background-size: 16px 16px
+  // END background pattern
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   .inner
     @extend .container
     +padding-leader(1)
     +padding-trailer(1)
     background-color: rgba($black, 0.4)
-    //
-      $total          : $grid-background-total-columns,
-      $column         : $grid-background-column-width,
-      $gutter         : $grid-background-gutter-width,
-      $baseline       : $grid-background-baseline-height,
-      $offset         : $grid-background-offset,
-      $column-color   : $grid-background-column-color,
-      $gutter-color   : $grid-background-gutter-color,
-      $baseline-color : $grid-background-baseline-color,
-      $force-fluid    : $grid-background-force-fluid
-    // @debug $grid-background-column-width
-    +column-grid-background(5, 170px, 24px, 24px, $green, rgba(0, 0, 0, 0), true)
+    +background-image(linear-gradient(left center, rgba($black, 0), rgba($black, 0) 59.7585%, rgba($brown, 0.5) 59.7585%, rgba($brown, 0.5) 79.2755%, rgba($black, 0) 79.2755%, rgba($black, 0)))
     +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
     color: $blue-ice
     > h1
@@ -365,7 +338,13 @@ $intro-width: 404px
         text-align: right
         +trailer
       article
-        +vertical-separation
+        +vertical-separation($baseline, 3px, rgba($brown, 0.5), solid)
+        // background-color: rgba($black, 0.25)
+        // +background-image(linear-gradient(top, rgba($black, 0), rgba($brown, 0.5) 50%))
+        margin-left: -12px
+        padding-left: 12px
+        margin-right: -26px
+        padding-right: 26px
         h1
           @extend h3
           line-height: 1em
@@ -373,49 +352,33 @@ $intro-width: 404px
         img
           +columns(1,2)
           +omega(2)
-          margin: 12px 0
+          margin: 3px 0
 
+/* TOOLS
+#tools
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  .inner
+    @extend .container
+    +padding-leader(1)
+    +padding-trailer(1)
 
 
 // fun
+#intro #teasers article, 
 #learn
   h1, h2, h3
     position: relative
     span
       position: relative
       &:nth-of-type(2n-2)
-        // opacity: 0.6
-        // top: -1px
       &:nth-of-type(3n-3)
         opacity: 0.7
-        // top: -0.3em
-        // font-size: 0.7em
-        // top: 1px
       &:nth-of-type(5n-5)
         opacity: 0.8
-        // top: -0.2em
-        // font-size: 0.8em
-        // top: -1px
-        +rotate(2deg)
+        // +rotate(2deg)
       &:nth-of-type(7n-7)
         opacity: 0.9
-        // top: -0.1em
-        // font-size: 0.9em
-        // top: 1px
-        +rotate(-2deg)
+        // +rotate(-2deg)
       
 
 
-
-
-// OLD OLD OLD OLD    
-        
-
-
-
-// footer  
-//   background: $white
-//   bottom: 0
-//   position: absolute
-//   text-align: center
-//   width: 100%
