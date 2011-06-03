@@ -178,14 +178,15 @@ $badge-size-neg-half: -$badge-size * 0.5
           +transition(all,0.5s)
           +remove-link-underlines
           display: block
-          +replace-text-with-dimensions('badge-color.png')
+          +replace-text-with-dimensions('badges/color.png')
           &:hover
             +transform2d(rotate(0) scale(1.2))
         @each $badge in color, clean-start, step-by-step, html5, fonts, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
           &##{$badge}-badge
             a
               // +replace-text-with-dimensions('badge-#{$badge}.png')
-              background-image: image_url('badge-#{$badge}.png')
+              // background-image: image_url('badge-#{$badge}.png')
+              @extend .badges-#{$badge}
     &:hover
       ul
         li

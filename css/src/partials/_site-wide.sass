@@ -181,16 +181,15 @@ $intro-width: 404px
         // &:hover
         //   +transform2d(scale(1.2))
         a
-          +transition(all,0.5s)
           +remove-link-underlines
           display: block
-          +replace-text-with-dimensions('badge-color.png')
+          +replace-text-with-dimensions('badges/color.png')
         @each $badge in color, clean-start, step-by-step, html5, fonts, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
           &##{$badge}-badge
             a
-              background-image: image_url('badge-#{$badge}.png')
+              @extend .badges-#{$badge}
               &:hover, &.selected
-                background-image: image_url('badge-#{$badge}-selected.png')
+                @extend .badges-#{$badge}-selected
         // calculate circle of badges
         @for $i from 1 through ($badge-total + 1)
           $radius: 320
