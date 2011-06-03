@@ -84,11 +84,11 @@ html {
 }
 
 .headers, h1, h2, h3, #main article h1, h4, h5, h6 {
-  font-family: futura-pt-1, futura-pt-2, sans-serif, refrigerator-deluxe-1, refrigerator-deluxe-2, sans-serif;
+  font-family: futura-pt-1, futura-pt-2, sans-serif;
 }
 
 .logo-type, header:before, header hgroup h1, header hgroup h2, header hgroup h3, header hgroup #main article h1, #main article header hgroup h1, header hgroup h4, header hgroup h5, header hgroup h6 {
-  font-family: proxima-nova-1, proxima-nova-2, sans-serif, futura-pt-1, futura-pt-2, sans-serif, refrigerator-deluxe-1, refrigerator-deluxe-2, sans-serif;
+  font-family: proxima-nova-1, proxima-nova-2, sans-serif, futura-pt-1, futura-pt-2, sans-serif;
 }
 
 .allcaps, caption {

@@ -17,6 +17,7 @@ body
 /* PAGE HEADER    
 header 
   position: relative
+  z-index: -50
   padding-top: 372px
   padding-bottom: 248px  
   background-image: image_url('dirt.jpg')
@@ -300,6 +301,8 @@ $intro-width: 404px
 
 /* LEARN
 #learn
+  position: relative
+  z-index: -51
   // START background pattern
   /* BACKGROUND PATTERN: http://leaverou.me/css3patterns/#carbon-fibre THANKS!
   background: -webkit-gradient(radial, 0 0, 0, 0 0, 16, color-stop(15%, $brown-dark), color-stop(16%, rgba($black, 0))), -webkit-gradient(radial, 8px 8px, 0, 8px 8px, 16, color-stop(15%, $brown-dark), color-stop(16%, rgba($black, 0))), -webkit-gradient(radial, 0 1px, 0, 0 1px, 20, color-stop(15%, rgba($white, 0.1)), color-stop(20%, rgba($black, 0))), -webkit-gradient(radial, 8px 9px, 0, 8px 9px, 20, color-stop(15%, rgba($white, 0.1)), color-stop(20%, rgba($black, 0)))
@@ -321,6 +324,9 @@ $intro-width: 404px
     color: $blue-ice
     > h1
       +full
+      text-align: center
+      font-weight: 300
+      margin-bottom: $baseline
       @extend .visuallyhidden
     #walkthru
       +columns(3)
@@ -356,11 +362,39 @@ $intro-width: 404px
 
 /* TOOLS
 #tools
+  position: relative
+  z-index: -52
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  background-color: $lightgray
   .inner
     @extend .container
     +padding-leader(1)
     +padding-trailer(1)
+    background-color: rgba($black, 0.5)
+    color: $white
+    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+    > h1
+      +full
+      text-align: center
+      font-weight: 300
+      margin-bottom: $baseline
+    #tools-nav
+      +columns(1)
+      +alpha
+      h2
+        @extend h3
+        border-bottom: 3px solid $gray
+      ul
+        +no-bullets
+        margin-left: 0
+        li
+          +vertical-separation($baseline-half, 1px, $gray)
+    #tools-examples
+      +columns(4)
+      +omega
+      article
+        max-width: 100%
+        overflow: auto
 
 
 // fun
