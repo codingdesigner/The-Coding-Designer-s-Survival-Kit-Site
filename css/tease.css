@@ -112,14 +112,14 @@ body {
 /* Selected Text -------------------------------------------------------------- */
 /* -moz- must be declared separately */
 ::-moz-selection {
-  color: white;
-  background: #b80000;
+  color: black;
+  background: #94afc9;
   text-shadow: none;
 }
 
 ::selection {
-  color: white;
-  background: #b80000;
+  color: black;
+  background: #94afc9;
   text-shadow: none;
 }
 
@@ -187,29 +187,29 @@ html > body {
 /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 /* Links -------------------------------------------------------------- */
 a {
-  color: #b80000;
+  color: #94afc9;
 }
 a:visited {
-  color: #b80000;
+  color: #94afc9;
 }
 a:hover {
-  color: #00b8b8;
+  color: #c9ae94;
 }
 a:active {
-  color: #00b8b8;
+  color: #c9ae94;
 }
 a {
   text-decoration: none;
-  border-bottom: 1px solid #b80000;
+  border-bottom: 1px solid #94afc9;
 }
 a:visited {
-  border-bottom-color: #b80000;
+  border-bottom-color: #94afc9;
 }
 a:hover {
-  border-bottom-color: #00b8b8;
+  border-bottom-color: #c9ae94;
 }
 a:active {
-  border-bottom-color: #00b8b8;
+  border-bottom-color: #c9ae94;
 }
 
 /* Headings -------------------------------------------------------------- */
@@ -741,6 +741,7 @@ textarea, input:not([type="radio"]) {
 img {
   vertical-align: text-bottom;
   max-width: 100%;
+  height: auto;
   -ms-interpolation-mode: bicubic;
 }
 img.left {
@@ -766,10 +767,10 @@ body.markup-elements h1.section-title a:visited {
   color: black;
 }
 body.markup-elements h1.section-title a:hover {
-  color: #b80000;
+  color: #94afc9;
 }
 body.markup-elements h1.section-title a:active {
-  color: #b80000;
+  color: #94afc9;
 }
 body.markup-elements h1.section-title a {
   text-decoration: none;
@@ -779,10 +780,10 @@ body.markup-elements h1.section-title a:visited {
   border-bottom-color: black;
 }
 body.markup-elements h1.section-title a:hover {
-  border-bottom-color: #b80000;
+  border-bottom-color: #94afc9;
 }
 body.markup-elements h1.section-title a:active {
-  border-bottom-color: #b80000;
+  border-bottom-color: #94afc9;
 }
 body.markup-elements article.element {
   *zoom: 1;
@@ -818,10 +819,10 @@ body.markup-elements article.element h2.element-title a:visited {
   color: white;
 }
 body.markup-elements article.element h2.element-title a:hover {
-  color: #b80000;
+  color: #94afc9;
 }
 body.markup-elements article.element h2.element-title a:active {
-  color: #b80000;
+  color: #94afc9;
 }
 body.markup-elements article.element h2.element-title a {
   text-decoration: none;
@@ -831,10 +832,10 @@ body.markup-elements article.element h2.element-title a:visited {
   border-bottom-color: white;
 }
 body.markup-elements article.element h2.element-title a:hover {
-  border-bottom-color: #b80000;
+  border-bottom-color: #94afc9;
 }
 body.markup-elements article.element h2.element-title a:active {
-  border-bottom-color: #b80000;
+  border-bottom-color: #94afc9;
 }
 body.markup-elements article.element .example {
   *zoom: 1;

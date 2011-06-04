@@ -1,6 +1,6 @@
 /* Links -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #tools-nav h2, h4, #intro #teasers article h1, h5, #main-nav ul li a, h6, p, blockquote, pre,
+h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #intro #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -71,7 +71,7 @@ html {
   font-family: sans-serif;
 }
 
-.mono, pre, code, tt, body.markup-elements article.element .example .markup + .show-source {
+.mono, pre, code, tt, body.markup-elements article.element .example .markup + .show-source, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner code, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
@@ -83,11 +83,11 @@ html {
   font-family: museo-slab-1, museo-slab-2, Georgia, serif;
 }
 
-.headers, h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #tools-nav h2, h4, #intro #teasers article h1, h5, #main-nav ul li a, h6 {
+.headers, h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #intro #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6 {
   font-family: futura-pt-1, futura-pt-2, sans-serif;
 }
 
-.logo-type, header:before, header h1, header h2, header h3, header #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article header h1, header #tools .inner #tools-nav h2, #tools .inner #tools-nav header h2, header h4, header #intro #teasers article h1, #intro #teasers article header h1, header h5, header #main-nav ul li a, #main-nav ul li header a, header h6 {
+.logo-type, header#page-header:before, header#page-header h1, header#page-header h2, header#page-header h3, header#page-header #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article header#page-header h1, header#page-header #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav header#page-header h2, header#page-header h4, header#page-header #intro #teasers article h1, #intro #teasers article header#page-header h1, header#page-header h5, header#page-header #main-nav ul li a, #main-nav ul li header#page-header a, header#page-header #main-nav ul li:before, #main-nav ul header#page-header li:before, header#page-header #main-nav ul li:after, #main-nav ul header#page-header li:after, header#page-header h6 {
   font-family: proxima-nova-1, proxima-nova-2, sans-serif, futura-pt-1, futura-pt-2, sans-serif;
 }
 
@@ -112,14 +112,14 @@ body {
 /* Selected Text -------------------------------------------------------------- */
 /* -moz- must be declared separately */
 ::-moz-selection {
-  color: white;
-  background: #b80000;
+  color: black;
+  background: #94afc9;
   text-shadow: none;
 }
 
 ::selection {
-  color: white;
-  background: #b80000;
+  color: black;
+  background: #94afc9;
   text-shadow: none;
 }
 
@@ -148,14 +148,14 @@ html > body {
 /* Hide for both screenreaders and browsers
  * css-discuss.incutio.com/wiki/Screenreader_Visibility */
 .hidden, #survivors,
-#start, #intro > h2, #intro nav.samples h3, #intro nav.samples #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article #intro nav.samples h1, #intro nav.samples #tools .inner #tools-nav h2, #tools .inner #tools-nav #intro nav.samples h2, #intro #teasers > h3, #intro #teasers > #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article #intro #teasers > h1, #intro #teasers > #tools .inner #tools-nav h2, #tools .inner #tools-nav #intro #teasers > h2, #intro #teasers article {
+#start, #intro > h2, #intro nav.samples h3, #intro nav.samples #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article #intro nav.samples h1, #intro nav.samples #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #intro nav.samples h2, #intro #teasers > h3, #intro #teasers > #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article #intro #teasers > h1, #intro #teasers > #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #intro #teasers > h2, #intro #teasers article {
   display: none;
   visibility: hidden;
 }
 
 /* Hide only visually, but have it available for screenreaders
  * www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
-.visuallyhidden, #main-nav h1, #learn .inner > h1 {
+.visuallyhidden, #main-nav h1, #learn .inner > h1, #tools .inner #all-examples #tools-examples > h2 {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
@@ -188,33 +188,33 @@ html > body {
 /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 /* Links -------------------------------------------------------------- */
 a {
-  color: #b80000;
+  color: #94afc9;
 }
 a:visited {
-  color: #b80000;
+  color: #94afc9;
 }
 a:hover {
-  color: #00b8b8;
+  color: #c9ae94;
 }
 a:active {
-  color: #00b8b8;
+  color: #c9ae94;
 }
 a {
   text-decoration: none;
-  border-bottom: 1px solid #b80000;
+  border-bottom: 1px solid #94afc9;
 }
 a:visited {
-  border-bottom-color: #b80000;
+  border-bottom-color: #94afc9;
 }
 a:hover {
-  border-bottom-color: #00b8b8;
+  border-bottom-color: #c9ae94;
 }
 a:active {
-  border-bottom-color: #00b8b8;
+  border-bottom-color: #c9ae94;
 }
 
 /* Headings -------------------------------------------------------------- */
-h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #tools-nav h2, h4, #intro #teasers article h1, h5, #main-nav ul li a, h6 {
+h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #intro #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6 {
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -229,7 +229,7 @@ h2 {
   line-height: 1.157em;
 }
 
-h3, #learn .inner #podcast-videos article h1, #tools .inner #tools-nav h2 {
+h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2 {
   font-size: 2.25em;
   line-height: 1.524em;
 }
@@ -239,7 +239,7 @@ h4, #intro #teasers article h1 {
   line-height: 1.736em;
 }
 
-h5, #main-nav ul li a {
+h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after {
   font-size: 1.5em;
   line-height: 1.143em;
 }
@@ -742,6 +742,7 @@ textarea, input:not([type="radio"]) {
 img {
   vertical-align: text-bottom;
   max-width: 100%;
+  height: auto;
   -ms-interpolation-mode: bicubic;
 }
 img.left {
@@ -844,10 +845,10 @@ body.markup-elements h1.section-title a:visited {
   color: black;
 }
 body.markup-elements h1.section-title a:hover {
-  color: #b80000;
+  color: #94afc9;
 }
 body.markup-elements h1.section-title a:active {
-  color: #b80000;
+  color: #94afc9;
 }
 body.markup-elements h1.section-title a {
   text-decoration: none;
@@ -857,10 +858,10 @@ body.markup-elements h1.section-title a:visited {
   border-bottom-color: black;
 }
 body.markup-elements h1.section-title a:hover {
-  border-bottom-color: #b80000;
+  border-bottom-color: #94afc9;
 }
 body.markup-elements h1.section-title a:active {
-  border-bottom-color: #b80000;
+  border-bottom-color: #94afc9;
 }
 body.markup-elements article.element {
   *zoom: 1;
@@ -896,10 +897,10 @@ body.markup-elements article.element h2.element-title a:visited {
   color: white;
 }
 body.markup-elements article.element h2.element-title a:hover {
-  color: #b80000;
+  color: #94afc9;
 }
 body.markup-elements article.element h2.element-title a:active {
-  color: #b80000;
+  color: #94afc9;
 }
 body.markup-elements article.element h2.element-title a {
   text-decoration: none;
@@ -909,10 +910,10 @@ body.markup-elements article.element h2.element-title a:visited {
   border-bottom-color: white;
 }
 body.markup-elements article.element h2.element-title a:hover {
-  border-bottom-color: #b80000;
+  border-bottom-color: #94afc9;
 }
 body.markup-elements article.element h2.element-title a:active {
-  border-bottom-color: #b80000;
+  border-bottom-color: #94afc9;
 }
 body.markup-elements article.element .example {
   *zoom: 1;
@@ -995,7 +996,7 @@ body {
 }
 
 /* PAGE HEADER */
-header {
+header#page-header {
   position: relative;
   padding-top: 372px;
   padding-bottom: 248px;
@@ -1005,7 +1006,7 @@ header {
   -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
 }
-header:before {
+header#page-header:before {
   content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
   letter-spacing: -4px;
   font-size: 3.375em;
@@ -1020,7 +1021,7 @@ header:before {
   overflow: hidden;
   z-index: 0;
 }
-header .wrapper {
+header#page-header .wrapper {
   background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
   padding-top: 36px;
   top: -36px;
@@ -1032,11 +1033,11 @@ header .wrapper {
   color: rgba(255, 255, 255, 0.8);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
 }
-header h1, header h2, header h3, header #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article header h1, header #tools .inner #tools-nav h2, #tools .inner #tools-nav header h2, header h4, header #intro #teasers article h1, #intro #teasers article header h1, header h5, header #main-nav ul li a, #main-nav ul li header a, header h6 {
+header#page-header h1, header#page-header h2, header#page-header h3, header#page-header #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article header#page-header h1, header#page-header #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav header#page-header h2, header#page-header h4, header#page-header #intro #teasers article h1, #intro #teasers article header#page-header h1, header#page-header h5, header#page-header #main-nav ul li a, #main-nav ul li header#page-header a, header#page-header #main-nav ul li:before, #main-nav ul header#page-header li:before, header#page-header #main-nav ul li:after, #main-nav ul header#page-header li:after, header#page-header h6 {
   font-weight: 700;
   font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
 }
-header h1 {
+header#page-header h1 {
   margin-bottom: 0;
   position: relative;
   font-size: 32.8px;
@@ -1044,12 +1045,12 @@ header h1 {
   text-align: right;
   padding-right: 6px;
 }
-.wf-active header h1 {
+.wf-active header#page-header h1 {
   font-size: 2.963em;
   line-height: 1.157em;
   top: -9px;
 }
-header h2 {
+header#page-header h2 {
   font-family: proxima-nova-1, proxima-nova-2, sans-serif;
   font-weight: 800;
   font-size: 4.929em;
@@ -1057,7 +1058,7 @@ header h2 {
   position: relative;
   top: 0px;
 }
-.wf-active header h2 {
+.wf-active header#page-header h2 {
   font-size: 5.063em;
   line-height: 1.016em;
   top: -12px;
@@ -1072,6 +1073,7 @@ header h2 {
   width: 100%;
   text-align: center;
   z-index: 100;
+  border-bottom: 1px solid #372218;
 }
 #main-nav ul {
   list-style-type: none;
@@ -1085,10 +1087,32 @@ header h2 {
   padding: 0 0.5em;
 }
 #main-nav ul li a {
+  color: #b80000;
+}
+#main-nav ul li a:visited {
+  color: #b80000;
+}
+#main-nav ul li a:hover {
+  color: #8a0000;
+}
+#main-nav ul li a:active {
+  color: #8a0000;
+}
+#main-nav ul li a {
   border-bottom: none;
 }
 #main-nav ul li a:hover {
   border-bottom: none;
+}
+#main-nav ul li:before, #main-nav ul li:after {
+  font-weight: 300;
+  color: #d3d3d3;
+}
+#main-nav ul li:before {
+  content: "<";
+}
+#main-nav ul li:after {
+  content: ">";
 }
 
 /* INTRODUCTION */
@@ -1489,40 +1513,49 @@ header h2 {
   -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
 }
-#tools .inner > h1 {
+#tools .inner > header {
   clear: both;
   margin-left: 2.414%;
   margin-right: 2.414%;
+  margin-bottom: 1.714em;
+}
+#tools .inner > header h1 {
   text-align: center;
   font-weight: 300;
   margin-bottom: 24px;
 }
-#tools .inner #tools-nav {
+#tools .inner #all-examples {
+  clear: both;
+  margin-left: 2.414%;
+  margin-right: 2.414%;
+  position: relative;
+}
+#tools .inner #all-examples #tools-nav {
   display: inline;
   float: left;
-  width: 17.103%;
-  margin-right: 2.414%;
-  margin-left: 2.414%;
+  width: 17.97%;
+  margin-right: 2.537%;
+  position: relative;
 }
-#tools .inner #tools-nav h2 {
+#tools .inner #all-examples #tools-nav h2 {
   border-bottom: 3px solid gray;
 }
-#tools .inner #tools-nav ul {
+#tools .inner #all-examples #tools-nav ul {
   list-style: none;
   margin-left: 0;
 }
-#tools .inner #tools-nav ul li {
+#tools .inner #all-examples #tools-nav ul li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0px;
 }
-#tools .inner #tools-nav ul li {
+#tools .inner #all-examples #tools-nav ul li {
   *zoom: 1;
   border-bottom: 1px solid gray;
   margin-bottom: 6px;
   padding-bottom: 5px;
 }
-#tools .inner #tools-nav ul li:after {
+#tools .inner #all-examples #tools-nav ul li:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -1530,73 +1563,100 @@ header h2 {
   overflow: hidden;
   visibility: hidden;
 }
-#tools .inner #tools-nav ul li:last-child {
+#tools .inner #all-examples #tools-nav ul li:last-child {
   padding-bottom: 0;
   border-bottom-width: 0;
   margin-bottom: 0;
 }
-#tools .inner #tools-examples {
+#tools .inner #all-examples #tools-examples {
   display: inline;
   float: left;
-  width: 75.654%;
-  margin-right: 2.414%;
+  width: 79.493%;
+  margin-right: 2.537%;
   display: inline;
   float: right;
-  margin-right: 2.414%;
+  margin-right: 0;
   #margin-left: -24px;
+  position: relative;
 }
-#tools .inner #tools-examples article {
+#tools .inner #all-examples #tools-examples article {
   max-width: 100%;
   overflow: auto;
 }
+#tools .inner #all-examples #tools-examples article .syntaxhighlighter {
+  white-space: nowrap;
+  overflow: auto;
+}
+#tools .inner #all-examples #tools-examples article .syntaxhighlighter th, #tools .inner #all-examples #tools-examples article .syntaxhighlighter td, #tools .inner #all-examples #tools-examples article .syntaxhighlighter caption {
+  padding: 0;
+}
+#tools .inner #all-examples #tools-examples article .syntaxhighlighter th .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter td .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter caption .line {
+  padding: 0 0.5em;
+}
+#tools .inner #all-examples #tools-examples article .syntaxhighlighter .toolbar {
+  display: none;
+}
+#tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner .line, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line {
+  height: 24px;
+}
+#tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter {
+  width: 2em;
+  max-width: 3em;
+}
+#tools .inner #all-examples #tools-examples article .syntaxhighlighter .container, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner {
+  width: auto;
+}
+#tools .inner #all-examples #tools-examples article .syntaxhighlighter .alt2 {
+  background-color: rgba(255, 255, 255, 0.025) !important;
+}
 
-#intro #teasers article h1, #intro #teasers article h2, #intro #teasers article h3, #intro #teasers #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos #intro #teasers article h1, #intro #teasers article #tools .inner #tools-nav h2, #tools .inner #tools-nav #intro #teasers article h2,
+#intro #teasers article h1, #intro #teasers article h2, #intro #teasers article h3, #intro #teasers #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos #intro #teasers article h1, #intro #teasers article #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #intro #teasers article h2,
 #learn h1,
 #learn h2,
 #learn h3,
 #learn #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article
 #learn h1,
-#learn #tools .inner #tools-nav h2, #tools .inner #tools-nav
+#learn #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
 #learn h2 {
   position: relative;
 }
-#intro #teasers article h1 span, #intro #teasers article h2 span, #intro #teasers article h3 span, #intro #teasers #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos #intro #teasers article h1 span, #intro #teasers article #tools .inner #tools-nav h2 span, #tools .inner #tools-nav #intro #teasers article h2 span,
+#intro #teasers article h1 span, #intro #teasers article h2 span, #intro #teasers article h3 span, #intro #teasers #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos #intro #teasers article h1 span, #intro #teasers article #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav #intro #teasers article h2 span,
 #learn h1 span,
 #learn h2 span,
 #learn h3 span,
 #learn #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos article
 #learn h1 span,
-#learn #tools .inner #tools-nav h2 span, #tools .inner #tools-nav
+#learn #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
 #learn h2 span {
   position: relative;
 }
-#intro #teasers article h1 span:nth-of-type(3n-3), #intro #teasers article h2 span:nth-of-type(3n-3), #intro #teasers article h3 span:nth-of-type(3n-3), #intro #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos #intro #teasers article h1 span:nth-of-type(3n-3), #intro #teasers article #tools .inner #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #tools-nav #intro #teasers article h2 span:nth-of-type(3n-3),
+#intro #teasers article h1 span:nth-of-type(3n-3), #intro #teasers article h2 span:nth-of-type(3n-3), #intro #teasers article h3 span:nth-of-type(3n-3), #intro #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos #intro #teasers article h1 span:nth-of-type(3n-3), #intro #teasers article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav #intro #teasers article h2 span:nth-of-type(3n-3),
 #learn h1 span:nth-of-type(3n-3),
 #learn h2 span:nth-of-type(3n-3),
 #learn h3 span:nth-of-type(3n-3),
 #learn #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos article
 #learn h1 span:nth-of-type(3n-3),
-#learn #tools .inner #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #tools-nav
+#learn #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
 #learn h2 span:nth-of-type(3n-3) {
   opacity: 0.7;
 }
-#intro #teasers article h1 span:nth-of-type(5n-5), #intro #teasers article h2 span:nth-of-type(5n-5), #intro #teasers article h3 span:nth-of-type(5n-5), #intro #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos #intro #teasers article h1 span:nth-of-type(5n-5), #intro #teasers article #tools .inner #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #tools-nav #intro #teasers article h2 span:nth-of-type(5n-5),
+#intro #teasers article h1 span:nth-of-type(5n-5), #intro #teasers article h2 span:nth-of-type(5n-5), #intro #teasers article h3 span:nth-of-type(5n-5), #intro #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos #intro #teasers article h1 span:nth-of-type(5n-5), #intro #teasers article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav #intro #teasers article h2 span:nth-of-type(5n-5),
 #learn h1 span:nth-of-type(5n-5),
 #learn h2 span:nth-of-type(5n-5),
 #learn h3 span:nth-of-type(5n-5),
 #learn #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos article
 #learn h1 span:nth-of-type(5n-5),
-#learn #tools .inner #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #tools-nav
+#learn #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
 #learn h2 span:nth-of-type(5n-5) {
   opacity: 0.8;
 }
-#intro #teasers article h1 span:nth-of-type(7n-7), #intro #teasers article h2 span:nth-of-type(7n-7), #intro #teasers article h3 span:nth-of-type(7n-7), #intro #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos #intro #teasers article h1 span:nth-of-type(7n-7), #intro #teasers article #tools .inner #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #tools-nav #intro #teasers article h2 span:nth-of-type(7n-7),
+#intro #teasers article h1 span:nth-of-type(7n-7), #intro #teasers article h2 span:nth-of-type(7n-7), #intro #teasers article h3 span:nth-of-type(7n-7), #intro #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos #intro #teasers article h1 span:nth-of-type(7n-7), #intro #teasers article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav #intro #teasers article h2 span:nth-of-type(7n-7),
 #learn h1 span:nth-of-type(7n-7),
 #learn h2 span:nth-of-type(7n-7),
 #learn h3 span:nth-of-type(7n-7),
 #learn #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos article
 #learn h1 span:nth-of-type(7n-7),
-#learn #tools .inner #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #tools-nav
+#learn #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
 #learn h2 span:nth-of-type(7n-7) {
   opacity: 0.9;
 }
