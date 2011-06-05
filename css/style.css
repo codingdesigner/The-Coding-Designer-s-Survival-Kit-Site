@@ -1501,12 +1501,16 @@ header#page-header h2 {
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  background-color: #d3d3d3;
+  background-color: #0b283d;
+  background-image: -webkit-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba(41, 96, 148, 0.05) 24px, rgba(41, 96, 148, 0.05) 36px);
+  background-image: -moz-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba(41, 96, 148, 0.05) 24px, rgba(41, 96, 148, 0.05) 36px);
+  background-image: -o-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba(41, 96, 148, 0.05) 24px, rgba(41, 96, 148, 0.05) 36px);
+  background-image: repeating-linear-gradient(165deg, transparent, transparent 24px, rgba(41, 96, 148, 0.05) 24px, rgba(41, 96, 148, 0.05) 36px);
 }
 #tools .inner {
   padding-top: 1.714em;
   padding-bottom: 1.714em;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.25);
   color: white;
   -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
@@ -1537,9 +1541,6 @@ header#page-header h2 {
   margin-right: 2.537%;
   position: relative;
 }
-#tools .inner #all-examples #tools-nav h2 {
-  border-bottom: 3px solid gray;
-}
 #tools .inner #all-examples #tools-nav ul {
   list-style: none;
   margin-left: 0;
@@ -1550,23 +1551,49 @@ header#page-header h2 {
   margin-left: 0px;
 }
 #tools .inner #all-examples #tools-nav ul li {
-  *zoom: 1;
-  border-bottom: 1px solid gray;
-  margin-bottom: 6px;
-  padding-bottom: 5px;
+  background-color: rgba(11, 40, 61, 0.1);
+  margin-left: -24px;
+  padding-left: 24px;
+  position: relative;
+  z-index: 75;
+  background: -webkit-linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(11, 40, 61, 0.1) 0, rgba(3, 12, 18, 0.8) 100%) bottom right;
+  background: -moz-linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right;
+  background: -o-linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right;
+  background: linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(255, 255, 255, 0.1) 0%, rgba(30, 30, 30, 0.8) 100%) bottom right;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
-#tools .inner #all-examples #tools-nav ul li:after {
-  content: "\0020";
+#tools .inner #all-examples #tools-nav ul li:hover {
+  background: -webkit-linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(11, 40, 61, 0.1) 0, rgba(7, 26, 39, 0.8) 100%) bottom right;
+}
+#tools .inner #all-examples #tools-nav ul li:not(:first-child) {
+  border-top: 1px solid #0b283d;
+}
+#tools .inner #all-examples #tools-nav ul li:not(:first-child):after {
+  position: absolute;
+  z-index: 74;
   display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
+  content: "\0020";
+  width: 18px;
+  height: 12px;
+  bottom: 19px;
+  right: -2px;
+  background: -webkit-linear-gradient(-140deg, rgba(0, 0, 0, 0) 7px, rgba(11, 40, 61, 0.8) 0) top right;
+  background: -mox-linear-gradient(-140deg, rgba(0, 0, 0, 0) 7px, rgba(11, 40, 61, 0.8) 0) top right;
+  background: -o-linear-gradient(-140deg, rgba(0, 0, 0, 0) 7px, rgba(11, 40, 61, 0.8) 0) top right;
+  background: linear-gradient(-140deg, rgba(0, 0, 0, 0) 7px, rgba(11, 40, 61, 0.8) 0%) top right;
+  background-size: 50%;
+  background-repeat: no-repeat;
 }
-#tools .inner #all-examples #tools-nav ul li:last-child {
-  padding-bottom: 0;
-  border-bottom-width: 0;
-  margin-bottom: 0;
+#tools .inner #all-examples #tools-nav ul li a {
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 0;
+  font-weight: 700;
+}
+#tools .inner #all-examples #tools-nav ul li a {
+  border-bottom: none;
+}
+#tools .inner #all-examples #tools-nav ul li a:hover {
+  border-bottom: none;
 }
 #tools .inner #all-examples #tools-examples {
   display: inline;
@@ -1581,7 +1608,15 @@ header#page-header h2 {
 }
 #tools .inner #all-examples #tools-examples article {
   max-width: 100%;
-  overflow: auto;
+}
+#tools .inner #all-examples #tools-examples article .example {
+  border: 1px dashed #0b283d;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
 }
 #tools .inner #all-examples #tools-examples article .syntaxhighlighter {
   white-space: nowrap;

@@ -377,12 +377,18 @@ $intro-width: 404px
   position: relative
   z-index: -52
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
-  background-color: $lightgray
+  background-color: $blue-dark
+  // background-color: gray;
+  @debug 'consider renaming $gutter variable to avoid conflicts'
+  background-image: -webkit-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
+  background-image: -moz-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
+  background-image: -o-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
+  background-image: repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
   .inner
     @extend .container
     +padding-leader(1)
     +padding-trailer(1)
-    background-color: rgba($black, 0.5)
+    background-color: rgba($white, 0.25)
     color: $white
     +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
     > header
@@ -400,12 +406,44 @@ $intro-width: 404px
         position: relative
         h2
           @extend h3
-          border-bottom: 3px solid $gray
         ul
           +no-bullets
           margin-left: 0
           li
-            +vertical-separation($baseline-half, 1px, $gray)
+            background-color: rgba($blue-dark, 0.1)
+            margin-left: -$side-gutter-width
+            padding-left: $side-gutter-width
+            position: relative
+            z-index: 75
+            background: -webkit-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba($blue-darker, 0.8) 100%) bottom right
+            background: -moz-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right
+            background: -o-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right
+            background: linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right
+            background-size: 100%
+            background-repeat: no-repeat
+            &:hover
+              background: -webkit-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+            &:not(:first-child)
+              border-top: 1px solid $blue-dark
+              &:after
+                position: absolute
+                z-index: 74
+                display: block
+                content: "\0020"
+                width: 18px
+                height: 12px
+                bottom: 19px
+                right: -2px
+                background: -webkit-linear-gradient(-140deg, change-color($black, $alpha:  0) 7px, rgba($blue-dark, 0.8) 0) top right
+                background: -mox-linear-gradient(-140deg, change-color($black, $alpha:  0) 7px, rgba($blue-dark, 0.8) 0) top right
+                background: -o-linear-gradient(-140deg, change-color($black, $alpha:  0) 7px, rgba($blue-dark, 0.8) 0) top right
+                background: linear-gradient(-140deg, change-color($black, $alpha:  0) 7px, rgba($blue-dark, 0.8) 0) top right
+                background-size: 50%
+                background-repeat: no-repeat
+            a
+              +remove-link-underlines
+              +text-shadow(rgba($black, 0.5) 1px 1px 0)
+              font-weight: 700
       #tools-examples
         +columns(4,5)
         +omega(5)
@@ -414,7 +452,11 @@ $intro-width: 404px
           @extend .visuallyhidden
         article
           max-width: 100%
-          overflow: auto
+          // overflow: auto
+          .example
+            // +box-shadow(rgba($black, 0.1) 0 0 18px, rgba($black, .7) 1px 2px 6px 1px inset)
+            border: 1px dashed $blue-dark
+            +border-radius
           .syntaxhighlighter
             white-space: nowrap
             overflow: auto
