@@ -10,9 +10,9 @@ body
   // background-image: image_url('dirt.jpg')
   
 // SECTIONS TO HIDE
-#survivors, 
-#start
-  @extend .hidden
+// #survivors, 
+// #start
+//   @extend .hidden
 
 /* PAGE HEADER    
 header#page-header
@@ -478,10 +478,60 @@ $intro-width: 404px
               code
                 @extend .mono
             .alt2
-              background-color: rgba($white, 0.025) !important
+              // background-color: rgba($white, 0.025) !important
 
+/* SURVIVORS
+// $total-cols: 4
+// @import susy
+#survivors
+  position: relative
+  z-index: -53
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  background-color: $red
+  .inner
+    @extend .container
+    // +container
+    +padding-leader(1)
+    +padding-trailer(1)
+    background-color: rgba($black, 0.25)
+    color: $white
+    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+    +susy-grid-background
+    > header
+      +full
+      +trailer
+      h1
+        text-align: center
+        font-weight: 300
+        margin-bottom: $baseline
+    .survivor
+      +columns(2)
+      &:nth-of-type(odd)
+        +alpha()
+      &:nth-of-type(even)
+        +omega()
+      img
+        // width: columns(2)
 
-// fun
+/* START
+// $total-cols: 3
+// @import susy
+#start
+  position: relative
+  z-index: -54
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  background-color: $chartreuse
+  .inner
+    @extend .container
+    // +container
+    +padding-leader(1)
+    +padding-trailer(1)
+    background-color: rgba($black, 0.25)
+    color: $white
+    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+    // +susy-grid-background
+
+// random letter opacity
 #intro #teasers article, 
 #learn
   h1, h2, h3

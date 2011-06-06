@@ -71,7 +71,7 @@ html {
   font-family: sans-serif;
 }
 
-.mono, pre, code, tt, body.markup-elements article.element .example .markup + .show-source, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner code, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code {
+.mono, pre, code, tt, body.markup-elements article.element .example .markup + .show-source, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner code, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner code, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #start .inner code, #start #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
@@ -147,8 +147,7 @@ html > body {
 
 /* Hide for both screenreaders and browsers
  * css-discuss.incutio.com/wiki/Screenreader_Visibility */
-.hidden, #survivors,
-#start, #intro > h2, #intro nav.samples h3, #intro nav.samples #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article #intro nav.samples h1, #intro nav.samples #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #intro nav.samples h2, #intro #teasers > h3, #intro #teasers > #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article #intro #teasers > h1, #intro #teasers > #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #intro #teasers > h2, #intro #teasers article {
+.hidden, #intro > h2, #intro nav.samples h3, #intro nav.samples #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article #intro nav.samples h1, #intro nav.samples #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #intro nav.samples h2, #intro #teasers > h3, #intro #teasers > #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article #intro #teasers > h1, #intro #teasers > #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #intro #teasers > h2, #intro #teasers article {
   display: none;
   visibility: hidden;
 }
@@ -966,13 +965,13 @@ body.markup-elements article.element .example .markup + .show-source + p {
   clear: both;
 }
 
-.container, #learn .inner, #tools .inner {
+.container, #learn .inner, #tools .inner, #survivors .inner, #start .inner {
   *zoom: 1;
   margin: auto;
   width: 994px;
   max-width: 100%;
 }
-.container:after, #learn .inner:after, #tools .inner:after {
+.container:after, #learn .inner:after, #tools .inner:after, #survivors .inner:after, #start .inner:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -1631,18 +1630,89 @@ header#page-header h2 {
 #tools .inner #all-examples #tools-examples article .syntaxhighlighter .toolbar {
   display: none;
 }
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner .line, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line {
+#tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner .line, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner .line, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #start .inner .line, #start #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line {
   height: 24px;
 }
 #tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter {
   width: 2em;
   max-width: 3em;
 }
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .container, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner {
+#tools .inner #all-examples #tools-examples article .syntaxhighlighter .container, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #start .inner, #start #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner {
   width: auto;
 }
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .alt2 {
-  background-color: rgba(255, 255, 255, 0.025) !important;
+
+/* SURVIVORS */
+#survivors {
+  position: relative;
+  z-index: -53;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
+  background-color: #b80000;
+}
+#survivors .inner {
+  padding-top: 1.714em;
+  padding-bottom: 1.714em;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(2.414%, rgba(0, 0, 0, 0)), color-stop(2.414%, rgba(100, 100, 225, 0.25)), color-stop(19.517%, rgba(100, 100, 225, 0.25)), color-stop(19.517%, rgba(0, 0, 0, 0)), color-stop(21.932%, rgba(0, 0, 0, 0)), color-stop(21.932%, rgba(100, 100, 225, 0.25)), color-stop(39.034%, rgba(100, 100, 225, 0.25)), color-stop(39.034%, rgba(0, 0, 0, 0)), color-stop(41.449%, rgba(0, 0, 0, 0)), color-stop(41.449%, rgba(100, 100, 225, 0.25)), color-stop(58.551%, rgba(100, 100, 225, 0.25)), color-stop(58.551%, rgba(0, 0, 0, 0)), color-stop(60.966%, rgba(0, 0, 0, 0)), color-stop(60.966%, rgba(100, 100, 225, 0.25)), color-stop(78.068%, rgba(100, 100, 225, 0.25)), color-stop(78.068%, rgba(0, 0, 0, 0)), color-stop(80.483%, rgba(0, 0, 0, 0)), color-stop(80.483%, rgba(100, 100, 225, 0.25)), color-stop(97.586%, rgba(100, 100, 225, 0.25)), color-stop(97.586%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 2.414%, rgba(100, 100, 225, 0.25) 2.414%, rgba(100, 100, 225, 0.25) 19.517%, rgba(0, 0, 0, 0) 19.517%, rgba(0, 0, 0, 0) 21.932%, rgba(100, 100, 225, 0.25) 21.932%, rgba(100, 100, 225, 0.25) 39.034%, rgba(0, 0, 0, 0) 39.034%, rgba(0, 0, 0, 0) 41.449%, rgba(100, 100, 225, 0.25) 41.449%, rgba(100, 100, 225, 0.25) 58.551%, rgba(0, 0, 0, 0) 58.551%, rgba(0, 0, 0, 0) 60.966%, rgba(100, 100, 225, 0.25) 60.966%, rgba(100, 100, 225, 0.25) 78.068%, rgba(0, 0, 0, 0) 78.068%, rgba(0, 0, 0, 0) 80.483%, rgba(100, 100, 225, 0.25) 80.483%, rgba(100, 100, 225, 0.25) 97.586%, rgba(0, 0, 0, 0) 97.586%, rgba(0, 0, 0, 0) 100%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 2.414%, rgba(100, 100, 225, 0.25) 2.414%, rgba(100, 100, 225, 0.25) 19.517%, rgba(0, 0, 0, 0) 19.517%, rgba(0, 0, 0, 0) 21.932%, rgba(100, 100, 225, 0.25) 21.932%, rgba(100, 100, 225, 0.25) 39.034%, rgba(0, 0, 0, 0) 39.034%, rgba(0, 0, 0, 0) 41.449%, rgba(100, 100, 225, 0.25) 41.449%, rgba(100, 100, 225, 0.25) 58.551%, rgba(0, 0, 0, 0) 58.551%, rgba(0, 0, 0, 0) 60.966%, rgba(100, 100, 225, 0.25) 60.966%, rgba(100, 100, 225, 0.25) 78.068%, rgba(0, 0, 0, 0) 78.068%, rgba(0, 0, 0, 0) 80.483%, rgba(100, 100, 225, 0.25) 80.483%, rgba(100, 100, 225, 0.25) 97.586%, rgba(0, 0, 0, 0) 97.586%, rgba(0, 0, 0, 0) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 2.414%, rgba(100, 100, 225, 0.25) 2.414%, rgba(100, 100, 225, 0.25) 19.517%, rgba(0, 0, 0, 0) 19.517%, rgba(0, 0, 0, 0) 21.932%, rgba(100, 100, 225, 0.25) 21.932%, rgba(100, 100, 225, 0.25) 39.034%, rgba(0, 0, 0, 0) 39.034%, rgba(0, 0, 0, 0) 41.449%, rgba(100, 100, 225, 0.25) 41.449%, rgba(100, 100, 225, 0.25) 58.551%, rgba(0, 0, 0, 0) 58.551%, rgba(0, 0, 0, 0) 60.966%, rgba(100, 100, 225, 0.25) 60.966%, rgba(100, 100, 225, 0.25) 78.068%, rgba(0, 0, 0, 0) 78.068%, rgba(0, 0, 0, 0) 80.483%, rgba(100, 100, 225, 0.25) 80.483%, rgba(100, 100, 225, 0.25) 97.586%, rgba(0, 0, 0, 0) 97.586%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 2.414%, rgba(100, 100, 225, 0.25) 2.414%, rgba(100, 100, 225, 0.25) 19.517%, rgba(0, 0, 0, 0) 19.517%, rgba(0, 0, 0, 0) 21.932%, rgba(100, 100, 225, 0.25) 21.932%, rgba(100, 100, 225, 0.25) 39.034%, rgba(0, 0, 0, 0) 39.034%, rgba(0, 0, 0, 0) 41.449%, rgba(100, 100, 225, 0.25) 41.449%, rgba(100, 100, 225, 0.25) 58.551%, rgba(0, 0, 0, 0) 58.551%, rgba(0, 0, 0, 0) 60.966%, rgba(100, 100, 225, 0.25) 60.966%, rgba(100, 100, 225, 0.25) 78.068%, rgba(0, 0, 0, 0) 78.068%, rgba(0, 0, 0, 0) 80.483%, rgba(100, 100, 225, 0.25) 80.483%, rgba(100, 100, 225, 0.25) 97.586%, rgba(0, 0, 0, 0) 97.586%, rgba(0, 0, 0, 0) 100%);
+  background-position: left top;
+}
+#survivors .inner > header {
+  clear: both;
+  margin-left: 2.414%;
+  margin-right: 2.414%;
+  margin-bottom: 1.714em;
+}
+#survivors .inner > header h1 {
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+#survivors .inner .survivor {
+  display: inline;
+  float: left;
+  width: 36.62%;
+  margin-right: 2.414%;
+}
+#survivors .inner .survivor:nth-of-type(odd) {
+  margin-left: 2.414%;
+}
+#survivors .inner .survivor:nth-of-type(even) {
+  display: inline;
+  float: right;
+  margin-right: 2.414%;
+  #margin-left: -24px;
+}
+
+/* START */
+#start {
+  position: relative;
+  z-index: -54;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
+  background-color: #7fff00;
+}
+#start .inner {
+  padding-top: 1.714em;
+  padding-bottom: 1.714em;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
 #intro #teasers article h1, #intro #teasers article h2, #intro #teasers article h3, #intro #teasers #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos #intro #teasers article h1, #intro #teasers article #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #intro #teasers article h2,
