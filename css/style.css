@@ -71,7 +71,7 @@ html {
   font-family: sans-serif;
 }
 
-.mono, pre, code, tt, body.markup-elements article.element .example .markup + .show-source, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner code, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner code, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #start .inner code, #start #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code {
+.mono, pre, code, tt, body.markup-elements article.element .example .markup + .show-source, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner code, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner code, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #prepared .inner code, #prepared #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
@@ -965,13 +965,13 @@ body.markup-elements article.element .example .markup + .show-source + p {
   clear: both;
 }
 
-.container, #learn .inner, #tools .inner, #survivors .inner, #start .inner {
+.container, #learn .inner, #tools .inner, #survivors .inner, #prepared .inner {
   *zoom: 1;
   margin: auto;
   width: 994px;
   max-width: 100%;
 }
-.container:after, #learn .inner:after, #tools .inner:after, #survivors .inner:after, #start .inner:after {
+.container:after, #learn .inner:after, #tools .inner:after, #survivors .inner:after, #prepared .inner:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -999,7 +999,8 @@ header#page-header {
   position: relative;
   padding-top: 372px;
   padding-bottom: 248px;
-  background-image: url('images/dirt.jpg?1300250432');
+  background-image: url('images/dirt.jpg?1307509169');
+  background-position: top center;
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
@@ -1630,14 +1631,14 @@ header#page-header h2 {
 #tools .inner #all-examples #tools-examples article .syntaxhighlighter .toolbar {
   display: none;
 }
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner .line, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner .line, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #start .inner .line, #start #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line {
+#tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner .line, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner .line, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #prepared .inner .line, #prepared #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line {
   height: 24px;
 }
 #tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter {
   width: 2em;
   max-width: 3em;
 }
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .container, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #start .inner, #start #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner {
+#tools .inner #all-examples #tools-examples article .syntaxhighlighter .container, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #prepared .inner, #prepared #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner {
   width: auto;
 }
 
@@ -1695,7 +1696,7 @@ header#page-header h2 {
 }
 
 /* START */
-#start {
+#prepared {
   position: relative;
   z-index: -54;
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
@@ -1704,7 +1705,7 @@ header#page-header h2 {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   background-color: #7fff00;
 }
-#start .inner {
+#prepared .inner {
   padding-top: 1.714em;
   padding-bottom: 1.714em;
   background-color: rgba(0, 0, 0, 0.25);

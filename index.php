@@ -65,7 +65,7 @@
       <li><a href="#learn">Learn</a></li>
       <li><a href="#tools">Tools</a></li>
       <li><a href="#survivors">Survivors</a></li>
-      <li><a href="#start">Start</a></li>
+      <li><a href="#prepared">Be Prepared</a></li>
     </ul>
   </nav>
 
@@ -325,22 +325,27 @@
       <header>
         <h1>Survivors</h1>
       </header>
-      <article class="survivor"><img src="http://dummyimage.com/364x320/ccc/fff" width=364 height=320 alt="placeholder image" />  </article>
-      <article class="survivor"><img src="http://dummyimage.com/364x320/ccc/fff" width=364 height=320 alt="placeholder image" />  </article>
-      <article class="survivor"><img src="http://dummyimage.com/364x320/ccc/fff" width=364 height=320 alt="placeholder image" />  </article>
-      <article class="survivor"><img src="http://dummyimage.com/364x320/ccc/fff" width=364 height=320 alt="placeholder image" />  </article>
-      <!-- <article class="survivor"><img src="http://dummyimage.com/364x320/ccc/fff" width=364 height=320 alt="placeholder image" />  </article>
-      <article class="survivor"><img src="http://dummyimage.com/364x320/ccc/fff" width=364 height=320 alt="placeholder image" />  --> </article>
+      <article class="survivor"><h1>Marsalis Music</h1><a href="http://marsalismucsic.com"><img src="images/marsalis.jpg" width=364 height=240 alt="marsalis music" /></a></article>
+      <article class="survivor"><h1>Jacket2 Magazine</h1><a href="http://jacket2.org/"><img src="images/jacket.jpg" width=364 height=240 alt="jacket2 magazine" /></a></article>
+      <article class="survivor"><h1>Zivtech</h1><a href="http://zivtech.com"><img src="images/zivtech.jpg" width=364 height=240 alt="zivtech" /></a></article>
+      <article class="survivor"><h1>Birds &amp; Monkeys</h1><a href="http://birdsandmonkeys.com"><img src="images/birds.jpg" width=364 height=240 alt="birds and monkeys" /></a></article>
     </div>
   </section>
 
-  <section id="start">
-    <div class="inner">
+  <section id="prepared">
+    <article class="inner">
       <header>
-        <h1>Start</h1>
+        <h1>Be Prepared</h1>
       </header>
-      <p>Download or Contribute on <a href="https://github.com/canarymason/The-Coding-Designers-Survival-Kit">Github</a></p>
-    </div>
+      <p class="download">Download or Contribute on <a href="https://github.com/canarymason/The-Coding-Designers-Survival-Kit">Github</a></p>
+      <aside>
+        <h2>Social</h2>
+        <ul>
+          <li><a href="http://twitter.com/canarymason">Hit me up on Twitter</a></li>
+          <li><a href="mailto:?subject=thecodingdesigner.com">Email this</a></li>
+        </ul>
+      </aside>
+    </article>
   </section>
   
   
