@@ -4,8 +4,17 @@
 
 // PROJECT COLORS
 // define your own here
+$red: #b80000
+$red-dark: mix($red, $black, 75%)
 $blue: #296094
+//0B283D
 $blue-ice: #F5F7FB
+$blue-light: mix($blue, $white)
+$blue-dark: #0B283D
+$blue-darker: adjust-color($blue-dark, $lightness: -10)
+$blue-mid: mix($blue, $blue-dark)
+$brown: #372218
+$brown-dark: mix($brown, $black)
 // $dark_gray: mix($white, $black, 30%)
 // $light_gray: mix($white, $black, 80%)
 // $very_light_gray: mix($white, $black, 95%)
@@ -20,5 +29,5 @@ $primary: $white
 
 // Color variables expected by _defaults.sass ------------------
 $base-color: $black
-$alt-color: $hotpink
+$alt-color: $blue-light
 $background-color: $white
