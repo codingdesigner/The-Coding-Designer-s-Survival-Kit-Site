@@ -328,7 +328,7 @@
       <article class="survivor"><h1>Marsalis Music</h1><a href="http://marsalismucsic.com"><img src="images/marsalis.jpg" width=364 height=240 alt="marsalis music" /></a></article>
       <article class="survivor"><h1>Jacket2 Magazine</h1><a href="http://jacket2.org/"><img src="images/jacket.jpg" width=364 height=240 alt="jacket2 magazine" /></a></article>
       <article class="survivor"><h1>Zivtech</h1><a href="http://zivtech.com"><img src="images/zivtech.jpg" width=364 height=240 alt="zivtech" /></a></article>
-      <article class="survivor"><h1>Birds &amp; Monkeys</h1><a href="http://birdsandmonkeys.com"><img src="images/birds.jpg" width=364 height=240 alt="birds and monkeys" /></a></article>
+      <article class="survivor"><h1>Birds <span class="amp">&amp;</span> Monkeys</h1><a href="http://birdsandmonkeys.com"><img src="images/birds.jpg" width=364 height=240 alt="birds and monkeys" /></a></article>
     </div>
   </section>
 
@@ -337,21 +337,22 @@
       <header>
         <h1>Be Prepared</h1>
       </header>
-      <p class="download">Download or Contribute on <a href="https://github.com/canarymason/The-Coding-Designers-Survival-Kit">Github</a></p>
-      <aside>
-        <h2>Social</h2>
-        <ul>
-          <li><a href="http://twitter.com/canarymason">Hit me up on Twitter</a></li>
-          <li><a href="mailto:?subject=thecodingdesigner.com">Email this</a></li>
-        </ul>
-      </aside>
+      <p class="download"><a href="https://github.com/canarymason/The-Coding-Designers-Survival-Kit">Download or Contribute on Github</a></p>
+      <footer class="site-wide">
+        Brought to you by <a href="http://birdsandmonkeys.com">Birds and Monkeys</a> <span class="amp">&amp;</span> <a href="http://zivtech.com">Zivtech</a>.
+        <aside>
+          <h2>Social</h2>
+          <ul>
+            <li>Twitter: <a href="http://twitter.com/canarymason">@canarymason</a></li>
+            <!-- <li><a href="mailto:?subject=thecodingdesigner.com">Email this</a></li> -->
+          </ul>
+        </aside>
+      </footer>
     </article>
   </section>
   
   
-  <footer class="site-wide">
-    Brought to you by <a href="http://birdsandmonkeys.com">Birds and Monkeys</a> <span class="amp">&amp;</span> <a href="http://zivtech.com">Zivtech</a>.
-  </footer>
+  
   
   
   

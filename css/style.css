@@ -1,6 +1,6 @@
 /* Links -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #intro #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6, p, blockquote, pre,
+h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #intro #teasers article h1, .wf-active #intro #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -83,11 +83,11 @@ html {
   font-family: museo-slab-1, museo-slab-2, Georgia, serif;
 }
 
-.headers, h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #intro #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6 {
+.headers, h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #intro #teasers article h1, .wf-active #intro #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6 {
   font-family: futura-pt-1, futura-pt-2, sans-serif;
 }
 
-.logo-type, header#page-header:before, header#page-header h1, header#page-header h2, header#page-header h3, header#page-header #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article header#page-header h1, header#page-header #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav header#page-header h2, header#page-header h4, header#page-header #intro #teasers article h1, #intro #teasers article header#page-header h1, header#page-header h5, header#page-header #main-nav ul li a, #main-nav ul li header#page-header a, header#page-header #main-nav ul li:before, #main-nav ul header#page-header li:before, header#page-header #main-nav ul li:after, #main-nav ul header#page-header li:after, header#page-header h6 {
+.logo-type, header#page-header:before, header#page-header h1, header#page-header h2, header#page-header h3, header#page-header #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article header#page-header h1, header#page-header #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav header#page-header h2, header#page-header h4, header#page-header #intro #teasers article h1, #intro #teasers article header#page-header h1, header#page-header .wf-active #intro #teasers article h1, .wf-active #intro #teasers article header#page-header h1, header#page-header h5, header#page-header #main-nav ul li a, #main-nav ul li header#page-header a, header#page-header #main-nav ul li:before, #main-nav ul header#page-header li:before, header#page-header #main-nav ul li:after, #main-nav ul header#page-header li:after, header#page-header h6 {
   font-family: proxima-nova-1, proxima-nova-2, sans-serif, futura-pt-1, futura-pt-2, sans-serif;
 }
 
@@ -154,7 +154,7 @@ html > body {
 
 /* Hide only visually, but have it available for screenreaders
  * www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
-.visuallyhidden, #main-nav h1, #learn .inner > h1, #tools .inner #all-examples #tools-examples > h2 {
+.visuallyhidden, #main-nav h1, #learn .inner > h1, #tools .inner #all-examples #tools-examples > h2, #prepared .inner footer aside h2 {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
@@ -213,7 +213,7 @@ a:active {
 }
 
 /* Headings -------------------------------------------------------------- */
-h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #intro #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6 {
+h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #intro #teasers article h1, .wf-active #intro #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6 {
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -233,7 +233,7 @@ h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools
   line-height: 1.524em;
 }
 
-h4, #intro #teasers article h1 {
+h4, #intro #teasers article h1, .wf-active #intro #teasers article h1 {
   font-size: 1.975em;
   line-height: 1.736em;
 }
@@ -999,7 +999,7 @@ header#page-header {
   position: relative;
   padding-top: 372px;
   padding-bottom: 248px;
-  background-image: url('images/dirt.jpg?1307510508');
+  background-image: url('images/dirt.jpg?1307510632');
   background-position: top center;
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
@@ -1033,7 +1033,7 @@ header#page-header .wrapper {
   color: rgba(255, 255, 255, 0.8);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
 }
-header#page-header h1, header#page-header h2, header#page-header h3, header#page-header #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article header#page-header h1, header#page-header #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav header#page-header h2, header#page-header h4, header#page-header #intro #teasers article h1, #intro #teasers article header#page-header h1, header#page-header h5, header#page-header #main-nav ul li a, #main-nav ul li header#page-header a, header#page-header #main-nav ul li:before, #main-nav ul header#page-header li:before, header#page-header #main-nav ul li:after, #main-nav ul header#page-header li:after, header#page-header h6 {
+header#page-header h1, header#page-header h2, header#page-header h3, header#page-header #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article header#page-header h1, header#page-header #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav header#page-header h2, header#page-header h4, header#page-header #intro #teasers article h1, #intro #teasers article header#page-header h1, header#page-header .wf-active #intro #teasers article h1, .wf-active #intro #teasers article header#page-header h1, header#page-header h5, header#page-header #main-nav ul li a, #main-nav ul li header#page-header a, header#page-header #main-nav ul li:before, #main-nav ul header#page-header li:before, header#page-header #main-nav ul li:after, #main-nav ul header#page-header li:after, header#page-header h6 {
   font-weight: 700;
   font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
 }
@@ -1237,7 +1237,7 @@ header#page-header h2 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badges/color.png?1307510508');
+  background-image: url('images/badges/color.png?1307510632');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1368,6 +1368,12 @@ header#page-header h2 {
   color: #7bacdb;
   display: block;
   visibility: visible;
+  font-size: 1.738em;
+  line-height: 1.973em;
+  padding-top: 6px;
+}
+.wf-active #intro #teasers article h1 {
+  padding-top: 0;
 }
 #intro #teasers article p {
   font-weight: bold;
@@ -1650,23 +1656,18 @@ header#page-header h2 {
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  background-color: #b80000;
+  background-color: #a1c436;
 }
 #survivors .inner {
   padding-top: 1.714em;
   padding-bottom: 1.714em;
-  background-color: rgba(0, 0, 0, 0.25);
-  color: white;
-  -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(2.414%, rgba(0, 0, 0, 0)), color-stop(2.414%, rgba(100, 100, 225, 0.25)), color-stop(19.517%, rgba(100, 100, 225, 0.25)), color-stop(19.517%, rgba(0, 0, 0, 0)), color-stop(21.932%, rgba(0, 0, 0, 0)), color-stop(21.932%, rgba(100, 100, 225, 0.25)), color-stop(39.034%, rgba(100, 100, 225, 0.25)), color-stop(39.034%, rgba(0, 0, 0, 0)), color-stop(41.449%, rgba(0, 0, 0, 0)), color-stop(41.449%, rgba(100, 100, 225, 0.25)), color-stop(58.551%, rgba(100, 100, 225, 0.25)), color-stop(58.551%, rgba(0, 0, 0, 0)), color-stop(60.966%, rgba(0, 0, 0, 0)), color-stop(60.966%, rgba(100, 100, 225, 0.25)), color-stop(78.068%, rgba(100, 100, 225, 0.25)), color-stop(78.068%, rgba(0, 0, 0, 0)), color-stop(80.483%, rgba(0, 0, 0, 0)), color-stop(80.483%, rgba(100, 100, 225, 0.25)), color-stop(97.586%, rgba(100, 100, 225, 0.25)), color-stop(97.586%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 2.414%, rgba(100, 100, 225, 0.25) 2.414%, rgba(100, 100, 225, 0.25) 19.517%, rgba(0, 0, 0, 0) 19.517%, rgba(0, 0, 0, 0) 21.932%, rgba(100, 100, 225, 0.25) 21.932%, rgba(100, 100, 225, 0.25) 39.034%, rgba(0, 0, 0, 0) 39.034%, rgba(0, 0, 0, 0) 41.449%, rgba(100, 100, 225, 0.25) 41.449%, rgba(100, 100, 225, 0.25) 58.551%, rgba(0, 0, 0, 0) 58.551%, rgba(0, 0, 0, 0) 60.966%, rgba(100, 100, 225, 0.25) 60.966%, rgba(100, 100, 225, 0.25) 78.068%, rgba(0, 0, 0, 0) 78.068%, rgba(0, 0, 0, 0) 80.483%, rgba(100, 100, 225, 0.25) 80.483%, rgba(100, 100, 225, 0.25) 97.586%, rgba(0, 0, 0, 0) 97.586%, rgba(0, 0, 0, 0) 100%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 2.414%, rgba(100, 100, 225, 0.25) 2.414%, rgba(100, 100, 225, 0.25) 19.517%, rgba(0, 0, 0, 0) 19.517%, rgba(0, 0, 0, 0) 21.932%, rgba(100, 100, 225, 0.25) 21.932%, rgba(100, 100, 225, 0.25) 39.034%, rgba(0, 0, 0, 0) 39.034%, rgba(0, 0, 0, 0) 41.449%, rgba(100, 100, 225, 0.25) 41.449%, rgba(100, 100, 225, 0.25) 58.551%, rgba(0, 0, 0, 0) 58.551%, rgba(0, 0, 0, 0) 60.966%, rgba(100, 100, 225, 0.25) 60.966%, rgba(100, 100, 225, 0.25) 78.068%, rgba(0, 0, 0, 0) 78.068%, rgba(0, 0, 0, 0) 80.483%, rgba(100, 100, 225, 0.25) 80.483%, rgba(100, 100, 225, 0.25) 97.586%, rgba(0, 0, 0, 0) 97.586%, rgba(0, 0, 0, 0) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 2.414%, rgba(100, 100, 225, 0.25) 2.414%, rgba(100, 100, 225, 0.25) 19.517%, rgba(0, 0, 0, 0) 19.517%, rgba(0, 0, 0, 0) 21.932%, rgba(100, 100, 225, 0.25) 21.932%, rgba(100, 100, 225, 0.25) 39.034%, rgba(0, 0, 0, 0) 39.034%, rgba(0, 0, 0, 0) 41.449%, rgba(100, 100, 225, 0.25) 41.449%, rgba(100, 100, 225, 0.25) 58.551%, rgba(0, 0, 0, 0) 58.551%, rgba(0, 0, 0, 0) 60.966%, rgba(100, 100, 225, 0.25) 60.966%, rgba(100, 100, 225, 0.25) 78.068%, rgba(0, 0, 0, 0) 78.068%, rgba(0, 0, 0, 0) 80.483%, rgba(100, 100, 225, 0.25) 80.483%, rgba(100, 100, 225, 0.25) 97.586%, rgba(0, 0, 0, 0) 97.586%, rgba(0, 0, 0, 0) 100%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 2.414%, rgba(100, 100, 225, 0.25) 2.414%, rgba(100, 100, 225, 0.25) 19.517%, rgba(0, 0, 0, 0) 19.517%, rgba(0, 0, 0, 0) 21.932%, rgba(100, 100, 225, 0.25) 21.932%, rgba(100, 100, 225, 0.25) 39.034%, rgba(0, 0, 0, 0) 39.034%, rgba(0, 0, 0, 0) 41.449%, rgba(100, 100, 225, 0.25) 41.449%, rgba(100, 100, 225, 0.25) 58.551%, rgba(0, 0, 0, 0) 58.551%, rgba(0, 0, 0, 0) 60.966%, rgba(100, 100, 225, 0.25) 60.966%, rgba(100, 100, 225, 0.25) 78.068%, rgba(0, 0, 0, 0) 78.068%, rgba(0, 0, 0, 0) 80.483%, rgba(100, 100, 225, 0.25) 80.483%, rgba(100, 100, 225, 0.25) 97.586%, rgba(0, 0, 0, 0) 97.586%, rgba(0, 0, 0, 0) 100%);
-  background-position: left top;
+  background-color: rgba(0, 0, 0, 0.12);
+  color: #f5f7fb;
+  text-shadow: rgba(41, 96, 148, 0.5) 1px 2px 4px;
+  -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1), 8px 0px 8px rgba(0, 0, 0, 0.05), -2px 0px 2px rgba(0, 0, 0, 0.1), -8px 0px 8px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1), 8px 0px 8px rgba(0, 0, 0, 0.05), -2px 0px 2px rgba(0, 0, 0, 0.1), -8px 0px 8px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1), 8px 0px 8px rgba(0, 0, 0, 0.05), -2px 0px 2px rgba(0, 0, 0, 0.1), -8px 0px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1), 8px 0px 8px rgba(0, 0, 0, 0.05), -2px 0px 2px rgba(0, 0, 0, 0.1), -8px 0px 8px rgba(0, 0, 0, 0.05);
 }
 #survivors .inner > header {
   clear: both;
@@ -1684,36 +1685,200 @@ header#page-header h2 {
   float: left;
   width: 36.62%;
   margin-right: 2.414%;
+  *zoom: 1;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: none;
+  position: relative;
+  background: #809c2b;
+  height: 240px;
+  padding: 6px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 1px 4px, rgba(0, 0, 0, 0.1) -4px 3px 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 1px 4px, rgba(0, 0, 0, 0.1) -4px 3px 8px;
+  -o-box-shadow: rgba(0, 0, 0, 0.1) 2px 1px 4px, rgba(0, 0, 0, 0.1) -4px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 1px 4px, rgba(0, 0, 0, 0.1) -4px 3px 8px;
+}
+#survivors .inner .survivor:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+#survivors .inner .survivor:last-child {
+  padding-bottom: 0;
+  border-bottom-width: 0;
+  margin-bottom: 0;
+}
+#survivors .inner .survivor h1 {
+  font-size: 2.25em;
+  line-height: 1.524em;
+  line-height: 1em;
+  position: absolute;
+  max-width: 240px;
 }
 #survivors .inner .survivor:nth-of-type(odd) {
   margin-left: 2.414%;
+  padding-right: 84px;
+}
+#survivors .inner .survivor:nth-of-type(odd) h1 {
+  text-align: right;
+  top: 0;
+  right: 0;
+  -moz-transform: rotate(-90deg) translate(-6px, -72px);
+  -webkit-transform: rotate(-90deg) translate(-6px, -72px);
+  -o-transform: rotate(-90deg) translate(-6px, -72px);
+  -ms-transform: rotate(-90deg) translate(-6px, -72px);
+  transform: rotate(-90deg) translate(-6px, -72px);
+  -moz-transform-origin: top right;
+  -webkit-transform-origin: top right;
+  -o-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
 }
 #survivors .inner .survivor:nth-of-type(even) {
   display: inline;
   float: right;
   margin-right: 2.414%;
   #margin-left: -24px;
+  padding-left: 84px;
+}
+#survivors .inner .survivor:nth-of-type(even) h1 {
+  top: 0;
+  left: 0;
+  -moz-transform: rotate(90deg) translate(6px, -72px);
+  -webkit-transform: rotate(90deg) translate(6px, -72px);
+  -o-transform: rotate(90deg) translate(6px, -72px);
+  -ms-transform: rotate(90deg) translate(6px, -72px);
+  transform: rotate(90deg) translate(6px, -72px);
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+#survivors .inner .survivor:last-child {
+  padding-bottom: 6px;
 }
 
 /* START */
 #prepared {
   position: relative;
   z-index: -54;
-  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  background-color: #7fff00;
+  background-image: url('images/dirt.jpg?1307510632');
+  background-position: top center;
+  color: white;
+  font-size: 1.975em;
+  line-height: 1.736em;
 }
 #prepared .inner {
-  padding-top: 1.714em;
-  padding-bottom: 1.714em;
+  padding-top: 3.429em;
+  padding-bottom: 3.429em;
   background-color: rgba(0, 0, 0, 0.25);
-  color: white;
   -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+#prepared .inner header {
+  position: relative;
+  float: left;
+  -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), 8px 0px 8px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), 8px 0px 8px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), 8px 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), 8px 0px 8px rgba(0, 0, 0, 0.1);
+}
+#prepared .inner header h1 {
+  background: #a1c436;
+  display: inline-block;
+  float: left;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), 5px 8px 8px rgba(0, 0, 0, 0.1);
+}
+#prepared .inner header h1 .word1 {
+  font-size: 0.772em;
+  line-height: 0.658em;
+  padding: 6px 28px;
+  float: left;
+  text-align: center;
+  -moz-transform: rotate(-90deg) translate(-18px, 0);
+  -webkit-transform: rotate(-90deg) translate(-18px, 0);
+  -o-transform: rotate(-90deg) translate(-18px, 0);
+  -ms-transform: rotate(-90deg) translate(-18px, 0);
+  transform: rotate(-90deg) translate(-18px, 0);
+  -moz-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2), -8px 5px 8px rgba(0, 0, 0, 0.1);
+}
+#prepared .inner header h1 .word2 {
+  margin-left: -31px;
+}
+#prepared .inner p.download {
+  float: left;
+  padding: 12px 0 0 0;
+  font-size: 1em;
+  line-height: 0.868em;
+}
+#prepared .inner p.download span {
+  background-color: #d0e11b;
+  float: left;
+  clear: left;
+}
+#prepared .inner p.download span.word1, #prepared .inner p.download span.word3, #prepared .inner p.download span.word5 {
+  padding-left: 0.5em;
+  -moz-transition-property: padding-left;
+  -webkit-transition-property: padding-left;
+  -o-transition-property: padding-left;
+  transition-property: padding-left;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+#prepared .inner p.download span.word2, #prepared .inner p.download span.word4 {
+  float: none;
+  clear: none;
+  margin-left: 0.5em;
+  background-color: transparent;
+  color: #a1c436;
+}
+#prepared .inner p.download a {
+  color: #1b110c;
+}
+#prepared .inner p.download a {
+  border-bottom: none;
+}
+#prepared .inner p.download a:hover {
+  border-bottom: none;
+}
+#prepared .inner p.download a:visited {
+  color: #1b110c;
+}
+#prepared .inner p.download a:hover {
+  color: #296094;
+}
+#prepared .inner p.download a:active {
+  color: #1b110c;
+}
+#prepared .inner p.download:hover span.word1, #prepared .inner p.download:hover span.word3, #prepared .inner p.download:hover span.word5 {
+  padding-left: 1em;
+}
+#prepared .inner footer {
+  padding-top: 0.857em;
+  clear: both;
+  text-align: right;
+}
+#prepared .inner footer aside ul {
+  list-style-type: none;
+}
+#prepared .inner footer aside ul, #prepared .inner footer aside ul li {
+  margin: 0px;
+  padding: 0px;
+  display: inline;
 }
 
 #intro #teasers article h1, #intro #teasers article h2, #intro #teasers article h3, #intro #teasers #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos #intro #teasers article h1, #intro #teasers article #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #intro #teasers article h2,
@@ -1723,7 +1888,28 @@ header#page-header h2 {
 #learn #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article
 #learn h1,
 #learn #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
-#learn h2 {
+#learn h2,
+#tools #tools-examples article h1,
+#tools #tools-examples article h2,
+#tools #tools-examples article h3,
+#tools #tools-examples #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos
+#tools #tools-examples article h1,
+#tools #tools-examples article #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
+#tools #tools-examples article h2,
+#survivors .survivor h1,
+#survivors .survivor h2,
+#survivors .survivor h3,
+#survivors .survivor #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article
+#survivors .survivor h1,
+#survivors .survivor #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
+#survivors .survivor h2,
+#prepared h1,
+#prepared h2,
+#prepared h3,
+#prepared #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article
+#prepared h1,
+#prepared #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
+#prepared h2 {
   position: relative;
 }
 #intro #teasers article h1 span, #intro #teasers article h2 span, #intro #teasers article h3 span, #intro #teasers #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos #intro #teasers article h1 span, #intro #teasers article #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav #intro #teasers article h2 span,
@@ -1733,7 +1919,28 @@ header#page-header h2 {
 #learn #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos article
 #learn h1 span,
 #learn #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
-#learn h2 span {
+#learn h2 span,
+#tools #tools-examples article h1 span,
+#tools #tools-examples article h2 span,
+#tools #tools-examples article h3 span,
+#tools #tools-examples #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos
+#tools #tools-examples article h1 span,
+#tools #tools-examples article #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
+#tools #tools-examples article h2 span,
+#survivors .survivor h1 span,
+#survivors .survivor h2 span,
+#survivors .survivor h3 span,
+#survivors .survivor #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos article
+#survivors .survivor h1 span,
+#survivors .survivor #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
+#survivors .survivor h2 span,
+#prepared h1 span,
+#prepared h2 span,
+#prepared h3 span,
+#prepared #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos article
+#prepared h1 span,
+#prepared #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
+#prepared h2 span {
   position: relative;
 }
 #intro #teasers article h1 span:nth-of-type(3n-3), #intro #teasers article h2 span:nth-of-type(3n-3), #intro #teasers article h3 span:nth-of-type(3n-3), #intro #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos #intro #teasers article h1 span:nth-of-type(3n-3), #intro #teasers article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav #intro #teasers article h2 span:nth-of-type(3n-3),
@@ -1743,7 +1950,28 @@ header#page-header h2 {
 #learn #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos article
 #learn h1 span:nth-of-type(3n-3),
 #learn #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
-#learn h2 span:nth-of-type(3n-3) {
+#learn h2 span:nth-of-type(3n-3),
+#tools #tools-examples article h1 span:nth-of-type(3n-3),
+#tools #tools-examples article h2 span:nth-of-type(3n-3),
+#tools #tools-examples article h3 span:nth-of-type(3n-3),
+#tools #tools-examples #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos
+#tools #tools-examples article h1 span:nth-of-type(3n-3),
+#tools #tools-examples article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
+#tools #tools-examples article h2 span:nth-of-type(3n-3),
+#survivors .survivor h1 span:nth-of-type(3n-3),
+#survivors .survivor h2 span:nth-of-type(3n-3),
+#survivors .survivor h3 span:nth-of-type(3n-3),
+#survivors .survivor #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos article
+#survivors .survivor h1 span:nth-of-type(3n-3),
+#survivors .survivor #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
+#survivors .survivor h2 span:nth-of-type(3n-3),
+#prepared h1 span:nth-of-type(3n-3),
+#prepared h2 span:nth-of-type(3n-3),
+#prepared h3 span:nth-of-type(3n-3),
+#prepared #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos article
+#prepared h1 span:nth-of-type(3n-3),
+#prepared #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
+#prepared h2 span:nth-of-type(3n-3) {
   opacity: 0.7;
 }
 #intro #teasers article h1 span:nth-of-type(5n-5), #intro #teasers article h2 span:nth-of-type(5n-5), #intro #teasers article h3 span:nth-of-type(5n-5), #intro #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos #intro #teasers article h1 span:nth-of-type(5n-5), #intro #teasers article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav #intro #teasers article h2 span:nth-of-type(5n-5),
@@ -1753,7 +1981,28 @@ header#page-header h2 {
 #learn #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos article
 #learn h1 span:nth-of-type(5n-5),
 #learn #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
-#learn h2 span:nth-of-type(5n-5) {
+#learn h2 span:nth-of-type(5n-5),
+#tools #tools-examples article h1 span:nth-of-type(5n-5),
+#tools #tools-examples article h2 span:nth-of-type(5n-5),
+#tools #tools-examples article h3 span:nth-of-type(5n-5),
+#tools #tools-examples #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos
+#tools #tools-examples article h1 span:nth-of-type(5n-5),
+#tools #tools-examples article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
+#tools #tools-examples article h2 span:nth-of-type(5n-5),
+#survivors .survivor h1 span:nth-of-type(5n-5),
+#survivors .survivor h2 span:nth-of-type(5n-5),
+#survivors .survivor h3 span:nth-of-type(5n-5),
+#survivors .survivor #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos article
+#survivors .survivor h1 span:nth-of-type(5n-5),
+#survivors .survivor #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
+#survivors .survivor h2 span:nth-of-type(5n-5),
+#prepared h1 span:nth-of-type(5n-5),
+#prepared h2 span:nth-of-type(5n-5),
+#prepared h3 span:nth-of-type(5n-5),
+#prepared #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos article
+#prepared h1 span:nth-of-type(5n-5),
+#prepared #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
+#prepared h2 span:nth-of-type(5n-5) {
   opacity: 0.8;
 }
 #intro #teasers article h1 span:nth-of-type(7n-7), #intro #teasers article h2 span:nth-of-type(7n-7), #intro #teasers article h3 span:nth-of-type(7n-7), #intro #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos #intro #teasers article h1 span:nth-of-type(7n-7), #intro #teasers article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav #intro #teasers article h2 span:nth-of-type(7n-7),
@@ -1763,6 +2012,27 @@ header#page-header h2 {
 #learn #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos article
 #learn h1 span:nth-of-type(7n-7),
 #learn #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
-#learn h2 span:nth-of-type(7n-7) {
+#learn h2 span:nth-of-type(7n-7),
+#tools #tools-examples article h1 span:nth-of-type(7n-7),
+#tools #tools-examples article h2 span:nth-of-type(7n-7),
+#tools #tools-examples article h3 span:nth-of-type(7n-7),
+#tools #tools-examples #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos
+#tools #tools-examples article h1 span:nth-of-type(7n-7),
+#tools #tools-examples article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
+#tools #tools-examples article h2 span:nth-of-type(7n-7),
+#survivors .survivor h1 span:nth-of-type(7n-7),
+#survivors .survivor h2 span:nth-of-type(7n-7),
+#survivors .survivor h3 span:nth-of-type(7n-7),
+#survivors .survivor #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos article
+#survivors .survivor h1 span:nth-of-type(7n-7),
+#survivors .survivor #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
+#survivors .survivor h2 span:nth-of-type(7n-7),
+#prepared h1 span:nth-of-type(7n-7),
+#prepared h2 span:nth-of-type(7n-7),
+#prepared h3 span:nth-of-type(7n-7),
+#prepared #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos article
+#prepared h1 span:nth-of-type(7n-7),
+#prepared #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
+#prepared h2 span:nth-of-type(7n-7) {
   opacity: 0.9;
 }

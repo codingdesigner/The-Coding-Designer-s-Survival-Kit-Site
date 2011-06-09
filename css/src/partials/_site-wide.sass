@@ -301,6 +301,12 @@ $intro-width: 404px
         color: adjust-color($blue, $lightness: +30)
         display: block
         visibility: visible
+        +adjust-font-size-to(24.327px)
+        padding-top: 6px
+        .wf-active &
+          @extend h4
+          // +adjust-font-size-to(24.327px)
+          padding-top: 0
       p
         font-weight: bold
         padding: 0 45px
@@ -489,16 +495,17 @@ $intro-width: 404px
   position: relative
   z-index: -53
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
-  background-color: $red
+  background-color: $green
   .inner
     @extend .container
     // +container
     +padding-leader(1)
     +padding-trailer(1)
-    background-color: rgba($black, 0.25)
-    color: $white
-    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
-    +susy-grid-background
+    background-color: rgba($black, 0.12)
+    color: $blue-ice
+    +text-shadow(rgba($blue, 0.5) 1px 2px 4px)
+    +box-shadow(2px 0px 2px rgba($black, 0.1px), 8px 0px 8px rgba($black, 0.05), -2px 0px 2px rgba($black, 0.1), -8px 0px 8px rgba($black, 0.05))
+    // +susy-grid-background
     > header
       +full
       +trailer
@@ -508,10 +515,39 @@ $intro-width: 404px
         margin-bottom: $baseline
     .survivor
       +columns(2)
+      +vertical-separation($baseline * 2)
+      position: relative
+      background: adjust-color($green, $lightness: -10)
+      height: 240px
+      padding: 6px
+      +box-shadow(rgba($black, 0.1) 2px 1px 4px, rgba($black, 0.1) -4px 3px 8px)
+      h1
+        +adjust-font-size-to($ms4)
+        line-height: 1em
+        position: absolute
+        max-width: 240px
       &:nth-of-type(odd)
         +alpha()
+        // +prefix(0.25)
+        padding-right: 84px
+        h1
+          text-align: right
+          top: 0
+          right: 0
+          +transform2d(rotate(-90deg) translate(-6px, -72px))
+          +transform-origin(top, right)
       &:nth-of-type(even)
+        // +suffix(0.25)
         +omega()
+        padding-left: 84px
+        h1
+          // text-align: right
+          top: 0
+          left: 0
+          +transform2d(rotate(90deg) translate(6px, -72px))
+          +transform-origin(top, left)
+      &:last-child
+        padding-bottom: 6px
       img
         // width: columns(2)
 
@@ -521,21 +557,87 @@ $intro-width: 404px
 #prepared
   position: relative
   z-index: -54
-  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
-  background-color: $chartreuse
+  // +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  background:
+    image: image_url('dirt.jpg')
+    position: top center
+  color: $white
+  // font-size: $ms3
+  +adjust-font-size-to($ms3)
   .inner
     @extend .container
     // +container
-    +padding-leader(1)
-    +padding-trailer(1)
+    +padding-leader(2)
+    +padding-trailer(2)
     background-color: rgba($black, 0.25)
-    color: $white
     +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
     // +susy-grid-background
+    position: relative
+    header
+      position: relative
+      float: left
+      +box-shadow(2px 0px 2px rgba($black, 0.2), 8px 0px 8px rgba($black, 0.1))
+      h1
+        background: $green
+        display: inline-block
+        float: left
+        +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+        .word1
+          +adjust-font-size-to($ms4-5, 1, $ms6)
+          padding: 6px 28px 
+          float: left
+          text-align: center
+          +transform2d(rotate(-90deg) translate(-18px, 0))
+          +transform-origin(50%, 50%)
+          +text-shadow(-2px 2px 2px rgba($black, 0.2), -8px 5px 8px rgba($black, 0.1))
+        .word2
+          margin-left: -31px
+    p.download
+      float: left
+      // margin-left: 1em
+      padding: 12px 0 0 0
+      +adjust-font-size-to($ms3, 1, $ms3)
+      // line-height: 1
+      span
+        background-color: mix($green, $yellow)
+        float: left
+        clear: left
+        &.word1, &.word3, &.word5
+          padding-left: 0.5em
+          +transition(padding-left,0.5s)
+        &.word2, &.word4
+          float: none
+          clear: none
+          margin-left: 0.5em
+          background-color: transparent
+          color: $green
+      a
+        +remove-link-underlines
+        +link-colors($brown-dark, $blue, $brown-dark, $brown-dark, false)
+      &:hover
+        span
+          &.word1, &.word3, &.word5
+            padding-left: 1em
+    footer
+      +padding-leader(0.5)
+      clear: both
+      text-align: right
+      aside
+        // +columns(2)
+        // +omega
+        h2
+          @extend .visuallyhidden
+        ul
+          // +no-bullets 
+          +inline-list
+          // +adjust-font-size-to($ms2, 1, $ms3)
 
 // random letter opacity
 #intro #teasers article, 
-#learn
+#learn,
+#tools #tools-examples article,
+#survivors .survivor,
+#prepared,
   h1, h2, h3
     position: relative
     span

@@ -38,6 +38,12 @@ $(document).ready(function () {
   // typography
   $('#intro #teasers article h1').lettering();
   $('#learn h1, #learn h2, #learn h3').lettering();
+  $('#tools #tools-examples article h1').lettering();
+  $('#survivors .survivor h1').lettering();
+  // $('#prepared header h1').lettering('words');
+  // $('#prepared h1, #prepared h2, #prepared h3').lettering();
+  $('#prepared header h1').lettering('words').children('span').lettering();
+  $('#prepared .download a').lettering('words');
   
   // syntax highlighter
   SyntaxHighlighter.all();
