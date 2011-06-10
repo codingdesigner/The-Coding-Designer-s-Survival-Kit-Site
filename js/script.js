@@ -36,7 +36,8 @@ $(document).ready(function () {
   }).filter(':first').click();
     
   // typography
-  $('#intro #teasers article h1').lettering();
+  $('#teasers article h1').lettering();
+  $('#intro h1').lettering();
   $('#learn h1, #learn h2, #learn h3').lettering();
   $('#tools #tools-examples article h1').lettering();
   $('#survivors .survivor h1').lettering();

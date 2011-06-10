@@ -61,7 +61,8 @@
   <nav id='main-nav'>
     <h1>Navigation</h1>
     <ul>
-      <li><a href="#page-header">Intro</a></li>
+      <li><a href="#page-header">Top</a></li>
+      <li><a href="#intro">Intro</a></li>
       <li><a href="#learn">Learn</a></li>
       <li><a href="#tools">Tools</a></li>
       <li><a href="#survivors">Survivors</a></li>
@@ -69,9 +70,8 @@
     </ul>
   </nav>
 
-  <section id='intro'>
-    
-    <h2>Intro</h2>
+  <section id='all-teasers'>
+    <h2>All Teasers</h2>
     <nav class="samples">
       <h3>Samples</h3>
       <ul>
@@ -125,6 +125,19 @@
         <p>As you&#8217;re designing in the browser, it&#8217;s nice to see the markup your working with. The Kit opens a window and lets you see what you need to. </p>
       </article> 
     </section>
+  </section>
+
+  <section id="intro">
+    <div class="inner">
+      <h1>Intro</h1>
+      <article id="what-is-this">
+        <h1>What is This?</h1>
+        <div class="body">
+          <p>When you design web sites in the browser you're left alone in the dark without any of your familiar design tools. By nature there's no application you can load up and start building your design. Well, this isn't that. However I think it's the next best thing. </p>
+          <p>Instead of starting from square one every time you begin a project I think we need a collection of good starting values in markup and css to start designing, and a library of javascript tools to help us rapidly prototype as we think creatively. In the Kit you'll find HTML inspired by HTML5 Boilerplate, a system for writing highly flexible and powerful css with Sass, Compass, Susy, and other frameworks, and a bevy of javascript libraries at your disposal. </p>
+        </div>
+      </article>
+    </div>
   </section>
 
   <section id="learn">

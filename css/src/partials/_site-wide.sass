@@ -22,14 +22,14 @@ header#page-header
   background:
     image: image_url('dirt.jpg')
     position: top center
-  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  // +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   &:before
     content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈"
     @extend .logo-type
     letter-spacing: -4px
     +adjust-font-size-to($ms6)
     color: mix($red, $black)
-    color: change-color($red, $alpha: 0.2)
+    color: change-color($green, $alpha: 0.2)
     // color: change-color($white, $alpha: 0.2)
     +text-shadow(rgba($black, 0.6) 1px 1px)
     position: absolute
@@ -108,7 +108,7 @@ header#page-header
       &:after
         content: '>'
   
-/* INTRODUCTION
+/* TEASERS
 // define animations
 @-webkit-keyframes spin
   0%
@@ -126,7 +126,7 @@ $badge-size: 115px
 $badge-size-neg-half: -$badge-size * 0.5
 $badge-total: 8
 $intro-width: 404px
-#intro
+#all-teasers
   position: relative
   z-index: 3
   display: block
@@ -319,10 +319,51 @@ $intro-width: 404px
         visibility: visible
 
 
+/* INTRODUCTION
+#intro
+  position: relative
+  z-index: -51
+  background:
+    image: image_url('dirt.jpg')
+    position: -50% center
+  // color: $white
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  // background-color: change-color(mix($green, $brown), $saturation:  30%)
+  .inner
+    @extend .container
+    // +container
+    +padding-leader(2)
+    +padding-trailer(2)
+    // background-color: rgba($black, 0.12)
+    color: $blue-ice
+    // +text-shadow(rgba($blue, 0.5) 1px 2px 4px)
+    // +box-shadow(2px 0px 2px rgba($black, 0.1px), 8px 0px 8px rgba($black, 0.05), -2px 0px 2px rgba($black, 0.1), -8px 0px 8px rgba($black, 0.05))
+    // +susy-grid-background
+    > h1
+      @extend .visuallyhidden
+    article
+      +full
+      h1
+        text-align: center
+        color: scale-color($green, $lightness:  50%)
+        // @debug scale-color($green, $lightness:  50%)
+        // @debug mix($green, $white)
+        +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+        // border-bottom: 1px solid $green
+        // +adjust-font-size-to($ms6, 2)
+        +adjust-leading-to(4, $ms6)
+      .body
+        +columns(4,5)
+        +prefix(0.5)
+        +column-count(2)
+        +column-gap(24px)
+        +text-shadow(rgba($black, 0.8) 1px 1px 2px)
+    
+
 /* LEARN
 #learn
   position: relative
-  z-index: -51
+  z-index: -52
   // START background pattern
   /* BACKGROUND PATTERN: http://leaverou.me/css3patterns/#carbon-fibre THANKS!
   background: -webkit-gradient(radial, 0 0, 0, 0 0, 16, color-stop(15%, $brown-dark), color-stop(16%, rgba($black, 0))), -webkit-gradient(radial, 8px 8px, 0, 8px 8px, 16, color-stop(15%, $brown-dark), color-stop(16%, rgba($black, 0))), -webkit-gradient(radial, 0 1px, 0, 0 1px, 20, color-stop(15%, rgba($white, 0.1)), color-stop(20%, rgba($black, 0))), -webkit-gradient(radial, 8px 9px, 0, 8px 9px, 20, color-stop(15%, rgba($white, 0.1)), color-stop(20%, rgba($black, 0)))
@@ -380,18 +421,23 @@ $intro-width: 404px
           +omega(2)
           margin: 3px 0
 
+    
 /* TOOLS
 #tools
   position: relative
-  z-index: -52
+  z-index: -53
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   background-color: $blue-dark
   // background-color: gray;
   @debug 'consider renaming $gutter variable to avoid conflicts'
-  background-image: -webkit-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
-  background-image: -moz-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
-  background-image: -o-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
-  background-image: repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
+  // background-image: -webkit-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
+  // background-image: -moz-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
+  // background-image: -o-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
+  // background-image: repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
+  background-image: -webkit-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
+  background-image: -moz-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
+  background-image: -o-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
+  background-image: linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
   .inner
     @extend .container
     +padding-leader(1)
@@ -423,14 +469,25 @@ $intro-width: 404px
             padding-left: $side-gutter-width
             position: relative
             z-index: 75
-            background: -webkit-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba($blue-darker, 0.8) 100%) bottom right
-            background: -moz-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right
-            background: -o-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right
-            background: linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right
-            background-size: 100%
+            // background: -webkit-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba($blue-darker, 0.8) 100%) bottom right
+            // background: -moz-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right
+            // background: -o-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right
+            // background: linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right
+            // background-size: 100%
             background-repeat: no-repeat
+            background: -webkit-linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
+            background: -moz-linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
+            background: -o-linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
+            background: linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
+            +background-clip("padding-box")
+            +transition(all,0.5s)
             &:hover
               background: -webkit-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              background: -moz-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              background: -o-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              background: linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              a
+                +link-colors($green, $green, $green, $green, false)
             &:not(:first-child)
               border-top: 1px solid $blue-dark
               &:after
@@ -449,8 +506,10 @@ $intro-width: 404px
                 background-size: 50%
                 background-repeat: no-repeat
             a
+              +transition(all,0.5s)
               +remove-link-underlines
-              +text-shadow(rgba($black, 0.5) 1px 1px 0)
+              +link-colors($brown, $green, $green, $brown, false)
+              // +text-shadow(rgba($black, 0.5) 1px 1px 0)
               font-weight: 700
       #tools-examples
         +columns(4,5)
@@ -463,8 +522,12 @@ $intro-width: 404px
           // overflow: auto
           .example
             // +box-shadow(rgba($black, 0.1) 0 0 18px, rgba($black, .7) 1px 2px 6px 1px inset)
-            border: 1px dashed $blue-dark
+            border: 1px solid $blue-dark
             +border-radius
+            & + footer
+              font-style: italic
+              +adjust-font-size-to($ms1)
+              opacity: 0.6
           .syntaxhighlighter
             white-space: nowrap
             overflow: auto
@@ -493,7 +556,7 @@ $intro-width: 404px
 // @import susy
 #survivors
   position: relative
-  z-index: -53
+  z-index: -54
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   background-color: $green
   .inner
@@ -556,7 +619,7 @@ $intro-width: 404px
 // @import susy
 #prepared
   position: relative
-  z-index: -54
+  z-index: -55
   // +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   background:
     image: image_url('dirt.jpg')
@@ -633,7 +696,8 @@ $intro-width: 404px
           // +adjust-font-size-to($ms2, 1, $ms3)
 
 // random letter opacity
-#intro #teasers article, 
+#teasers article, 
+#intro,
 #learn,
 #tools #tools-examples article,
 #survivors .survivor,
