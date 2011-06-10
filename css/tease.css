@@ -248,6 +248,12 @@ h6 {
   line-height: 1.302em;
 }
 
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 2.963em;
+    line-height: 1.157em;
+  }
+}
 /* Inline -------------------------------------------------------------- */
 cite, em, dfn, address, i {
   font-style: italic;

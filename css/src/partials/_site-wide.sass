@@ -5,10 +5,28 @@ body
   width: 100%
   height: 100%
   
+@media screen and (max-width: 320px)
+  body
+    // *
+      // max-width: 320px
+    
+    // #main-nav,  
+    // #page-header,
+    // #all-teasers,
+    #intro,
+    #learn,
+    #tools,
+    #survivors,
+    #prepared
+      display: none
 
 /* PAGE HEADER    
 header#page-header
   position: relative
+  @media screen and (max-width: 320px)
+    padding-top: 92px
+    padding-bottom: 600px
+    padding-bottom: 500px
   padding-top: 372px
   padding-bottom: 248px  
   background:
@@ -23,6 +41,8 @@ header#page-header
     color: change-color($red, $alpha: 0.2)
     +text-shadow(rgba($black, 0.6) 1px 1px)
     position: absolute
+    @media screen and (max-width: 320px)
+      top: 94px
     top: 362px
     left: 0
     width: 100%
@@ -34,6 +54,8 @@ header#page-header
     top: -$baseline * 1.5
     position: relative
     z-index: 5
+    @media screen and (max-width: 320px)
+      width: 320px
     width: 480px
     margin: 0 auto
     color: $white
@@ -46,16 +68,26 @@ header#page-header
   h1
     margin-bottom: 0
     position: relative
+    @media screen and (max-width: 320px)
+      font-size: $ms2
+      padding-right: 2px
+      top: 3px
     font-size: 32.8px
     top: 0px
     text-align: right
     padding-right: 6px
     .wf-active &
+      @media screen and (max-width: 320px)
+        font-size: $ms2
+        top: 3px
       +adjust-font-size-to($ms5)
       top: -9px
   h2
     font-family: $font-proxima-nova
     font-weight: 800
+    @media screen and (max-width: 320px)
+      +adjust-font-size-to(46px)
+      top: 9px
     +adjust-font-size-to(69px)
     position: relative
     top: 0px
@@ -118,6 +150,11 @@ $intro-width: 404px
   width: $intro-width
   max-width: $intro-width
   top: -300px
+  @media screen and (max-width: 320px)
+    width: 320px
+    max-width: 320px
+    top: -460px
+    // overflow-y: hidden
   > h2
     @extend .hidden
   nav.samples
@@ -143,6 +180,10 @@ $intro-width: 404px
       top: -$badge-size * 3.66
       left: -160px
       width: 400px
+      @media screen and (max-width: 320px)
+        top: 0
+        left: -222px
+        max-width: 400px
       @media screen and (min-width: 901px)
         top: $badge-size-neg-half
         left: $badge-size-neg-half
@@ -222,6 +263,14 @@ $intro-width: 404px
     position: relative
     width: $intro-width
     margin: 0 auto
+    @media screen and (max-width: 320px)
+      width: 320px
+      // height: auto
+      top: 250px
+      margin-left: 0
+      margin-right: 0
+      // display: none
+      
     > h3
       @extend .hidden
     article
@@ -234,15 +283,20 @@ $intro-width: 404px
       color: $lightgray
       text-align: center
       left: 0px
-      &:before
-        content: '\0020'
-        position: absolute
-        width: 410px
-        height: 476px
-        +background-image(linear-gradient(top, change-color($black, $alpha:  0), change-color($black, $alpha:  0.5)))
-        z-index: -10
-        bottom: 190px
-        left: 0
+      @media screen and (max-width: 320px)
+        width: 320px
+        +border-bottom-radius(0)
+        overflow: hidden
+      @media screen and (min-width: 320px)
+        &:before
+          content: '\0020'
+          position: absolute
+          width: 410px
+          height: 476px
+          +background-image(linear-gradient(top, change-color($black, $alpha:  0), change-color($black, $alpha:  0.5)))
+          z-index: -10
+          bottom: 190px
+          left: 0
       h1
         @extend h4
         border-bottom: 1px dashed adjust-color($blue, $lightness: +45 )
@@ -255,9 +309,13 @@ $intro-width: 404px
         .wf-active &
           @extend h4
           padding-top: 0
+        @media screen and (max-width: 320px)
+          margin: 0 0px 0.25em
       p
         font-weight: bold
         padding: 0 45px
+        @media screen and (max-width: 320px)
+          padding: 0 0
       @extend .hidden
       &:target, &.selected
         display: block
@@ -274,6 +332,9 @@ $intro-width: 404px
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   .inner
     @extend .container
+    @media screen and (max-width: 320px)
+      +padding-leader(1)
+      +padding-trailer(1)
     +padding-leader(2)
     +padding-trailer(2)
     color: $blue-ice
