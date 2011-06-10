@@ -4,15 +4,7 @@ html
 body
   width: 100%
   height: 100%
-  // background-color: $red 
-  // background-image: image_url('dirt-6.png'), image_url('dirt-5.png'), image_url('dirt-4.png'), image_url('dirt-3.png'), image_url('dirt-2.png'), image_url('dirt-1.jpg')
-  // background-image: image_url('dirt-3.png'), image_url('dirt-2.png'), image_url('dirt-1.jpg')
-  // background-image: image_url('dirt.jpg')
   
-// SECTIONS TO HIDE
-// #survivors, 
-// #start
-//   @extend .hidden
 
 /* PAGE HEADER    
 header#page-header
@@ -22,7 +14,6 @@ header#page-header
   background:
     image: image_url('dirt.jpg')
     position: top center
-  // +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   &:before
     content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈"
     @extend .logo-type
@@ -30,11 +21,9 @@ header#page-header
     +adjust-font-size-to($ms6)
     color: mix($red, $black)
     color: change-color($red, $alpha: 0.2)
-    // color: change-color($white, $alpha: 0.2)
     +text-shadow(rgba($black, 0.6) 1px 1px)
     position: absolute
     top: 362px
-    // top: 26px
     left: 0
     width: 100%
     overflow: hidden
@@ -59,7 +48,6 @@ header#page-header
     position: relative
     font-size: 32.8px
     top: 0px
-    // left: 50px
     text-align: right
     padding-right: 6px
     .wf-active &
@@ -85,15 +73,12 @@ header#page-header
   text-align: center
   z-index: 100
   border-bottom: 1px solid $brown
-  // +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   h1
     @extend .visuallyhidden
   ul
     +inline-list
     li
       padding: 0 0.5em
-      // &:first-child:before
-      //   content: '~~~ '
       a
         @extend h5
         +link-colors($red, $red-dark, $red-dark, $red, false)
@@ -101,7 +86,6 @@ header#page-header
       &:before, &:after
         @extend h5
         font-weight: 300
-        // opacity: 0.2
         color: $lightgray
       &:before
         content: '<'
@@ -133,7 +117,6 @@ $intro-width: 404px
   margin: 0 auto
   width: $intro-width
   max-width: $intro-width
-  // padding-bottom: 292px
   top: -300px
   > h2
     @extend .hidden
@@ -142,59 +125,45 @@ $intro-width: 404px
     z-index: 2
     top: $badge-size-neg-half
     left: $intro-width * 0.5
-    -webkit-animation-name: spin
-    -webkit-animation-duration: 80s
-    -webkit-animation-timing-function: linear
-    -webkit-animation-iteration-count: infinite
+    @media screen and (min-width: 901px)
+      -webkit-animation-name: spin
+      -webkit-animation-duration: 80s
+      -webkit-animation-timing-function: linear
+      -webkit-animation-iteration-count: infinite
     +transform2d(scale(0.9))
     +transition(all,0.5s)
-    // &:hover
-    //   ul
-    //     li
-    //       $badge-total: 8
-    //       @for $i from 1 through ($badge-total + 1)
-    //         $radius: 345
-    //         $position: 360 / ($badge-total + 1) * $i
-    //         $rotation: $position
-    //         @if $rotation > 180
-    //           $rotation: -360 + $rotation
-    //         @if $rotation == 0
-    //           $rotation: $rotation + 20
-    //         $rotation: $rotation
-    //         $cos: cos($position * (pi() / 180))
-    //         $x-position: $radius * $cos + px
-    //         $sin: sin($position * (pi() / 180))
-    //         $y-position: $radius * $sin + px
-    //         &        
-    //           &:nth-of-type(#{$i}n-#{$i})      
-    //             top: $y-position
-    //             left: $x-position
     h3
       @extend .hidden
     ul
       margin: 0 0 0 0
-      +no-bullets
+      +no-bullets      
       position: absolute
+      
       $badge-size: 115px
-      top: $badge-size-neg-half
-      left: $badge-size-neg-half
+      top: -$badge-size * 3.66
+      left: -160px
+      width: 400px
+      @media screen and (min-width: 901px)
+        top: $badge-size-neg-half
+        left: $badge-size-neg-half
       li
-        -webkit-animation-name: spin-back
-        -webkit-animation-duration: 80s
-        -webkit-animation-timing-function: linear
-        -webkit-animation-iteration-count: infinite
-        position: absolute
+        float: left
+        @media screen and (min-width: 901px)
+          -webkit-animation-name: spin-back
+          -webkit-animation-duration: 80s
+          -webkit-animation-timing-function: linear
+          -webkit-animation-iteration-count: infinite
+          position: absolute
+          float: none
         top: 0
         left: 0
         width: 115px
         height: 115px
-        z-index: 4
+        z-index: 4        
         +border-radius($ms9)
         +background-clip(padding-box)
         +transition(all,0.5s)
         +box-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
-        // &:hover
-        //   +transform2d(scale(1.2))
         a
           +remove-link-underlines
           display: block
@@ -205,54 +174,10 @@ $intro-width: 404px
               @extend .badges-#{$badge}
               &:hover, &.selected
                 @extend .badges-#{$badge}-selected
-        // calculate circle of badges
-        @for $i from 1 through ($badge-total + 1)
-          $radius: 320
-          $position: 360 / ($badge-total + 1) * $i
-          $rotation: $position
-          @if $rotation > 180
-            $rotation: -360 + $rotation
-          @if $rotation == 0
-            $rotation: $rotation + 20
-          $rotation: $rotation
-          $cos: cos($position * (pi() / 180))
-          $x-position: $radius * $cos + px
-          // @debug $radius * $cos + '%'
-          // @debug $radius * $cos + px
-          $sin: sin($position * (pi() / 180))
-          $y-position: $radius * $sin + px
-          &        
-            &:nth-of-type(#{$i}n-#{$i})      
-              top: $y-position
-              left: $x-position
-              // &:before
-              //   content: '\0020'
-              //   content: '#{$i}'
-              //   color: $white
-              //   '\0020'
-              //   border: 1px solid $white
-              //   width: ($radius) + px
-              //   height: 0px 
-              //   position: absolute
-              //   left: $x-position
-              //   top: $y-position
-              //   // @debug $cos
-              //   $x-origin: -$badge-size * $cos
-              //   $y-origin: $badge-size * $sin
-              //   // @debug $x-origin
-              //   // @debug $y-origin
-              //   +transform2d(rotate($rotation) translate($y-position, $x-position))
-              //   // @debug $rotation + 180 + deg
-              //   +transform2d(rotate($rotation + 180 + deg) translate($x-origin, $y-origin))
-              //   +transform2d( translate($x-origin, $y-origin))
-              //   +transform-origin(0, 0)
-    // expand the circle when you mouse-over the nav
-    &:hover
-      ul
-        li
-
+        @media screen and (min-width: 901px)
+          // calculate circle of badges
           @for $i from 1 through ($badge-total + 1)
-            $radius: 330
+            $radius: 320
             $position: 360 / ($badge-total + 1) * $i
             $rotation: $position
             @if $rotation > 180
@@ -262,17 +187,41 @@ $intro-width: 404px
             $rotation: $rotation
             $cos: cos($position * (pi() / 180))
             $x-position: $radius * $cos + px
+            // @debug $radius * $cos + '%'
+            // @debug $radius * $cos + px
             $sin: sin($position * (pi() / 180))
             $y-position: $radius * $sin + px
             &        
               &:nth-of-type(#{$i}n-#{$i})      
                 top: $y-position
                 left: $x-position
+      @media screen and (min-width: 901px)
+        // expand the circle when you mouse-over the nav
+        &:hover
+          ul
+            li
+
+              @for $i from 1 through ($badge-total + 1)
+                $radius: 330
+                $position: 360 / ($badge-total + 1) * $i
+                $rotation: $position
+                @if $rotation > 180
+                  $rotation: -360 + $rotation
+                @if $rotation == 0
+                  $rotation: $rotation + 20
+                $rotation: $rotation
+                $cos: cos($position * (pi() / 180))
+                $x-position: $radius * $cos + px
+                $sin: sin($position * (pi() / 180))
+                $y-position: $radius * $sin + px
+                &        
+                  &:nth-of-type(#{$i}n-#{$i})      
+                    top: $y-position
+                    left: $x-position
   #teasers
     position: relative
     width: $intro-width
     margin: 0 auto
-    // left: -$intro-width * 0.5
     > h3
       @extend .hidden
     article
@@ -305,7 +254,6 @@ $intro-width: 404px
         padding-top: 6px
         .wf-active &
           @extend h4
-          // +adjust-font-size-to(24.327px)
           padding-top: 0
       p
         font-weight: bold
@@ -314,9 +262,6 @@ $intro-width: 404px
       &:target, &.selected
         display: block
         visibility: visible
-      // &:first-of-type
-      //   display: block
-      //   visibility: visible
 
 
 /* INTRODUCTION
@@ -326,19 +271,12 @@ $intro-width: 404px
   background:
     image: image_url('dirt.jpg')
     position: -50% center
-  // color: $white
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
-  // background-color: change-color(mix($green, $brown), $saturation:  30%)
   .inner
     @extend .container
-    // +container
     +padding-leader(2)
     +padding-trailer(2)
-    // background-color: rgba($black, 0.12)
     color: $blue-ice
-    // +text-shadow(rgba($blue, 0.5) 1px 2px 4px)
-    // +box-shadow(2px 0px 2px rgba($black, 0.1px), 8px 0px 8px rgba($black, 0.05), -2px 0px 2px rgba($black, 0.1), -8px 0px 8px rgba($black, 0.05))
-    // +susy-grid-background
     > h1
       @extend .visuallyhidden
     article
@@ -346,18 +284,16 @@ $intro-width: 404px
       h1
         text-align: center
         color: scale-color($green, $lightness:  50%)
-        // @debug scale-color($green, $lightness:  50%)
-        // @debug mix($green, $white)
         +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
-        // border-bottom: 1px solid $green
-        // +adjust-font-size-to($ms6, 2)
         +adjust-leading-to(4, $ms6)
       .body
         +columns(4,5)
         +prefix(0.5)
-        +column-count(2)
-        +column-gap(24px)
         +text-shadow(rgba($black, 0.8) 1px 1px 2px)
+        @media screen and (min-width: 500px)
+          +column-count(2)
+          +column-gap(24px)
+        
     
 
 /* LEARN
@@ -390,24 +326,26 @@ $intro-width: 404px
       margin-bottom: $baseline
       @extend .visuallyhidden
     #walkthru
-      +columns(3)
-      +alpha
+      +full
+      @media screen and (min-width: 500px)
+        +columns(3)
+        +alpha
       iframe
         width: 558px
         height: 376.65px
         max-width: 100%
     #podcast-videos
-      +leader(1)
-      +columns(2)
-      +omega
+      +full
+      @media screen and (min-width: 500px)
+        +leader(1)
+        +columns(2)
+        +omega
       > h2
         +adjust-font-size-to($ms2)
         text-align: right
         +trailer
       article
         +vertical-separation($baseline, 3px, rgba($brown, 0.5), solid)
-        // background-color: rgba($black, 0.25)
-        // +background-image(linear-gradient(top, rgba($black, 0), rgba($brown, 0.5) 50%))
         margin-left: -12px
         padding-left: 12px
         margin-right: -26px
@@ -428,12 +366,7 @@ $intro-width: 404px
   z-index: -53
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   background-color: $blue-dark
-  // background-color: gray;
   @debug 'consider renaming $gutter variable to avoid conflicts'
-  // background-image: -webkit-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
-  // background-image: -moz-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
-  // background-image: -o-repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
-  // background-image: repeating-linear-gradient(165deg, transparent, transparent 24px, rgba($blue,.05) 24px, rgba($blue,.05) 24px * 1.5)
   background-image: -webkit-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
   background-image: -moz-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
   background-image: -o-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
@@ -456,7 +389,8 @@ $intro-width: 404px
       +full
       position: relative
       #tools-nav
-        +columns(1,5)
+        @media screen and (min-width: 500px)
+          +columns(1,5)
         position: relative
         h2
           @extend h3
@@ -469,11 +403,6 @@ $intro-width: 404px
             padding-left: $side-gutter-width
             position: relative
             z-index: 75
-            // background: -webkit-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba($blue-darker, 0.8) 100%) bottom right
-            // background: -moz-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right
-            // background: -o-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right
-            // background: linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba(255, 255, 255, 0.1) 0, rgba(30, 30, 30, 0.8) 100%) bottom right
-            // background-size: 100%
             background-repeat: no-repeat
             background: -webkit-linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
             background: -moz-linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
@@ -509,19 +438,17 @@ $intro-width: 404px
               +transition(all,0.5s)
               +remove-link-underlines
               +link-colors($brown, $green, $green, $brown, false)
-              // +text-shadow(rgba($black, 0.5) 1px 1px 0)
               font-weight: 700
       #tools-examples
-        +columns(4,5)
-        +omega(5)
+        @media screen and (min-width: 500px)
+          +columns(4,5)
+          +omega(5)
         position: relative
         > h2
           @extend .visuallyhidden
         article
           max-width: 100%
-          // overflow: auto
           .example
-            // +box-shadow(rgba($black, 0.1) 0 0 18px, rgba($black, .7) 1px 2px 6px 1px inset)
             border: 1px solid $blue-dark
             +border-radius
             & + footer
@@ -548,8 +475,7 @@ $intro-width: 404px
               width: auto
               code
                 @extend .mono
-            .alt2
-              // background-color: rgba($white, 0.025) !important
+
 
 /* SURVIVORS
 // $total-cols: 4
@@ -561,14 +487,12 @@ $intro-width: 404px
   background-color: $green
   .inner
     @extend .container
-    // +container
     +padding-leader(1)
     +padding-trailer(1)
     background-color: rgba($black, 0.12)
     color: $blue-ice
     +text-shadow(rgba($blue, 0.5) 1px 2px 4px)
     +box-shadow(2px 0px 2px rgba($black, 0.1px), 8px 0px 8px rgba($black, 0.05), -2px 0px 2px rgba($black, 0.1), -8px 0px 8px rgba($black, 0.05))
-    // +susy-grid-background
     > header
       +full
       +trailer
@@ -577,64 +501,65 @@ $intro-width: 404px
         font-weight: 300
         margin-bottom: $baseline
     .survivor
-      +columns(2)
+      @media screen and (min-width: 500px)
+        +columns(2)
+        max-height: 240px
       +vertical-separation($baseline * 2)
       position: relative
       background: adjust-color($green, $lightness: -10)
-      height: 240px
       padding: 6px
       +box-shadow(rgba($black, 0.1) 2px 1px 4px, rgba($black, 0.1) -4px 3px 8px)
       h1
-        +adjust-font-size-to($ms4)
+        +adjust-font-size-to($ms3)
         line-height: 1em
-        position: absolute
         max-width: 240px
+        
+        @media screen and (min-width: 901px)
+          position: absolute
+          +adjust-font-size-to($ms4)
+          line-height: 1em
       &:nth-of-type(odd)
-        +alpha()
-        // +prefix(0.25)
-        padding-right: 84px
+        @media screen and (min-width: 500px)
+          +alpha()
+        @media screen and (min-width: 901px)
+          padding-right: 9%
         h1
-          text-align: right
+          @media screen and (min-width: 500px)
+            text-align: right
           top: 0
           right: 0
-          +transform2d(rotate(-90deg) translate(-6px, -72px))
-          +transform-origin(top, right)
+          @media screen and (min-width: 901px)
+            +transform2d(rotate(-90deg) translate(-6px, -72px))
+            +transform-origin(top, right)
       &:nth-of-type(even)
-        // +suffix(0.25)
-        +omega()
-        padding-left: 84px
+        @media screen and (min-width: 500px)
+          +omega()
+        @media screen and (min-width: 901px)
+          padding-left: 9%
         h1
-          // text-align: right
           top: 0
           left: 0
-          +transform2d(rotate(90deg) translate(6px, -72px))
-          +transform-origin(top, left)
+          @media screen and (min-width: 901px)
+            +transform2d(rotate(90deg) translate(6px, -72px))
+            +transform-origin(top, left)
       &:last-child
         padding-bottom: 6px
-      img
-        // width: columns(2)
 
 /* START
-// $total-cols: 3
-// @import susy
 #prepared
   position: relative
   z-index: -55
-  // +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   background:
     image: image_url('dirt.jpg')
     position: top center
   color: $white
-  // font-size: $ms3
   +adjust-font-size-to($ms3)
   .inner
     @extend .container
-    // +container
     +padding-leader(2)
     +padding-trailer(2)
     background-color: rgba($black, 0.25)
     +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
-    // +susy-grid-background
     position: relative
     header
       position: relative
@@ -645,22 +570,27 @@ $intro-width: 404px
         display: inline-block
         float: left
         +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+        @media screen and (max-width: 500px)
+          +adjust-font-size-to($ms5)
         .word1
-          +adjust-font-size-to($ms4-5, 1, $ms6)
-          padding: 6px 28px 
           float: left
-          text-align: center
-          +transform2d(rotate(-90deg) translate(-18px, 0))
-          +transform-origin(50%, 50%)
-          +text-shadow(-2px 2px 2px rgba($black, 0.2), -8px 5px 8px rgba($black, 0.1))
+          margin-right: 0.25em
+          @media screen and (min-width: 500px)
+            +adjust-font-size-to($ms4-5, 1, $ms6)
+            // padding: 6px 0
+            +transform2d(rotate(-90deg) translate(-18px, 0))
+            +transform-origin(50%, 50%)
+            margin-right: 0
+            text-align: center
+            padding: 6px 28px 
+            +text-shadow(-2px 2px 2px rgba($black, 0.2), -8px 5px 8px rgba($black, 0.1))
         .word2
-          margin-left: -31px
+          @media screen and (min-width: 500px)
+            margin-left: -31px
     p.download
       float: left
-      // margin-left: 1em
       padding: 12px 0 0 0
       +adjust-font-size-to($ms3, 1, $ms3)
-      // line-height: 1
       span
         background-color: mix($green, $yellow)
         float: left
@@ -669,7 +599,6 @@ $intro-width: 404px
           padding-left: 0.5em
           +transition(padding-left,0.5s)
         &.word2, &.word4
-          // float: none
           clear: none
           margin-left: 0.5em
           background-color: transparent
@@ -713,10 +642,8 @@ $intro-width: 404px
         opacity: 0.7
       &:nth-of-type(5n-5)
         opacity: 0.8
-        // +rotate(2deg)
       &:nth-of-type(7n-7)
         opacity: 0.9
-        // +rotate(-2deg)
       
 
 
