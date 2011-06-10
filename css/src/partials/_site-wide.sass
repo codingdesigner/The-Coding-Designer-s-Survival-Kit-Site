@@ -29,7 +29,7 @@ header#page-header
     letter-spacing: -4px
     +adjust-font-size-to($ms6)
     color: mix($red, $black)
-    color: change-color($green, $alpha: 0.2)
+    color: change-color($red, $alpha: 0.2)
     // color: change-color($white, $alpha: 0.2)
     +text-shadow(rgba($black, 0.6) 1px 1px)
     position: absolute
@@ -314,9 +314,9 @@ $intro-width: 404px
       &:target, &.selected
         display: block
         visibility: visible
-      &:first-of-type
-        display: block
-        visibility: visible
+      // &:first-of-type
+      //   display: block
+      //   visibility: visible
 
 
 /* INTRODUCTION
@@ -669,7 +669,7 @@ $intro-width: 404px
           padding-left: 0.5em
           +transition(padding-left,0.5s)
         &.word2, &.word4
-          float: none
+          // float: none
           clear: none
           margin-left: 0.5em
           background-color: transparent
@@ -685,15 +685,17 @@ $intro-width: 404px
       +padding-leader(0.5)
       clear: both
       text-align: right
+      position: relative
+      .amp
+        +adjust-font-size-to($ms6, 1, $ms3)
+        position: relative
+        top: 0.2em
       aside
-        // +columns(2)
-        // +omega
         h2
           @extend .visuallyhidden
         ul
-          // +no-bullets 
           +inline-list
-          // +adjust-font-size-to($ms2, 1, $ms3)
+        
 
 // random letter opacity
 #teasers article, 

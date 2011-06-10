@@ -4,20 +4,20 @@
 
 $(document).ready(function () {
   // teaser tabs
-  var teaserContainers = $('#intro #teasers article');
+  var teaserContainers = $('#all-teasers #teasers article');
   teaserContainers.hide().filter(':first').show();
   function badgeClick (el) {
     teaserContainers.hide().removeClass('selected');
     teaserContainers.filter(el.hash).show().addClass('selected');
-    $('#intro nav.samples ul li a').removeClass('selected');
+    $('#all-teasers nav.samples ul li a').removeClass('selected');
     $(el).addClass('selected');
     return false;
   }
-  $('#intro nav.samples ul li a').click(function () {
+  $('#all-teasers nav.samples ul li a').click(function () {
     badgeClick(this);
     return false;
   }).filter(':first').click();
-  $('#intro nav.samples ul li a').mouseenter(
+  $('#all-teasers nav.samples ul li a').mouseenter(
     function () {
       badgeClick(this);
     });
@@ -50,20 +50,6 @@ $(document).ready(function () {
   SyntaxHighlighter.all();
   
   
-  //   // Geared Scrolling
-  //   "use strict";
-  //   var syncColumn;
-  //   console.log(syncColumn);
-  //   console.log('helllo');
-  //   $('#all-examples #tools-nav').addClass("column");
-  //   $('#all-examples #tools-examples').addClass("column");
-  //   $(window).load(function () {
-  //     console.log('hi mom');
-  //     // syncColumn = $('#all-examples').gearedscrolling();
-  //     
-  //     syncColumn = $('#all-examples').gearedscrolling();
-  //     // $('#all-examples').gearedscrolling();
-  //  console.log(syncColumn);
-  // });
+
 });
 

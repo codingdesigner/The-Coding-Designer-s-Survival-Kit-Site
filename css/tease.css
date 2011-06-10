@@ -113,13 +113,13 @@ body {
 /* -moz- must be declared separately */
 ::-moz-selection {
   color: black;
-  background: #94afc9;
+  background: #9ab5cb;
   text-shadow: none;
 }
 
 ::selection {
   color: black;
-  background: #94afc9;
+  background: #9ab5cb;
   text-shadow: none;
 }
 
@@ -187,29 +187,29 @@ html > body {
 /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 /* Links -------------------------------------------------------------- */
 a {
-  color: #94afc9;
+  color: #9ab5cb;
 }
 a:visited {
-  color: #94afc9;
+  color: #9ab5cb;
 }
 a:hover {
-  color: #c9ae94;
+  color: #cbb09a;
 }
 a:active {
-  color: #c9ae94;
+  color: #cbb09a;
 }
 a {
   text-decoration: none;
-  border-bottom: 1px solid #94afc9;
+  border-bottom: 1px solid #9ab5cb;
 }
 a:visited {
-  border-bottom-color: #94afc9;
+  border-bottom-color: #9ab5cb;
 }
 a:hover {
-  border-bottom-color: #c9ae94;
+  border-bottom-color: #cbb09a;
 }
 a:active {
-  border-bottom-color: #c9ae94;
+  border-bottom-color: #cbb09a;
 }
 
 /* Headings -------------------------------------------------------------- */
@@ -285,7 +285,7 @@ del {
 }
 
 mark {
-  background: #b80000;
+  background: #bf0000;
   background-color: rgba(255, 255, 0, 0.5);
   text-shadow: none;
 }
@@ -767,10 +767,10 @@ body.markup-elements h1.section-title a:visited {
   color: black;
 }
 body.markup-elements h1.section-title a:hover {
-  color: #94afc9;
+  color: #9ab5cb;
 }
 body.markup-elements h1.section-title a:active {
-  color: #94afc9;
+  color: #9ab5cb;
 }
 body.markup-elements h1.section-title a {
   text-decoration: none;
@@ -780,10 +780,10 @@ body.markup-elements h1.section-title a:visited {
   border-bottom-color: black;
 }
 body.markup-elements h1.section-title a:hover {
-  border-bottom-color: #94afc9;
+  border-bottom-color: #9ab5cb;
 }
 body.markup-elements h1.section-title a:active {
-  border-bottom-color: #94afc9;
+  border-bottom-color: #9ab5cb;
 }
 body.markup-elements article.element {
   *zoom: 1;
@@ -819,10 +819,10 @@ body.markup-elements article.element h2.element-title a:visited {
   color: white;
 }
 body.markup-elements article.element h2.element-title a:hover {
-  color: #94afc9;
+  color: #9ab5cb;
 }
 body.markup-elements article.element h2.element-title a:active {
-  color: #94afc9;
+  color: #9ab5cb;
 }
 body.markup-elements article.element h2.element-title a {
   text-decoration: none;
@@ -832,10 +832,10 @@ body.markup-elements article.element h2.element-title a:visited {
   border-bottom-color: white;
 }
 body.markup-elements article.element h2.element-title a:hover {
-  border-bottom-color: #94afc9;
+  border-bottom-color: #9ab5cb;
 }
 body.markup-elements article.element h2.element-title a:active {
-  border-bottom-color: #94afc9;
+  border-bottom-color: #9ab5cb;
 }
 body.markup-elements article.element .example {
   *zoom: 1;
@@ -910,7 +910,7 @@ body.markup-elements article.element .example .markup + .show-source + p {
 }
 
 .wireframe {
-  outline: 1px dashed #b80000;
+  outline: 1px dashed #bf0000;
 }
 
 html {
@@ -941,7 +941,7 @@ body header {
 
 /* Non-grid Layout and styling -------------------------------------------------------------- */
 body {
-  background-color: #372218;
+  background-color: #452d1c;
   background-image: url('images/dirt.jpg?1307510632');
 }
 
@@ -966,9 +966,9 @@ header:before {
   letter-spacing: -4px;
   font-size: 3.375em;
   line-height: 1.016em;
-  color: #1b110c;
-  color: rgba(27, 17, 12, 0.5);
-  color: rgba(184, 0, 0, 0.2);
+  color: #22160e;
+  color: rgba(34, 22, 14, 0.5);
+  color: rgba(191, 0, 0, 0.2);
   text-shadow: rgba(0, 0, 0, 0.6) 1px 1px;
   position: absolute;
   top: 50%;
@@ -1286,9 +1286,9 @@ header hgroup h1 {
   left: 0;
 }
 #main article h1 {
-  border-bottom: 1px dashed #b7d2eb;
+  border-bottom: 1px dashed #c7dbeb;
   margin: 0 5px 0.25em;
-  color: #7bacdb;
+  color: #8fb6d7;
 }
 #main article p {
   font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;

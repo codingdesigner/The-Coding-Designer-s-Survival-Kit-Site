@@ -23,6 +23,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- CSS : implied media="all" -->
+  <link rel="stylesheet" href="css/type/font_face.css?v=2">
   <link rel="stylesheet" href="css/style.css?v=2">
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
@@ -149,7 +150,8 @@
       </article>
       <section id="podcast-videos">
         <h2>Podcast</h2>
-        <article class="podcast-video">
+        <p>Coming soon: A periodic video podcast all about using these tools to design in the browser. We'll talk about installing and configuring all the tools, and how to apply these to the creative process.</p>
+        <!-- <article class="podcast-video">
           <h1>installing sass and compass</h1>
           <img src="http://dummyimage.com/170x128/ccc/fff" width=170 height=128 alt="placeholder image" />
         </article>
@@ -160,7 +162,7 @@
         <article class="podcast-video">
           <h1>when do i design in code?</h1>
           <img src="http://dummyimage.com/170x128/ccc/fff" width=170 height=128 alt="placeholder image" />
-        </article>
+        </article> -->
       </section>
     </div>
   </section>
