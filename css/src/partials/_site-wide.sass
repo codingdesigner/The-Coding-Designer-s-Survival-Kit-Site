@@ -5,20 +5,19 @@ body
   width: 100%
   height: 100%
   
-@media screen and (max-width: 320px)
-  body
-    // *
-      // max-width: 320px
-    
-    // #main-nav,  
-    // #page-header,
-    // #all-teasers,
-    #intro,
-    #learn,
-    #tools,
-    #survivors,
-    #prepared
-      display: none
+// @media screen and (max-width: 320px)
+//   body
+//     // *
+//       // max-width: 320px
+//     #main-nav,  
+//     // #page-header,
+//     #all-teasers,
+//     #intro,
+//     #learn,
+//     #tools,
+//     #survivors,  
+//     #prepared
+//       display: none
 
 /* PAGE HEADER    
 header#page-header
@@ -30,6 +29,7 @@ header#page-header
   padding-top: 372px
   padding-bottom: 248px  
   background:
+    color: $brown
     image: image_url('dirt.jpg')
     position: top center
   &:before
@@ -77,23 +77,26 @@ header#page-header
     text-align: right
     padding-right: 6px
     .wf-active &
-      @media screen and (max-width: 320px)
-        font-size: $ms2
-        top: 3px
       +adjust-font-size-to($ms5)
       top: -9px
+      @media screen and (max-width: 320px)
+        font-size: $ms3
+        top: 3px
   h2
     font-family: $font-proxima-nova
     font-weight: 800
-    @media screen and (max-width: 320px)
-      +adjust-font-size-to(46px)
-      top: 9px
     +adjust-font-size-to(69px)
     position: relative
     top: 0px
+    @media screen and (max-width: 320px)
+      +adjust-font-size-to(46px)
+      top: 9px
     .wf-active &
       +adjust-font-size-to($ms8)
       top: -$baseline-half
+      @media screen and (max-width: 320px)
+        font-size: $ms6 
+        // top: 3px
   
 /* MASTER NAVIGATION
 #main-nav
@@ -154,7 +157,6 @@ $intro-width: 404px
     width: 320px
     max-width: 320px
     top: -460px
-    // overflow-y: hidden
   > h2
     @extend .hidden
   nav.samples
@@ -162,6 +164,8 @@ $intro-width: 404px
     z-index: 2
     top: $badge-size-neg-half
     left: $intro-width * 0.5
+    @media screen and (max-width: 320px)
+      left: 0
     @media screen and (min-width: 901px)
       -webkit-animation-name: spin
       -webkit-animation-duration: 80s
@@ -182,20 +186,14 @@ $intro-width: 404px
       width: 400px
       @media screen and (max-width: 320px)
         top: 0
-        left: -222px
-        max-width: 400px
+        left: 0px
+        max-width: 300px
+        overflow: hidden
       @media screen and (min-width: 901px)
         top: $badge-size-neg-half
         left: $badge-size-neg-half
       li
         float: left
-        @media screen and (min-width: 901px)
-          -webkit-animation-name: spin-back
-          -webkit-animation-duration: 80s
-          -webkit-animation-timing-function: linear
-          -webkit-animation-iteration-count: infinite
-          position: absolute
-          float: none
         top: 0
         left: 0
         width: 115px
@@ -205,10 +203,24 @@ $intro-width: 404px
         +background-clip(padding-box)
         +transition(all,0.5s)
         +box-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
+        @media screen and (max-width: 320px)
+          position: relative
+          left: 0px
+          width: 100px
+          height: 100px
+        @media screen and (min-width: 901px)
+          -webkit-animation-name: spin-back
+          -webkit-animation-duration: 80s
+          -webkit-animation-timing-function: linear
+          -webkit-animation-iteration-count: infinite
+          position: absolute
+          float: none
         a
           +remove-link-underlines
           display: block
           +replace-text-with-dimensions('badges/color.png')
+          @media screen and (max-width: 320px)
+            +scale(0.7)
         @each $badge in color, clean-start, step-by-step, html5, fonts, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
           &##{$badge}-badge
             a
@@ -351,6 +363,9 @@ $intro-width: 404px
         +columns(4,5)
         +prefix(0.5)
         +text-shadow(rgba($black, 0.8) 1px 1px 2px)
+        @media screen and (max-width: 320px)
+          +columns(5,5)
+          +prefix(0)
         @media screen and (min-width: 500px)
           +column-count(2)
           +column-gap(24px)
@@ -387,7 +402,10 @@ $intro-width: 404px
       margin-bottom: $baseline
       @extend .visuallyhidden
     #walkthru
-      +full
+      +full      
+      @media screen and (max-width: 320px)
+        h1
+          +adjust-font-size-to($ms3)
       @media screen and (min-width: 500px)
         +columns(3)
         +alpha
@@ -395,12 +413,17 @@ $intro-width: 404px
         width: 558px
         height: 376.65px
         max-width: 100%
+        @media screen and (max-width: 320px)
+          width: 308px
+          height: auto
     #podcast-videos
       +full
       @media screen and (min-width: 500px)
         +leader(1)
         +columns(2)
         +omega
+        clear: none
+        margin-left: 0
       > h2
         +adjust-font-size-to($ms2)
         text-align: right
@@ -471,11 +494,15 @@ $intro-width: 404px
             background: linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
             +background-clip("padding-box")
             +transition(all,0.5s)
+            @media screen and (max-width: 320px)
+              background-color: rgba($white, 0.8)
             &:hover
-              background: -webkit-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
-              background: -moz-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
-              background: -o-linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
-              background: linear-gradient(165deg, change-color($black, $alpha:  0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              background: -webkit-linear-gradient(165deg, rgba($black, 0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              background: -moz-linear-gradient(165deg, rgba($black, 0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              background: -o-linear-gradient(165deg, rgba($black, 0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              background: linear-gradient(165deg, rgba($black, 0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              @media screen and (max-width: 320px)
+                background-color: rgba($blue-dark, 0.1)
               a
                 +link-colors($green, $green, $green, $green, false)
             &:not(:first-child)
@@ -631,8 +658,10 @@ $intro-width: 404px
         display: inline-block
         float: left
         +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
-        @media screen and (max-width: 500px)
+        @media screen and                                              (max-width: 500px)
           +adjust-font-size-to($ms5)
+        @media screen and (max-width: 320px)
+          font-size: $ms6
         .word1
           float: left
           margin-right: 0.25em

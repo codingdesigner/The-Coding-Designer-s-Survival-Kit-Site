@@ -146,7 +146,8 @@
       <h1>Learn</h1>
       <article id="walkthru" class="screencast video">
         <h1>Please allow me to introduce myself</h1>
-        <iframe src="http://player.vimeo.com/video/3826197?title=0&amp;byline=0&amp;portrait=0" width="558" height="376.65" frameborder="0"></iframe><p><a href="http://vimeo.com/3826197">I Am A Chain Reaction</a> from <a href="http://vimeo.com/presstube">Presstube</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+        <iframe src="http://www.archive.org/embed/drupalconchi_day3_design_in_the_browser" width="640" height="480" frameborder="0" ></iframe>
+        <p>I introduced the Kit at <a href="http://chicago2011.drupal.org/sessions/design-browser-use-css-stop-lying-ourselves-and-our-clients">Drupalcon Chicago 2011</a> - Design in the Browser: Use CSS to Stop Lying to Ourselves and Our Clients (March 10, 2011). <a href="http://www.archive.org/details/drupalconchi_day3_design_in_the_browser">Archive.org</a></p>
       </article>
       <section id="podcast-videos">
         <h2>Podcast</h2>
