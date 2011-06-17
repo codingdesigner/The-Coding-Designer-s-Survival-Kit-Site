@@ -13,7 +13,7 @@ $(document).ready(function () {
     $(el).addClass('selected');
     return false;
   }
-  $('#all-teasers nav.samples ul li a').click(function () {
+  $('#all-teasers nav.samples ul li a').css('cursor', 'default').click(function () {
     badgeClick(this);
     return false;
   }).filter(':first').click();
