@@ -143,7 +143,7 @@ header#page-header
     
 $badge-size: 115px
 $badge-size-neg-half: -$badge-size * 0.5
-$badge-total: 8
+$badge-total: 9
 $intro-width: 404px
 #all-teasers
   position: relative
@@ -208,6 +208,9 @@ $intro-width: 404px
           left: 0px
           width: 100px
           height: 100px
+        @media screen and (max-width: 900px)
+          &#code-viewer-badge
+            display: none
         @media screen and (min-width: 901px)
           -webkit-animation-name: spin-back
           -webkit-animation-duration: 80s
@@ -221,7 +224,7 @@ $intro-width: 404px
           +replace-text-with-dimensions('badges/color.png')
           @media screen and (max-width: 320px)
             +scale(0.7)
-        @each $badge in color, clean-start, step-by-step, html5, fonts, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
+        @each $badge in color, clean-start, step-by-step, html5, fonts, jquery-plugins, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
           &##{$badge}-badge
             a
               @extend .badges-#{$badge}
@@ -340,7 +343,7 @@ $intro-width: 404px
   z-index: -51
   background:
     image: image_url('dirt.jpg')
-    position: -50% center
+    position: center -50%
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   .inner
     @extend .container

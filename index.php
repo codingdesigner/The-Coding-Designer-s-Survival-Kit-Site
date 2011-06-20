@@ -80,6 +80,7 @@
         <li id="step-by-step-badge"><a href="#step-by-step-tease">Step-by-Step</a></li>
         <li id="color-badge"><a href="#color-tease">Color</a></li>
         <li id="fonts-badge"><a href="#fonts-tease">Fonts</a></li>
+        <li id="jquery-plugins-badge"><a href="#jquery-plugins-tease">Jquery Plugins</a></li>
         <li id="sass-mixins-badge"><a href="#sass-mixins-tease">Sass Mixins</a></li>
         <li id="html5-badge"><a href="#html5-tease">HTML5</a></li>
         <li id="ui-patterns-badge"><a href="#ui-patterns-tease">UI Patterns</a></li>
@@ -104,6 +105,10 @@
       <article id="fonts-tease">
         <h1>Easy Webfont Integration</h1>
         <p>The Kit establishes a system for incorporating fonts from services like Typekit, or your own font files.</p>
+      </article>
+      <article id="jquery-plugins-tease">
+        <h1>jQuery Plugins</h1>
+        <p>The Kit includes many of the best jQuery plugins, and other great javascript tools. </p>
       </article>
       <article id="sass-mixins-tease">
         <h1>Sass Mixins</h1>
@@ -151,7 +156,7 @@
       </article>
       <section id="podcast-videos">
         <h2>Podcast</h2>
-        <p>Coming soon: A periodic video podcast all about using these tools to design in the browser. We'll talk about installing and configuring all the tools, and how to apply these to the creative process.</p>
+        <p>Coming soon: A video podcast all about using these tools to design in the browser. We'll talk about installing and configuring all the tools, and how to apply these to the creative process.</p>
         <!-- <article class="podcast-video">
           <h1>installing sass and compass</h1>
           <img src="http://dummyimage.com/170x128/ccc/fff" width=170 height=128 alt="placeholder image" />
@@ -183,6 +188,7 @@
             <li><a href="#ui-patterns">UI Patterns</a></li>
             <li><a href="#drupal-ui-patterns">Drupal UI Patterns</a></li>
             <li><a href="#code-viewer">In-Line Code Viewer</a></li>
+            <li><a href="#jquery-plugins">jQuery &amp; Javascript</a></li>
           </ul>
 
           <h2 id="css-sass">CSS / Sass</h2>
@@ -241,6 +247,15 @@
             <h1>Code Viewer</h1>
             <p>Firebug and Webkit Inspector are great, but sometimes you just need a peek at the markup you're working on. </p>
             <img src="/examples/screen_code_viewer.png" width="683" height="228" alt="Screen Code Viewer">
+          </article>
+          <article id="jquery-plugins" class="html">
+            <h1>jQuery <span class="amp">&amp;</span> Javascript Tools</h1>
+            <p>The Kit includes jQuery and javascript tools like jQueryUI and lettering.js so that it's always quick and simple to add them to your project when you need them.</p>
+            <div class="example">
+              <pre class="brush: html">
+<?php include 'examples/jquery-plugins.inc' ?>                
+              </pre>
+            </div>
           </article>
           <article id="step-by-step" class="sass tool">
             <h1>Step by Step</h1>
