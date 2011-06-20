@@ -177,7 +177,7 @@
     <div class="inner">
       <header>
         <h1>Tools</h1>
-        <p>Want to look under the hood? The best way is to <a href="tktktk">download</a> it and get started. Below is a small sampling of what's included.</p>
+        <p>Want to look under the hood? The best way is to <a href="https://github.com/canarymason/The-Coding-Designers-Survival-Kit">download</a> it and get started. Below is a small sampling of what's included.</p>
       </header>
       <div id="all-examples">
         <nav id="tools-nav" class="tabs">
@@ -311,7 +311,7 @@
           </article>
           <article id="modular-scales" class="sass tool">
             <h1>Modular Scales</h1>
-            <p>The Kit is very well suited to using modular scales, as suggested in Tim Brown's excellent <a href="tktktk">A List Apart</a> article. Use a series of related values for typography, column widths, image sizes, or whatever you like.</p>
+            <p>The Kit is very well suited to using modular scales, as suggested in Tim Brown's excellent <a href="http://www.alistapart.com/articles/more-meaningful-typography/">A List Apart</a> article. Use a series of related values for typography, column widths, image sizes, or whatever you like.</p>
             <div class="example">
               <pre class="brush: sass">
                <?php include 'examples/modular-scales.inc' ?>
@@ -320,7 +320,7 @@
           </article>
           <article id="forms" class="sass tool">
             <h1>Forms</h1>
-            <p>It's always good to start nice defaults, and that may go double for form elements. The Kit establishes a nice clean form style that you can alter as you see fit, and employs Nathan Smith's excellent <a href="tktktk">Formalize</a> to help smooth out cross-browser issues.</p>
+            <p>It's always good to start nice defaults, and that may go double for form elements. The Kit establishes a nice clean form style that you can alter as you see fit, and employs Nathan Smith's excellent <a href="http://formalize.me/">Formalize</a> to help smooth out cross-browser issues.</p>
             <div class="example">
               <pre class="brush: sass">
 <?php include 'examples/forms.inc' ?>
@@ -329,7 +329,7 @@
           </article>
           <article id="responsive-tools" class="sass tool">
             <h1>Responsive Design</h1>
-            <p>Ethan Marcotte's <a href="http://www.alistapart.com/articles/responsive-web-design/">post in A List Apart</a> has proven so influential it's often referred to now simply as "The Article". Sass comes with powerful <a href="tktktk">@media bubbling</a> that helps you make your pages "responsive". The Kit helps show you how to put this into practice. </p>
+            <p>Ethan Marcotte's <a href="http://www.alistapart.com/articles/responsive-web-design/">post in A List Apart</a> has proven so influential it's often referred to now simply as "The Article". Sass comes with powerful <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#media">@media bubbling</a> that helps you make your pages "responsive". The Kit helps show you how to put this into practice. </p>
             <div class="example">
               <pre class="brush: sass">
 <?php include 'examples/responsive-tools.inc' ?>
