@@ -30,8 +30,23 @@ header#page-header
   padding-bottom: 248px  
   background:
     color: $brown
-    image: image_url('dirt.jpg')
+    image: image_url('dirt-320x320.jpg')
     position: top center
+  @media screen and (max-width: 320px)
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (max-width: 500px)
+    background-image: image_url('dirt-500x500.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (max-width: 900px)
+    background-image: image_url('dirt-920x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (min-width: 901px)
+    background-image: image_url('dirt-1200x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
   &:before
     content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈"
     @extend .logo-type
@@ -114,6 +129,7 @@ header#page-header
     +inline-list
     li
       padding: 0 0.5em
+      display: inline-block
       a
         @extend h5
         +link-colors($red, $red-dark, $red-dark, $red, false)
@@ -342,8 +358,24 @@ $intro-width: 404px
   position: relative
   z-index: -51
   background:
-    image: image_url('dirt.jpg')
+    color: $brown
+    image: image_url('dirt-320x320.jpg')
     position: center -50%
+  @media screen and (max-width: 320px)
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (max-width: 500px)
+    background-image: image_url('dirt-500x500.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (max-width: 900px)
+    background-image: image_url('dirt-920x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (min-width: 901px)
+    background-image: image_url('dirt-1200x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   .inner
     @extend .container
@@ -640,11 +672,27 @@ $intro-width: 404px
 #prepared
   position: relative
   z-index: -55
-  background:
-    image: image_url('dirt.jpg')
-    position: top center
   color: $white
   +adjust-font-size-to($ms3)
+  background:
+    color: $brown
+    image: image_url('dirt-320x320.jpg')
+    position: top center
+  @media screen and (max-width: 320px)
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (max-width: 500px)
+    background-image: image_url('dirt-500x500.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (max-width: 900px)
+    background-image: image_url('dirt-920x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (min-width: 901px)
+    background-image: image_url('dirt-1200x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
   .inner
     @extend .container
     +padding-leader(2)
