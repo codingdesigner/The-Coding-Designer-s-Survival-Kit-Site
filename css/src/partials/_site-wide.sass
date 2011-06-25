@@ -1,109 +1,790 @@
 /* Non-grid Layout and styling --------------------------------------------------------------
-
+html
+  height: 100%
 body
-  position: relative
   width: 100%
-  overflow: hidden
-  background: $brown image_url('dirt.jpg')
+  height: 100%
+  
+// @media screen and (max-width: 320px)
+//   body
+//     // *
+//       // max-width: 320px
+//     #main-nav,  
+//     // #page-header,
+//     #all-teasers,
+//     #intro,
+//     #learn,
+//     #tools,
+//     #survivors,  
+//     #prepared
+//       display: none
+
+/* PAGE HEADER    
+header#page-header
+  position: relative
+  @media screen and (max-width: 320px)
+    padding-top: 92px
+    padding-bottom: 600px
+    padding-bottom: 500px
+  padding-top: 372px
+  padding-bottom: 248px  
+  background:
+    color: $brown
+    image: image_url('dirt-320x320.jpg')
+    position: top center
+  @media screen and (max-width: 320px)
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (max-width: 500px)
+    background-image: image_url('dirt-500x500.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (max-width: 900px)
+    background-image: image_url('dirt-920x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (min-width: 901px)
+    background-image: image_url('dirt-1200x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
   &:before
     content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈"
     @extend .logo-type
     letter-spacing: -4px
-    +adjust-font-size-to($ms7)
-    color: $blue-ice
+    +adjust-font-size-to($ms6)
+    color: mix($red, $black)
+    color: change-color($red, $alpha: 0.2)
+    +text-shadow(rgba($black, 0.6) 1px 1px)
     position: absolute
-    // top: -$baseline-half
-    top: 12px
+    @media screen and (max-width: 320px)
+      top: 94px
+    top: 362px
+    left: 0
+    width: 100%
+    overflow: hidden
     z-index: 0
-    
-    
-header 
-  background-color: $white
-  hgroup
-    @extend .container
+  .wrapper
     background: transparent image_url('logo.png') no-repeat 0 ($baseline * 1.5)
     padding-top: $baseline * 1.5
-    // padding-top: $baseline * 1.5
+    top: -$baseline * 1.5
     position: relative
-    z-index: 1
-    #{headers(all)}
-      @extend .logo-type
-      font-weight: 700
-      font-family: $font-proxima-nova-condensed
-    h2
-      margin-bottom: 0
+    z-index: 5
+    @media screen and (max-width: 320px)
+      width: 320px
+    width: 480px
+    margin: 0 auto
+    color: $white
+    color: change-color($white, $alpha: 0.8)
+    +text-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
+  #{headers(all)}
+    @extend .logo-type
+    font-weight: 700
+    font-family: $font-proxima-nova-condensed
+  h1
+    margin-bottom: 0
+    position: relative
+    @media screen and (max-width: 320px)
+      font-size: $ms2
+      padding-right: 2px
+      top: 3px
+    font-size: 32.8px
+    top: 0px
+    text-align: right
+    padding-right: 6px
+    .wf-active &
+      +adjust-font-size-to($ms5)
+      top: -9px
+      @media screen and (max-width: 320px)
+        font-size: $ms3
+        top: 3px
+  h2
+    font-family: $font-proxima-nova
+    font-weight: 800
+    +adjust-font-size-to(69px)
+    position: relative
+    top: 0px
+    @media screen and (max-width: 320px)
+      +adjust-font-size-to(46px)
+      top: 9px
+    .wf-active &
+      +adjust-font-size-to($ms8)
+      top: -$baseline-half
+      @media screen and (max-width: 320px)
+        font-size: $ms6 
+        // top: 3px
+  
+/* MASTER NAVIGATION
+#main-nav
+  position: fixed
+  top: 0
+  background-color: $white
+  background-color: change-color($white, $alpha:  0.9)
+  width: 100%
+  text-align: center
+  z-index: 100
+  border-bottom: 1px solid $brown
+  h1
+    @extend .visuallyhidden
+  ul
+    +inline-list
+    li
+      padding: 0 0.5em
+      display: inline-block
+      a
+        @extend h5
+        +link-colors($red, $red-dark, $red-dark, $red, false)
+        +remove-link-underlines
+      &:before, &:after
+        @extend h5
+        font-weight: 300
+        color: $lightgray
+      &:before
+        content: '<'
+      &:after
+        content: '>'
+  
+/* TEASERS
+// define animations
+@-webkit-keyframes spin
+  0%
+    +transform2d(rotate(0deg))
+  100%
+    +transform2d(rotate(360deg))
+      
+@-webkit-keyframes spin-back
+  0%
+    +transform2d(rotate(0deg))
+  100%
+    +transform2d(rotate(-360deg))
+    
+$badge-size: 115px
+$badge-size-neg-half: -$badge-size * 0.5
+$badge-total: 9
+$intro-width: 404px
+#all-teasers
+  position: relative
+  z-index: 3
+  display: block
+  margin: 0 auto
+  width: $intro-width
+  max-width: $intro-width
+  top: -300px
+  @media screen and (max-width: 320px)
+    width: 320px
+    max-width: 320px
+    top: -460px
+  > h2
+    @extend .hidden
+  nav.samples
+    position: absolute
+    z-index: 2
+    top: $badge-size-neg-half
+    left: $intro-width * 0.5
+    @media screen and (max-width: 320px)
+      left: 0
+    @media screen and (min-width: 901px)
+      -webkit-animation-name: spin
+      -webkit-animation-duration: 80s
+      -webkit-animation-timing-function: linear
+      -webkit-animation-iteration-count: infinite
+    +transform2d(scale(0.9))
+    +transition(all,0.5s)
+    h3
+      @extend .hidden
+    ul
+      margin: 0 0 0 0
+      +no-bullets      
+      position: absolute
+      
+      $badge-size: 115px
+      top: -$badge-size * 3.66
+      left: -160px
+      width: 400px
+      @media screen and (max-width: 320px)
+        top: 0
+        left: 0px
+        max-width: 300px
+        overflow: hidden
+      @media screen and (min-width: 901px)
+        top: $badge-size-neg-half
+        left: $badge-size-neg-half
+      li
+        float: left
+        top: 0
+        left: 0
+        width: 115px
+        height: 115px
+        z-index: 4        
+        +border-radius($ms9)
+        +background-clip(padding-box)
+        +transition(all,0.5s)
+        +box-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
+        @media screen and (max-width: 320px)
+          position: relative
+          left: 0px
+          width: 100px
+          height: 100px
+        @media screen and (max-width: 900px)
+          &#code-viewer-badge
+            display: none
+        @media screen and (min-width: 901px)
+          -webkit-animation-name: spin-back
+          -webkit-animation-duration: 80s
+          -webkit-animation-timing-function: linear
+          -webkit-animation-iteration-count: infinite
+          position: absolute
+          float: none
+        a
+          +remove-link-underlines
+          display: block
+          +replace-text-with-dimensions('badges/color.png')
+          @media screen and (max-width: 320px)
+            +scale(0.7)
+        @each $badge in color, clean-start, step-by-step, html5, fonts, jquery-plugins, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
+          &##{$badge}-badge
+            a
+              @extend .badges-#{$badge}
+              &:hover, &.selected
+                @extend .badges-#{$badge}-selected
+        @media screen and (min-width: 901px)
+          // calculate circle of badges
+          @for $i from 1 through ($badge-total + 1)
+            $radius: 320
+            $position: 360 / ($badge-total + 1) * $i
+            $rotation: $position
+            @if $rotation > 180
+              $rotation: -360 + $rotation
+            @if $rotation == 0
+              $rotation: $rotation + 20
+            $rotation: $rotation
+            $cos: cos($position * (pi() / 180))
+            $x-position: $radius * $cos + px
+            // @debug $radius * $cos + '%'
+            // @debug $radius * $cos + px
+            $sin: sin($position * (pi() / 180))
+            $y-position: $radius * $sin + px
+            &        
+              &:nth-of-type(#{$i}n-#{$i})      
+                top: $y-position
+                left: $x-position
+      @media screen and (min-width: 901px)
+        // expand the circle when you mouse-over the nav
+        &:hover
+          ul
+            li
+
+              @for $i from 1 through ($badge-total + 1)
+                $radius: 330
+                $position: 360 / ($badge-total + 1) * $i
+                $rotation: $position
+                @if $rotation > 180
+                  $rotation: -360 + $rotation
+                @if $rotation == 0
+                  $rotation: $rotation + 20
+                $rotation: $rotation
+                $cos: cos($position * (pi() / 180))
+                $x-position: $radius * $cos + px
+                $sin: sin($position * (pi() / 180))
+                $y-position: $radius * $sin + px
+                &        
+                  &:nth-of-type(#{$i}n-#{$i})      
+                    top: $y-position
+                    left: $x-position
+  #teasers
+    position: relative
+    width: $intro-width
+    margin: 0 auto
+    @media screen and (max-width: 320px)
+      width: 320px
+      // height: auto
+      top: 250px
+      margin-left: 0
+      margin-right: 0
+      // display: none
+      
+    > h3
+      @extend .hidden
+    article
+      position: absolute
+      height: 190px
+      width: 410px
+      +border-bottom-radius(180px)
+      background-color: $black
+      background-color: change-color($black, $alpha:  0.5)
+      color: $lightgray
+      text-align: center
+      left: 0px
+      @media screen and (max-width: 320px)
+        width: 320px
+        +border-bottom-radius(0)
+        overflow: hidden
+      @media screen and (min-width: 320px)
+        &:before
+          content: '\0020'
+          position: absolute
+          width: 410px
+          height: 476px
+          +background-image(linear-gradient(top, change-color($black, $alpha:  0), change-color($black, $alpha:  0.5)))
+          z-index: -10
+          bottom: 190px
+          left: 0
+      h1
+        @extend h4
+        border-bottom: 1px dashed adjust-color($blue, $lightness: +45 )
+        margin: 0 5px 0.25em
+        color: adjust-color($blue, $lightness: +30)
+        display: block
+        visibility: visible
+        +adjust-font-size-to(24.327px)
+        padding-top: 6px
+        .wf-active &
+          @extend h4
+          padding-top: 0
+        @media screen and (max-width: 320px)
+          margin: 0 0px 0.25em
+      p
+        font-weight: bold
+        padding: 0 45px
+        @media screen and (max-width: 320px)
+          padding: 0 0
+      @extend .hidden
+      &:target, &.selected
+        display: block
+        visibility: visible
+
+
+/* INTRODUCTION
+#intro
+  position: relative
+  z-index: -51
+  background:
+    color: $brown
+    image: image_url('dirt-320x320.jpg')
+    position: center -50%
+  @media screen and (max-width: 320px)
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (max-width: 500px)
+    background-image: image_url('dirt-500x500.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (max-width: 900px)
+    background-image: image_url('dirt-920x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (min-width: 901px)
+    background-image: image_url('dirt-1200x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  .inner
+    @extend .container
+    @media screen and (max-width: 320px)
+      +padding-leader(1)
+      +padding-trailer(1)
+    +padding-leader(2)
+    +padding-trailer(2)
+    color: $blue-ice
+    > h1
+      @extend .visuallyhidden
+    article
+      +full
+      h1
+        text-align: center
+        color: scale-color($green, $lightness:  50%)
+        +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+        +adjust-leading-to(4, $ms6)
+      .body
+        +columns(4,5)
+        +prefix(0.5)
+        +text-shadow(rgba($black, 0.8) 1px 1px 2px)
+        @media screen and (max-width: 320px)
+          +columns(5,5)
+          +prefix(0)
+        @media screen and (min-width: 500px)
+          +column-count(2)
+          +column-gap(24px)
+        
+    
+
+/* LEARN
+#learn
+  position: relative
+  z-index: -52
+  // START background pattern
+  /* BACKGROUND PATTERN: http://leaverou.me/css3patterns/#carbon-fibre THANKS!
+  background: -webkit-gradient(radial, 0 0, 0, 0 0, 16, color-stop(15%, $brown-dark), color-stop(16%, rgba($black, 0))), -webkit-gradient(radial, 8px 8px, 0, 8px 8px, 16, color-stop(15%, $brown-dark), color-stop(16%, rgba($black, 0))), -webkit-gradient(radial, 0 1px, 0, 0 1px, 20, color-stop(15%, rgba($white, 0.1)), color-stop(20%, rgba($black, 0))), -webkit-gradient(radial, 8px 9px, 0, 8px 9px, 20, color-stop(15%, rgba($white, 0.1)), color-stop(20%, rgba($black, 0)))
+  background: -webkit-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 0 0, -webkit-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 8px 8px, -webkit-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 0 1px, -webkit-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 8px 9px
+  background: -moz-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 0 0, -moz-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 8px 8px, -moz-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 0 1px, -moz-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 8px 9px
+  background: -o-radial-gradient(0 0, $brown-dark 15%, rgba($black, 0) 16%), -o-radial-gradient(8px 8px, $brown-dark 15%, rgba($black, 0) 16%), -o-radial-gradient(0 1px, rgba($white, 0.1) 15%, rgba($black, 0) 20%), -o-radial-gradient(8px 9px, rgba($white, 0.1) 15%, rgba($black, 0) 20%)
+  background: radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 0 0, radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 8px 8px, radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 0 1px, radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 8px 9px
+  background-color: $brown
+  background-size: 16px 16px
+  // END background pattern
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  .inner
+    @extend .container
+    +padding-leader(1)
+    +padding-trailer(1)
+    background-color: rgba($black, 0.4)
+    +background-image(linear-gradient(left center, rgba($black, 0), rgba($black, 0) 59.7585%, rgba($brown, 0.5) 59.7585%, rgba($brown, 0.5) 79.2755%, rgba($black, 0) 79.2755%, rgba($black, 0)))
+    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+    color: $blue-ice
+    > h1
+      +full
+      text-align: center
+      font-weight: 300
+      margin-bottom: $baseline
+      @extend .visuallyhidden
+    #walkthru
+      +full      
+      @media screen and (max-width: 320px)
+        h1
+          +adjust-font-size-to($ms3)
+      @media screen and (min-width: 500px)
+        +columns(3)
+        +alpha
+      iframe
+        width: 558px
+        height: 376.65px
+        max-width: 100%
+        @media screen and (max-width: 320px)
+          width: 308px
+          height: auto
+    #podcast-videos
+      +full
+      @media screen and (min-width: 500px)
+        +leader(1)
+        +columns(2)
+        +omega
+        clear: none
+        margin-left: 0
+      > h2
+        +adjust-font-size-to($ms2)
+        text-align: right
+        +trailer
+      article
+        +vertical-separation($baseline, 3px, rgba($brown, 0.5), solid)
+        margin-left: -12px
+        padding-left: 12px
+        margin-right: -26px
+        padding-right: 26px
+        h1
+          @extend h3
+          line-height: 1em
+          +columns(1,2)
+        img
+          +columns(1,2)
+          +omega(2)
+          margin: 3px 0
+
+    
+/* TOOLS
+#tools
+  position: relative
+  z-index: -53
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  background-color: $blue-dark
+  @debug 'consider renaming $gutter variable to avoid conflicts'
+  background-image: -webkit-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
+  background-image: -moz-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
+  background-image: -o-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
+  background-image: linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
+  .inner
+    @extend .container
+    +padding-leader(1)
+    +padding-trailer(1)
+    background-color: rgba($white, 0.25)
+    color: $white
+    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+    > header
+      +full
+      +trailer
+      h1
+        text-align: center
+        font-weight: 300
+        margin-bottom: $baseline
+    #all-examples
+      +full
       position: relative
-      // left: 60px
-      // top: -3px
-      // font-size: 36px
-      // line-height: 36px
-      font-size: 33px
-      top: 0px
-      left: 55px
-      .wf-active &
-        +adjust-font-size-to($ms5)
-        top: -9px
-        left: 59px
-    h1
-      font-family: $font-proxima-nova
-      font-weight: 800
-      +adjust-font-size-to(69px)
+      #tools-nav
+        @media screen and (min-width: 500px)
+          +columns(1,5)
+        position: relative
+        h2
+          @extend h3
+        ul
+          +no-bullets
+          margin-left: 0
+          li
+            background-color: rgba($blue-dark, 0.1)
+            margin-left: -$side-gutter-width
+            padding-left: $side-gutter-width
+            position: relative
+            z-index: 75
+            background-repeat: no-repeat
+            background: -webkit-linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
+            background: -moz-linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
+            background: -o-linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
+            background: linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
+            +background-clip("padding-box")
+            +transition(all,0.5s)
+            @media screen and (max-width: 320px)
+              background-color: rgba($white, 0.8)
+            &:hover
+              background: -webkit-linear-gradient(165deg, rgba($black, 0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              background: -moz-linear-gradient(165deg, rgba($black, 0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              background: -o-linear-gradient(165deg, rgba($black, 0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              background: linear-gradient(165deg, rgba($black, 0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+              @media screen and (max-width: 320px)
+                background-color: rgba($blue-dark, 0.1)
+              a
+                +link-colors($green, $green, $green, $green, false)
+            &:not(:first-child)
+              border-top: 1px solid $blue-dark
+              &:after
+                position: absolute
+                z-index: 74
+                display: block
+                content: "\0020"
+                width: 18px
+                height: 12px
+                bottom: 19px
+                right: -2px
+                background: -webkit-linear-gradient(-140deg, change-color($black, $alpha:  0) 7px, rgba($blue-dark, 0.8) 0) top right
+                background: -mox-linear-gradient(-140deg, change-color($black, $alpha:  0) 7px, rgba($blue-dark, 0.8) 0) top right
+                background: -o-linear-gradient(-140deg, change-color($black, $alpha:  0) 7px, rgba($blue-dark, 0.8) 0) top right
+                background: linear-gradient(-140deg, change-color($black, $alpha:  0) 7px, rgba($blue-dark, 0.8) 0) top right
+                background-size: 50%
+                background-repeat: no-repeat
+            a
+              +transition(all,0.5s)
+              +remove-link-underlines
+              +link-colors($brown, $green, $green, $brown, false)
+              font-weight: 700
+      #tools-examples
+        @media screen and (min-width: 500px)
+          +columns(4,5)
+          +omega(5)
+        position: relative
+        > h2
+          @extend .visuallyhidden
+        article
+          max-width: 100%
+          .example
+            border: 1px solid $blue-dark
+            +border-radius
+            & + footer
+              font-style: italic
+              +adjust-font-size-to($ms1)
+              opacity: 0.6
+          .syntaxhighlighter
+            white-space: nowrap
+            overflow: auto
+            th, td, caption
+              padding: 0
+              .line
+                padding: 0 0.5em
+            .toolbar
+              display: none
+            .gutter, .container
+              .line
+                height: 24px
+            .gutter
+              width: 2em
+              max-width: 3em
+              @extend .mono
+            .container
+              width: auto
+              code
+                @extend .mono
+
+
+/* SURVIVORS
+// $total-cols: 4
+// @import susy
+#survivors
+  position: relative
+  z-index: -54
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  background-color: $green
+  .inner
+    @extend .container
+    +padding-leader(1)
+    +padding-trailer(1)
+    background-color: rgba($black, 0.12)
+    color: $blue-ice
+    +text-shadow(rgba($blue, 0.5) 1px 2px 4px)
+    +box-shadow(2px 0px 2px rgba($black, 0.1px), 8px 0px 8px rgba($black, 0.05), -2px 0px 2px rgba($black, 0.1), -8px 0px 8px rgba($black, 0.05))
+    > header
+      +full
+      +trailer
+      h1
+        text-align: center
+        font-weight: 300
+        margin-bottom: $baseline
+    .survivor
+      @media screen and (min-width: 500px)
+        +columns(2)
+        max-height: 240px
+      +vertical-separation($baseline * 2)
       position: relative
-      // top: -3px
-      // font-size: $ms7
-      // font-size: 69px
-      top: 0px
-      .wf-active &
-        +adjust-font-size-to($ms8)
-        top: -$baseline-half
+      background: adjust-color($green, $lightness: -10)
+      padding: 6px
+      +box-shadow(rgba($black, 0.1) 2px 1px 4px, rgba($black, 0.1) -4px 3px 8px)
+      h1
+        +adjust-font-size-to($ms3)
+        line-height: 1em
+        max-width: 240px
+        
+        @media screen and (min-width: 901px)
+          position: absolute
+          +adjust-font-size-to($ms4)
+          line-height: 1em
+      &:nth-of-type(odd)
+        @media screen and (min-width: 500px)
+          +alpha()
+        @media screen and (min-width: 901px)
+          padding-right: 9%
+        h1
+          @media screen and (min-width: 500px)
+            text-align: right
+          top: 0
+          right: 0
+          @media screen and (min-width: 901px)
+            +transform2d(rotate(-90deg) translate(-6px, -72px))
+            +transform-origin(top, right)
+      &:nth-of-type(even)
+        @media screen and (min-width: 500px)
+          +omega()
+        @media screen and (min-width: 901px)
+          padding-left: 9%
+        h1
+          top: 0
+          left: 0
+          @media screen and (min-width: 901px)
+            +transform2d(rotate(90deg) translate(6px, -72px))
+            +transform-origin(top, left)
+      &:last-child
+        padding-bottom: 6px
+
+/* START
+#prepared
+  position: relative
+  z-index: -55
+  color: $white
+  +adjust-font-size-to($ms3)
+  background:
+    color: $brown
+    image: image_url('dirt-320x320.jpg')
+    position: top center
+  @media screen and (max-width: 320px)
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (max-width: 500px)
+    background-image: image_url('dirt-500x500.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (max-width: 900px)
+    background-image: image_url('dirt-920x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  @media screen and (min-width: 901px)
+    background-image: image_url('dirt-1200x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
+  .inner
+    @extend .container
+    +padding-leader(2)
+    +padding-trailer(2)
+    background-color: rgba($black, 0.25)
+    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+    position: relative
+    header
+      position: relative
+      float: left
+      +box-shadow(2px 0px 2px rgba($black, 0.2), 8px 0px 8px rgba($black, 0.1))
+      h1
+        background: $green
+        display: inline-block
+        float: left
+        +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+        @media screen and                                              (max-width: 500px)
+          +adjust-font-size-to($ms5)
+        @media screen and (max-width: 320px)
+          font-size: $ms6
+        .word1
+          float: left
+          margin-right: 0.25em
+          @media screen and (min-width: 500px)
+            +adjust-font-size-to($ms4-5, 1, $ms6)
+            // padding: 6px 0
+            +transform2d(rotate(-90deg) translate(-18px, 0))
+            +transform-origin(50%, 50%)
+            margin-right: 0
+            text-align: center
+            padding: 6px 28px 
+            +text-shadow(-2px 2px 2px rgba($black, 0.2), -8px 5px 8px rgba($black, 0.1))
+        .word2
+          @media screen and (min-width: 500px)
+            margin-left: -31px
+    p.download
+      float: left
+      padding: 12px 0 0 0
+      +adjust-font-size-to($ms3, 1, $ms3)
+      span
+        background-color: mix($green, $yellow)
+        float: left
+        clear: left
+        &.word1, &.word3, &.word5
+          padding-left: 0.5em
+          +transition(padding-left,0.5s)
+        &.word2, &.word4
+          clear: none
+          margin-left: 0.5em
+          background-color: transparent
+          color: $green
+      a
+        +remove-link-underlines
+        +link-colors($brown-dark, $blue, $brown-dark, $brown-dark, false)
+      &:hover
+        span
+          &.word1, &.word3, &.word5
+            padding-left: 1em
+    footer
+      +padding-leader(0.5)
+      clear: both
+      text-align: right
+      position: relative
+      .amp
+        +adjust-font-size-to($ms6, 1, $ms3)
+        position: relative
+        top: 0.2em
+      aside
+        h2
+          @extend .visuallyhidden
+        ul
+          +inline-list
         
 
-      
-#container
-  background-color: transparentize($white, 0.2)
-  
-#main
-  position: relative
-  +padding-leader(2)
-  aside.samples
-    position: absolute
-    z-index: 3
-    top: -130px
-    right: -30px
-    +transform2d(rotate(24deg) translate(54px, -24px))
-    +transition(all,0.5s)
-    $card-total: 6
-    $card-total-half: $card-total / 2
-    @for $i from 1 through 5
-      $degree: (($i - $card-total-half) * -12)
-      $deg: $degree + deg
-      @if $degree < 0
-        $degree: $degree * -1
-      $offset-y: ($degree * ($degree * -0.1)) + 18 + px
-      $offset-x: (($i - $card-total-half) * -30) + px
-      // @debug $degree
-      // @debug $offset-x
-      // @debug $deg 
-      // @debug $offset 
-      img
-        &:nth-of-type(#{$i}n-#{$i})
-          +transform2d(scale(0.9) rotate($deg) translate($offset-x, $offset-y))
-          +box-shadow(transparentize($black, 0.7), 2px, 1px, 2px)
-    &:hover
-      +transform2d(scale(1) rotate(0deg) translate(0, 0))
-      img
-        +transform2d(scale(0.9) rotate(0deg) translate(0, 0))
-        z-index: 5
-    img
+// random letter opacity
+#teasers article, 
+#intro,
+#learn,
+#tools #tools-examples article,
+#survivors .survivor,
+#prepared,
+  h1, h2, h3
+    position: relative
+    span
       position: relative
-      z-index: 4
-      border: 1px solid $brown
-      +border-radius($ms0)
-      +background-clip(padding-box)
-      +transition(all,0.5s)
-      &:hover
-        +transform2d(scale(1) rotate(0deg) translate(0, 0))
-        +box-shadow(transparentize($black, 0.5), 3px, 3px, 4px)
-        +border-radius($ms-2)
-        
-        
+      &:nth-of-type(2n-2)
+      &:nth-of-type(3n-3)
+        opacity: 0.7
+      &:nth-of-type(5n-5)
+        opacity: 0.8
+      &:nth-of-type(7n-7)
+        opacity: 0.9
+      
+
+
