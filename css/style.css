@@ -1,6 +1,6 @@
 /* Links -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #all-teasers #teasers article h1, .wf-active #all-teasers #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -71,7 +71,7 @@ html {
   font-family: sans-serif;
 }
 
-.mono, pre, code, tt, body.markup-elements article.element .example .markup + .show-source, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #intro .inner code, #intro #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner code, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner code, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #prepared .inner code, #prepared #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code {
+.mono, pre, code, tt, body.markup-elements article.element .example .markup + .show-source {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
@@ -83,11 +83,11 @@ html {
   font-family: museo-slab-1, museo-slab-2, Georgia, serif;
 }
 
-.headers, h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #all-teasers #teasers article h1, .wf-active #all-teasers #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6 {
+.headers, h1, h2, h3, h4, h5, h6 {
   font-family: futura-pt-1, futura-pt-2, sans-serif;
 }
 
-.logo-type, header#page-header:before, header#page-header h1, header#page-header h2, header#page-header h3, header#page-header #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article header#page-header h1, header#page-header #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav header#page-header h2, header#page-header h4, header#page-header #all-teasers #teasers article h1, #all-teasers #teasers article header#page-header h1, header#page-header .wf-active #all-teasers #teasers article h1, .wf-active #all-teasers #teasers article header#page-header h1, header#page-header h5, header#page-header #main-nav ul li a, #main-nav ul li header#page-header a, header#page-header #main-nav ul li:before, #main-nav ul header#page-header li:before, header#page-header #main-nav ul li:after, #main-nav ul header#page-header li:after, header#page-header h6 {
+.logo-type {
   font-family: proxima-nova-1, proxima-nova-2, sans-serif, futura-pt-1, futura-pt-2, sans-serif;
 }
 
@@ -147,14 +147,14 @@ html > body {
 
 /* Hide for both screenreaders and browsers
  * css-discuss.incutio.com/wiki/Screenreader_Visibility */
-.hidden, #all-teasers > h2, #all-teasers nav.samples h3, #all-teasers nav.samples #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article #all-teasers nav.samples h1, #all-teasers nav.samples #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #all-teasers nav.samples h2, #all-teasers #teasers > h3, #all-teasers #teasers > #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article #all-teasers #teasers > h1, #all-teasers #teasers > #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #all-teasers #teasers > h2, #all-teasers #teasers article {
+.hidden {
   display: none;
   visibility: hidden;
 }
 
 /* Hide only visually, but have it available for screenreaders
  * www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
-.visuallyhidden, #main-nav h1, #intro .inner > h1, #learn .inner > h1, #tools .inner #all-examples #tools-examples > h2, #prepared .inner footer aside h2 {
+.visuallyhidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
@@ -213,7 +213,7 @@ a:active {
 }
 
 /* Headings -------------------------------------------------------------- */
-h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #all-teasers #teasers article h1, .wf-active #all-teasers #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -228,17 +228,17 @@ h2 {
   line-height: 1.157em;
 }
 
-h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2 {
+h3 {
   font-size: 2.25em;
   line-height: 1.524em;
 }
 
-h4, #all-teasers #teasers article h1, .wf-active #all-teasers #teasers article h1 {
+h4 {
   font-size: 1.975em;
   line-height: 1.736em;
 }
 
-h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after {
+h5 {
   font-size: 1.5em;
   line-height: 1.143em;
 }
@@ -760,87 +760,87 @@ img.right {
 }
 
 /* Sprites -------------------------------------------------------------- */
-.badges-sprite, .badges-clean-start-selected, #all-teasers nav.samples ul li#clean-start-badge a:hover, #all-teasers nav.samples ul li#clean-start-badge a.selected, .badges-clean-start, #all-teasers nav.samples ul li#clean-start-badge a, .badges-code-viewer-selected, #all-teasers nav.samples ul li#code-viewer-badge a:hover, #all-teasers nav.samples ul li#code-viewer-badge a.selected, .badges-code-viewer, #all-teasers nav.samples ul li#code-viewer-badge a, .badges-color-selected, #all-teasers nav.samples ul li#color-badge a:hover, #all-teasers nav.samples ul li#color-badge a.selected, .badges-color, #all-teasers nav.samples ul li#color-badge a, .badges-drupal-ui-patterns-selected, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a:hover, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a.selected, .badges-drupal-ui-patterns, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a, .badges-fonts-selected, #all-teasers nav.samples ul li#fonts-badge a:hover, #all-teasers nav.samples ul li#fonts-badge a.selected, .badges-fonts, #all-teasers nav.samples ul li#fonts-badge a, .badges-html5-selected, #all-teasers nav.samples ul li#html5-badge a:hover, #all-teasers nav.samples ul li#html5-badge a.selected, .badges-html5, #all-teasers nav.samples ul li#html5-badge a, .badges-jquery-plugins-selected, #all-teasers nav.samples ul li#jquery-plugins-badge a:hover, #all-teasers nav.samples ul li#jquery-plugins-badge a.selected, .badges-jquery-plugins, #all-teasers nav.samples ul li#jquery-plugins-badge a, .badges-sass-mixins-selected, #all-teasers nav.samples ul li#sass-mixins-badge a:hover, #all-teasers nav.samples ul li#sass-mixins-badge a.selected, .badges-sass-mixins, #all-teasers nav.samples ul li#sass-mixins-badge a, .badges-step-by-step-selected, #all-teasers nav.samples ul li#step-by-step-badge a:hover, #all-teasers nav.samples ul li#step-by-step-badge a.selected, .badges-step-by-step, #all-teasers nav.samples ul li#step-by-step-badge a, .badges-ui-patterns-selected, #all-teasers nav.samples ul li#ui-patterns-badge a:hover, #all-teasers nav.samples ul li#ui-patterns-badge a.selected, .badges-ui-patterns, #all-teasers nav.samples ul li#ui-patterns-badge a {
+.badges-sprite, .badges-clean-start-selected, .badges-clean-start, .badges-code-viewer-selected, .badges-code-viewer, .badges-color-selected, .badges-color, .badges-drupal-ui-patterns-selected, .badges-drupal-ui-patterns, .badges-fonts-selected, .badges-fonts, .badges-html5-selected, .badges-html5, .badges-jquery-plugins-selected, .badges-jquery-plugins, .badges-sass-mixins-selected, .badges-sass-mixins, .badges-step-by-step-selected, .badges-step-by-step, .badges-ui-patterns-selected, .badges-ui-patterns {
   background: url('images/badges-0e70f9dbc1.png') no-repeat;
 }
 
-.badges-clean-start-selected, #all-teasers nav.samples ul li#clean-start-badge a:hover, #all-teasers nav.samples ul li#clean-start-badge a.selected {
+.badges-clean-start-selected {
   background-position: 0 0;
 }
 
-.badges-clean-start, #all-teasers nav.samples ul li#clean-start-badge a {
+.badges-clean-start {
   background-position: 0 -115px;
 }
 
-.badges-code-viewer-selected, #all-teasers nav.samples ul li#code-viewer-badge a:hover, #all-teasers nav.samples ul li#code-viewer-badge a.selected {
+.badges-code-viewer-selected {
   background-position: 0 -230px;
 }
 
-.badges-code-viewer, #all-teasers nav.samples ul li#code-viewer-badge a {
+.badges-code-viewer {
   background-position: 0 -345px;
 }
 
-.badges-color-selected, #all-teasers nav.samples ul li#color-badge a:hover, #all-teasers nav.samples ul li#color-badge a.selected {
+.badges-color-selected {
   background-position: 0 -460px;
 }
 
-.badges-color, #all-teasers nav.samples ul li#color-badge a {
+.badges-color {
   background-position: 0 -575px;
 }
 
-.badges-drupal-ui-patterns-selected, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a:hover, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a.selected {
+.badges-drupal-ui-patterns-selected {
   background-position: 0 -690px;
 }
 
-.badges-drupal-ui-patterns, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a {
+.badges-drupal-ui-patterns {
   background-position: 0 -805px;
 }
 
-.badges-fonts-selected, #all-teasers nav.samples ul li#fonts-badge a:hover, #all-teasers nav.samples ul li#fonts-badge a.selected {
+.badges-fonts-selected {
   background-position: 0 -920px;
 }
 
-.badges-fonts, #all-teasers nav.samples ul li#fonts-badge a {
+.badges-fonts {
   background-position: 0 -1035px;
 }
 
-.badges-html5-selected, #all-teasers nav.samples ul li#html5-badge a:hover, #all-teasers nav.samples ul li#html5-badge a.selected {
+.badges-html5-selected {
   background-position: 0 -1150px;
 }
 
-.badges-html5, #all-teasers nav.samples ul li#html5-badge a {
+.badges-html5 {
   background-position: 0 -1265px;
 }
 
-.badges-jquery-plugins-selected, #all-teasers nav.samples ul li#jquery-plugins-badge a:hover, #all-teasers nav.samples ul li#jquery-plugins-badge a.selected {
+.badges-jquery-plugins-selected {
   background-position: 0 -1380px;
 }
 
-.badges-jquery-plugins, #all-teasers nav.samples ul li#jquery-plugins-badge a {
+.badges-jquery-plugins {
   background-position: 0 -1495px;
 }
 
-.badges-sass-mixins-selected, #all-teasers nav.samples ul li#sass-mixins-badge a:hover, #all-teasers nav.samples ul li#sass-mixins-badge a.selected {
+.badges-sass-mixins-selected {
   background-position: 0 -1610px;
 }
 
-.badges-sass-mixins, #all-teasers nav.samples ul li#sass-mixins-badge a {
+.badges-sass-mixins {
   background-position: 0 -1725px;
 }
 
-.badges-step-by-step-selected, #all-teasers nav.samples ul li#step-by-step-badge a:hover, #all-teasers nav.samples ul li#step-by-step-badge a.selected {
+.badges-step-by-step-selected {
   background-position: 0 -1840px;
 }
 
-.badges-step-by-step, #all-teasers nav.samples ul li#step-by-step-badge a {
+.badges-step-by-step {
   background-position: 0 -1955px;
 }
 
-.badges-ui-patterns-selected, #all-teasers nav.samples ul li#ui-patterns-badge a:hover, #all-teasers nav.samples ul li#ui-patterns-badge a.selected {
+.badges-ui-patterns-selected {
   background-position: 0 -2070px;
 }
 
-.badges-ui-patterns, #all-teasers nav.samples ul li#ui-patterns-badge a {
+.badges-ui-patterns {
   background-position: 0 -2185px;
 }
 
@@ -979,13 +979,13 @@ body.markup-elements article.element .example .markup + .show-source + p {
   clear: both;
 }
 
-.container, #intro .inner, #learn .inner, #tools .inner, #survivors .inner, #prepared .inner {
+.container {
   *zoom: 1;
   margin: auto;
   width: 994px;
   max-width: 100%;
 }
-.container:after, #intro .inner:after, #learn .inner:after, #tools .inner:after, #survivors .inner:after, #prepared .inner:after {
+.container:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -996,1540 +996,4 @@ body.markup-elements article.element .example .markup + .show-source + p {
 
 .wireframe {
   outline: 1px dashed #bf0000;
-}
-
-/* Non-grid Layout and styling -------------------------------------------------------------- */
-html {
-  height: 100%;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-}
-
-/* PAGE HEADER */
-header#page-header {
-  position: relative;
-  padding-top: 372px;
-  padding-bottom: 248px;
-  background-color: #452d1c;
-  background-image: url('images/dirt-320x320.jpg?1308888806');
-  background-position: top center;
-}
-@media screen and (max-width: 320px) {
-  header#page-header {
-    padding-top: 92px;
-    padding-bottom: 600px;
-    padding-bottom: 500px;
-  }
-}
-@media screen and (max-width: 320px) {
-  header#page-header {
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-@media screen and (max-width: 500px) {
-  header#page-header {
-    background-image: url('images/dirt-500x500.jpg?1308888848');
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-@media screen and (max-width: 900px) {
-  header#page-header {
-    background-image: url('images/dirt-920x776.jpg?1308888870');
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-@media screen and (min-width: 901px) {
-  header#page-header {
-    background-image: url('images/dirt-1200x776.jpg?1308888934');
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-header#page-header:before {
-  content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
-  letter-spacing: -4px;
-  font-size: 3.375em;
-  line-height: 1.016em;
-  color: #5f0000;
-  color: rgba(191, 0, 0, 0.2);
-  text-shadow: rgba(0, 0, 0, 0.6) 1px 1px;
-  position: absolute;
-  top: 362px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  z-index: 0;
-}
-@media screen and (max-width: 320px) {
-  header#page-header:before {
-    top: 94px;
-  }
-}
-header#page-header .wrapper {
-  background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
-  padding-top: 36px;
-  top: -36px;
-  position: relative;
-  z-index: 5;
-  width: 480px;
-  margin: 0 auto;
-  color: white;
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
-}
-@media screen and (max-width: 320px) {
-  header#page-header .wrapper {
-    width: 320px;
-  }
-}
-header#page-header h1, header#page-header h2, header#page-header h3, header#page-header #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article header#page-header h1, header#page-header #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav header#page-header h2, header#page-header h4, header#page-header #all-teasers #teasers article h1, #all-teasers #teasers article header#page-header h1, header#page-header .wf-active #all-teasers #teasers article h1, .wf-active #all-teasers #teasers article header#page-header h1, header#page-header h5, header#page-header #main-nav ul li a, #main-nav ul li header#page-header a, header#page-header #main-nav ul li:before, #main-nav ul header#page-header li:before, header#page-header #main-nav ul li:after, #main-nav ul header#page-header li:after, header#page-header h6 {
-  font-weight: 700;
-  font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
-}
-header#page-header h1 {
-  margin-bottom: 0;
-  position: relative;
-  font-size: 32.8px;
-  top: 0px;
-  text-align: right;
-  padding-right: 6px;
-}
-@media screen and (max-width: 320px) {
-  header#page-header h1 {
-    font-size: 21px;
-    padding-right: 2px;
-    top: 3px;
-  }
-}
-.wf-active header#page-header h1 {
-  font-size: 2.963em;
-  line-height: 1.157em;
-  top: -9px;
-}
-@media screen and (max-width: 320px) {
-  .wf-active header#page-header h1 {
-    font-size: 27.654px;
-    top: 3px;
-  }
-}
-header#page-header h2 {
-  font-family: proxima-nova-1, proxima-nova-2, sans-serif;
-  font-weight: 800;
-  font-size: 4.929em;
-  line-height: 1.043em;
-  position: relative;
-  top: 0px;
-}
-@media screen and (max-width: 320px) {
-  header#page-header h2 {
-    font-size: 3.286em;
-    line-height: 1.043em;
-    top: 9px;
-  }
-}
-.wf-active header#page-header h2 {
-  font-size: 5.063em;
-  line-height: 1.016em;
-  top: -12px;
-}
-@media screen and (max-width: 320px) {
-  .wf-active header#page-header h2 {
-    font-size: 47.25px;
-  }
-}
-
-/* MASTER NAVIGATION */
-#main-nav {
-  position: fixed;
-  top: 0;
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 100%;
-  text-align: center;
-  z-index: 100;
-  border-bottom: 1px solid #452d1c;
-}
-#main-nav ul {
-  list-style-type: none;
-}
-#main-nav ul, #main-nav ul li {
-  margin: 0px;
-  padding: 0px;
-  display: inline;
-}
-#main-nav ul li {
-  padding: 0 0.5em;
-  display: inline-block;
-}
-#main-nav ul li a {
-  color: #bf0000;
-}
-#main-nav ul li a:visited {
-  color: #bf0000;
-}
-#main-nav ul li a:hover {
-  color: #8f0000;
-}
-#main-nav ul li a:active {
-  color: #8f0000;
-}
-#main-nav ul li a {
-  border-bottom: none;
-}
-#main-nav ul li a:hover {
-  border-bottom: none;
-}
-#main-nav ul li:before, #main-nav ul li:after {
-  font-weight: 300;
-  color: #d3d3d3;
-}
-#main-nav ul li:before {
-  content: "<";
-}
-#main-nav ul li:after {
-  content: ">";
-}
-
-/* TEASERS */
-@-webkit-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes spin-back {
-  0% {
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -moz-transform: rotate(-360deg);
-    -webkit-transform: rotate(-360deg);
-    -o-transform: rotate(-360deg);
-    -ms-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-  }
-}
-
-#all-teasers {
-  position: relative;
-  z-index: 3;
-  display: block;
-  margin: 0 auto;
-  width: 404px;
-  max-width: 404px;
-  top: -300px;
-}
-@media screen and (max-width: 320px) {
-  #all-teasers {
-    width: 320px;
-    max-width: 320px;
-    top: -460px;
-  }
-}
-#all-teasers nav.samples {
-  position: absolute;
-  z-index: 2;
-  top: -57.5px;
-  left: 202px;
-  -moz-transform: scale(0.9);
-  -webkit-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-}
-@media screen and (max-width: 320px) {
-  #all-teasers nav.samples {
-    left: 0;
-  }
-}
-@media screen and (min-width: 901px) {
-  #all-teasers nav.samples {
-    -webkit-animation-name: spin;
-    -webkit-animation-duration: 80s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-  }
-}
-#all-teasers nav.samples ul {
-  margin: 0 0 0 0;
-  list-style: none;
-  position: absolute;
-  top: -420.9px;
-  left: -160px;
-  width: 400px;
-}
-#all-teasers nav.samples ul li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0px;
-}
-@media screen and (max-width: 320px) {
-  #all-teasers nav.samples ul {
-    top: 0;
-    left: 0px;
-    max-width: 300px;
-    overflow: hidden;
-  }
-}
-@media screen and (min-width: 901px) {
-  #all-teasers nav.samples ul {
-    top: -57.5px;
-    left: -57.5px;
-  }
-}
-#all-teasers nav.samples ul li {
-  float: left;
-  top: 0;
-  left: 0;
-  width: 115px;
-  height: 115px;
-  z-index: 4;
-  -moz-border-radius: 93.333px;
-  -webkit-border-radius: 93.333px;
-  -o-border-radius: 93.333px;
-  -ms-border-radius: 93.333px;
-  -khtml-border-radius: 93.333px;
-  border-radius: 93.333px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  -o-background-clip: padding-box;
-  -ms-background-clip: padding-box;
-  -khtml-background-clip: padding-box;
-  background-clip: padding-box;
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
-  -o-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
-}
-@media screen and (max-width: 320px) {
-  #all-teasers nav.samples ul li {
-    position: relative;
-    left: 0px;
-    width: 100px;
-    height: 100px;
-  }
-}
-@media screen and (max-width: 900px) {
-  #all-teasers nav.samples ul li#code-viewer-badge {
-    display: none;
-  }
-}
-@media screen and (min-width: 901px) {
-  #all-teasers nav.samples ul li {
-    -webkit-animation-name: spin-back;
-    -webkit-animation-duration: 80s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    position: absolute;
-    float: none;
-  }
-}
-#all-teasers nav.samples ul li a {
-  display: block;
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('images/badges/color.png?1307510632');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 115px;
-  height: 115px;
-}
-#all-teasers nav.samples ul li a {
-  border-bottom: none;
-}
-#all-teasers nav.samples ul li a:hover {
-  border-bottom: none;
-}
-@media screen and (max-width: 320px) {
-  #all-teasers nav.samples ul li a {
-    -moz-transform: scale(0.7, 0.7);
-    -webkit-transform: scale(0.7, 0.7);
-    -o-transform: scale(0.7, 0.7);
-    -ms-transform: scale(0.7, 0.7);
-    transform: scale(0.7, 0.7);
-  }
-}
-@media screen and (min-width: 901px) {
-  #all-teasers nav.samples ul li:nth-of-type(1n-1) {
-    top: 188.091px;
-    left: 258.885px;
-  }
-  #all-teasers nav.samples ul li:nth-of-type(2n-2) {
-    top: 304.338px;
-    left: 98.885px;
-  }
-  #all-teasers nav.samples ul li:nth-of-type(3n-3) {
-    top: 304.338px;
-    left: -98.885px;
-  }
-  #all-teasers nav.samples ul li:nth-of-type(4n-4) {
-    top: 188.091px;
-    left: -258.885px;
-  }
-  #all-teasers nav.samples ul li:nth-of-type(5n-5) {
-    top: 0.0px;
-    left: -320px;
-  }
-  #all-teasers nav.samples ul li:nth-of-type(6n-6) {
-    top: -188.091px;
-    left: -258.885px;
-  }
-  #all-teasers nav.samples ul li:nth-of-type(7n-7) {
-    top: -304.338px;
-    left: -98.885px;
-  }
-  #all-teasers nav.samples ul li:nth-of-type(8n-8) {
-    top: -304.338px;
-    left: 98.885px;
-  }
-  #all-teasers nav.samples ul li:nth-of-type(9n-9) {
-    top: -188.091px;
-    left: 258.885px;
-  }
-  #all-teasers nav.samples ul li:nth-of-type(10n-10) {
-    top: 0.0px;
-    left: 320px;
-  }
-}
-@media screen and (min-width: 901px) {
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(1n-1) {
-    top: 193.969px;
-    left: 266.976px;
-  }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(2n-2) {
-    top: 313.849px;
-    left: 101.976px;
-  }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(3n-3) {
-    top: 313.849px;
-    left: -101.976px;
-  }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(4n-4) {
-    top: 193.969px;
-    left: -266.976px;
-  }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(5n-5) {
-    top: 0.0px;
-    left: -330px;
-  }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(6n-6) {
-    top: -193.969px;
-    left: -266.976px;
-  }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(7n-7) {
-    top: -313.849px;
-    left: -101.976px;
-  }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(8n-8) {
-    top: -313.849px;
-    left: 101.976px;
-  }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(9n-9) {
-    top: -193.969px;
-    left: 266.976px;
-  }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(10n-10) {
-    top: 0.0px;
-    left: 330px;
-  }
-}
-#all-teasers #teasers {
-  position: relative;
-  width: 404px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 320px) {
-  #all-teasers #teasers {
-    width: 320px;
-    top: 250px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-#all-teasers #teasers article {
-  position: absolute;
-  height: 190px;
-  width: 410px;
-  -moz-border-radius-bottomleft: 180px;
-  -webkit-border-bottom-left-radius: 180px;
-  -o-border-bottom-left-radius: 180px;
-  -ms-border-bottom-left-radius: 180px;
-  -khtml-border-bottom-left-radius: 180px;
-  border-bottom-left-radius: 180px;
-  -moz-border-radius-bottomright: 180px;
-  -webkit-border-bottom-right-radius: 180px;
-  -o-border-bottom-right-radius: 180px;
-  -ms-border-bottom-right-radius: 180px;
-  -khtml-border-bottom-right-radius: 180px;
-  border-bottom-right-radius: 180px;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #d3d3d3;
-  text-align: center;
-  left: 0px;
-}
-@media screen and (max-width: 320px) {
-  #all-teasers #teasers article {
-    width: 320px;
-    -moz-border-radius-bottomleft: 0;
-    -webkit-border-bottom-left-radius: 0;
-    -o-border-bottom-left-radius: 0;
-    -ms-border-bottom-left-radius: 0;
-    -khtml-border-bottom-left-radius: 0;
-    border-bottom-left-radius: 0;
-    -moz-border-radius-bottomright: 0;
-    -webkit-border-bottom-right-radius: 0;
-    -o-border-bottom-right-radius: 0;
-    -ms-border-bottom-right-radius: 0;
-    -khtml-border-bottom-right-radius: 0;
-    border-bottom-right-radius: 0;
-    overflow: hidden;
-  }
-}
-@media screen and (min-width: 320px) {
-  #all-teasers #teasers article:before {
-    content: "\0020";
-    position: absolute;
-    width: 410px;
-    height: 476px;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.5)));
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    z-index: -10;
-    bottom: 190px;
-    left: 0;
-  }
-}
-#all-teasers #teasers article h1 {
-  border-bottom: 1px dashed #c7dbeb;
-  margin: 0 5px 0.25em;
-  color: #8fb6d7;
-  display: block;
-  visibility: visible;
-  font-size: 1.738em;
-  line-height: 1.973em;
-  padding-top: 6px;
-}
-.wf-active #all-teasers #teasers article h1 {
-  padding-top: 0;
-}
-@media screen and (max-width: 320px) {
-  #all-teasers #teasers article h1 {
-    margin: 0 0px 0.25em;
-  }
-}
-#all-teasers #teasers article p {
-  font-weight: bold;
-  padding: 0 45px;
-}
-@media screen and (max-width: 320px) {
-  #all-teasers #teasers article p {
-    padding: 0 0;
-  }
-}
-#all-teasers #teasers article:target, #all-teasers #teasers article.selected {
-  display: block;
-  visibility: visible;
-}
-
-/* INTRODUCTION */
-#intro {
-  position: relative;
-  z-index: -51;
-  background-color: #452d1c;
-  background-image: url('images/dirt-320x320.jpg?1308888806');
-  background-position: center -50%;
-  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-}
-@media screen and (max-width: 320px) {
-  #intro {
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-@media screen and (max-width: 500px) {
-  #intro {
-    background-image: url('images/dirt-500x500.jpg?1308888848');
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-@media screen and (max-width: 900px) {
-  #intro {
-    background-image: url('images/dirt-920x776.jpg?1308888870');
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-@media screen and (min-width: 901px) {
-  #intro {
-    background-image: url('images/dirt-1200x776.jpg?1308888934');
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-#intro .inner {
-  padding-top: 3.429em;
-  padding-bottom: 3.429em;
-  color: #f6f8fb;
-}
-@media screen and (max-width: 320px) {
-  #intro .inner {
-    padding-top: 1.714em;
-    padding-bottom: 1.714em;
-  }
-}
-#intro .inner article {
-  clear: both;
-  margin-left: 2.414%;
-  margin-right: 2.414%;
-}
-#intro .inner article h1 {
-  text-align: center;
-  color: #d4e49d;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), 5px 8px 8px rgba(0, 0, 0, 0.1);
-  line-height: 2.032em;
-}
-#intro .inner article .body, #intro .inner article body {
-  display: inline;
-  float: left;
-  width: 79.493%;
-  margin-right: 2.537%;
-  padding-left: 10.966%;
-  text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
-}
-@media screen and (max-width: 320px) {
-  #intro .inner article .body, #intro .inner article body {
-    display: inline;
-    float: left;
-    width: 100%;
-    margin-right: 2.537%;
-    padding-left: 0%;
-  }
-}
-@media screen and (min-width: 500px) {
-  #intro .inner article .body, #intro .inner article body {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    -o-column-count: 2;
-    column-count: 2;
-    -moz-column-gap: 24px;
-    -webkit-column-gap: 24px;
-    -o-column-gap: 24px;
-    column-gap: 24px;
-  }
-}
-
-/* LEARN */
-#learn {
-  position: relative;
-  z-index: -52;
-  /* BACKGROUND PATTERN: http://leaverou.me/css3patterns/#carbon-fibre THANKS! */
-  background: -webkit-gradient(radial, 0 0, 0, 0 0, 16, color-stop(15%, #22160e), color-stop(16%, rgba(0, 0, 0, 0))), -webkit-gradient(radial, 8px 8px, 0, 8px 8px, 16, color-stop(15%, #22160e), color-stop(16%, rgba(0, 0, 0, 0))), -webkit-gradient(radial, 0 1px, 0, 0 1px, 20, color-stop(15%, rgba(255, 255, 255, 0.1)), color-stop(20%, rgba(0, 0, 0, 0))), -webkit-gradient(radial, 8px 9px, 0, 8px 9px, 20, color-stop(15%, rgba(255, 255, 255, 0.1)), color-stop(20%, rgba(0, 0, 0, 0)));
-  background: -webkit-radial-gradient(#22160e 15%, rgba(0, 0, 0, 0) 16%) 0 0, -webkit-radial-gradient(#22160e 15%, rgba(0, 0, 0, 0) 16%) 8px 8px, -webkit-radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 0 1px, -webkit-radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 8px 9px;
-  background: -moz-radial-gradient(#22160e 15%, rgba(0, 0, 0, 0) 16%) 0 0, -moz-radial-gradient(#22160e 15%, rgba(0, 0, 0, 0) 16%) 8px 8px, -moz-radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 0 1px, -moz-radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 8px 9px;
-  background: -o-radial-gradient(0 0, #22160e 15%, rgba(0, 0, 0, 0) 16%), -o-radial-gradient(8px 8px, #22160e 15%, rgba(0, 0, 0, 0) 16%), -o-radial-gradient(0 1px, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%), -o-radial-gradient(8px 9px, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%);
-  background: radial-gradient(#22160e 15%, rgba(0, 0, 0, 0) 16%) 0 0, radial-gradient(#22160e 15%, rgba(0, 0, 0, 0) 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 8px 9px;
-  background-color: #452d1c;
-  background-size: 16px 16px;
-  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-}
-#learn .inner {
-  padding-top: 1.714em;
-  padding-bottom: 1.714em;
-  background-color: rgba(0, 0, 0, 0.4);
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59.759%, rgba(0, 0, 0, 0)), color-stop(59.759%, rgba(69, 45, 28, 0.5)), color-stop(79.276%, rgba(69, 45, 28, 0.5)), color-stop(79.276%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(left center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 59.759%, rgba(69, 45, 28, 0.5) 59.759%, rgba(69, 45, 28, 0.5) 79.276%, rgba(0, 0, 0, 0) 79.276%, rgba(0, 0, 0, 0));
-  background-image: -moz-linear-gradient(left center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 59.759%, rgba(69, 45, 28, 0.5) 59.759%, rgba(69, 45, 28, 0.5) 79.276%, rgba(0, 0, 0, 0) 79.276%, rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(left center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 59.759%, rgba(69, 45, 28, 0.5) 59.759%, rgba(69, 45, 28, 0.5) 79.276%, rgba(0, 0, 0, 0) 79.276%, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(left center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 59.759%, rgba(69, 45, 28, 0.5) 59.759%, rgba(69, 45, 28, 0.5) 79.276%, rgba(0, 0, 0, 0) 79.276%, rgba(0, 0, 0, 0));
-  -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  color: #f6f8fb;
-}
-#learn .inner > h1 {
-  clear: both;
-  margin-left: 2.414%;
-  margin-right: 2.414%;
-  text-align: center;
-  font-weight: 300;
-  margin-bottom: 24px;
-}
-#learn .inner #walkthru {
-  clear: both;
-  margin-left: 2.414%;
-  margin-right: 2.414%;
-}
-@media screen and (max-width: 320px) {
-  #learn .inner #walkthru h1 {
-    font-size: 1.975em;
-    line-height: 1.736em;
-  }
-}
-@media screen and (min-width: 500px) {
-  #learn .inner #walkthru {
-    display: inline;
-    float: left;
-    width: 56.137%;
-    margin-right: 2.414%;
-    margin-left: 2.414%;
-  }
-}
-#learn .inner #walkthru iframe {
-  width: 558px;
-  height: 376.65px;
-  max-width: 100%;
-}
-@media screen and (max-width: 320px) {
-  #learn .inner #walkthru iframe {
-    width: 308px;
-    height: auto;
-  }
-}
-#learn .inner #podcast-videos {
-  clear: both;
-  margin-left: 2.414%;
-  margin-right: 2.414%;
-}
-@media screen and (min-width: 500px) {
-  #learn .inner #podcast-videos {
-    margin-top: 1.714em;
-    display: inline;
-    float: left;
-    width: 36.62%;
-    margin-right: 2.414%;
-    display: inline;
-    float: right;
-    margin-right: 2.414%;
-    #margin-left: -24px;
-    clear: none;
-    margin-left: 0;
-  }
-}
-#learn .inner #podcast-videos > h2 {
-  font-size: 1.5em;
-  line-height: 1.143em;
-  text-align: right;
-  margin-bottom: 1.714em;
-}
-#learn .inner #podcast-videos article {
-  *zoom: 1;
-  border-bottom: 3px solid rgba(69, 45, 28, 0.5);
-  margin-bottom: 12px;
-  padding-bottom: 9px;
-  margin-left: -12px;
-  padding-left: 12px;
-  margin-right: -26px;
-  padding-right: 26px;
-}
-#learn .inner #podcast-videos article:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-#learn .inner #podcast-videos article:last-child {
-  padding-bottom: 0;
-  border-bottom-width: 0;
-  margin-bottom: 0;
-}
-#learn .inner #podcast-videos article h1 {
-  line-height: 1em;
-  display: inline;
-  float: left;
-  width: 46.703%;
-  margin-right: 6.593%;
-}
-#learn .inner #podcast-videos article img {
-  display: inline;
-  float: left;
-  width: 46.703%;
-  margin-right: 6.593%;
-  display: inline;
-  float: right;
-  margin-right: 0;
-  #margin-left: -24px;
-  margin: 3px 0;
-}
-
-/* TOOLS */
-#tools {
-  position: relative;
-  z-index: -53;
-  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  background-color: #113342;
-  background-image: -webkit-linear-gradient(165deg, rgba(54, 107, 151, 0.2), rgba(54, 107, 151, 0.2) 33%, #113342 33%, #113342 66%, rgba(54, 107, 151, 0.2) 66%, rgba(54, 107, 151, 0.2) 100%);
-  background-image: -moz-linear-gradient(165deg, rgba(54, 107, 151, 0.2), rgba(54, 107, 151, 0.2) 33%, #113342 33%, #113342 66%, rgba(54, 107, 151, 0.2) 66%, rgba(54, 107, 151, 0.2) 100%);
-  background-image: -o-linear-gradient(165deg, rgba(54, 107, 151, 0.2), rgba(54, 107, 151, 0.2) 33%, #113342 33%, #113342 66%, rgba(54, 107, 151, 0.2) 66%, rgba(54, 107, 151, 0.2) 100%);
-  background-image: linear-gradient(165deg, rgba(54, 107, 151, 0.2), rgba(54, 107, 151, 0.2) 33%, #113342 33%, #113342 66%, rgba(54, 107, 151, 0.2) 66%, rgba(54, 107, 151, 0.2) 100%);
-}
-#tools .inner {
-  padding-top: 1.714em;
-  padding-bottom: 1.714em;
-  background-color: rgba(255, 255, 255, 0.25);
-  color: white;
-  -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-}
-#tools .inner > header {
-  clear: both;
-  margin-left: 2.414%;
-  margin-right: 2.414%;
-  margin-bottom: 1.714em;
-}
-#tools .inner > header h1 {
-  text-align: center;
-  font-weight: 300;
-  margin-bottom: 24px;
-}
-#tools .inner #all-examples {
-  clear: both;
-  margin-left: 2.414%;
-  margin-right: 2.414%;
-  position: relative;
-}
-#tools .inner #all-examples #tools-nav {
-  position: relative;
-}
-@media screen and (min-width: 500px) {
-  #tools .inner #all-examples #tools-nav {
-    display: inline;
-    float: left;
-    width: 17.97%;
-    margin-right: 2.537%;
-  }
-}
-#tools .inner #all-examples #tools-nav ul {
-  list-style: none;
-  margin-left: 0;
-}
-#tools .inner #all-examples #tools-nav ul li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0px;
-}
-#tools .inner #all-examples #tools-nav ul li {
-  background-color: rgba(17, 51, 66, 0.1);
-  margin-left: -24px;
-  padding-left: 24px;
-  position: relative;
-  z-index: 75;
-  background-repeat: no-repeat;
-  background: -webkit-linear-gradient(165deg, rgba(255, 255, 255, 0) 8px, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0.8) 100%) bottom right;
-  background: -moz-linear-gradient(165deg, rgba(255, 255, 255, 0) 8px, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0.8) 100%) bottom right;
-  background: -o-linear-gradient(165deg, rgba(255, 255, 255, 0) 8px, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0.8) 100%) bottom right;
-  background: linear-gradient(165deg, rgba(255, 255, 255, 0) 8px, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.8) 100%) bottom right;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  -o-background-clip: padding-box;
-  -ms-background-clip: padding-box;
-  -khtml-background-clip: padding-box;
-  background-clip: padding-box;
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-}
-@media screen and (max-width: 320px) {
-  #tools .inner #all-examples #tools-nav ul li {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-}
-#tools .inner #all-examples #tools-nav ul li:hover {
-  background: -webkit-linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(17, 51, 66, 0.1) 0, rgba(12, 35, 46, 0.8) 100%) bottom right;
-  background: -moz-linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(17, 51, 66, 0.1) 0, rgba(12, 35, 46, 0.8) 100%) bottom right;
-  background: -o-linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(17, 51, 66, 0.1) 0, rgba(12, 35, 46, 0.8) 100%) bottom right;
-  background: linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(17, 51, 66, 0.1) 0%, rgba(12, 35, 46, 0.8) 100%) bottom right;
-}
-@media screen and (max-width: 320px) {
-  #tools .inner #all-examples #tools-nav ul li:hover {
-    background-color: rgba(17, 51, 66, 0.1);
-  }
-}
-#tools .inner #all-examples #tools-nav ul li:hover a {
-  color: #aac93b;
-}
-#tools .inner #all-examples #tools-nav ul li:hover a:visited {
-  color: #aac93b;
-}
-#tools .inner #all-examples #tools-nav ul li:hover a:hover {
-  color: #aac93b;
-}
-#tools .inner #all-examples #tools-nav ul li:hover a:active {
-  color: #aac93b;
-}
-#tools .inner #all-examples #tools-nav ul li:not(:first-child) {
-  border-top: 1px solid #113342;
-}
-#tools .inner #all-examples #tools-nav ul li:not(:first-child):after {
-  position: absolute;
-  z-index: 74;
-  display: block;
-  content: "\0020";
-  width: 18px;
-  height: 12px;
-  bottom: 19px;
-  right: -2px;
-  background: -webkit-linear-gradient(-140deg, rgba(0, 0, 0, 0) 7px, rgba(17, 51, 66, 0.8) 0) top right;
-  background: -mox-linear-gradient(-140deg, rgba(0, 0, 0, 0) 7px, rgba(17, 51, 66, 0.8) 0) top right;
-  background: -o-linear-gradient(-140deg, rgba(0, 0, 0, 0) 7px, rgba(17, 51, 66, 0.8) 0) top right;
-  background: linear-gradient(-140deg, rgba(0, 0, 0, 0) 7px, rgba(17, 51, 66, 0.8) 0%) top right;
-  background-size: 50%;
-  background-repeat: no-repeat;
-}
-#tools .inner #all-examples #tools-nav ul li a {
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  color: #452d1c;
-  font-weight: 700;
-}
-#tools .inner #all-examples #tools-nav ul li a {
-  border-bottom: none;
-}
-#tools .inner #all-examples #tools-nav ul li a:hover {
-  border-bottom: none;
-}
-#tools .inner #all-examples #tools-nav ul li a:visited {
-  color: #452d1c;
-}
-#tools .inner #all-examples #tools-nav ul li a:hover {
-  color: #aac93b;
-}
-#tools .inner #all-examples #tools-nav ul li a:active {
-  color: #aac93b;
-}
-#tools .inner #all-examples #tools-examples {
-  position: relative;
-}
-@media screen and (min-width: 500px) {
-  #tools .inner #all-examples #tools-examples {
-    display: inline;
-    float: left;
-    width: 79.493%;
-    margin-right: 2.537%;
-    display: inline;
-    float: right;
-    margin-right: 0;
-    #margin-left: -24px;
-  }
-}
-#tools .inner #all-examples #tools-examples article {
-  max-width: 100%;
-}
-#tools .inner #all-examples #tools-examples article .example {
-  border: 1px solid #113342;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-}
-#tools .inner #all-examples #tools-examples article .example + footer {
-  font-style: italic;
-  font-size: 1.317em;
-  line-height: 1.302em;
-  opacity: 0.6;
-}
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter {
-  white-space: nowrap;
-  overflow: auto;
-}
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter th, #tools .inner #all-examples #tools-examples article .syntaxhighlighter td, #tools .inner #all-examples #tools-examples article .syntaxhighlighter caption {
-  padding: 0;
-}
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter th .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter td .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter caption .line {
-  padding: 0 0.5em;
-}
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .toolbar {
-  display: none;
-}
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #intro .inner .line, #intro #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner .line, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner .line, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #prepared .inner .line, #prepared #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line {
-  height: 24px;
-}
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter {
-  width: 2em;
-  max-width: 3em;
-}
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .container, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #intro .inner, #intro #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #prepared .inner, #prepared #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner {
-  width: auto;
-}
-
-/* SURVIVORS */
-#survivors {
-  position: relative;
-  z-index: -54;
-  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
-  background-color: #aac93b;
-}
-#survivors .inner {
-  padding-top: 1.714em;
-  padding-bottom: 1.714em;
-  background-color: rgba(0, 0, 0, 0.12);
-  color: #f6f8fb;
-  text-shadow: rgba(54, 107, 151, 0.5) 1px 2px 4px;
-  -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1), 8px 0px 8px rgba(0, 0, 0, 0.05), -2px 0px 2px rgba(0, 0, 0, 0.1), -8px 0px 8px rgba(0, 0, 0, 0.05);
-  -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1), 8px 0px 8px rgba(0, 0, 0, 0.05), -2px 0px 2px rgba(0, 0, 0, 0.1), -8px 0px 8px rgba(0, 0, 0, 0.05);
-  -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1), 8px 0px 8px rgba(0, 0, 0, 0.05), -2px 0px 2px rgba(0, 0, 0, 0.1), -8px 0px 8px rgba(0, 0, 0, 0.05);
-  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1), 8px 0px 8px rgba(0, 0, 0, 0.05), -2px 0px 2px rgba(0, 0, 0, 0.1), -8px 0px 8px rgba(0, 0, 0, 0.05);
-}
-#survivors .inner > header {
-  clear: both;
-  margin-left: 2.414%;
-  margin-right: 2.414%;
-  margin-bottom: 1.714em;
-}
-#survivors .inner > header h1 {
-  text-align: center;
-  font-weight: 300;
-  margin-bottom: 24px;
-}
-#survivors .inner .survivor {
-  *zoom: 1;
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: none;
-  position: relative;
-  background: #8aa42d;
-  padding: 6px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 1px 4px, rgba(0, 0, 0, 0.1) -4px 3px 8px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 1px 4px, rgba(0, 0, 0, 0.1) -4px 3px 8px;
-  -o-box-shadow: rgba(0, 0, 0, 0.1) 2px 1px 4px, rgba(0, 0, 0, 0.1) -4px 3px 8px;
-  box-shadow: rgba(0, 0, 0, 0.1) 2px 1px 4px, rgba(0, 0, 0, 0.1) -4px 3px 8px;
-}
-@media screen and (min-width: 500px) {
-  #survivors .inner .survivor {
-    display: inline;
-    float: left;
-    width: 36.62%;
-    margin-right: 2.414%;
-    max-height: 240px;
-  }
-}
-#survivors .inner .survivor:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-#survivors .inner .survivor:last-child {
-  padding-bottom: 0;
-  border-bottom-width: 0;
-  margin-bottom: 0;
-}
-#survivors .inner .survivor h1 {
-  font-size: 1.975em;
-  line-height: 1.736em;
-  line-height: 1em;
-  max-width: 240px;
-}
-@media screen and (min-width: 901px) {
-  #survivors .inner .survivor h1 {
-    position: absolute;
-    font-size: 2.25em;
-    line-height: 1.524em;
-    line-height: 1em;
-  }
-}
-@media screen and (min-width: 500px) {
-  #survivors .inner .survivor:nth-of-type(odd) {
-    margin-left: 2.414%;
-  }
-}
-@media screen and (min-width: 901px) {
-  #survivors .inner .survivor:nth-of-type(odd) {
-    padding-right: 9%;
-  }
-}
-#survivors .inner .survivor:nth-of-type(odd) h1 {
-  top: 0;
-  right: 0;
-}
-@media screen and (min-width: 500px) {
-  #survivors .inner .survivor:nth-of-type(odd) h1 {
-    text-align: right;
-  }
-}
-@media screen and (min-width: 901px) {
-  #survivors .inner .survivor:nth-of-type(odd) h1 {
-    -moz-transform: rotate(-90deg) translate(-6px, -72px);
-    -webkit-transform: rotate(-90deg) translate(-6px, -72px);
-    -o-transform: rotate(-90deg) translate(-6px, -72px);
-    -ms-transform: rotate(-90deg) translate(-6px, -72px);
-    transform: rotate(-90deg) translate(-6px, -72px);
-    -moz-transform-origin: top right;
-    -webkit-transform-origin: top right;
-    -o-transform-origin: top right;
-    -ms-transform-origin: top right;
-    transform-origin: top right;
-  }
-}
-@media screen and (min-width: 500px) {
-  #survivors .inner .survivor:nth-of-type(even) {
-    display: inline;
-    float: right;
-    margin-right: 2.414%;
-    #margin-left: -24px;
-  }
-}
-@media screen and (min-width: 901px) {
-  #survivors .inner .survivor:nth-of-type(even) {
-    padding-left: 9%;
-  }
-}
-#survivors .inner .survivor:nth-of-type(even) h1 {
-  top: 0;
-  left: 0;
-}
-@media screen and (min-width: 901px) {
-  #survivors .inner .survivor:nth-of-type(even) h1 {
-    -moz-transform: rotate(90deg) translate(6px, -72px);
-    -webkit-transform: rotate(90deg) translate(6px, -72px);
-    -o-transform: rotate(90deg) translate(6px, -72px);
-    -ms-transform: rotate(90deg) translate(6px, -72px);
-    transform: rotate(90deg) translate(6px, -72px);
-    -moz-transform-origin: top left;
-    -webkit-transform-origin: top left;
-    -o-transform-origin: top left;
-    -ms-transform-origin: top left;
-    transform-origin: top left;
-  }
-}
-#survivors .inner .survivor:last-child {
-  padding-bottom: 6px;
-}
-
-/* START */
-#prepared {
-  position: relative;
-  z-index: -55;
-  color: white;
-  font-size: 1.975em;
-  line-height: 1.736em;
-  background-color: #452d1c;
-  background-image: url('images/dirt-320x320.jpg?1308888806');
-  background-position: top center;
-}
-@media screen and (max-width: 320px) {
-  #prepared {
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-@media screen and (max-width: 500px) {
-  #prepared {
-    background-image: url('images/dirt-500x500.jpg?1308888848');
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-@media screen and (max-width: 900px) {
-  #prepared {
-    background-image: url('images/dirt-920x776.jpg?1308888870');
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-@media screen and (min-width: 901px) {
-  #prepared {
-    background-image: url('images/dirt-1200x776.jpg?1308888934');
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-#prepared .inner {
-  padding-top: 3.429em;
-  padding-bottom: 3.429em;
-  background-color: rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-#prepared .inner header {
-  position: relative;
-  float: left;
-  -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), 8px 0px 8px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), 8px 0px 8px rgba(0, 0, 0, 0.1);
-  -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), 8px 0px 8px rgba(0, 0, 0, 0.1);
-  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), 8px 0px 8px rgba(0, 0, 0, 0.1);
-}
-#prepared .inner header h1 {
-  background: #aac93b;
-  display: inline-block;
-  float: left;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), 5px 8px 8px rgba(0, 0, 0, 0.1);
-}
-@media screen and                                              (max-width: 500px) {
-  #prepared .inner header h1 {
-    font-size: 2.963em;
-    line-height: 1.157em;
-  }
-}
-@media screen and (max-width: 320px) {
-  #prepared .inner header h1 {
-    font-size: 47.25px;
-  }
-}
-#prepared .inner header h1 .word1 {
-  float: left;
-  margin-right: 0.25em;
-}
-@media screen and (min-width: 500px) {
-  #prepared .inner header h1 .word1 {
-    font-size: 0.772em;
-    line-height: 0.658em;
-    -moz-transform: rotate(-90deg) translate(-18px, 0);
-    -webkit-transform: rotate(-90deg) translate(-18px, 0);
-    -o-transform: rotate(-90deg) translate(-18px, 0);
-    -ms-transform: rotate(-90deg) translate(-18px, 0);
-    transform: rotate(-90deg) translate(-18px, 0);
-    -moz-transform-origin: 50% 50%;
-    -webkit-transform-origin: 50% 50%;
-    -o-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    margin-right: 0;
-    text-align: center;
-    padding: 6px 28px;
-    text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2), -8px 5px 8px rgba(0, 0, 0, 0.1);
-  }
-}
-@media screen and (min-width: 500px) {
-  #prepared .inner header h1 .word2 {
-    margin-left: -31px;
-  }
-}
-#prepared .inner p.download {
-  float: left;
-  padding: 12px 0 0 0;
-  font-size: 1em;
-  line-height: 0.868em;
-}
-#prepared .inner p.download span {
-  background-color: #d4e41d;
-  float: left;
-  clear: left;
-}
-#prepared .inner p.download span.word1, #prepared .inner p.download span.word3, #prepared .inner p.download span.word5 {
-  padding-left: 0.5em;
-  -moz-transition-property: padding-left;
-  -webkit-transition-property: padding-left;
-  -o-transition-property: padding-left;
-  transition-property: padding-left;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-}
-#prepared .inner p.download span.word2, #prepared .inner p.download span.word4 {
-  clear: none;
-  margin-left: 0.5em;
-  background-color: transparent;
-  color: #aac93b;
-}
-#prepared .inner p.download a {
-  color: #22160e;
-}
-#prepared .inner p.download a {
-  border-bottom: none;
-}
-#prepared .inner p.download a:hover {
-  border-bottom: none;
-}
-#prepared .inner p.download a:visited {
-  color: #22160e;
-}
-#prepared .inner p.download a:hover {
-  color: #366b97;
-}
-#prepared .inner p.download a:active {
-  color: #22160e;
-}
-#prepared .inner p.download:hover span.word1, #prepared .inner p.download:hover span.word3, #prepared .inner p.download:hover span.word5 {
-  padding-left: 1em;
-}
-#prepared .inner footer {
-  padding-top: 0.857em;
-  clear: both;
-  text-align: right;
-  position: relative;
-}
-#prepared .inner footer .amp {
-  font-size: 1.709em;
-  line-height: 0.508em;
-  position: relative;
-  top: 0.2em;
-}
-#prepared .inner footer aside ul {
-  list-style-type: none;
-}
-#prepared .inner footer aside ul, #prepared .inner footer aside ul li {
-  margin: 0px;
-  padding: 0px;
-  display: inline;
-}
-
-#teasers article h1, #teasers article h2, #teasers article h3, #teasers #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos #teasers article h1, #teasers article #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #teasers article h2,
-#intro h1,
-#intro h2,
-#intro h3,
-#intro #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article
-#intro h1,
-#intro #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
-#intro h2,
-#learn h1,
-#learn h2,
-#learn h3,
-#learn #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article
-#learn h1,
-#learn #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
-#learn h2,
-#tools #tools-examples article h1,
-#tools #tools-examples article h2,
-#tools #tools-examples article h3,
-#tools #tools-examples #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos
-#tools #tools-examples article h1,
-#tools #tools-examples article #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
-#tools #tools-examples article h2,
-#survivors .survivor h1,
-#survivors .survivor h2,
-#survivors .survivor h3,
-#survivors .survivor #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article
-#survivors .survivor h1,
-#survivors .survivor #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
-#survivors .survivor h2,
-#prepared h1,
-#prepared h2,
-#prepared h3,
-#prepared #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article
-#prepared h1,
-#prepared #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
-#prepared h2 {
-  position: relative;
-}
-#teasers article h1 span, #teasers article h2 span, #teasers article h3 span, #teasers #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos #teasers article h1 span, #teasers article #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav #teasers article h2 span,
-#intro h1 span,
-#intro h2 span,
-#intro h3 span,
-#intro #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos article
-#intro h1 span,
-#intro #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
-#intro h2 span,
-#learn h1 span,
-#learn h2 span,
-#learn h3 span,
-#learn #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos article
-#learn h1 span,
-#learn #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
-#learn h2 span,
-#tools #tools-examples article h1 span,
-#tools #tools-examples article h2 span,
-#tools #tools-examples article h3 span,
-#tools #tools-examples #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos
-#tools #tools-examples article h1 span,
-#tools #tools-examples article #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
-#tools #tools-examples article h2 span,
-#survivors .survivor h1 span,
-#survivors .survivor h2 span,
-#survivors .survivor h3 span,
-#survivors .survivor #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos article
-#survivors .survivor h1 span,
-#survivors .survivor #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
-#survivors .survivor h2 span,
-#prepared h1 span,
-#prepared h2 span,
-#prepared h3 span,
-#prepared #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos article
-#prepared h1 span,
-#prepared #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
-#prepared h2 span {
-  position: relative;
-}
-#teasers article h1 span:nth-of-type(3n-3), #teasers article h2 span:nth-of-type(3n-3), #teasers article h3 span:nth-of-type(3n-3), #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos #teasers article h1 span:nth-of-type(3n-3), #teasers article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav #teasers article h2 span:nth-of-type(3n-3),
-#intro h1 span:nth-of-type(3n-3),
-#intro h2 span:nth-of-type(3n-3),
-#intro h3 span:nth-of-type(3n-3),
-#intro #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos article
-#intro h1 span:nth-of-type(3n-3),
-#intro #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
-#intro h2 span:nth-of-type(3n-3),
-#learn h1 span:nth-of-type(3n-3),
-#learn h2 span:nth-of-type(3n-3),
-#learn h3 span:nth-of-type(3n-3),
-#learn #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos article
-#learn h1 span:nth-of-type(3n-3),
-#learn #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
-#learn h2 span:nth-of-type(3n-3),
-#tools #tools-examples article h1 span:nth-of-type(3n-3),
-#tools #tools-examples article h2 span:nth-of-type(3n-3),
-#tools #tools-examples article h3 span:nth-of-type(3n-3),
-#tools #tools-examples #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos
-#tools #tools-examples article h1 span:nth-of-type(3n-3),
-#tools #tools-examples article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
-#tools #tools-examples article h2 span:nth-of-type(3n-3),
-#survivors .survivor h1 span:nth-of-type(3n-3),
-#survivors .survivor h2 span:nth-of-type(3n-3),
-#survivors .survivor h3 span:nth-of-type(3n-3),
-#survivors .survivor #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos article
-#survivors .survivor h1 span:nth-of-type(3n-3),
-#survivors .survivor #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
-#survivors .survivor h2 span:nth-of-type(3n-3),
-#prepared h1 span:nth-of-type(3n-3),
-#prepared h2 span:nth-of-type(3n-3),
-#prepared h3 span:nth-of-type(3n-3),
-#prepared #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos article
-#prepared h1 span:nth-of-type(3n-3),
-#prepared #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
-#prepared h2 span:nth-of-type(3n-3) {
-  opacity: 0.7;
-}
-#teasers article h1 span:nth-of-type(5n-5), #teasers article h2 span:nth-of-type(5n-5), #teasers article h3 span:nth-of-type(5n-5), #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos #teasers article h1 span:nth-of-type(5n-5), #teasers article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav #teasers article h2 span:nth-of-type(5n-5),
-#intro h1 span:nth-of-type(5n-5),
-#intro h2 span:nth-of-type(5n-5),
-#intro h3 span:nth-of-type(5n-5),
-#intro #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos article
-#intro h1 span:nth-of-type(5n-5),
-#intro #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
-#intro h2 span:nth-of-type(5n-5),
-#learn h1 span:nth-of-type(5n-5),
-#learn h2 span:nth-of-type(5n-5),
-#learn h3 span:nth-of-type(5n-5),
-#learn #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos article
-#learn h1 span:nth-of-type(5n-5),
-#learn #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
-#learn h2 span:nth-of-type(5n-5),
-#tools #tools-examples article h1 span:nth-of-type(5n-5),
-#tools #tools-examples article h2 span:nth-of-type(5n-5),
-#tools #tools-examples article h3 span:nth-of-type(5n-5),
-#tools #tools-examples #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos
-#tools #tools-examples article h1 span:nth-of-type(5n-5),
-#tools #tools-examples article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
-#tools #tools-examples article h2 span:nth-of-type(5n-5),
-#survivors .survivor h1 span:nth-of-type(5n-5),
-#survivors .survivor h2 span:nth-of-type(5n-5),
-#survivors .survivor h3 span:nth-of-type(5n-5),
-#survivors .survivor #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos article
-#survivors .survivor h1 span:nth-of-type(5n-5),
-#survivors .survivor #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
-#survivors .survivor h2 span:nth-of-type(5n-5),
-#prepared h1 span:nth-of-type(5n-5),
-#prepared h2 span:nth-of-type(5n-5),
-#prepared h3 span:nth-of-type(5n-5),
-#prepared #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos article
-#prepared h1 span:nth-of-type(5n-5),
-#prepared #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
-#prepared h2 span:nth-of-type(5n-5) {
-  opacity: 0.8;
-}
-#teasers article h1 span:nth-of-type(7n-7), #teasers article h2 span:nth-of-type(7n-7), #teasers article h3 span:nth-of-type(7n-7), #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos #teasers article h1 span:nth-of-type(7n-7), #teasers article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav #teasers article h2 span:nth-of-type(7n-7),
-#intro h1 span:nth-of-type(7n-7),
-#intro h2 span:nth-of-type(7n-7),
-#intro h3 span:nth-of-type(7n-7),
-#intro #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos article
-#intro h1 span:nth-of-type(7n-7),
-#intro #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
-#intro h2 span:nth-of-type(7n-7),
-#learn h1 span:nth-of-type(7n-7),
-#learn h2 span:nth-of-type(7n-7),
-#learn h3 span:nth-of-type(7n-7),
-#learn #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos article
-#learn h1 span:nth-of-type(7n-7),
-#learn #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
-#learn h2 span:nth-of-type(7n-7),
-#tools #tools-examples article h1 span:nth-of-type(7n-7),
-#tools #tools-examples article h2 span:nth-of-type(7n-7),
-#tools #tools-examples article h3 span:nth-of-type(7n-7),
-#tools #tools-examples #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos
-#tools #tools-examples article h1 span:nth-of-type(7n-7),
-#tools #tools-examples article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
-#tools #tools-examples article h2 span:nth-of-type(7n-7),
-#survivors .survivor h1 span:nth-of-type(7n-7),
-#survivors .survivor h2 span:nth-of-type(7n-7),
-#survivors .survivor h3 span:nth-of-type(7n-7),
-#survivors .survivor #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos article
-#survivors .survivor h1 span:nth-of-type(7n-7),
-#survivors .survivor #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
-#survivors .survivor h2 span:nth-of-type(7n-7),
-#prepared h1 span:nth-of-type(7n-7),
-#prepared h2 span:nth-of-type(7n-7),
-#prepared h3 span:nth-of-type(7n-7),
-#prepared #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos article
-#prepared h1 span:nth-of-type(7n-7),
-#prepared #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
-#prepared h2 span:nth-of-type(7n-7) {
-  opacity: 0.9;
 }
