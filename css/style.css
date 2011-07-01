@@ -1,6 +1,6 @@
 /* Links -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #all-teasers #teasers article h1, .wf-active #all-teasers #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -71,7 +71,7 @@ html {
   font-family: sans-serif;
 }
 
-.mono, pre, code, tt, body.markup-elements article.element .example .markup + .show-source, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #intro .inner code, #intro #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner code, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner code, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #prepared .inner code, #prepared #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner code {
+.mono, pre, code, tt, #tools-examples article .syntaxhighlighter .gutter, #tools-examples article .syntaxhighlighter .container code, #tools-examples article .syntaxhighlighter #intro .inner code, #intro #tools-examples article .syntaxhighlighter .inner code, #tools-examples article .syntaxhighlighter #learn .inner code, #learn #tools-examples article .syntaxhighlighter .inner code, #tools-examples article .syntaxhighlighter #tools .inner code, #tools #tools-examples article .syntaxhighlighter .inner code, #tools-examples article .syntaxhighlighter #survivors .inner code, #survivors #tools-examples article .syntaxhighlighter .inner code, #tools-examples article .syntaxhighlighter #prepared .inner code, #prepared #tools-examples article .syntaxhighlighter .inner code {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
@@ -83,11 +83,11 @@ html {
   font-family: museo-slab-1, museo-slab-2, Georgia, serif;
 }
 
-.headers, h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #all-teasers #teasers article h1, .wf-active #all-teasers #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6 {
+.headers, .h1, h1, .h2, h2, .h3, h3, #podcast-videos article h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #main-nav ul li, .h6, h6 {
   font-family: futura-pt-1, futura-pt-2, sans-serif;
 }
 
-.logo-type, header#page-header:before, header#page-header h1, header#page-header h2, header#page-header h3, header#page-header #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article header#page-header h1, header#page-header #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav header#page-header h2, header#page-header h4, header#page-header #all-teasers #teasers article h1, #all-teasers #teasers article header#page-header h1, header#page-header .wf-active #all-teasers #teasers article h1, .wf-active #all-teasers #teasers article header#page-header h1, header#page-header h5, header#page-header #main-nav ul li a, #main-nav ul li header#page-header a, header#page-header #main-nav ul li:before, #main-nav ul header#page-header li:before, header#page-header #main-nav ul li:after, #main-nav ul header#page-header li:after, header#page-header h6 {
+.logo-type, header#page-header:before, header#page-header h1, header#page-header h2 {
   font-family: proxima-nova-1, proxima-nova-2, sans-serif, futura-pt-1, futura-pt-2, sans-serif;
 }
 
@@ -147,14 +147,14 @@ html > body {
 
 /* Hide for both screenreaders and browsers
  * css-discuss.incutio.com/wiki/Screenreader_Visibility */
-.hidden, #all-teasers > h2, #all-teasers nav.samples h3, #all-teasers nav.samples #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article #all-teasers nav.samples h1, #all-teasers nav.samples #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #all-teasers nav.samples h2, #all-teasers #teasers > h3, #all-teasers #teasers > #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article #all-teasers #teasers > h1, #all-teasers #teasers > #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #all-teasers #teasers > h2, #all-teasers #teasers article {
+.hidden, #all-teasers > h2, #all-teasers nav.samples h3, #teasers > h3, #teasers article {
   display: none;
   visibility: hidden;
 }
 
 /* Hide only visually, but have it available for screenreaders
  * www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
-.visuallyhidden, #main-nav h1, #intro .inner > h1, #learn .inner > h1, #tools .inner #all-examples #tools-examples > h2, #prepared .inner footer aside h2 {
+.visuallyhidden, #main-nav h1, #intro .inner > h1, #learn .inner > h1, #tools-examples > h2, #prepared footer aside h2 {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
@@ -213,37 +213,37 @@ a:active {
 }
 
 /* Headings -------------------------------------------------------------- */
-h1, h2, h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2, h4, #all-teasers #teasers article h1, .wf-active #all-teasers #teasers article h1, h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after, h6 {
+.h1, h1, .h2, h2, .h3, h3, #podcast-videos article h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #main-nav ul li, .h6, h6 {
   font-weight: normal;
   text-transform: uppercase;
 }
 
-h1 {
+.h1, h1 {
   font-size: 3.375em;
   line-height: 1.016em;
 }
 
-h2 {
+.h2, h2 {
   font-size: 2.963em;
   line-height: 1.157em;
 }
 
-h3, #learn .inner #podcast-videos article h1, #tools .inner #all-examples #tools-nav h2 {
+.h3, h3, #podcast-videos article h1, #tools-nav h2 {
   font-size: 2.25em;
   line-height: 1.524em;
 }
 
-h4, #all-teasers #teasers article h1, .wf-active #all-teasers #teasers article h1 {
+.h4, h4, #teasers article h1, .wf-active #teasers article h1 {
   font-size: 1.975em;
   line-height: 1.736em;
 }
 
-h5, #main-nav ul li a, #main-nav ul li:before, #main-nav ul li:after {
+.h5, h5, #main-nav ul li {
   font-size: 1.5em;
   line-height: 1.143em;
 }
 
-h6 {
+.h6, h6 {
   font-size: 1.317em;
   line-height: 1.302em;
 }
@@ -844,141 +844,6 @@ img.right {
   background-position: 0 -2185px;
 }
 
-body.markup-elements h1.section-title {
-  font-size: 2.25em;
-  line-height: 1.524em;
-  background-color: #d3d3d3;
-  text-transform: uppercase;
-  padding-left: 12px;
-}
-body.markup-elements h1.section-title a {
-  color: black;
-}
-body.markup-elements h1.section-title a:visited {
-  color: black;
-}
-body.markup-elements h1.section-title a:hover {
-  color: #9ab5cb;
-}
-body.markup-elements h1.section-title a:active {
-  color: #9ab5cb;
-}
-body.markup-elements h1.section-title a {
-  text-decoration: none;
-  border-bottom: 1px solid black;
-}
-body.markup-elements h1.section-title a:visited {
-  border-bottom-color: black;
-}
-body.markup-elements h1.section-title a:hover {
-  border-bottom-color: #9ab5cb;
-}
-body.markup-elements h1.section-title a:active {
-  border-bottom-color: #9ab5cb;
-}
-body.markup-elements article.element {
-  *zoom: 1;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 24px;
-  padding-bottom: 23px;
-}
-body.markup-elements article.element:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-body.markup-elements article.element:last-child {
-  padding-bottom: 0;
-  border-bottom-width: 0;
-  margin-bottom: 0;
-}
-body.markup-elements article.element h2.element-title {
-  font-size: 1em;
-  line-height: 1.714em;
-  background-color: gray;
-  color: white;
-  text-transform: uppercase;
-  padding-left: 12px;
-}
-body.markup-elements article.element h2.element-title a {
-  color: white;
-}
-body.markup-elements article.element h2.element-title a:visited {
-  color: white;
-}
-body.markup-elements article.element h2.element-title a:hover {
-  color: #9ab5cb;
-}
-body.markup-elements article.element h2.element-title a:active {
-  color: #9ab5cb;
-}
-body.markup-elements article.element h2.element-title a {
-  text-decoration: none;
-  border-bottom: 1px solid white;
-}
-body.markup-elements article.element h2.element-title a:visited {
-  border-bottom-color: white;
-}
-body.markup-elements article.element h2.element-title a:hover {
-  border-bottom-color: #9ab5cb;
-}
-body.markup-elements article.element h2.element-title a:active {
-  border-bottom-color: #9ab5cb;
-}
-body.markup-elements article.element .example {
-  *zoom: 1;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
-  margin-bottom: 12px;
-  padding-bottom: 11px;
-  *zoom: 1;
-}
-body.markup-elements article.element .example:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-body.markup-elements article.element .example:last-child {
-  padding-bottom: 0;
-  border-bottom-width: 0;
-  margin-bottom: 0;
-}
-body.markup-elements article.element .example:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-body.markup-elements article.element .example .markup {
-  display: inline;
-  float: left;
-  width: 75.654%;
-  margin-right: 2.414%;
-}
-body.markup-elements article.element .example .markup + .show-source {
-  display: inline;
-  float: left;
-  width: 36.62%;
-  margin-right: 2.414%;
-  display: inline;
-  float: right;
-  margin-right: 0;
-  #margin-left: -24px;
-}
-body.markup-elements article.element .example .markup + .show-source .show-hide {
-  text-align: right;
-}
-body.markup-elements article.element .example .markup + .show-source + p {
-  clear: both;
-}
-
 .container, #intro .inner, #learn .inner, #tools .inner, #survivors .inner, #prepared .inner {
   *zoom: 1;
   margin: auto;
@@ -1014,44 +879,46 @@ header#page-header {
   padding-top: 372px;
   padding-bottom: 248px;
   background-color: #452d1c;
-  background-image: url('images/dirt-320x320.jpg?1308888806');
+  background-image: url('images/dirt-320x320.jpg?1309277922');
   background-position: top center;
 }
 @media screen and (max-width: 320px) {
   header#page-header {
+    /* set different backgrounds depending on the device width */
+    background-size: cover;
+    -moz-background-size: cover;
+    /* different padding < 320 */
     padding-top: 92px;
     padding-bottom: 600px;
     padding-bottom: 500px;
   }
 }
-@media screen and (max-width: 320px) {
-  header#page-header {
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
 @media screen and (max-width: 500px) {
   header#page-header {
-    background-image: url('images/dirt-500x500.jpg?1308888848');
+    /* set different backgrounds depending on the device width */
+    background-image: url('images/dirt-500x500.jpg?1309277922');
     background-size: cover;
     -moz-background-size: cover;
   }
 }
 @media screen and (max-width: 900px) {
   header#page-header {
-    background-image: url('images/dirt-920x776.jpg?1308888870');
+    /* set different backgrounds depending on the device width */
+    background-image: url('images/dirt-920x776.jpg?1309277922');
     background-size: cover;
     -moz-background-size: cover;
   }
 }
 @media screen and (min-width: 901px) {
   header#page-header {
-    background-image: url('images/dirt-1200x776.jpg?1308888934');
+    /* set different backgrounds depending on the device width */
+    background-image: url('images/dirt-1200x776.jpg?1309277922');
     background-size: cover;
     -moz-background-size: cover;
   }
 }
 header#page-header:before {
+  /* add the little background stripe behind the logo */
   content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
   letter-spacing: -4px;
   font-size: 3.375em;
@@ -1068,11 +935,12 @@ header#page-header:before {
 }
 @media screen and (max-width: 320px) {
   header#page-header:before {
+    /* move the stripe for small screens */
     top: 94px;
   }
 }
 header#page-header .wrapper {
-  background: transparent url('images/logo.png?1303525784') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1305037698') no-repeat 0 36px;
   padding-top: 36px;
   top: -36px;
   position: relative;
@@ -1085,10 +953,11 @@ header#page-header .wrapper {
 }
 @media screen and (max-width: 320px) {
   header#page-header .wrapper {
+    /* set the width of the wrapper for smaller screeens */
     width: 320px;
   }
 }
-header#page-header h1, header#page-header h2, header#page-header h3, header#page-header #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article header#page-header h1, header#page-header #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav header#page-header h2, header#page-header h4, header#page-header #all-teasers #teasers article h1, #all-teasers #teasers article header#page-header h1, header#page-header .wf-active #all-teasers #teasers article h1, .wf-active #all-teasers #teasers article header#page-header h1, header#page-header h5, header#page-header #main-nav ul li a, #main-nav ul li header#page-header a, header#page-header #main-nav ul li:before, #main-nav ul header#page-header li:before, header#page-header #main-nav ul li:after, #main-nav ul header#page-header li:after, header#page-header h6 {
+header#page-header h1, header#page-header h2 {
   font-weight: 700;
   font-family: proxima-nova-condensed-1, proxima-nova-condensed-2, sans-serif;
 }
@@ -1102,18 +971,21 @@ header#page-header h1 {
 }
 @media screen and (max-width: 320px) {
   header#page-header h1 {
+    /* change the font size for small screens */
     font-size: 21px;
     padding-right: 2px;
     top: 3px;
   }
 }
 .wf-active header#page-header h1 {
+  /* adjust for active webfonts */
   font-size: 2.963em;
   line-height: 1.157em;
   top: -9px;
 }
 @media screen and (max-width: 320px) {
   .wf-active header#page-header h1 {
+    /* adjust for small screens and active web fonts */
     font-size: 27.654px;
     top: 3px;
   }
@@ -1128,18 +1000,21 @@ header#page-header h2 {
 }
 @media screen and (max-width: 320px) {
   header#page-header h2 {
+    /* change the font size for small screens */
     font-size: 3.286em;
     line-height: 1.043em;
     top: 9px;
   }
 }
 .wf-active header#page-header h2 {
+  /* adjust for active webfonts */
   font-size: 5.063em;
   line-height: 1.016em;
   top: -12px;
 }
 @media screen and (max-width: 320px) {
   .wf-active header#page-header h2 {
+    /* adjust for small screens and active web fonts */
     font-size: 47.25px;
   }
 }
@@ -1197,6 +1072,7 @@ header#page-header h2 {
 }
 
 /* TEASERS */
+/* define animations */
 @-webkit-keyframes spin {
   0% {
     -moz-transform: rotate(0deg);
@@ -1244,6 +1120,7 @@ header#page-header h2 {
 }
 @media screen and (max-width: 320px) {
   #all-teasers {
+    /* adjust for small screens */
     width: 320px;
     max-width: 320px;
     top: -460px;
@@ -1270,11 +1147,13 @@ header#page-header h2 {
 }
 @media screen and (max-width: 320px) {
   #all-teasers nav.samples {
+    /* move to the far left on small screens */
     left: 0;
   }
 }
 @media screen and (min-width: 901px) {
   #all-teasers nav.samples {
+    /* allow animations on large screens */
     -webkit-animation-name: spin;
     -webkit-animation-duration: 80s;
     -webkit-animation-timing-function: linear;
@@ -1296,6 +1175,7 @@ header#page-header h2 {
 }
 @media screen and (max-width: 320px) {
   #all-teasers nav.samples ul {
+    /* move and size for small screens */
     top: 0;
     left: 0px;
     max-width: 300px;
@@ -1304,6 +1184,7 @@ header#page-header h2 {
 }
 @media screen and (min-width: 901px) {
   #all-teasers nav.samples ul {
+    /* place the center of the circle on large screens */
     top: -57.5px;
     left: -57.5px;
   }
@@ -1342,6 +1223,7 @@ header#page-header h2 {
 }
 @media screen and (max-width: 320px) {
   #all-teasers nav.samples ul li {
+    /* keep from overflowing on small screens */
     position: relative;
     left: 0px;
     width: 100px;
@@ -1349,12 +1231,16 @@ header#page-header h2 {
   }
 }
 @media screen and (max-width: 900px) {
+  #all-teasers nav.samples ul li {
+    /* show only nine badges when not large enough for a circle */
+  }
   #all-teasers nav.samples ul li#code-viewer-badge {
     display: none;
   }
 }
 @media screen and (min-width: 901px) {
   #all-teasers nav.samples ul li {
+    /* reverse-spin the individual badges (so they appear to not spin) when there is a spinning circle */
     -webkit-animation-name: spin-back;
     -webkit-animation-duration: 80s;
     -webkit-animation-timing-function: linear;
@@ -1368,7 +1254,7 @@ header#page-header h2 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badges/color.png?1307510632');
+  background-image: url('images/badges/color.png?1308058349');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1382,6 +1268,7 @@ header#page-header h2 {
 }
 @media screen and (max-width: 320px) {
   #all-teasers nav.samples ul li a {
+    /* shrink the badges a bit on small screens */
     -moz-transform: scale(0.7, 0.7);
     -webkit-transform: scale(0.7, 0.7);
     -o-transform: scale(0.7, 0.7);
@@ -1390,6 +1277,9 @@ header#page-header h2 {
   }
 }
 @media screen and (min-width: 901px) {
+  #all-teasers nav.samples ul li {
+    /* lay out the badges in a circle on large screens */
+  }
   #all-teasers nav.samples ul li:nth-of-type(1n-1) {
     top: 188.091px;
     left: 258.885px;
@@ -1432,61 +1322,66 @@ header#page-header h2 {
   }
 }
 @media screen and (min-width: 901px) {
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(1n-1) {
+  #all-teasers nav.samples ul {
+    /* expand the circle when you mouse-over the nav (large screens) */
+  }
+  #all-teasers nav.samples ul:hover li:nth-of-type(1n-1) {
     top: 193.969px;
     left: 266.976px;
   }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(2n-2) {
+  #all-teasers nav.samples ul:hover li:nth-of-type(2n-2) {
     top: 313.849px;
     left: 101.976px;
   }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(3n-3) {
+  #all-teasers nav.samples ul:hover li:nth-of-type(3n-3) {
     top: 313.849px;
     left: -101.976px;
   }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(4n-4) {
+  #all-teasers nav.samples ul:hover li:nth-of-type(4n-4) {
     top: 193.969px;
     left: -266.976px;
   }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(5n-5) {
+  #all-teasers nav.samples ul:hover li:nth-of-type(5n-5) {
     top: 0.0px;
     left: -330px;
   }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(6n-6) {
+  #all-teasers nav.samples ul:hover li:nth-of-type(6n-6) {
     top: -193.969px;
     left: -266.976px;
   }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(7n-7) {
+  #all-teasers nav.samples ul:hover li:nth-of-type(7n-7) {
     top: -313.849px;
     left: -101.976px;
   }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(8n-8) {
+  #all-teasers nav.samples ul:hover li:nth-of-type(8n-8) {
     top: -313.849px;
     left: 101.976px;
   }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(9n-9) {
+  #all-teasers nav.samples ul:hover li:nth-of-type(9n-9) {
     top: -193.969px;
     left: 266.976px;
   }
-  #all-teasers nav.samples ul:hover ul li:nth-of-type(10n-10) {
+  #all-teasers nav.samples ul:hover li:nth-of-type(10n-10) {
     top: 0.0px;
     left: 330px;
   }
 }
-#all-teasers #teasers {
+
+#teasers {
   position: relative;
   width: 404px;
   margin: 0 auto;
 }
 @media screen and (max-width: 320px) {
-  #all-teasers #teasers {
+  #teasers {
+    /* resize for smaller screens */
     width: 320px;
     top: 250px;
     margin-left: 0;
     margin-right: 0;
   }
 }
-#all-teasers #teasers article {
+#teasers article {
   position: absolute;
   height: 190px;
   width: 410px;
@@ -1509,7 +1404,8 @@ header#page-header h2 {
   left: 0px;
 }
 @media screen and (max-width: 320px) {
-  #all-teasers #teasers article {
+  #teasers article {
+    /* resize for small screens */
     width: 320px;
     -moz-border-radius-bottomleft: 0;
     -webkit-border-bottom-left-radius: 0;
@@ -1527,7 +1423,10 @@ header#page-header h2 {
   }
 }
 @media screen and (min-width: 320px) {
-  #all-teasers #teasers article:before {
+  #teasers article {
+    /* add a semi-trans background when not the smallest screens */
+  }
+  #teasers article:before {
     content: "\0020";
     position: absolute;
     width: 410px;
@@ -1542,7 +1441,7 @@ header#page-header h2 {
     left: 0;
   }
 }
-#all-teasers #teasers article h1 {
+#teasers article h1 {
   border-bottom: 1px dashed #c7dbeb;
   margin: 0 5px 0.25em;
   color: #8fb6d7;
@@ -1552,24 +1451,27 @@ header#page-header h2 {
   line-height: 1.973em;
   padding-top: 6px;
 }
-.wf-active #all-teasers #teasers article h1 {
+.wf-active #teasers article h1 {
+  /* style for active webfonts */
   padding-top: 0;
 }
 @media screen and (max-width: 320px) {
-  #all-teasers #teasers article h1 {
+  #teasers article h1 {
+    /* adjust for small screens */
     margin: 0 0px 0.25em;
   }
 }
-#all-teasers #teasers article p {
+#teasers article p {
   font-weight: bold;
   padding: 0 45px;
 }
 @media screen and (max-width: 320px) {
-  #all-teasers #teasers article p {
+  #teasers article p {
+    /* no padding for small screens */
     padding: 0 0;
   }
 }
-#all-teasers #teasers article:target, #all-teasers #teasers article.selected {
+#teasers article:target, #teasers article.selected {
   display: block;
   visibility: visible;
 }
@@ -1579,7 +1481,7 @@ header#page-header h2 {
   position: relative;
   z-index: -51;
   background-color: #452d1c;
-  background-image: url('images/dirt-320x320.jpg?1308888806');
+  background-image: url('images/dirt-320x320.jpg?1309277922');
   background-position: center -50%;
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
@@ -1588,27 +1490,31 @@ header#page-header h2 {
 }
 @media screen and (max-width: 320px) {
   #intro {
+    /* set different backgrounds depending on the device width */
     background-size: cover;
     -moz-background-size: cover;
   }
 }
 @media screen and (max-width: 500px) {
   #intro {
-    background-image: url('images/dirt-500x500.jpg?1308888848');
+    /* set different backgrounds depending on the device width */
+    background-image: url('images/dirt-500x500.jpg?1309277922');
     background-size: cover;
     -moz-background-size: cover;
   }
 }
 @media screen and (max-width: 900px) {
   #intro {
-    background-image: url('images/dirt-920x776.jpg?1308888870');
+    /* set different backgrounds depending on the device width */
+    background-image: url('images/dirt-920x776.jpg?1309277922');
     background-size: cover;
     -moz-background-size: cover;
   }
 }
 @media screen and (min-width: 901px) {
   #intro {
-    background-image: url('images/dirt-1200x776.jpg?1308888934');
+    /* set different backgrounds depending on the device width */
+    background-image: url('images/dirt-1200x776.jpg?1309277922');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -1620,22 +1526,23 @@ header#page-header h2 {
 }
 @media screen and (max-width: 320px) {
   #intro .inner {
+    /* adjust padding for small browsers */
     padding-top: 1.714em;
     padding-bottom: 1.714em;
   }
 }
-#intro .inner article {
+#intro article {
   clear: both;
   margin-left: 2.414%;
   margin-right: 2.414%;
 }
-#intro .inner article h1 {
+#intro article h1 {
   text-align: center;
   color: #d4e49d;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), 5px 8px 8px rgba(0, 0, 0, 0.1);
   line-height: 2.032em;
 }
-#intro .inner article .body, #intro .inner article body {
+#intro article .content {
   display: inline;
   float: left;
   width: 79.493%;
@@ -1644,7 +1551,8 @@ header#page-header h2 {
   text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
 }
 @media screen and (max-width: 320px) {
-  #intro .inner article .body, #intro .inner article body {
+  #intro article .content {
+    /* full width for small screens */
     display: inline;
     float: left;
     width: 100%;
@@ -1653,7 +1561,8 @@ header#page-header h2 {
   }
 }
 @media screen and (min-width: 500px) {
-  #intro .inner article .body, #intro .inner article body {
+  #intro article .content {
+    /* 2 column text for most screens */
     -moz-column-count: 2;
     -webkit-column-count: 2;
     -o-column-count: 2;
@@ -1705,19 +1614,24 @@ header#page-header h2 {
   font-weight: 300;
   margin-bottom: 24px;
 }
-#learn .inner #walkthru {
+
+#walkthru {
   clear: both;
   margin-left: 2.414%;
   margin-right: 2.414%;
 }
 @media screen and (max-width: 320px) {
-  #learn .inner #walkthru h1 {
+  #walkthru {
+    /* resize h1 for small screens */
+  }
+  #walkthru h1 {
     font-size: 1.975em;
     line-height: 1.736em;
   }
 }
 @media screen and (min-width: 500px) {
-  #learn .inner #walkthru {
+  #walkthru {
+    /* set to 3 columns wide on most screens */
     display: inline;
     float: left;
     width: 56.137%;
@@ -1725,24 +1639,27 @@ header#page-header h2 {
     margin-left: 2.414%;
   }
 }
-#learn .inner #walkthru iframe {
+#walkthru iframe {
   width: 558px;
   height: 376.65px;
   max-width: 100%;
 }
 @media screen and (max-width: 320px) {
-  #learn .inner #walkthru iframe {
+  #walkthru iframe {
+    /* resize iframe on small screens */
     width: 308px;
     height: auto;
   }
 }
-#learn .inner #podcast-videos {
+
+#podcast-videos {
   clear: both;
   margin-left: 2.414%;
   margin-right: 2.414%;
 }
 @media screen and (min-width: 500px) {
-  #learn .inner #podcast-videos {
+  #podcast-videos {
+    /* move these to a right column on most screens */
     margin-top: 1.714em;
     display: inline;
     float: left;
@@ -1756,13 +1673,13 @@ header#page-header h2 {
     margin-left: 0;
   }
 }
-#learn .inner #podcast-videos > h2 {
+#podcast-videos > h2 {
   font-size: 1.5em;
   line-height: 1.143em;
   text-align: right;
   margin-bottom: 1.714em;
 }
-#learn .inner #podcast-videos article {
+#podcast-videos article {
   *zoom: 1;
   border-bottom: 3px solid rgba(69, 45, 28, 0.5);
   margin-bottom: 12px;
@@ -1772,7 +1689,7 @@ header#page-header h2 {
   margin-right: -26px;
   padding-right: 26px;
 }
-#learn .inner #podcast-videos article:after {
+#podcast-videos article:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -1780,19 +1697,19 @@ header#page-header h2 {
   overflow: hidden;
   visibility: hidden;
 }
-#learn .inner #podcast-videos article:last-child {
+#podcast-videos article:last-child {
   padding-bottom: 0;
   border-bottom-width: 0;
   margin-bottom: 0;
 }
-#learn .inner #podcast-videos article h1 {
+#podcast-videos article h1 {
   line-height: 1em;
   display: inline;
   float: left;
   width: 46.703%;
   margin-right: 6.593%;
 }
-#learn .inner #podcast-videos article img {
+#podcast-videos article img {
   display: inline;
   float: left;
   width: 46.703%;
@@ -1839,33 +1756,36 @@ header#page-header h2 {
   font-weight: 300;
   margin-bottom: 24px;
 }
-#tools .inner #all-examples {
+
+#all-examples {
   clear: both;
   margin-left: 2.414%;
   margin-right: 2.414%;
   position: relative;
 }
-#tools .inner #all-examples #tools-nav {
+
+#tools-nav {
   position: relative;
 }
 @media screen and (min-width: 500px) {
-  #tools .inner #all-examples #tools-nav {
+  #tools-nav {
+    /* set to 1 column for most screens */
     display: inline;
     float: left;
     width: 17.97%;
     margin-right: 2.537%;
   }
 }
-#tools .inner #all-examples #tools-nav ul {
+#tools-nav ul {
   list-style: none;
   margin-left: 0;
 }
-#tools .inner #all-examples #tools-nav ul li {
+#tools-nav ul li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0px;
 }
-#tools .inner #all-examples #tools-nav ul li {
+#tools-nav ul li {
   background-color: rgba(17, 51, 66, 0.1);
   margin-left: -24px;
   padding-left: 24px;
@@ -1892,37 +1812,39 @@ header#page-header h2 {
   transition-duration: 0.5s;
 }
 @media screen and (max-width: 320px) {
-  #tools .inner #all-examples #tools-nav ul li {
+  #tools-nav ul li {
+    /* recolor for small screens */
     background-color: rgba(255, 255, 255, 0.8);
   }
 }
-#tools .inner #all-examples #tools-nav ul li:hover {
+#tools-nav ul li:hover {
   background: -webkit-linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(17, 51, 66, 0.1) 0, rgba(12, 35, 46, 0.8) 100%) bottom right;
   background: -moz-linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(17, 51, 66, 0.1) 0, rgba(12, 35, 46, 0.8) 100%) bottom right;
   background: -o-linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(17, 51, 66, 0.1) 0, rgba(12, 35, 46, 0.8) 100%) bottom right;
   background: linear-gradient(165deg, rgba(0, 0, 0, 0) 8px, rgba(17, 51, 66, 0.1) 0%, rgba(12, 35, 46, 0.8) 100%) bottom right;
 }
 @media screen and (max-width: 320px) {
-  #tools .inner #all-examples #tools-nav ul li:hover {
+  #tools-nav ul li:hover {
+    /* recolor :hover for small screens */
     background-color: rgba(17, 51, 66, 0.1);
   }
 }
-#tools .inner #all-examples #tools-nav ul li:hover a {
+#tools-nav ul li:hover a {
   color: #aac93b;
 }
-#tools .inner #all-examples #tools-nav ul li:hover a:visited {
+#tools-nav ul li:hover a:visited {
   color: #aac93b;
 }
-#tools .inner #all-examples #tools-nav ul li:hover a:hover {
+#tools-nav ul li:hover a:hover {
   color: #aac93b;
 }
-#tools .inner #all-examples #tools-nav ul li:hover a:active {
+#tools-nav ul li:hover a:active {
   color: #aac93b;
 }
-#tools .inner #all-examples #tools-nav ul li:not(:first-child) {
+#tools-nav ul li:not(:first-child) {
   border-top: 1px solid #113342;
 }
-#tools .inner #all-examples #tools-nav ul li:not(:first-child):after {
+#tools-nav ul li:not(:first-child):after {
   position: absolute;
   z-index: 74;
   display: block;
@@ -1938,7 +1860,7 @@ header#page-header h2 {
   background-size: 50%;
   background-repeat: no-repeat;
 }
-#tools .inner #all-examples #tools-nav ul li a {
+#tools-nav ul li a {
   -moz-transition-property: all;
   -webkit-transition-property: all;
   -o-transition-property: all;
@@ -1950,26 +1872,28 @@ header#page-header h2 {
   color: #452d1c;
   font-weight: 700;
 }
-#tools .inner #all-examples #tools-nav ul li a {
+#tools-nav ul li a {
   border-bottom: none;
 }
-#tools .inner #all-examples #tools-nav ul li a:hover {
+#tools-nav ul li a:hover {
   border-bottom: none;
 }
-#tools .inner #all-examples #tools-nav ul li a:visited {
+#tools-nav ul li a:visited {
   color: #452d1c;
 }
-#tools .inner #all-examples #tools-nav ul li a:hover {
+#tools-nav ul li a:hover {
   color: #aac93b;
 }
-#tools .inner #all-examples #tools-nav ul li a:active {
+#tools-nav ul li a:active {
   color: #aac93b;
 }
-#tools .inner #all-examples #tools-examples {
+
+#tools-examples {
   position: relative;
 }
 @media screen and (min-width: 500px) {
-  #tools .inner #all-examples #tools-examples {
+  #tools-examples {
+    /* 4 columns wide on most screens */
     display: inline;
     float: left;
     width: 79.493%;
@@ -1980,10 +1904,10 @@ header#page-header h2 {
     #margin-left: -24px;
   }
 }
-#tools .inner #all-examples #tools-examples article {
+#tools-examples article {
   max-width: 100%;
 }
-#tools .inner #all-examples #tools-examples article .example {
+#tools-examples article .example {
   border: 1px solid #113342;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1992,33 +1916,33 @@ header#page-header h2 {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-#tools .inner #all-examples #tools-examples article .example + footer {
+#tools-examples article .example + footer {
   font-style: italic;
   font-size: 1.317em;
   line-height: 1.302em;
   opacity: 0.6;
 }
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter {
+#tools-examples article .syntaxhighlighter {
   white-space: nowrap;
   overflow: auto;
 }
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter th, #tools .inner #all-examples #tools-examples article .syntaxhighlighter td, #tools .inner #all-examples #tools-examples article .syntaxhighlighter caption {
+#tools-examples article .syntaxhighlighter th, #tools-examples article .syntaxhighlighter td, #tools-examples article .syntaxhighlighter caption {
   padding: 0;
 }
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter th .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter td .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter caption .line {
+#tools-examples article .syntaxhighlighter th .line, #tools-examples article .syntaxhighlighter td .line, #tools-examples article .syntaxhighlighter caption .line {
   padding: 0 0.5em;
 }
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .toolbar {
+#tools-examples article .syntaxhighlighter .toolbar {
   display: none;
 }
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .container .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #intro .inner .line, #intro #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner .line, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner .line, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #prepared .inner .line, #prepared #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner .line {
+#tools-examples article .syntaxhighlighter .gutter .line, #tools-examples article .syntaxhighlighter .container .line, #tools-examples article .syntaxhighlighter #intro .inner .line, #intro #tools-examples article .syntaxhighlighter .inner .line, #tools-examples article .syntaxhighlighter #learn .inner .line, #learn #tools-examples article .syntaxhighlighter .inner .line, #tools-examples article .syntaxhighlighter #tools .inner .line, #tools #tools-examples article .syntaxhighlighter .inner .line, #tools-examples article .syntaxhighlighter #survivors .inner .line, #survivors #tools-examples article .syntaxhighlighter .inner .line, #tools-examples article .syntaxhighlighter #prepared .inner .line, #prepared #tools-examples article .syntaxhighlighter .inner .line {
   height: 24px;
 }
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .gutter {
+#tools-examples article .syntaxhighlighter .gutter {
   width: 2em;
   max-width: 3em;
 }
-#tools .inner #all-examples #tools-examples article .syntaxhighlighter .container, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #intro .inner, #intro #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #learn .inner, #learn #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #survivors .inner, #survivors #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner, #tools .inner #all-examples #tools-examples article .syntaxhighlighter #prepared .inner, #prepared #tools .inner #all-examples #tools-examples article .syntaxhighlighter .inner {
+#tools-examples article .syntaxhighlighter .container, #tools-examples article .syntaxhighlighter #intro .inner, #intro #tools-examples article .syntaxhighlighter .inner, #tools-examples article .syntaxhighlighter #learn .inner, #learn #tools-examples article .syntaxhighlighter .inner, #tools-examples article .syntaxhighlighter #tools .inner, #tools #tools-examples article .syntaxhighlighter .inner, #tools-examples article .syntaxhighlighter #survivors .inner, #survivors #tools-examples article .syntaxhighlighter .inner, #tools-examples article .syntaxhighlighter #prepared .inner, #prepared #tools-examples article .syntaxhighlighter .inner {
   width: auto;
 }
 
@@ -2054,7 +1978,7 @@ header#page-header h2 {
   font-weight: 300;
   margin-bottom: 24px;
 }
-#survivors .inner .survivor {
+#survivors .survivor {
   *zoom: 1;
   margin-bottom: 24px;
   padding-bottom: 24px;
@@ -2068,7 +1992,8 @@ header#page-header h2 {
   box-shadow: rgba(0, 0, 0, 0.1) 2px 1px 4px, rgba(0, 0, 0, 0.1) -4px 3px 8px;
 }
 @media screen and (min-width: 500px) {
-  #survivors .inner .survivor {
+  #survivors .survivor {
+    /* each item 2 columns on most screens */
     display: inline;
     float: left;
     width: 36.62%;
@@ -2076,7 +2001,7 @@ header#page-header h2 {
     max-height: 240px;
   }
 }
-#survivors .inner .survivor:after {
+#survivors .survivor:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -2084,46 +2009,54 @@ header#page-header h2 {
   overflow: hidden;
   visibility: hidden;
 }
-#survivors .inner .survivor:last-child {
+#survivors .survivor:last-child {
   padding-bottom: 0;
   border-bottom-width: 0;
   margin-bottom: 0;
 }
-#survivors .inner .survivor h1 {
+#survivors .survivor h1 {
   font-size: 1.975em;
   line-height: 1.736em;
   line-height: 1em;
   max-width: 240px;
 }
 @media screen and (min-width: 901px) {
-  #survivors .inner .survivor h1 {
+  #survivors .survivor h1 {
+    /* set font size for large screens */
     position: absolute;
     font-size: 2.25em;
     line-height: 1.524em;
     line-height: 1em;
   }
 }
+#survivors .survivor:nth-of-type(odd) {
+  /* left side (odd) items */
+}
 @media screen and (min-width: 500px) {
-  #survivors .inner .survivor:nth-of-type(odd) {
+  #survivors .survivor:nth-of-type(odd) {
+    /* adjust placement for mid screens */
     margin-left: 2.414%;
   }
 }
 @media screen and (min-width: 901px) {
-  #survivors .inner .survivor:nth-of-type(odd) {
+  #survivors .survivor:nth-of-type(odd) {
+    /* adjust placement for large screens */
     padding-right: 9%;
   }
 }
-#survivors .inner .survivor:nth-of-type(odd) h1 {
+#survivors .survivor:nth-of-type(odd) h1 {
   top: 0;
   right: 0;
 }
 @media screen and (min-width: 500px) {
-  #survivors .inner .survivor:nth-of-type(odd) h1 {
+  #survivors .survivor:nth-of-type(odd) h1 {
+    /* move text for most screens */
     text-align: right;
   }
 }
 @media screen and (min-width: 901px) {
-  #survivors .inner .survivor:nth-of-type(odd) h1 {
+  #survivors .survivor:nth-of-type(odd) h1 {
+    /* rotate titles on large screens */
     -moz-transform: rotate(-90deg) translate(-6px, -72px);
     -webkit-transform: rotate(-90deg) translate(-6px, -72px);
     -o-transform: rotate(-90deg) translate(-6px, -72px);
@@ -2136,8 +2069,12 @@ header#page-header h2 {
     transform-origin: top right;
   }
 }
+#survivors .survivor:nth-of-type(even) {
+  /* right side (even) items */
+}
 @media screen and (min-width: 500px) {
-  #survivors .inner .survivor:nth-of-type(even) {
+  #survivors .survivor:nth-of-type(even) {
+    /* adjust placement for mid screens */
     display: inline;
     float: right;
     margin-right: 2.414%;
@@ -2145,16 +2082,18 @@ header#page-header h2 {
   }
 }
 @media screen and (min-width: 901px) {
-  #survivors .inner .survivor:nth-of-type(even) {
+  #survivors .survivor:nth-of-type(even) {
+    /* adjust placement for large screens */
     padding-left: 9%;
   }
 }
-#survivors .inner .survivor:nth-of-type(even) h1 {
+#survivors .survivor:nth-of-type(even) h1 {
   top: 0;
   left: 0;
 }
 @media screen and (min-width: 901px) {
-  #survivors .inner .survivor:nth-of-type(even) h1 {
+  #survivors .survivor:nth-of-type(even) h1 {
+    /* rotate titles on large screens */
     -moz-transform: rotate(90deg) translate(6px, -72px);
     -webkit-transform: rotate(90deg) translate(6px, -72px);
     -o-transform: rotate(90deg) translate(6px, -72px);
@@ -2167,7 +2106,7 @@ header#page-header h2 {
     transform-origin: top left;
   }
 }
-#survivors .inner .survivor:last-child {
+#survivors .survivor:last-child {
   padding-bottom: 6px;
 }
 
@@ -2179,32 +2118,36 @@ header#page-header h2 {
   font-size: 1.975em;
   line-height: 1.736em;
   background-color: #452d1c;
-  background-image: url('images/dirt-320x320.jpg?1308888806');
+  background-image: url('images/dirt-320x320.jpg?1309277922');
   background-position: top center;
 }
 @media screen and (max-width: 320px) {
   #prepared {
+    /* set different backgrounds depending on the device width */
     background-size: cover;
     -moz-background-size: cover;
   }
 }
 @media screen and (max-width: 500px) {
   #prepared {
-    background-image: url('images/dirt-500x500.jpg?1308888848');
+    /* set different backgrounds depending on the device width */
+    background-image: url('images/dirt-500x500.jpg?1309277922');
     background-size: cover;
     -moz-background-size: cover;
   }
 }
 @media screen and (max-width: 900px) {
   #prepared {
-    background-image: url('images/dirt-920x776.jpg?1308888870');
+    /* set different backgrounds depending on the device width */
+    background-image: url('images/dirt-920x776.jpg?1309277922');
     background-size: cover;
     -moz-background-size: cover;
   }
 }
 @media screen and (min-width: 901px) {
   #prepared {
-    background-image: url('images/dirt-1200x776.jpg?1308888934');
+    /* set different backgrounds depending on the device width */
+    background-image: url('images/dirt-1200x776.jpg?1309277922');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -2219,7 +2162,7 @@ header#page-header h2 {
   box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), 8px 0px 8px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.4), -8px 0px 8px rgba(0, 0, 0, 0.2);
   position: relative;
 }
-#prepared .inner header {
+#prepared header {
   position: relative;
   float: left;
   -moz-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), 8px 0px 8px rgba(0, 0, 0, 0.1);
@@ -2227,29 +2170,32 @@ header#page-header h2 {
   -o-box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), 8px 0px 8px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), 8px 0px 8px rgba(0, 0, 0, 0.1);
 }
-#prepared .inner header h1 {
+#prepared header h1 {
   background: #aac93b;
   display: inline-block;
   float: left;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), 5px 8px 8px rgba(0, 0, 0, 0.1);
 }
-@media screen and                                              (max-width: 500px) {
-  #prepared .inner header h1 {
+@media screen and (max-width: 500px) {
+  #prepared header h1 {
+    /* font size for most screens */
     font-size: 2.963em;
     line-height: 1.157em;
   }
 }
 @media screen and (max-width: 320px) {
-  #prepared .inner header h1 {
+  #prepared header h1 {
+    /* font size for small screens */
     font-size: 47.25px;
   }
 }
-#prepared .inner header h1 .word1 {
+#prepared header h1 .word1 {
   float: left;
   margin-right: 0.25em;
 }
 @media screen and (min-width: 500px) {
-  #prepared .inner header h1 .word1 {
+  #prepared header h1 .word1 {
+    /* lettering.js adjustment for most screens */
     font-size: 0.772em;
     line-height: 0.658em;
     -moz-transform: rotate(-90deg) translate(-18px, 0);
@@ -2269,22 +2215,23 @@ header#page-header h2 {
   }
 }
 @media screen and (min-width: 500px) {
-  #prepared .inner header h1 .word2 {
+  #prepared header h1 .word2 {
+    /* lettering.js adjustment for most screens */
     margin-left: -31px;
   }
 }
-#prepared .inner p.download {
+#prepared p.download {
   float: left;
   padding: 12px 0 0 0;
   font-size: 1em;
   line-height: 0.868em;
 }
-#prepared .inner p.download span {
+#prepared p.download span {
   background-color: #d4e41d;
   float: left;
   clear: left;
 }
-#prepared .inner p.download span.word1, #prepared .inner p.download span.word3, #prepared .inner p.download span.word5 {
+#prepared p.download span.word1, #prepared p.download span.word3, #prepared p.download span.word5 {
   padding-left: 0.5em;
   -moz-transition-property: padding-left;
   -webkit-transition-property: padding-left;
@@ -2295,241 +2242,105 @@ header#page-header h2 {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-#prepared .inner p.download span.word2, #prepared .inner p.download span.word4 {
+#prepared p.download span.word2, #prepared p.download span.word4 {
   clear: none;
   margin-left: 0.5em;
   background-color: transparent;
   color: #aac93b;
 }
-#prepared .inner p.download a {
+#prepared p.download a {
   color: #22160e;
 }
-#prepared .inner p.download a {
+#prepared p.download a {
   border-bottom: none;
 }
-#prepared .inner p.download a:hover {
+#prepared p.download a:hover {
   border-bottom: none;
 }
-#prepared .inner p.download a:visited {
+#prepared p.download a:visited {
   color: #22160e;
 }
-#prepared .inner p.download a:hover {
+#prepared p.download a:hover {
   color: #366b97;
 }
-#prepared .inner p.download a:active {
+#prepared p.download a:active {
   color: #22160e;
 }
-#prepared .inner p.download:hover span.word1, #prepared .inner p.download:hover span.word3, #prepared .inner p.download:hover span.word5 {
+#prepared p.download:hover span.word1, #prepared p.download:hover span.word3, #prepared p.download:hover span.word5 {
   padding-left: 1em;
 }
-#prepared .inner footer {
+#prepared footer {
   padding-top: 0.857em;
   clear: both;
   text-align: right;
   position: relative;
 }
-#prepared .inner footer .amp {
+#prepared footer .amp {
   font-size: 1.709em;
   line-height: 0.508em;
   position: relative;
   top: 0.2em;
 }
-#prepared .inner footer aside ul {
+#prepared footer aside ul {
   list-style-type: none;
 }
-#prepared .inner footer aside ul, #prepared .inner footer aside ul li {
+#prepared footer aside ul, #prepared footer aside ul li {
   margin: 0px;
   padding: 0px;
   display: inline;
 }
 
-#teasers article h1, #teasers article h2, #teasers article h3, #teasers #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos #teasers article h1, #teasers article #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav #teasers article h2,
-#intro h1,
-#intro h2,
-#intro h3,
-#intro #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article
-#intro h1,
-#intro #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
-#intro h2,
-#learn h1,
-#learn h2,
-#learn h3,
-#learn #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article
-#learn h1,
-#learn #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
-#learn h2,
-#tools #tools-examples article h1,
-#tools #tools-examples article h2,
-#tools #tools-examples article h3,
-#tools #tools-examples #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos
-#tools #tools-examples article h1,
-#tools #tools-examples article #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
-#tools #tools-examples article h2,
-#survivors .survivor h1,
-#survivors .survivor h2,
-#survivors .survivor h3,
-#survivors .survivor #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article
-#survivors .survivor h1,
-#survivors .survivor #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
-#survivors .survivor h2,
-#prepared h1,
-#prepared h2,
-#prepared h3,
-#prepared #learn .inner #podcast-videos article h1, #learn .inner #podcast-videos article
-#prepared h1,
-#prepared #tools .inner #all-examples #tools-nav h2, #tools .inner #all-examples #tools-nav
-#prepared h2 {
-  position: relative;
-}
-#teasers article h1 span, #teasers article h2 span, #teasers article h3 span, #teasers #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos #teasers article h1 span, #teasers article #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav #teasers article h2 span,
-#intro h1 span,
-#intro h2 span,
-#intro h3 span,
-#intro #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos article
-#intro h1 span,
-#intro #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
-#intro h2 span,
-#learn h1 span,
-#learn h2 span,
-#learn h3 span,
-#learn #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos article
-#learn h1 span,
-#learn #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
-#learn h2 span,
-#tools #tools-examples article h1 span,
-#tools #tools-examples article h2 span,
-#tools #tools-examples article h3 span,
-#tools #tools-examples #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos
-#tools #tools-examples article h1 span,
-#tools #tools-examples article #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
-#tools #tools-examples article h2 span,
-#survivors .survivor h1 span,
-#survivors .survivor h2 span,
-#survivors .survivor h3 span,
-#survivors .survivor #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos article
-#survivors .survivor h1 span,
-#survivors .survivor #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
-#survivors .survivor h2 span,
-#prepared h1 span,
-#prepared h2 span,
-#prepared h3 span,
-#prepared #learn .inner #podcast-videos article h1 span, #learn .inner #podcast-videos article
-#prepared h1 span,
-#prepared #tools .inner #all-examples #tools-nav h2 span, #tools .inner #all-examples #tools-nav
-#prepared h2 span {
-  position: relative;
-}
-#teasers article h1 span:nth-of-type(3n-3), #teasers article h2 span:nth-of-type(3n-3), #teasers article h3 span:nth-of-type(3n-3), #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos #teasers article h1 span:nth-of-type(3n-3), #teasers article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav #teasers article h2 span:nth-of-type(3n-3),
+#teasers article h1 span:nth-of-type(3n-3), #teasers article h2 span:nth-of-type(3n-3), #teasers article h3 span:nth-of-type(3n-3),
 #intro h1 span:nth-of-type(3n-3),
 #intro h2 span:nth-of-type(3n-3),
 #intro h3 span:nth-of-type(3n-3),
-#intro #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos article
-#intro h1 span:nth-of-type(3n-3),
-#intro #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
-#intro h2 span:nth-of-type(3n-3),
 #learn h1 span:nth-of-type(3n-3),
 #learn h2 span:nth-of-type(3n-3),
 #learn h3 span:nth-of-type(3n-3),
-#learn #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos article
-#learn h1 span:nth-of-type(3n-3),
-#learn #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
-#learn h2 span:nth-of-type(3n-3),
 #tools #tools-examples article h1 span:nth-of-type(3n-3),
 #tools #tools-examples article h2 span:nth-of-type(3n-3),
 #tools #tools-examples article h3 span:nth-of-type(3n-3),
-#tools #tools-examples #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos
-#tools #tools-examples article h1 span:nth-of-type(3n-3),
-#tools #tools-examples article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
-#tools #tools-examples article h2 span:nth-of-type(3n-3),
 #survivors .survivor h1 span:nth-of-type(3n-3),
 #survivors .survivor h2 span:nth-of-type(3n-3),
 #survivors .survivor h3 span:nth-of-type(3n-3),
-#survivors .survivor #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos article
-#survivors .survivor h1 span:nth-of-type(3n-3),
-#survivors .survivor #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
-#survivors .survivor h2 span:nth-of-type(3n-3),
 #prepared h1 span:nth-of-type(3n-3),
 #prepared h2 span:nth-of-type(3n-3),
-#prepared h3 span:nth-of-type(3n-3),
-#prepared #learn .inner #podcast-videos article h1 span:nth-of-type(3n-3), #learn .inner #podcast-videos article
-#prepared h1 span:nth-of-type(3n-3),
-#prepared #tools .inner #all-examples #tools-nav h2 span:nth-of-type(3n-3), #tools .inner #all-examples #tools-nav
-#prepared h2 span:nth-of-type(3n-3) {
+#prepared h3 span:nth-of-type(3n-3) {
   opacity: 0.7;
 }
-#teasers article h1 span:nth-of-type(5n-5), #teasers article h2 span:nth-of-type(5n-5), #teasers article h3 span:nth-of-type(5n-5), #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos #teasers article h1 span:nth-of-type(5n-5), #teasers article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav #teasers article h2 span:nth-of-type(5n-5),
+#teasers article h1 span:nth-of-type(5n-5), #teasers article h2 span:nth-of-type(5n-5), #teasers article h3 span:nth-of-type(5n-5),
 #intro h1 span:nth-of-type(5n-5),
 #intro h2 span:nth-of-type(5n-5),
 #intro h3 span:nth-of-type(5n-5),
-#intro #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos article
-#intro h1 span:nth-of-type(5n-5),
-#intro #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
-#intro h2 span:nth-of-type(5n-5),
 #learn h1 span:nth-of-type(5n-5),
 #learn h2 span:nth-of-type(5n-5),
 #learn h3 span:nth-of-type(5n-5),
-#learn #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos article
-#learn h1 span:nth-of-type(5n-5),
-#learn #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
-#learn h2 span:nth-of-type(5n-5),
 #tools #tools-examples article h1 span:nth-of-type(5n-5),
 #tools #tools-examples article h2 span:nth-of-type(5n-5),
 #tools #tools-examples article h3 span:nth-of-type(5n-5),
-#tools #tools-examples #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos
-#tools #tools-examples article h1 span:nth-of-type(5n-5),
-#tools #tools-examples article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
-#tools #tools-examples article h2 span:nth-of-type(5n-5),
 #survivors .survivor h1 span:nth-of-type(5n-5),
 #survivors .survivor h2 span:nth-of-type(5n-5),
 #survivors .survivor h3 span:nth-of-type(5n-5),
-#survivors .survivor #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos article
-#survivors .survivor h1 span:nth-of-type(5n-5),
-#survivors .survivor #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
-#survivors .survivor h2 span:nth-of-type(5n-5),
 #prepared h1 span:nth-of-type(5n-5),
 #prepared h2 span:nth-of-type(5n-5),
-#prepared h3 span:nth-of-type(5n-5),
-#prepared #learn .inner #podcast-videos article h1 span:nth-of-type(5n-5), #learn .inner #podcast-videos article
-#prepared h1 span:nth-of-type(5n-5),
-#prepared #tools .inner #all-examples #tools-nav h2 span:nth-of-type(5n-5), #tools .inner #all-examples #tools-nav
-#prepared h2 span:nth-of-type(5n-5) {
+#prepared h3 span:nth-of-type(5n-5) {
   opacity: 0.8;
 }
-#teasers article h1 span:nth-of-type(7n-7), #teasers article h2 span:nth-of-type(7n-7), #teasers article h3 span:nth-of-type(7n-7), #teasers #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos #teasers article h1 span:nth-of-type(7n-7), #teasers article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav #teasers article h2 span:nth-of-type(7n-7),
+#teasers article h1 span:nth-of-type(7n-7), #teasers article h2 span:nth-of-type(7n-7), #teasers article h3 span:nth-of-type(7n-7),
 #intro h1 span:nth-of-type(7n-7),
 #intro h2 span:nth-of-type(7n-7),
 #intro h3 span:nth-of-type(7n-7),
-#intro #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos article
-#intro h1 span:nth-of-type(7n-7),
-#intro #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
-#intro h2 span:nth-of-type(7n-7),
 #learn h1 span:nth-of-type(7n-7),
 #learn h2 span:nth-of-type(7n-7),
 #learn h3 span:nth-of-type(7n-7),
-#learn #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos article
-#learn h1 span:nth-of-type(7n-7),
-#learn #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
-#learn h2 span:nth-of-type(7n-7),
 #tools #tools-examples article h1 span:nth-of-type(7n-7),
 #tools #tools-examples article h2 span:nth-of-type(7n-7),
 #tools #tools-examples article h3 span:nth-of-type(7n-7),
-#tools #tools-examples #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos
-#tools #tools-examples article h1 span:nth-of-type(7n-7),
-#tools #tools-examples article #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
-#tools #tools-examples article h2 span:nth-of-type(7n-7),
 #survivors .survivor h1 span:nth-of-type(7n-7),
 #survivors .survivor h2 span:nth-of-type(7n-7),
 #survivors .survivor h3 span:nth-of-type(7n-7),
-#survivors .survivor #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos article
-#survivors .survivor h1 span:nth-of-type(7n-7),
-#survivors .survivor #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
-#survivors .survivor h2 span:nth-of-type(7n-7),
 #prepared h1 span:nth-of-type(7n-7),
 #prepared h2 span:nth-of-type(7n-7),
-#prepared h3 span:nth-of-type(7n-7),
-#prepared #learn .inner #podcast-videos article h1 span:nth-of-type(7n-7), #learn .inner #podcast-videos article
-#prepared h1 span:nth-of-type(7n-7),
-#prepared #tools .inner #all-examples #tools-nav h2 span:nth-of-type(7n-7), #tools .inner #all-examples #tools-nav
-#prepared h2 span:nth-of-type(7n-7) {
+#prepared h3 span:nth-of-type(7n-7) {
   opacity: 0.9;
 }
