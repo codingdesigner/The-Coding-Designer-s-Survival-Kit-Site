@@ -133,8 +133,8 @@
 // ✔ 7. DEFAULTS
   Set your overall site defaults. This covers mostly high level typographic items
 @import kit_partials/defaults/_defaults
-// @import partials/boilerplate/_boilerplate-setup
-// @import partials/boilerplate/_boilerplate-helpers
+// @import kit_partials/boilerplate/_boilerplate-setup
+@import kit_partials/boilerplate/_boilerplate-helpers
 // Set defaults for most HTML elements
 @import kit_partials/defaults/_elements
 
@@ -142,7 +142,7 @@
 // ✔ 8. SPRITES
   import any sprites using Compass' automatic sprite generator
 // @import kit_partials/sprites/_sprites
-// @import my_partials/sprites/_sprites
+@import my_partials/sprites/_sprites
 
 
 
@@ -154,7 +154,7 @@
 // ✔ 9. Styles just for working in the Survival Kit
   REMOVE THESE IN PRODUCTION
   These are styles designed for use by The Kit
-@import kit_partials/survival_kit/_survival-kit
+// @import kit_partials/survival_kit/_survival-kit
 
 
 // ✔ 9. CMS-specific overrides and mixins
@@ -183,7 +183,7 @@
 // ✔ 12. RESPONSIVE --------------------------------------------------
   Create layouts for a number of device-size breakpoints
 // @import kit_partials/responsive/_responsive-susy.sass
-@import kit_partials/responsive/_responsive-blueprint.sass
+// @import kit_partials/responsive/_responsive-blueprint.sass
 
 // ✔ 13. Modernizr & Browser Support -------------------------------------------
   Use modernizr (http://modernizr.com) to manage styles for less-capable devices
