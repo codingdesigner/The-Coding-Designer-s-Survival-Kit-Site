@@ -89,7 +89,7 @@ html {
   font-family: sans-serif;
 }
 
-.mono, pre, code, tt, #tools-examples article .syntaxhighlighter .gutter, #tools-examples article .syntaxhighlighter .container code, #tools-examples article .syntaxhighlighter #page code, #tools-examples article .syntaxhighlighter #intro .inner code, #intro #tools-examples article .syntaxhighlighter .inner code, #tools-examples article .syntaxhighlighter #learn .inner code, #learn #tools-examples article .syntaxhighlighter .inner code, #tools-examples article .syntaxhighlighter #tools .inner code, #tools #tools-examples article .syntaxhighlighter .inner code, #tools-examples article .syntaxhighlighter #survivors .inner code, #survivors #tools-examples article .syntaxhighlighter .inner code, #tools-examples article .syntaxhighlighter #prepared .inner code, #prepared #tools-examples article .syntaxhighlighter .inner code {
+.mono, pre, code, tt, body.markup-elements article.element .example .markup + .show-source, #tools-examples article .syntaxhighlighter .gutter, #tools-examples article .syntaxhighlighter .container code, #tools-examples article .syntaxhighlighter #page code, #tools-examples article .syntaxhighlighter #intro .inner code, #intro #tools-examples article .syntaxhighlighter .inner code, #tools-examples article .syntaxhighlighter #learn .inner code, #learn #tools-examples article .syntaxhighlighter .inner code, #tools-examples article .syntaxhighlighter #tools .inner code, #tools #tools-examples article .syntaxhighlighter .inner code, #tools-examples article .syntaxhighlighter #survivors .inner code, #survivors #tools-examples article .syntaxhighlighter .inner code, #tools-examples article .syntaxhighlighter #prepared .inner code, #prepared #tools-examples article .syntaxhighlighter .inner code {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
@@ -706,6 +706,137 @@ img.left {
 img.right {
   float: right;
   margin: 12px 0 12px 24px;
+}
+
+body.markup-elements h1.section-title {
+  font-size: 2.25em;
+  line-height: 1.524em;
+  background-color: #d3d3d3;
+  text-transform: uppercase;
+  padding-left: 12px;
+}
+body.markup-elements h1.section-title a {
+  color: black;
+}
+body.markup-elements h1.section-title a:visited {
+  color: black;
+}
+body.markup-elements h1.section-title a:hover {
+  color: #ff69b4;
+}
+body.markup-elements h1.section-title a:active {
+  color: #ff69b4;
+}
+body.markup-elements h1.section-title a {
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+body.markup-elements h1.section-title a:visited {
+  border-bottom-color: black;
+}
+body.markup-elements h1.section-title a:hover {
+  border-bottom-color: #ff69b4;
+}
+body.markup-elements h1.section-title a:active {
+  border-bottom-color: #ff69b4;
+}
+body.markup-elements article.element {
+  *zoom: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  padding-bottom: 23px;
+}
+body.markup-elements article.element:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+body.markup-elements article.element:last-child {
+  padding-bottom: 0;
+  border-bottom-width: 0;
+  margin-bottom: 0;
+}
+body.markup-elements article.element h2.element-title {
+  font-size: 1em;
+  line-height: 1.714em;
+  background-color: gray;
+  color: white;
+  text-transform: uppercase;
+  padding-left: 12px;
+}
+body.markup-elements article.element h2.element-title a {
+  color: white;
+}
+body.markup-elements article.element h2.element-title a:visited {
+  color: white;
+}
+body.markup-elements article.element h2.element-title a:hover {
+  color: #ff69b4;
+}
+body.markup-elements article.element h2.element-title a:active {
+  color: #ff69b4;
+}
+body.markup-elements article.element h2.element-title a {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+body.markup-elements article.element h2.element-title a:visited {
+  border-bottom-color: white;
+}
+body.markup-elements article.element h2.element-title a:hover {
+  border-bottom-color: #ff69b4;
+}
+body.markup-elements article.element h2.element-title a:active {
+  border-bottom-color: #ff69b4;
+}
+body.markup-elements article.element .example {
+  *zoom: 1;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+  padding-bottom: 11px;
+  *zoom: 1;
+}
+body.markup-elements article.element .example:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+body.markup-elements article.element .example:last-child {
+  padding-bottom: 0;
+  border-bottom-width: 0;
+  margin-bottom: 0;
+}
+body.markup-elements article.element .example:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+body.markup-elements article.element .example .markup {
+  display: inline;
+  float: left;
+  width: 64.228%;
+  margin-right: 2.439%;
+}
+body.markup-elements article.element .example .markup + .show-source {
+  display: inline;
+  float: right;
+  width: 30.894%;
+  margin-right: 0;
+}
+body.markup-elements article.element .example .markup + .show-source .show-hide {
+  text-align: right;
+}
+body.markup-elements article.element .example .markup + .show-source + p {
+  clear: both;
 }
 
 /* LAYOUT -------------------------------------------------------------- */
@@ -2190,4 +2321,104 @@ header#page-header h2 {
 #prepared h2 span:nth-of-type(7n-7),
 #prepared h3 span:nth-of-type(7n-7) {
   opacity: 0.9;
+}
+
+/* RESPONSIVE GRIDS -------------------------------------------------------------- */
+@media screen and (max-width: 320px) {
+  #page {
+    width: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+    *zoom: 1;
+    background-image: -webkit-gradient(linear, 0% 50%, 332 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(96.386%, rgba(100, 100, 225, 0.25)), color-stop(96.386%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 320px, rgba(0, 0, 0, 0) 320px, rgba(0, 0, 0, 0) 332px);
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 320px, rgba(0, 0, 0, 0) 320px, rgba(0, 0, 0, 0) 332px);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 320px, rgba(0, 0, 0, 0) 320px, rgba(0, 0, 0, 0) 332px);
+    background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 320px, rgba(0, 0, 0, 0) 320px, rgba(0, 0, 0, 0) 332px);
+    background-position: left top;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  #page {
+    width: 321px;
+    margin: 0 auto;
+    overflow: hidden;
+    *zoom: 1;
+    background-image: -webkit-gradient(linear, 0% 50%, 336 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(28.869%, rgba(100, 100, 225, 0.25)), color-stop(28.869%, rgba(0, 0, 0, 0)), color-stop(33.333%, rgba(0, 0, 0, 0)), color-stop(33.333%, rgba(100, 100, 225, 0.25)), color-stop(62.202%, rgba(100, 100, 225, 0.25)), color-stop(62.202%, rgba(0, 0, 0, 0)), color-stop(66.667%, rgba(0, 0, 0, 0)), color-stop(66.667%, rgba(100, 100, 225, 0.25)), color-stop(95.536%, rgba(100, 100, 225, 0.25)), color-stop(95.536%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 97px, rgba(0, 0, 0, 0) 97px, rgba(0, 0, 0, 0) 112px, rgba(100, 100, 225, 0.25) 112px, rgba(100, 100, 225, 0.25) 209px, rgba(0, 0, 0, 0) 209px, rgba(0, 0, 0, 0) 224px, rgba(100, 100, 225, 0.25) 224px, rgba(100, 100, 225, 0.25) 321px, rgba(0, 0, 0, 0) 321px, rgba(0, 0, 0, 0) 336px);
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 97px, rgba(0, 0, 0, 0) 97px, rgba(0, 0, 0, 0) 112px, rgba(100, 100, 225, 0.25) 112px, rgba(100, 100, 225, 0.25) 209px, rgba(0, 0, 0, 0) 209px, rgba(0, 0, 0, 0) 224px, rgba(100, 100, 225, 0.25) 224px, rgba(100, 100, 225, 0.25) 321px, rgba(0, 0, 0, 0) 321px, rgba(0, 0, 0, 0) 336px);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 97px, rgba(0, 0, 0, 0) 97px, rgba(0, 0, 0, 0) 112px, rgba(100, 100, 225, 0.25) 112px, rgba(100, 100, 225, 0.25) 209px, rgba(0, 0, 0, 0) 209px, rgba(0, 0, 0, 0) 224px, rgba(100, 100, 225, 0.25) 224px, rgba(100, 100, 225, 0.25) 321px, rgba(0, 0, 0, 0) 321px, rgba(0, 0, 0, 0) 336px);
+    background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 97px, rgba(0, 0, 0, 0) 97px, rgba(0, 0, 0, 0) 112px, rgba(100, 100, 225, 0.25) 112px, rgba(100, 100, 225, 0.25) 209px, rgba(0, 0, 0, 0) 209px, rgba(0, 0, 0, 0) 224px, rgba(100, 100, 225, 0.25) 224px, rgba(100, 100, 225, 0.25) 321px, rgba(0, 0, 0, 0) 321px, rgba(0, 0, 0, 0) 336px);
+    background-position: left top;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 600px) {
+  #page {
+    width: 472px;
+    margin: 0 auto;
+    overflow: hidden;
+    *zoom: 1;
+    background-image: -webkit-gradient(linear, 0% 50%, 496 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(20.161%, rgba(100, 100, 225, 0.25)), color-stop(20.161%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(100, 100, 225, 0.25)), color-stop(45.161%, rgba(100, 100, 225, 0.25)), color-stop(45.161%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(100, 100, 225, 0.25)), color-stop(70.161%, rgba(100, 100, 225, 0.25)), color-stop(70.161%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(100, 100, 225, 0.25)), color-stop(95.161%, rgba(100, 100, 225, 0.25)), color-stop(95.161%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 124px, rgba(100, 100, 225, 0.25) 124px, rgba(100, 100, 225, 0.25) 224px, rgba(0, 0, 0, 0) 224px, rgba(0, 0, 0, 0) 248px, rgba(100, 100, 225, 0.25) 248px, rgba(100, 100, 225, 0.25) 348px, rgba(0, 0, 0, 0) 348px, rgba(0, 0, 0, 0) 372px, rgba(100, 100, 225, 0.25) 372px, rgba(100, 100, 225, 0.25) 472px, rgba(0, 0, 0, 0) 472px, rgba(0, 0, 0, 0) 496px);
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 124px, rgba(100, 100, 225, 0.25) 124px, rgba(100, 100, 225, 0.25) 224px, rgba(0, 0, 0, 0) 224px, rgba(0, 0, 0, 0) 248px, rgba(100, 100, 225, 0.25) 248px, rgba(100, 100, 225, 0.25) 348px, rgba(0, 0, 0, 0) 348px, rgba(0, 0, 0, 0) 372px, rgba(100, 100, 225, 0.25) 372px, rgba(100, 100, 225, 0.25) 472px, rgba(0, 0, 0, 0) 472px, rgba(0, 0, 0, 0) 496px);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 124px, rgba(100, 100, 225, 0.25) 124px, rgba(100, 100, 225, 0.25) 224px, rgba(0, 0, 0, 0) 224px, rgba(0, 0, 0, 0) 248px, rgba(100, 100, 225, 0.25) 248px, rgba(100, 100, 225, 0.25) 348px, rgba(0, 0, 0, 0) 348px, rgba(0, 0, 0, 0) 372px, rgba(100, 100, 225, 0.25) 372px, rgba(100, 100, 225, 0.25) 472px, rgba(0, 0, 0, 0) 472px, rgba(0, 0, 0, 0) 496px);
+    background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 124px, rgba(100, 100, 225, 0.25) 124px, rgba(100, 100, 225, 0.25) 224px, rgba(0, 0, 0, 0) 224px, rgba(0, 0, 0, 0) 248px, rgba(100, 100, 225, 0.25) 248px, rgba(100, 100, 225, 0.25) 348px, rgba(0, 0, 0, 0) 348px, rgba(0, 0, 0, 0) 372px, rgba(100, 100, 225, 0.25) 372px, rgba(100, 100, 225, 0.25) 472px, rgba(0, 0, 0, 0) 472px, rgba(0, 0, 0, 0) 496px);
+    background-position: left top;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  #page {
+    width: 596px;
+    margin: 0 auto;
+    overflow: hidden;
+    *zoom: 1;
+    background-image: -webkit-gradient(linear, 0% 50%, 620 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(16.129%, rgba(100, 100, 225, 0.25)), color-stop(16.129%, rgba(0, 0, 0, 0)), color-stop(20%, rgba(0, 0, 0, 0)), color-stop(20%, rgba(100, 100, 225, 0.25)), color-stop(36.129%, rgba(100, 100, 225, 0.25)), color-stop(36.129%, rgba(0, 0, 0, 0)), color-stop(40%, rgba(0, 0, 0, 0)), color-stop(40%, rgba(100, 100, 225, 0.25)), color-stop(56.129%, rgba(100, 100, 225, 0.25)), color-stop(56.129%, rgba(0, 0, 0, 0)), color-stop(60%, rgba(0, 0, 0, 0)), color-stop(60%, rgba(100, 100, 225, 0.25)), color-stop(76.129%, rgba(100, 100, 225, 0.25)), color-stop(76.129%, rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0)), color-stop(80%, rgba(100, 100, 225, 0.25)), color-stop(96.129%, rgba(100, 100, 225, 0.25)), color-stop(96.129%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 124px, rgba(100, 100, 225, 0.25) 124px, rgba(100, 100, 225, 0.25) 224px, rgba(0, 0, 0, 0) 224px, rgba(0, 0, 0, 0) 248px, rgba(100, 100, 225, 0.25) 248px, rgba(100, 100, 225, 0.25) 348px, rgba(0, 0, 0, 0) 348px, rgba(0, 0, 0, 0) 372px, rgba(100, 100, 225, 0.25) 372px, rgba(100, 100, 225, 0.25) 472px, rgba(0, 0, 0, 0) 472px, rgba(0, 0, 0, 0) 496px, rgba(100, 100, 225, 0.25) 496px, rgba(100, 100, 225, 0.25) 596px, rgba(0, 0, 0, 0) 596px, rgba(0, 0, 0, 0) 620px);
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 124px, rgba(100, 100, 225, 0.25) 124px, rgba(100, 100, 225, 0.25) 224px, rgba(0, 0, 0, 0) 224px, rgba(0, 0, 0, 0) 248px, rgba(100, 100, 225, 0.25) 248px, rgba(100, 100, 225, 0.25) 348px, rgba(0, 0, 0, 0) 348px, rgba(0, 0, 0, 0) 372px, rgba(100, 100, 225, 0.25) 372px, rgba(100, 100, 225, 0.25) 472px, rgba(0, 0, 0, 0) 472px, rgba(0, 0, 0, 0) 496px, rgba(100, 100, 225, 0.25) 496px, rgba(100, 100, 225, 0.25) 596px, rgba(0, 0, 0, 0) 596px, rgba(0, 0, 0, 0) 620px);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 124px, rgba(100, 100, 225, 0.25) 124px, rgba(100, 100, 225, 0.25) 224px, rgba(0, 0, 0, 0) 224px, rgba(0, 0, 0, 0) 248px, rgba(100, 100, 225, 0.25) 248px, rgba(100, 100, 225, 0.25) 348px, rgba(0, 0, 0, 0) 348px, rgba(0, 0, 0, 0) 372px, rgba(100, 100, 225, 0.25) 372px, rgba(100, 100, 225, 0.25) 472px, rgba(0, 0, 0, 0) 472px, rgba(0, 0, 0, 0) 496px, rgba(100, 100, 225, 0.25) 496px, rgba(100, 100, 225, 0.25) 596px, rgba(0, 0, 0, 0) 596px, rgba(0, 0, 0, 0) 620px);
+    background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 124px, rgba(100, 100, 225, 0.25) 124px, rgba(100, 100, 225, 0.25) 224px, rgba(0, 0, 0, 0) 224px, rgba(0, 0, 0, 0) 248px, rgba(100, 100, 225, 0.25) 248px, rgba(100, 100, 225, 0.25) 348px, rgba(0, 0, 0, 0) 348px, rgba(0, 0, 0, 0) 372px, rgba(100, 100, 225, 0.25) 372px, rgba(100, 100, 225, 0.25) 472px, rgba(0, 0, 0, 0) 472px, rgba(0, 0, 0, 0) 496px, rgba(100, 100, 225, 0.25) 496px, rgba(100, 100, 225, 0.25) 596px, rgba(0, 0, 0, 0) 596px, rgba(0, 0, 0, 0) 620px);
+    background-position: left top;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 960px) {
+  #page {
+    width: 750px;
+    margin: 0 auto;
+    overflow: hidden;
+    *zoom: 1;
+    background-image: -webkit-gradient(linear, 0% 50%, 774 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(13.566%, rgba(100, 100, 225, 0.25)), color-stop(13.566%, rgba(0, 0, 0, 0)), color-stop(16.667%, rgba(0, 0, 0, 0)), color-stop(16.667%, rgba(100, 100, 225, 0.25)), color-stop(30.233%, rgba(100, 100, 225, 0.25)), color-stop(30.233%, rgba(0, 0, 0, 0)), color-stop(33.333%, rgba(0, 0, 0, 0)), color-stop(33.333%, rgba(100, 100, 225, 0.25)), color-stop(46.899%, rgba(100, 100, 225, 0.25)), color-stop(46.899%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(100, 100, 225, 0.25)), color-stop(63.566%, rgba(100, 100, 225, 0.25)), color-stop(63.566%, rgba(0, 0, 0, 0)), color-stop(66.667%, rgba(0, 0, 0, 0)), color-stop(66.667%, rgba(100, 100, 225, 0.25)), color-stop(80.233%, rgba(100, 100, 225, 0.25)), color-stop(80.233%, rgba(0, 0, 0, 0)), color-stop(83.333%, rgba(0, 0, 0, 0)), color-stop(83.333%, rgba(100, 100, 225, 0.25)), color-stop(96.899%, rgba(100, 100, 225, 0.25)), color-stop(96.899%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 105px, rgba(0, 0, 0, 0) 105px, rgba(0, 0, 0, 0) 129px, rgba(100, 100, 225, 0.25) 129px, rgba(100, 100, 225, 0.25) 234px, rgba(0, 0, 0, 0) 234px, rgba(0, 0, 0, 0) 258px, rgba(100, 100, 225, 0.25) 258px, rgba(100, 100, 225, 0.25) 363px, rgba(0, 0, 0, 0) 363px, rgba(0, 0, 0, 0) 387px, rgba(100, 100, 225, 0.25) 387px, rgba(100, 100, 225, 0.25) 492px, rgba(0, 0, 0, 0) 492px, rgba(0, 0, 0, 0) 516px, rgba(100, 100, 225, 0.25) 516px, rgba(100, 100, 225, 0.25) 621px, rgba(0, 0, 0, 0) 621px, rgba(0, 0, 0, 0) 645px, rgba(100, 100, 225, 0.25) 645px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 774px);
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 105px, rgba(0, 0, 0, 0) 105px, rgba(0, 0, 0, 0) 129px, rgba(100, 100, 225, 0.25) 129px, rgba(100, 100, 225, 0.25) 234px, rgba(0, 0, 0, 0) 234px, rgba(0, 0, 0, 0) 258px, rgba(100, 100, 225, 0.25) 258px, rgba(100, 100, 225, 0.25) 363px, rgba(0, 0, 0, 0) 363px, rgba(0, 0, 0, 0) 387px, rgba(100, 100, 225, 0.25) 387px, rgba(100, 100, 225, 0.25) 492px, rgba(0, 0, 0, 0) 492px, rgba(0, 0, 0, 0) 516px, rgba(100, 100, 225, 0.25) 516px, rgba(100, 100, 225, 0.25) 621px, rgba(0, 0, 0, 0) 621px, rgba(0, 0, 0, 0) 645px, rgba(100, 100, 225, 0.25) 645px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 774px);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 105px, rgba(0, 0, 0, 0) 105px, rgba(0, 0, 0, 0) 129px, rgba(100, 100, 225, 0.25) 129px, rgba(100, 100, 225, 0.25) 234px, rgba(0, 0, 0, 0) 234px, rgba(0, 0, 0, 0) 258px, rgba(100, 100, 225, 0.25) 258px, rgba(100, 100, 225, 0.25) 363px, rgba(0, 0, 0, 0) 363px, rgba(0, 0, 0, 0) 387px, rgba(100, 100, 225, 0.25) 387px, rgba(100, 100, 225, 0.25) 492px, rgba(0, 0, 0, 0) 492px, rgba(0, 0, 0, 0) 516px, rgba(100, 100, 225, 0.25) 516px, rgba(100, 100, 225, 0.25) 621px, rgba(0, 0, 0, 0) 621px, rgba(0, 0, 0, 0) 645px, rgba(100, 100, 225, 0.25) 645px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 774px);
+    background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 105px, rgba(0, 0, 0, 0) 105px, rgba(0, 0, 0, 0) 129px, rgba(100, 100, 225, 0.25) 129px, rgba(100, 100, 225, 0.25) 234px, rgba(0, 0, 0, 0) 234px, rgba(0, 0, 0, 0) 258px, rgba(100, 100, 225, 0.25) 258px, rgba(100, 100, 225, 0.25) 363px, rgba(0, 0, 0, 0) 363px, rgba(0, 0, 0, 0) 387px, rgba(100, 100, 225, 0.25) 387px, rgba(100, 100, 225, 0.25) 492px, rgba(0, 0, 0, 0) 492px, rgba(0, 0, 0, 0) 516px, rgba(100, 100, 225, 0.25) 516px, rgba(100, 100, 225, 0.25) 621px, rgba(0, 0, 0, 0) 621px, rgba(0, 0, 0, 0) 645px, rgba(100, 100, 225, 0.25) 645px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 774px);
+    background-position: left top;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+  #page {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    *zoom: 1;
+    background-image: -webkit-gradient(linear, 0% 50%, 984 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(14.228%, rgba(100, 100, 225, 0.25)), color-stop(14.228%, rgba(0, 0, 0, 0)), color-stop(16.667%, rgba(0, 0, 0, 0)), color-stop(16.667%, rgba(100, 100, 225, 0.25)), color-stop(30.894%, rgba(100, 100, 225, 0.25)), color-stop(30.894%, rgba(0, 0, 0, 0)), color-stop(33.333%, rgba(0, 0, 0, 0)), color-stop(33.333%, rgba(100, 100, 225, 0.25)), color-stop(47.561%, rgba(100, 100, 225, 0.25)), color-stop(47.561%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(100, 100, 225, 0.25)), color-stop(64.228%, rgba(100, 100, 225, 0.25)), color-stop(64.228%, rgba(0, 0, 0, 0)), color-stop(66.667%, rgba(0, 0, 0, 0)), color-stop(66.667%, rgba(100, 100, 225, 0.25)), color-stop(80.894%, rgba(100, 100, 225, 0.25)), color-stop(80.894%, rgba(0, 0, 0, 0)), color-stop(83.333%, rgba(0, 0, 0, 0)), color-stop(83.333%, rgba(100, 100, 225, 0.25)), color-stop(97.561%, rgba(100, 100, 225, 0.25)), color-stop(97.561%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 140px, rgba(0, 0, 0, 0) 140px, rgba(0, 0, 0, 0) 164px, rgba(100, 100, 225, 0.25) 164px, rgba(100, 100, 225, 0.25) 304px, rgba(0, 0, 0, 0) 304px, rgba(0, 0, 0, 0) 328px, rgba(100, 100, 225, 0.25) 328px, rgba(100, 100, 225, 0.25) 468px, rgba(0, 0, 0, 0) 468px, rgba(0, 0, 0, 0) 492px, rgba(100, 100, 225, 0.25) 492px, rgba(100, 100, 225, 0.25) 632px, rgba(0, 0, 0, 0) 632px, rgba(0, 0, 0, 0) 656px, rgba(100, 100, 225, 0.25) 656px, rgba(100, 100, 225, 0.25) 796px, rgba(0, 0, 0, 0) 796px, rgba(0, 0, 0, 0) 820px, rgba(100, 100, 225, 0.25) 820px, rgba(100, 100, 225, 0.25) 960px, rgba(0, 0, 0, 0) 960px, rgba(0, 0, 0, 0) 984px);
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 140px, rgba(0, 0, 0, 0) 140px, rgba(0, 0, 0, 0) 164px, rgba(100, 100, 225, 0.25) 164px, rgba(100, 100, 225, 0.25) 304px, rgba(0, 0, 0, 0) 304px, rgba(0, 0, 0, 0) 328px, rgba(100, 100, 225, 0.25) 328px, rgba(100, 100, 225, 0.25) 468px, rgba(0, 0, 0, 0) 468px, rgba(0, 0, 0, 0) 492px, rgba(100, 100, 225, 0.25) 492px, rgba(100, 100, 225, 0.25) 632px, rgba(0, 0, 0, 0) 632px, rgba(0, 0, 0, 0) 656px, rgba(100, 100, 225, 0.25) 656px, rgba(100, 100, 225, 0.25) 796px, rgba(0, 0, 0, 0) 796px, rgba(0, 0, 0, 0) 820px, rgba(100, 100, 225, 0.25) 820px, rgba(100, 100, 225, 0.25) 960px, rgba(0, 0, 0, 0) 960px, rgba(0, 0, 0, 0) 984px);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 140px, rgba(0, 0, 0, 0) 140px, rgba(0, 0, 0, 0) 164px, rgba(100, 100, 225, 0.25) 164px, rgba(100, 100, 225, 0.25) 304px, rgba(0, 0, 0, 0) 304px, rgba(0, 0, 0, 0) 328px, rgba(100, 100, 225, 0.25) 328px, rgba(100, 100, 225, 0.25) 468px, rgba(0, 0, 0, 0) 468px, rgba(0, 0, 0, 0) 492px, rgba(100, 100, 225, 0.25) 492px, rgba(100, 100, 225, 0.25) 632px, rgba(0, 0, 0, 0) 632px, rgba(0, 0, 0, 0) 656px, rgba(100, 100, 225, 0.25) 656px, rgba(100, 100, 225, 0.25) 796px, rgba(0, 0, 0, 0) 796px, rgba(0, 0, 0, 0) 820px, rgba(100, 100, 225, 0.25) 820px, rgba(100, 100, 225, 0.25) 960px, rgba(0, 0, 0, 0) 960px, rgba(0, 0, 0, 0) 984px);
+    background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 140px, rgba(0, 0, 0, 0) 140px, rgba(0, 0, 0, 0) 164px, rgba(100, 100, 225, 0.25) 164px, rgba(100, 100, 225, 0.25) 304px, rgba(0, 0, 0, 0) 304px, rgba(0, 0, 0, 0) 328px, rgba(100, 100, 225, 0.25) 328px, rgba(100, 100, 225, 0.25) 468px, rgba(0, 0, 0, 0) 468px, rgba(0, 0, 0, 0) 492px, rgba(100, 100, 225, 0.25) 492px, rgba(100, 100, 225, 0.25) 632px, rgba(0, 0, 0, 0) 632px, rgba(0, 0, 0, 0) 656px, rgba(100, 100, 225, 0.25) 656px, rgba(100, 100, 225, 0.25) 796px, rgba(0, 0, 0, 0) 796px, rgba(0, 0, 0, 0) 820px, rgba(100, 100, 225, 0.25) 820px, rgba(100, 100, 225, 0.25) 960px, rgba(0, 0, 0, 0) 960px, rgba(0, 0, 0, 0) 984px);
+    background-position: left top;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page {
+    width: 1192px;
+    margin: 0 auto;
+    overflow: hidden;
+    *zoom: 1;
+    background-image: -webkit-gradient(linear, 0% 50%, 1216 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(10.526%, rgba(100, 100, 225, 0.25)), color-stop(10.526%, rgba(0, 0, 0, 0)), color-stop(12.5%, rgba(0, 0, 0, 0)), color-stop(12.5%, rgba(100, 100, 225, 0.25)), color-stop(23.026%, rgba(100, 100, 225, 0.25)), color-stop(23.026%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(100, 100, 225, 0.25)), color-stop(35.526%, rgba(100, 100, 225, 0.25)), color-stop(35.526%, rgba(0, 0, 0, 0)), color-stop(37.5%, rgba(0, 0, 0, 0)), color-stop(37.5%, rgba(100, 100, 225, 0.25)), color-stop(48.026%, rgba(100, 100, 225, 0.25)), color-stop(48.026%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(100, 100, 225, 0.25)), color-stop(60.526%, rgba(100, 100, 225, 0.25)), color-stop(60.526%, rgba(0, 0, 0, 0)), color-stop(62.5%, rgba(0, 0, 0, 0)), color-stop(62.5%, rgba(100, 100, 225, 0.25)), color-stop(73.026%, rgba(100, 100, 225, 0.25)), color-stop(73.026%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(100, 100, 225, 0.25)), color-stop(85.526%, rgba(100, 100, 225, 0.25)), color-stop(85.526%, rgba(0, 0, 0, 0)), color-stop(87.5%, rgba(0, 0, 0, 0)), color-stop(87.5%, rgba(100, 100, 225, 0.25)), color-stop(98.026%, rgba(100, 100, 225, 0.25)), color-stop(98.026%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 128px, rgba(0, 0, 0, 0) 128px, rgba(0, 0, 0, 0) 152px, rgba(100, 100, 225, 0.25) 152px, rgba(100, 100, 225, 0.25) 280px, rgba(0, 0, 0, 0) 280px, rgba(0, 0, 0, 0) 304px, rgba(100, 100, 225, 0.25) 304px, rgba(100, 100, 225, 0.25) 432px, rgba(0, 0, 0, 0) 432px, rgba(0, 0, 0, 0) 456px, rgba(100, 100, 225, 0.25) 456px, rgba(100, 100, 225, 0.25) 584px, rgba(0, 0, 0, 0) 584px, rgba(0, 0, 0, 0) 608px, rgba(100, 100, 225, 0.25) 608px, rgba(100, 100, 225, 0.25) 736px, rgba(0, 0, 0, 0) 736px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 888px, rgba(0, 0, 0, 0) 888px, rgba(0, 0, 0, 0) 912px, rgba(100, 100, 225, 0.25) 912px, rgba(100, 100, 225, 0.25) 1040px, rgba(0, 0, 0, 0) 1040px, rgba(0, 0, 0, 0) 1064px, rgba(100, 100, 225, 0.25) 1064px, rgba(100, 100, 225, 0.25) 1192px, rgba(0, 0, 0, 0) 1192px, rgba(0, 0, 0, 0) 1216px);
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 128px, rgba(0, 0, 0, 0) 128px, rgba(0, 0, 0, 0) 152px, rgba(100, 100, 225, 0.25) 152px, rgba(100, 100, 225, 0.25) 280px, rgba(0, 0, 0, 0) 280px, rgba(0, 0, 0, 0) 304px, rgba(100, 100, 225, 0.25) 304px, rgba(100, 100, 225, 0.25) 432px, rgba(0, 0, 0, 0) 432px, rgba(0, 0, 0, 0) 456px, rgba(100, 100, 225, 0.25) 456px, rgba(100, 100, 225, 0.25) 584px, rgba(0, 0, 0, 0) 584px, rgba(0, 0, 0, 0) 608px, rgba(100, 100, 225, 0.25) 608px, rgba(100, 100, 225, 0.25) 736px, rgba(0, 0, 0, 0) 736px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 888px, rgba(0, 0, 0, 0) 888px, rgba(0, 0, 0, 0) 912px, rgba(100, 100, 225, 0.25) 912px, rgba(100, 100, 225, 0.25) 1040px, rgba(0, 0, 0, 0) 1040px, rgba(0, 0, 0, 0) 1064px, rgba(100, 100, 225, 0.25) 1064px, rgba(100, 100, 225, 0.25) 1192px, rgba(0, 0, 0, 0) 1192px, rgba(0, 0, 0, 0) 1216px);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 128px, rgba(0, 0, 0, 0) 128px, rgba(0, 0, 0, 0) 152px, rgba(100, 100, 225, 0.25) 152px, rgba(100, 100, 225, 0.25) 280px, rgba(0, 0, 0, 0) 280px, rgba(0, 0, 0, 0) 304px, rgba(100, 100, 225, 0.25) 304px, rgba(100, 100, 225, 0.25) 432px, rgba(0, 0, 0, 0) 432px, rgba(0, 0, 0, 0) 456px, rgba(100, 100, 225, 0.25) 456px, rgba(100, 100, 225, 0.25) 584px, rgba(0, 0, 0, 0) 584px, rgba(0, 0, 0, 0) 608px, rgba(100, 100, 225, 0.25) 608px, rgba(100, 100, 225, 0.25) 736px, rgba(0, 0, 0, 0) 736px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 888px, rgba(0, 0, 0, 0) 888px, rgba(0, 0, 0, 0) 912px, rgba(100, 100, 225, 0.25) 912px, rgba(100, 100, 225, 0.25) 1040px, rgba(0, 0, 0, 0) 1040px, rgba(0, 0, 0, 0) 1064px, rgba(100, 100, 225, 0.25) 1064px, rgba(100, 100, 225, 0.25) 1192px, rgba(0, 0, 0, 0) 1192px, rgba(0, 0, 0, 0) 1216px);
+    background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 128px, rgba(0, 0, 0, 0) 128px, rgba(0, 0, 0, 0) 152px, rgba(100, 100, 225, 0.25) 152px, rgba(100, 100, 225, 0.25) 280px, rgba(0, 0, 0, 0) 280px, rgba(0, 0, 0, 0) 304px, rgba(100, 100, 225, 0.25) 304px, rgba(100, 100, 225, 0.25) 432px, rgba(0, 0, 0, 0) 432px, rgba(0, 0, 0, 0) 456px, rgba(100, 100, 225, 0.25) 456px, rgba(100, 100, 225, 0.25) 584px, rgba(0, 0, 0, 0) 584px, rgba(0, 0, 0, 0) 608px, rgba(100, 100, 225, 0.25) 608px, rgba(100, 100, 225, 0.25) 736px, rgba(0, 0, 0, 0) 736px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 888px, rgba(0, 0, 0, 0) 888px, rgba(0, 0, 0, 0) 912px, rgba(100, 100, 225, 0.25) 912px, rgba(100, 100, 225, 0.25) 1040px, rgba(0, 0, 0, 0) 1040px, rgba(0, 0, 0, 0) 1064px, rgba(100, 100, 225, 0.25) 1064px, rgba(100, 100, 225, 0.25) 1192px, rgba(0, 0, 0, 0) 1192px, rgba(0, 0, 0, 0) 1216px);
+    background-position: left top;
+  }
 }
