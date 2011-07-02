@@ -762,6 +762,17 @@ $intro-width: 404px
       @media screen and (max-width: 500px)
         /* font size for most screens
         +adjust-font-size-to($ms5)
+      @media screen and (min-width: 500px)
+        /* faux left extension for most screens
+        position: relative
+        &:before
+          content: '\0020'
+          position: absolute
+          background: $green
+          top: 0
+          bottom: 0
+          width: 9999px
+          right: 100%
       @media screen and (max-width: 320px)
         /* font size for small screens
         font-size: $ms6
