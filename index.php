@@ -138,7 +138,7 @@
       <h1>Intro</h1>
       <article id="what-is-this">
         <h1>What is This?</h1>
-        <div class="body">
+        <div class="content">
           <p>When you design web sites in the browser you're left alone in the dark without any of your familiar design tools. By nature there's no application you can load up and start building your design. Well, this isn't that. However I think it's the next best thing. </p>
           <p>Instead of starting from square one every time you begin a project I think we need a collection of good starting values in markup and css to start designing, and a library of javascript tools to help us rapidly prototype as we think creatively. In the Kit you'll find HTML inspired by HTML5 Boilerplate, a system for writing highly flexible and powerful css with Sass, Compass, Susy, and other frameworks, and a bevy of javascript libraries at your disposal. </p>
         </div>
@@ -150,10 +150,14 @@
     <div class="inner">
       <h1>Learn</h1>
       <article id="walkthru" class="screencast video">
-        <h1>Please allow me to introduce myself</h1>
-        <iframe src="http://www.archive.org/embed/drupalconchi_day3_design_in_the_browser" width="640" height="480" frameborder="0" ></iframe>
-        <p>I introduced the Kit at <a href="http://chicago2011.drupal.org/sessions/design-browser-use-css-stop-lying-ourselves-and-our-clients">Drupalcon Chicago 2011</a> - Design in the Browser: Use CSS to Stop Lying to Ourselves and Our Clients (March 10, 2011). <a href="http://www.archive.org/details/drupalconchi_day3_design_in_the_browser">Archive.org</a></p>
+        <h1>Please allow me to introdice myself</h1>
+        <iframe src="http://player.vimeo.com/video/25716502?title=0&amp;byline=0&amp;portrait=0" width="640" height="480" frameborder="0"></iframe><p><a href="http://vimeo.com/25716502">The Coding Designer's Survival Kit - Introduction</a> from <a href="http://vimeo.com/user3068429">Mason Wendell</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
       </article>
+      <!-- <article id="walkthru" class="screencast video">
+              <h1>Please allow me to introduce myself</h1>
+              <iframe src="http://www.archive.org/embed/drupalconchi_day3_design_in_the_browser" width="640" height="480" frameborder="0" ></iframe>
+              <p>I introduced the Kit at <a href="http://chicago2011.drupal.org/sessions/design-browser-use-css-stop-lying-ourselves-and-our-clients">Drupalcon Chicago 2011</a> - Design in the Browser: Use CSS to Stop Lying to Ourselves and Our Clients (March 10, 2011). <a href="http://www.archive.org/details/drupalconchi_day3_design_in_the_browser">Archive.org</a></p>
+            </article> -->
       <section id="podcast-videos">
         <h2>Podcast</h2>
         <p>Coming soon: A video podcast all about using these tools to design in the browser. We'll talk about installing and configuring all the tools, and how to apply these to the creative process.</p>
