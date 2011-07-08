@@ -74,12 +74,12 @@ table {
 }
 
 /* Links -------------------------------------------------------------- */
+/* Typography -------------------------------------------------------------- */
 html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-/* The following classes are for use with @extend. */
 .serif, body {
   font-family: museo-slab-1, museo-slab-2, Georgia, serif;
 }
@@ -224,7 +224,6 @@ a:active {
 /* Headings -------------------------------------------------------------- */
 .h1, h1, .h2, h2, .h3, h3, #podcast-videos article h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #main-nav ul li, .h6, h6 {
   font-weight: normal;
-  text-transform: uppercase;
 }
 
 .h1, h1 {
@@ -410,6 +409,7 @@ tfoot {
 img {
   vertical-align: text-bottom;
   max-width: 100%;
+  height: auto;
   -ms-interpolation-mode: bicubic;
 }
 img.left {
@@ -419,6 +419,10 @@ img.left {
 img.right {
   float: right;
   margin: 12px 0 12px 24px;
+}
+
+.h1, h1, .h2, h2, .h3, h3, #podcast-videos article h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #main-nav ul li, .h6, h6 {
+  text-transform: uppercase;
 }
 
 .badges-sprite, .badges-clean-start-selected, #all-teasers nav.samples ul li#clean-start-badge a:hover, #all-teasers nav.samples ul li#clean-start-badge a.selected, .badges-clean-start, #all-teasers nav.samples ul li#clean-start-badge a, .badges-code-viewer-selected, #all-teasers nav.samples ul li#code-viewer-badge a:hover, #all-teasers nav.samples ul li#code-viewer-badge a.selected, .badges-code-viewer, #all-teasers nav.samples ul li#code-viewer-badge a, .badges-color-selected, #all-teasers nav.samples ul li#color-badge a:hover, #all-teasers nav.samples ul li#color-badge a.selected, .badges-color, #all-teasers nav.samples ul li#color-badge a, .badges-drupal-ui-patterns-selected, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a:hover, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a.selected, .badges-drupal-ui-patterns, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a, .badges-fonts-selected, #all-teasers nav.samples ul li#fonts-badge a:hover, #all-teasers nav.samples ul li#fonts-badge a.selected, .badges-fonts, #all-teasers nav.samples ul li#fonts-badge a, .badges-html5-selected, #all-teasers nav.samples ul li#html5-badge a:hover, #all-teasers nav.samples ul li#html5-badge a.selected, .badges-html5, #all-teasers nav.samples ul li#html5-badge a, .badges-jquery-plugins-selected, #all-teasers nav.samples ul li#jquery-plugins-badge a:hover, #all-teasers nav.samples ul li#jquery-plugins-badge a.selected, .badges-jquery-plugins, #all-teasers nav.samples ul li#jquery-plugins-badge a, .badges-sass-mixins-selected, #all-teasers nav.samples ul li#sass-mixins-badge a:hover, #all-teasers nav.samples ul li#sass-mixins-badge a.selected, .badges-sass-mixins, #all-teasers nav.samples ul li#sass-mixins-badge a, .badges-step-by-step-selected, #all-teasers nav.samples ul li#step-by-step-badge a:hover, #all-teasers nav.samples ul li#step-by-step-badge a.selected, .badges-step-by-step, #all-teasers nav.samples ul li#step-by-step-badge a, .badges-ui-patterns-selected, #all-teasers nav.samples ul li#ui-patterns-badge a:hover, #all-teasers nav.samples ul li#ui-patterns-badge a.selected, .badges-ui-patterns, #all-teasers nav.samples ul li#ui-patterns-badge a {
@@ -523,7 +527,7 @@ header#page-header {
   padding-top: 372px;
   padding-bottom: 248px;
   background-color: #452d1c;
-  background-image: url('images/dirt-320x320.jpg?1309589789');
+  background-image: url('images/dirt-320x320.jpg?1310052882');
   background-position: top center;
 }
 @media screen and (max-width: 320px) {
@@ -540,7 +544,7 @@ header#page-header {
 @media screen and (max-width: 500px) {
   header#page-header {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-500x500.jpg?1309589789');
+    background-image: url('images/dirt-500x500.jpg?1310052882');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -548,7 +552,7 @@ header#page-header {
 @media screen and (max-width: 900px) {
   header#page-header {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-920x776.jpg?1309589789');
+    background-image: url('images/dirt-920x776.jpg?1310052882');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -556,7 +560,7 @@ header#page-header {
 @media screen and (min-width: 901px) {
   header#page-header {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-1200x776.jpg?1309589789');
+    background-image: url('images/dirt-1200x776.jpg?1310052882');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -584,7 +588,7 @@ header#page-header:before {
   }
 }
 header#page-header .wrapper {
-  background: transparent url('images/logo.png?1309589789') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1310052882') no-repeat 0 36px;
   padding-top: 36px;
   top: -36px;
   position: relative;
@@ -898,7 +902,7 @@ header#page-header h2 {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badges/color.png?1309589789');
+  background-image: url('images/badges/color.png?1310052882');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1125,7 +1129,7 @@ header#page-header h2 {
   position: relative;
   z-index: -51;
   background-color: #452d1c;
-  background-image: url('images/dirt-320x320.jpg?1309589789');
+  background-image: url('images/dirt-320x320.jpg?1310052882');
   background-position: center -50%;
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
@@ -1142,7 +1146,7 @@ header#page-header h2 {
 @media screen and (max-width: 500px) {
   #intro {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-500x500.jpg?1309589789');
+    background-image: url('images/dirt-500x500.jpg?1310052882');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -1150,7 +1154,7 @@ header#page-header h2 {
 @media screen and (max-width: 900px) {
   #intro {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-920x776.jpg?1309589789');
+    background-image: url('images/dirt-920x776.jpg?1310052882');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -1158,7 +1162,7 @@ header#page-header h2 {
 @media screen and (min-width: 901px) {
   #intro {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-1200x776.jpg?1309589789');
+    background-image: url('images/dirt-1200x776.jpg?1310052882');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -1259,22 +1263,22 @@ header#page-header h2 {
   margin-bottom: 24px;
 }
 
-#walkthru {
+#current {
   clear: both;
   margin-left: 2.414%;
   margin-right: 2.414%;
 }
 @media screen and (max-width: 320px) {
-  #walkthru {
+  #current {
     /* resize h1 for small screens */
   }
-  #walkthru h1 {
+  #current h1 {
     font-size: 1.975em;
     line-height: 1.736em;
   }
 }
 @media screen and (min-width: 500px) {
-  #walkthru {
+  #current {
     /* set to 3 columns wide on most screens */
     display: inline;
     float: left;
@@ -1283,13 +1287,13 @@ header#page-header h2 {
     margin-left: 2.414%;
   }
 }
-#walkthru iframe {
+#current iframe {
   width: 558px;
   height: 376.65px;
   max-width: 100%;
 }
 @media screen and (max-width: 320px) {
-  #walkthru iframe {
+  #current iframe {
     /* resize iframe on small screens */
     width: 308px;
     height: auto;
@@ -1353,7 +1357,7 @@ header#page-header h2 {
   width: 46.703%;
   margin-right: 6.593%;
 }
-#podcast-videos article img {
+#podcast-videos article iframe {
   display: inline;
   float: left;
   width: 46.703%;
@@ -1363,6 +1367,9 @@ header#page-header h2 {
   margin-right: 0;
   #margin-left: -24px;
   margin: 3px 0;
+}
+#podcast-videos article p {
+  clear: both;
 }
 
 /* TOOLS */
@@ -1762,7 +1769,7 @@ header#page-header h2 {
   font-size: 1.975em;
   line-height: 1.736em;
   background-color: #452d1c;
-  background-image: url('images/dirt-320x320.jpg?1309589789');
+  background-image: url('images/dirt-320x320.jpg?1310052882');
   background-position: top center;
 }
 @media screen and (max-width: 320px) {
@@ -1775,7 +1782,7 @@ header#page-header h2 {
 @media screen and (max-width: 500px) {
   #prepared {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-500x500.jpg?1309589789');
+    background-image: url('images/dirt-500x500.jpg?1310052882');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -1783,7 +1790,7 @@ header#page-header h2 {
 @media screen and (max-width: 900px) {
   #prepared {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-920x776.jpg?1309589789');
+    background-image: url('images/dirt-920x776.jpg?1310052882');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -1791,7 +1798,7 @@ header#page-header h2 {
 @media screen and (min-width: 901px) {
   #prepared {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-1200x776.jpg?1309589789');
+    background-image: url('images/dirt-1200x776.jpg?1310052882');
     background-size: cover;
     -moz-background-size: cover;
   }

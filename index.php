@@ -149,23 +149,23 @@
   <section id="learn">
     <div class="inner">
       <h1>Learn</h1>
-      <article id="walkthru" class="screencast video">
-        <h1>Please allow me to introdice myself</h1>
-        <iframe src="http://player.vimeo.com/video/25716502?title=0&amp;byline=0&amp;portrait=0" width="640" height="480" frameborder="0"></iframe><p><a href="http://vimeo.com/25716502">The Coding Designer's Survival Kit - Introduction</a> from <a href="http://vimeo.com/user3068429">Mason Wendell</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+      <article id="current" class="screencast video">
+        <h1>Sass Variables</h1>
+        <iframe src="http://player.vimeo.com/video/26147636?title=0&amp;byline=0&amp;portrait=0" width="640" height="480" frameborder="0"></iframe><p><a href="http://vimeo.com/26147636">The Coding Designer's Survival Kit: Ep 1: Sass Variables</a> from <a href="http://vimeo.com/user3068429">Mason Wendell</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
       </article>
-      <!-- <article id="walkthru" class="screencast video">
-              <h1>Please allow me to introduce myself</h1>
-              <iframe src="http://www.archive.org/embed/drupalconchi_day3_design_in_the_browser" width="640" height="480" frameborder="0" ></iframe>
-              <p>I introduced the Kit at <a href="http://chicago2011.drupal.org/sessions/design-browser-use-css-stop-lying-ourselves-and-our-clients">Drupalcon Chicago 2011</a> - Design in the Browser: Use CSS to Stop Lying to Ourselves and Our Clients (March 10, 2011). <a href="http://www.archive.org/details/drupalconchi_day3_design_in_the_browser">Archive.org</a></p>
-            </article> -->
       <section id="podcast-videos">
         <h2>Podcast</h2>
-        <p>Coming soon: A video podcast all about using these tools to design in the browser. We'll talk about installing and configuring all the tools, and how to apply these to the creative process.</p>
-        <!-- <article class="podcast-video">
-          <h1>installing sass and compass</h1>
-          <img src="http://dummyimage.com/170x128/ccc/fff" width=170 height=128 alt="placeholder image" />
+        <!-- <p>Coming soon: A video podcast all about using these tools to design in the browser. We'll talk about installing and configuring all the tools, and how to apply these to the creative process.</p> -->
+        <article class="podcast-video">
+          <h1>Please allow me to introduce myself</h1>
+          <iframe src="http://player.vimeo.com/video/25716502?title=0&amp;byline=0&amp;portrait=0" frameborder="0"></iframe><p><a href="http://vimeo.com/25716502">The Coding Designer's Survival Kit - Introduction</a> from <a href="http://vimeo.com/user3068429">Mason Wendell</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
         </article>
         <article class="podcast-video">
+          <h1>The Kit at Drupalcon Chicago</h1>
+          <iframe src="http://www.archive.org/embed/drupalconchi_day3_design_in_the_browser" frameborder="0" ></iframe>
+          <p>I introduced the Kit at <a href="http://chicago2011.drupal.org/sessions/design-browser-use-css-stop-lying-ourselves-and-our-clients">Drupalcon Chicago 2011</a> - Design in the Browser: Use CSS to Stop Lying to Ourselves and Our Clients (March 10, 2011). <a href="http://www.archive.org/details/drupalconchi_day3_design_in_the_browser">Archive.org</a></p>
+        </article> 
+        <!-- <article class="podcast-video">
           <h1>livereload is your new best friend</h1>
           <img src="http://dummyimage.com/170x128/ccc/fff" width=170 height=128 alt="placeholder image" />
         </article>
