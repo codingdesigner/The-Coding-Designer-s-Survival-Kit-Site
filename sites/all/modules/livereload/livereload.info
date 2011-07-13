@@ -1,0 +1,10 @@
+name = LiveReload
+description = Enables and enhances use of LiveReload during development.
+core = 7.x
+
+; Information added by drupal.org packaging script on 2011-07-07
+version = "7.x-1.0"
+core = "7.x"
+project = "livereload"
+datestamp = "1310073419"
+

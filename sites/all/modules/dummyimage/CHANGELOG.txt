@@ -1,0 +1,14 @@
+CHANGELOG for Dummyimage for Drupal 7
+
+Dummyimage 7.x-1.2 (May 14, 2011)
+  New features:
+  * Issue 1147392: Support for flickholdr.com
+  * Issue 1121488 by Schnitzel: Support for lorempixum.com
+
+Dummyimage 7.x-1.1 (Apr 5, 2011)
+  Bug fixes:
+ * Issue 1102102 by cotto: There was no implementation of hook_perm.
+New features:
+ * Issue 1113458: Option for color kitten photos.
+ * The kitten admin page now speaks lolspeak. No idea how I missed the fact that it was in english before!
+

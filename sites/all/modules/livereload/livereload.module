@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_css_alter().
+ *
+ * Force CSS to be added with link tags, rather than @import.
+ */
+function livereload_css_alter(&$css) {
+  foreach ($css as $key => $value) {
+    $css[$key]['preprocess'] = FALSE;
+  }
+}

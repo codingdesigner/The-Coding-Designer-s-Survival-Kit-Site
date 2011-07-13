@@ -1,0 +1,9 @@
+name = Badge
+description = The main theme for this site. Deal with it, other themes. 
+package = The Coding Designer's Survival Kit 
+version = 1.x-dev
+core = 7.x
+base theme = survivalkit
+
+; stylesheets
+stylesheets[all][] = css/style.css
