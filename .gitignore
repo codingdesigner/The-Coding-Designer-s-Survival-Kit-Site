@@ -2,3 +2,4 @@
 /coding_designer.tmproj
 *.livereload
 .DS_Store
+sites/all/themes/badge/css/.sass-cache/
