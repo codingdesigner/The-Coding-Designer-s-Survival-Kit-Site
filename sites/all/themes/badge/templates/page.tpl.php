@@ -35,10 +35,17 @@
       <li><a href="#prepared">Be Prepared</a></li>
     </ul> -->
 </nav>
+
+<div id="page-tools">
+  <?php print render($page['highlighted']); ?>
+  <?php if ($tabs = render($tabs)): ?><div class="tabs"><?php print $tabs; ?></div><?php endif; ?>
+  <?php print render($page['help']); ?>
+  <?php if ($action_links = render($action_links)): ?><ul class="action-links"><?php print $action_links; ?></ul><?php endif; ?>
+</div>
       
-<?php if ($breadcrumb): ?>
+<?php /* if ($breadcrumb): ?>
   <nav id="breadcrumb"><?php print $breadcrumb; ?></nav>
-<?php endif; ?>
+<?php endif; */ ?>
 
 <?php print $messages; ?>
 
