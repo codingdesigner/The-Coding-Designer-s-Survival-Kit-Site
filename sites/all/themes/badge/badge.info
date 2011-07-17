@@ -7,3 +7,4 @@ base theme = survivalkit
 
 ; stylesheets
 stylesheets[all][] = css/style.css
+stylesheets[all][] = css/type/font_face.css
