@@ -16,12 +16,6 @@
     </header>
   <?php endif; ?>
 
-  <?php if (!$teaser && $display_submitted): ?>
-    <footer class="author">
-      <?php print $submitted; ?>
-    </footer>
-  <?php endif; ?>
-
   <div class="content"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
@@ -30,6 +24,12 @@
       print render($content);
     ?>
   </div>
+  
+  <?php if (!$teaser && $display_submitted): ?>
+    <footer class="author">
+      <?php print $submitted; ?>
+    </footer>
+  <?php endif; ?>
 
   <?php if ($links = render($content['links'])): ?>
     <footer class="link-wrapper">
