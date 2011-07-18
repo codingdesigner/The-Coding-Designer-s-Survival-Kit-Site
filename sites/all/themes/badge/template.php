@@ -16,3 +16,10 @@ function badge_preprocess_page(&$variables) {
 // function badge_preprocess_node(&$variables) {
   // dsm($variables);
 // }
+
+
+function badge_preprocess_media_vimeo_video(&$variables) {
+  $variables['output'] = <<<OUTPUT
+    <iframe src="http://player.vimeo.com/video/{$variables['video_id']}?title=0&amp;byline=0&amp;portrait=0" width="640" height="480" frameborder="0"></iframe>    
+OUTPUT;
+}
