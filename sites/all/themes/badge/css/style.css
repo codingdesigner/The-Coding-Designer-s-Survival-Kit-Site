@@ -93,7 +93,7 @@ html {
   letter-spacing: 0.1em;
 }
 
-.headers, .h1, h1, .h2, h2, .h3, h3, #learn .inner .view-podcast .view-content .views-row h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #learn .more-link, #main-nav ul li, .h6, h6 {
+.headers, .h1, h1, .h2, h2, .h3, h3, .not-front div[role=main] .view-display-id-page .views-row .video-content h1, #learn .inner .view-podcast .view-content .views-row h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #learn .more-link, #main-nav ul li, .h6, h6 {
   font-family: futura-pt-1, futura-pt-2, sans-serif;
 }
 
@@ -219,7 +219,7 @@ a:active {
 }
 
 /* Headings -------------------------------------------------------------- */
-.h1, h1, .h2, h2, .h3, h3, #learn .inner .view-podcast .view-content .views-row h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #learn .more-link, #main-nav ul li, .h6, h6 {
+.h1, h1, .h2, h2, .h3, h3, .not-front div[role=main] .view-display-id-page .views-row .video-content h1, #learn .inner .view-podcast .view-content .views-row h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #learn .more-link, #main-nav ul li, .h6, h6 {
   font-weight: normal;
 }
 
@@ -233,7 +233,7 @@ a:active {
   line-height: 1.157em;
 }
 
-.h3, h3, #learn .inner .view-podcast .view-content .views-row h1, #tools-nav h2 {
+.h3, h3, .not-front div[role=main] .view-display-id-page .views-row .video-content h1, #learn .inner .view-podcast .view-content .views-row h1, #tools-nav h2 {
   font-size: 2.25em;
   line-height: 1.524em;
 }
@@ -418,7 +418,7 @@ img.right {
   margin: 12px 0 12px 24px;
 }
 
-.h1, h1, .h2, h2, .h3, h3, #learn .inner .view-podcast .view-content .views-row h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #learn .more-link, #main-nav ul li, .h6, h6 {
+.h1, h1, .h2, h2, .h3, h3, .not-front div[role=main] .view-display-id-page .views-row .video-content h1, #learn .inner .view-podcast .view-content .views-row h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #learn .more-link, #main-nav ul li, .h6, h6 {
   text-transform: uppercase;
 }
 
@@ -765,12 +765,19 @@ header#page-header a:active {
 
 .not-front div[role=main] #page-title {
   color: white;
+  text-align: center;
+  clear: both;
+  margin-left: 2.414%;
+  margin-right: 2.414%;
 }
 .not-front div[role=main] .view-display-id-page .views-row {
   *zoom: 1;
-  margin-bottom: 12px;
-  padding-bottom: 12px;
-  border-bottom: none;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+  margin-bottom: 36px;
+  padding-bottom: 35px;
+  clear: both;
+  margin-left: 2.414%;
+  margin-right: 2.414%;
 }
 .not-front div[role=main] .view-display-id-page .views-row:after {
   content: "";
@@ -781,6 +788,85 @@ header#page-header a:active {
   padding-bottom: 0;
   border-bottom-width: 0;
   margin-bottom: 0;
+}
+.not-front div[role=main] .view-display-id-page .views-row .media-vimeo-outer-wrapper {
+  display: inline;
+  float: left;
+  width: 58.985%;
+  margin-right: 2.537%;
+}
+@media screen and (max-width: 768px) {
+  .not-front div[role=main] .view-display-id-page .views-row .media-vimeo-outer-wrapper {
+    float: none;
+    display: block;
+    width: auto;
+    margin-right: auto;
+  }
+}
+.not-front div[role=main] .view-display-id-page .views-row .video-content {
+  display: inline;
+  float: left;
+  width: 38.478%;
+  margin-right: 2.537%;
+  display: inline;
+  float: right;
+  margin-right: 0;
+  #margin-left: -24px;
+  width: 41.015%;
+  margin-left: -2.537%;
+  padding-left: 2.537%;
+  padding-right: 0.5em;
+  padding-bottom: 0.857em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+@media screen and (max-width: 768px) {
+  .not-front div[role=main] .view-display-id-page .views-row .video-content {
+    float: none;
+    display: block;
+    width: auto;
+    margin-right: auto;
+    margin-left: 0;
+    padding-left: 0.5em;
+  }
+}
+.not-front div[role=main] .view-display-id-page .views-row .video-content h1 {
+  margin-top: 0.429em;
+  line-height: 1;
+  border-bottom: 1px solid #9ab5cb;
+  margin-bottom: 0.429em;
+}
+.not-front div[role=main] .view-display-id-page .views-row .video-content h1 a {
+  border-bottom: none;
+}
+.not-front div[role=main] .view-display-id-page .views-row .video-content h1 a:hover {
+  border-bottom: none;
+}
+
+.not-front div[role=main] article.node {
+  clear: both;
+  margin-left: 2.414%;
+  margin-right: 2.414%;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.857em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.not-front div[role=main] article.node .field-name-field-video {
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+}
+.not-front div[role=main] article.node .field-name-field-video iframe {
+  width: 100%;
 }
 
 /* TEASERS */

@@ -181,17 +181,68 @@ header#page-header
     
 .not-front
   div[role=main]
-    // background-color: $white
-    // background-color: change-color($white, $alpha:  0.9)
     .inner
       @extend .container
     #page-title
       color: $white
+      text-align: center
+      +full
+      // +trailer
     .view-display-id-page
       .views-row
-        +vertical-separation
-    
-    
+        +vertical-separation($kit-baseline * 3, 1px, change-color($white, $alpha:  0.5), dashed)
+        +full
+        .media-vimeo-outer-wrapper
+          +columns(3, 5)
+          @media screen and (max-width: 768px)
+            // reposition for smaller screens
+            +reset-column
+        .video-content
+          +columns(2, 5)
+          +omega(5)
+          width: 38.478% + 2.537%
+          margin-left: -2.537%
+          padding-left: 2.537%
+          padding-right: 0.5em
+          +padding-trailer(0.5)
+          +box-sizing(border-box)
+          background-color: $white
+          background-color: change-color($white, $alpha:  0.9)
+          @media screen and (max-width: 768px)
+            // reposition for smaller screens
+            +reset-column
+            margin-left: 0
+            padding-left: 0.5em
+          h1
+            +leader(0.25)
+            @extend .h3
+            line-height: 1
+            border-bottom: 1px solid $alt-color
+            +trailer(0.25)
+            a
+              +remove-link-underlines
+
+.not-front
+  div[role=main]
+    article.node
+      +full
+      background-color: $white
+      background-color: change-color($white, $alpha:  0.9)
+      padding-left: 0.5em
+      padding-right: 0.5em
+      +padding-trailer(0.5)
+      +box-sizing(border-box)
+      .field-name-field-video
+        // +prefix(1,5)
+        // margin-left: -2.414%
+        // margin-right: -2.414%
+        margin-left: -0.5em
+        margin-right: -0.5em
+        iframe
+          width: 100%
+
+
+ 
         
 /* TEASERS
 /* define animations
