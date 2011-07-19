@@ -591,7 +591,7 @@ header#page-header:before {
     top: 94px;
   }
   .front header#page-header:before {
-    top: 94px;
+    top: 10px;
   }
 }
 header#page-header .wrapper {
@@ -610,6 +610,7 @@ header#page-header .wrapper {
   header#page-header .wrapper {
     /* set the width of the wrapper for smaller screeens */
     width: 320px;
+    top: -400px;
   }
 }
 header#page-header h1, header#page-header h2 {
@@ -708,6 +709,13 @@ header#page-header a:active {
 #main-nav ul li {
   padding: 0 0.5em;
   display: inline-block;
+  line-height: 1.143em;
+}
+@media screen and (max-width: 480px) {
+  #main-nav ul li {
+    font-size: 1em;
+    line-height: 1.714em;
+  }
 }
 #main-nav ul li a {
   color: #bf0000;
@@ -803,6 +811,9 @@ header#page-header a:active {
     margin-right: auto;
   }
 }
+.not-front div[role=main] .view-display-id-page .views-row .media-vimeo-outer-wrapper iframe {
+  width: 100%;
+}
 .not-front div[role=main] .view-display-id-page .views-row .video-content {
   display: inline;
   float: left;
@@ -847,10 +858,21 @@ header#page-header a:active {
   border-bottom: none;
 }
 
+@media screen and (max-width: 480px) {
+  .not-front div[role=main] h1.title {
+    font-size: 1.975em;
+    line-height: 1.736em;
+  }
+}
 .not-front div[role=main] article.node {
-  clear: both;
-  margin-left: 2.414%;
-  margin-right: 2.414%;
+  display: inline;
+  float: left;
+  width: 58.985%;
+  margin-right: 2.537%;
+  padding-left: 20.507%;
+  display: block;
+  float: none;
+  margin: 0 auto;
   background-color: white;
   background-color: rgba(255, 255, 255, 0.9);
   padding-left: 0.5em;
@@ -861,12 +883,40 @@ header#page-header a:active {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
+@media screen and (max-width: 768px) {
+  .not-front div[role=main] article.node {
+    float: none;
+    display: block;
+    width: auto;
+    margin-right: auto;
+  }
+}
 .not-front div[role=main] article.node .field-name-field-video {
   margin-left: -0.5em;
   margin-right: -0.5em;
 }
 .not-front div[role=main] article.node .field-name-field-video iframe {
   width: 100%;
+}
+.not-front div[role=main] article.node .author {
+  font-style: italic;
+  color: #4d4d4d;
+}
+.not-front div[role=main] article.node #comments {
+  border-top: 12px double #aac93b;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #e5eec3;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 1.714em;
+  padding-bottom: 1.714em;
 }
 
 /* TEASERS */
@@ -921,7 +971,7 @@ header#page-header a:active {
     /* adjust for small screens */
     width: 320px;
     max-width: 320px;
-    top: -460px;
+    top: -590px;
   }
 }
 #all-teasers nav.samples {
@@ -1018,6 +1068,11 @@ header#page-header a:active {
     left: 0px;
     width: 100px;
     height: 100px;
+    -moz-transform: scale(0.7, 0.7);
+    -webkit-transform: scale(0.7, 0.7);
+    -o-transform: scale(0.7, 0.7);
+    -ms-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7);
   }
 }
 @media screen and (max-width: 900px) {
@@ -1059,11 +1114,6 @@ header#page-header a:active {
 @media screen and (max-width: 320px) {
   #all-teasers nav.samples ul li a {
     /* shrink the badges a bit on small screens */
-    -moz-transform: scale(0.7, 0.7);
-    -webkit-transform: scale(0.7, 0.7);
-    -o-transform: scale(0.7, 0.7);
-    -ms-transform: scale(0.7, 0.7);
-    transform: scale(0.7, 0.7);
   }
 }
 @media screen and (min-width: 901px) {
