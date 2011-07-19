@@ -45,7 +45,7 @@
       // typography
       $('#teasers article h1').lettering();
       $('#intro h1').lettering();
-      $('#learn h1, #learn h2, #learn h3').lettering();
+      $('#learn h1 a, #learn h2 a, #learn h3 a').lettering();
       $('#tools #tools-examples article h1').lettering();
       $('#survivors .views-row h1').lettering();
       // $('#prepared header h1').lettering('words');
