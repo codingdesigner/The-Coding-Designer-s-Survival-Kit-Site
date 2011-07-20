@@ -93,7 +93,7 @@ html {
   letter-spacing: 0.1em;
 }
 
-.headers, .h1, h1, .h2, h2, .h3, h3, .not-front div[role=main] .view-display-id-page .views-row .video-content h1, #learn .inner .view-podcast .view-content .views-row h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #learn .more-link, #main-nav ul li, .h6, h6 {
+.headers, .h1, h1, .h2, h2, .h3, h3, .not-front div[role=main] .view-display-id-page .views-row .video-content h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, #learn .inner .view-podcast .view-content .views-row header h1, .h5, h5, #learn .more-link, #main-nav ul li, .h6, h6 {
   font-family: futura-pt-1, futura-pt-2, sans-serif;
 }
 
@@ -219,7 +219,7 @@ a:active {
 }
 
 /* Headings -------------------------------------------------------------- */
-.h1, h1, .h2, h2, .h3, h3, .not-front div[role=main] .view-display-id-page .views-row .video-content h1, #learn .inner .view-podcast .view-content .views-row h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #learn .more-link, #main-nav ul li, .h6, h6 {
+.h1, h1, .h2, h2, .h3, h3, .not-front div[role=main] .view-display-id-page .views-row .video-content h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, #learn .inner .view-podcast .view-content .views-row header h1, .h5, h5, #learn .more-link, #main-nav ul li, .h6, h6 {
   font-weight: normal;
 }
 
@@ -233,12 +233,12 @@ a:active {
   line-height: 1.157em;
 }
 
-.h3, h3, .not-front div[role=main] .view-display-id-page .views-row .video-content h1, #learn .inner .view-podcast .view-content .views-row h1, #tools-nav h2 {
+.h3, h3, .not-front div[role=main] .view-display-id-page .views-row .video-content h1, #tools-nav h2 {
   font-size: 2.25em;
   line-height: 1.524em;
 }
 
-.h4, h4, #teasers article h1, .wf-active #teasers article h1 {
+.h4, h4, #teasers article h1, .wf-active #teasers article h1, #learn .inner .view-podcast .view-content .views-row header h1 {
   font-size: 1.975em;
   line-height: 1.736em;
 }
@@ -418,7 +418,7 @@ img.right {
   margin: 12px 0 12px 24px;
 }
 
-.h1, h1, .h2, h2, .h3, h3, .not-front div[role=main] .view-display-id-page .views-row .video-content h1, #learn .inner .view-podcast .view-content .views-row h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #learn .more-link, #main-nav ul li, .h6, h6 {
+.h1, h1, .h2, h2, .h3, h3, .not-front div[role=main] .view-display-id-page .views-row .video-content h1, #tools-nav h2, .h4, h4, #teasers article h1, .wf-active #teasers article h1, #learn .inner .view-podcast .view-content .views-row header h1, .h5, h5, #learn .more-link, #main-nav ul li, .h6, h6 {
   text-transform: uppercase;
 }
 
@@ -517,7 +517,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #452d1c;
-  background-image: url('images/dirt-320x320.jpg?1310652969');
+  background-image: url('images/dirt-320x320.jpg?1310766511');
   background-position: top center;
   background-attachment: fixed;
 }
@@ -535,7 +535,7 @@ body {
 @media screen and (max-width: 500px) {
   body {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-500x500.jpg?1310652969');
+    background-image: url('images/dirt-500x500.jpg?1310766511');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -543,7 +543,7 @@ body {
 @media screen and (max-width: 900px) {
   body {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-920x776.jpg?1310652969');
+    background-image: url('images/dirt-920x776.jpg?1310766511');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -551,7 +551,7 @@ body {
 @media screen and (min-width: 901px) {
   body {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-1200x776.jpg?1310652969');
+    background-image: url('images/dirt-1200x776.jpg?1310766511');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -595,7 +595,7 @@ header#page-header:before {
   }
 }
 header#page-header .wrapper {
-  background: transparent url('images/logo.png?1310652969') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1310766511') no-repeat 0 36px;
   padding-top: 36px;
   top: -36px;
   position: relative;
@@ -1099,7 +1099,7 @@ header#page-header a:active {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badges/color.png?1310652969');
+  background-image: url('images/badges/color.png?1310766511');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1432,15 +1432,6 @@ header#page-header a:active {
   margin-left: 2.414%;
   margin-right: 2.414%;
 }
-@media screen and (max-width: 320px) {
-  #learn .inner .view-podcast .attachment {
-    /* resize h1 for small screens */
-  }
-  #learn .inner .view-podcast .attachment h1 {
-    font-size: 1.975em;
-    line-height: 1.736em;
-  }
-}
 @media screen and (min-width: 500px) {
   #learn .inner .view-podcast .attachment {
     /* set to 3 columns wide on most screens */
@@ -1458,6 +1449,20 @@ header#page-header a:active {
   float: none;
   margin-right: auto;
   margin-left: auto;
+}
+#learn .inner .view-podcast .attachment .view-content .views-row h1 {
+  display: block;
+  float: none;
+  width: auto;
+  font-size: 2.25em;
+  line-height: 1.524em;
+}
+@media screen and (max-width: 320px) {
+  #learn .inner .view-podcast .attachment .view-content .views-row h1 {
+    /* resize h1 for small screens */
+    font-size: 1.975em;
+    line-height: 1.736em;
+  }
 }
 #learn .inner .view-podcast .attachment .media-vimeo-outer-wrapper {
   width: 558px;
@@ -1503,10 +1508,6 @@ header#page-header a:active {
   border-bottom: 3px solid rgba(69, 45, 28, 0.5);
   margin-bottom: 12px;
   padding-bottom: 9px;
-  margin-left: -12px;
-  padding-left: 12px;
-  margin-right: -26px;
-  padding-right: 26px;
 }
 #learn .inner .view-podcast .view-content .views-row:after {
   content: "";
@@ -1518,12 +1519,14 @@ header#page-header a:active {
   border-bottom-width: 0;
   margin-bottom: 0;
 }
-#learn .inner .view-podcast .view-content .views-row h1 {
-  line-height: 1em;
+#learn .inner .view-podcast .view-content .views-row header {
   display: inline;
   float: left;
   width: 46.703%;
   margin-right: 6.593%;
+}
+#learn .inner .view-podcast .view-content .views-row header h1 {
+  line-height: 1em;
 }
 #learn .inner .view-podcast .view-content .views-row .content {
   display: inline;
@@ -1534,10 +1537,6 @@ header#page-header a:active {
   float: right;
   margin-right: 0;
   #margin-left: -24px;
-  margin: 3px 0;
-}
-#learn .inner .view-podcast .view-content .views-row .content p {
-  clear: both;
 }
 #learn .more-link {
   font-style: italic;

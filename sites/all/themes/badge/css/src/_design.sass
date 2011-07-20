@@ -576,11 +576,7 @@ $intro-width: 404px
         a
           +remove-link-underlines
       .attachment
-        +full      
-        @media screen and (max-width: 320px)
-          /* resize h1 for small screens
-          h1
-            +adjust-font-size-to($ms3)
+        +full
         @media screen and (min-width: 500px)
           /* set to 3 columns wide on most screens
           +columns(3)
@@ -592,6 +588,15 @@ $intro-width: 404px
           float: none
           margin-right: auto
           margin-left: auto
+          .views-row 
+            h1
+              display: block
+              float: none
+              width: auto
+              +adjust-font-size-to($ms4)
+              @media screen and (max-width: 320px)
+                /* resize h1 for small screens
+                +adjust-font-size-to($ms3)
         .media-vimeo-outer-wrapper
           width: 558px
           height: 376.65px
@@ -615,20 +620,21 @@ $intro-width: 404px
           +trailer
         .views-row
           +vertical-separation($kit-baseline, 3px, rgba($brown, 0.5), solid)
-          margin-left: -12px
-          padding-left: 12px
-          margin-right: -26px
-          padding-right: 26px
-          h1
-            @extend .h3
-            line-height: 1em
-            +columns(1,2)
+          // margin-left: -12px
+          // padding-left: 12px
+          // margin-right: -26px
+          // padding-right: 26px
+          header
+            +columns(1, 2)
+            h1
+              @extend .h4
+              line-height: 1em
           .content
-            +columns(1,2)
+            +columns(1, 2)
             +omega(2)
-            margin: 3px 0
-            p
-              clear: both
+            // margin: 3px 0
+            // p
+              // clear: both
   .more-link
     @extend h5
     font-style: italic
