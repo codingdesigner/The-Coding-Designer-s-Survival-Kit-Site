@@ -160,21 +160,19 @@ header#page-header
       &:after
         content: '>'
 
-
-#page-tools
-  position: fixed
-  bottom: 0
-  background-color: $white
-  background-color: change-color($white, $alpha:  0.9)
-  width: auto
-  padding: 0.25em
-  // text-align: center
-  z-index: 101
-  // border-bottom: 1px solid $brown
-  ul
-    margin-bottom: 0
-    margin-left: 0
-    +no-bullets
+.logged-in
+  #page-tools
+    position: fixed
+    bottom: 0
+    background-color: $white
+    background-color: change-color($white, $alpha:  0.9)
+    width: auto
+    padding: 0.25em
+    z-index: 101
+    ul
+      margin-bottom: 0
+      margin-left: 0
+      +no-bullets
     
   
   
@@ -191,7 +189,6 @@ header#page-header
       color: $white
       text-align: center
       +full
-      // +trailer
     .view-display-id-page
       .views-row
         +vertical-separation($kit-baseline * 3, 1px, change-color($white, $alpha:  0.5), dashed)
@@ -250,11 +247,7 @@ header#page-header
       padding-right: 0.5em
       +padding-trailer(0.5)
       +box-sizing(border-box)
-      
       .field-name-field-video
-        // +prefix(1,5)
-        // margin-left: -2.414%
-        // margin-right: -2.414%
         margin-left: -0.5em
         margin-right: -0.5em
         iframe
@@ -274,6 +267,23 @@ header#page-header
         +padding-trailer
 
 
+  
+
+.not-front  
+  div[role=main]
+    .inner
+      #content
+        +full
+        background-color: $white
+        background-color: change-color($white, $alpha:  0.9)
+
+
+.page-tutorials, .node-type-podcast-episode
+  div[role=main]
+    .inner
+      #content
+        background-color: transparent
+        +reset-column
  
         
 /* TEASERS
@@ -516,15 +526,19 @@ $intro-width: 404px
     +padding-leader(2)
     +padding-trailer(2)
     color: $blue-ice
+    background-color: $black
+    background-color: change-color($black, $alpha:  0.5)
     > h1
       @extend .visuallyhidden
   article
     +full
+    
     h1
       text-align: center
       color: scale-color($green, $lightness:  50%)
       +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
       +adjust-leading-to(4, $ms6)
+      display: none
     .content
       +columns(4,5)
       +prefix(0.5)
@@ -629,6 +643,8 @@ $intro-width: 404px
             margin: 3px 0
             p
               clear: both
+            .field-type-text-with-summary
+              @extend .visuallyhidden
   .more-link
     @extend h5
     font-style: italic
