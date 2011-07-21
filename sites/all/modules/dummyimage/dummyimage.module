@@ -1,0 +1,259 @@
+<?php
+
+define('DUMMYIMAGE_GENERATE_NONE', 1);
+define('DUMMYIMAGE_GENERATE_MISSING', 2);
+define('DUMMYIMAGE_GENERATE_ALL', 3);
+
+/**
+ * Implements hook_menu().
+ */
+function dummyimage_menu() {
+  $items['admin/config/development/dummyimage'] = array(
+    'title' => 'Dummy images',
+    'description' => 'Use dummy image services for image content.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('dummyimage_admin_form'),
+    'access arguments' => array('administer dummyimage'),
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function dummyimage_permission() {
+  return array(
+    'administer dummyimage' => array(
+      'title' => t('Administer dummyimage'),
+      'description' => t('Edit settings for dummy images.'),
+    ),
+  );
+}
+
+/**
+ * Admin settings form.
+ */
+function dummyimage_admin_form($form, &$form_state) {
+  $options = array(
+    DUMMYIMAGE_GENERATE_NONE => t('For no images'),
+    DUMMYIMAGE_GENERATE_MISSING => t('For missing images'),
+    DUMMYIMAGE_GENERATE_ALL => t('For all images'),
+  );
+  $form['dummyimages_generate'] = array(
+    '#type' => 'radios',
+    '#title' => t('Use dummy images'),
+    '#options' => $options,
+    '#default_value' => variable_get('dummyimages_generate', DUMMYIMAGE_GENERATE_NONE),
+  );
+  $form['dummyimage_default_dimensions'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Default dimensions'),
+    '#description' => t('Enter a dimension (preset size) in the format [width]x[height]. If the dummyimage module cannot determine a dimension to use, it will fall back to this dimension. Defaults to 300x300.'),
+    '#size' => 12,
+    '#default_value' => variable_get('dummyimage_default_dimensions', '300x300'),
+  );
+
+  $form['dummyimages_service'] = array(
+     '#type' => 'select',
+     '#title' => t('Service'),
+     '#default_value' => variable_get('dummyimages_service', 'dummyimage'),
+     '#options' => array(
+       'dummyimage' => t('Dummy Image'),
+       'placekitten' => t('Placekitten'),
+       'lorempixum' => t('Lorem Pixum'),
+       'flickholdr' => t('Flickholdr'),
+       ),
+   );
+
+  $services[] = l('Dummy image', 'http://dummyimage.com');
+  $services[] = l('Placekitten', 'http://placekitten.com');
+  $services[] = l('Lorem Pixum', 'http://lorempixum.com');
+  $services[] = l('Flickholdr', 'http://flickholdr.com');
+
+  $form['dummyimages_service'] = array(
+    '#type' => 'select',
+    '#title' => t('Service'),
+    '#description' => t('Select the service you would like to use for your dummy images. You can currently choose between these services: !services', array('!services' => theme('item_list', array('items' => $services)))),
+    '#default_value' => variable_get('dummyimages_service', 'dummyimage'),
+    '#options' => array(
+      'dummyimage' => t('Dummy Image'),
+      'placekitten' => t('Placekitten'),
+      'lorempixum' => t('Lorem Pixum'),
+      'flickholdr' => t('Flickholdr'),
+      ),
+  );
+
+  $form['dummyimage'] = array(
+     '#type' => 'fieldset',
+     '#title' => t('Dummy Image'),
+     '#tree' => FALSE,
+     '#collapsible' => TRUE,
+     '#collapsed' => TRUE,
+     '#prefix' => '<h3>' . t('Configuration') . '</h3>',
+   );
+   $form['dummyimage']['dummyimage_color'] = array(
+     '#type' => 'textfield',
+     '#title' => t('Color'),
+     '#description' => t('Enter the hex code of the color you want for the foreground. Do not include the #. Defaults to 000000.'),
+     '#size' => 12,
+     '#maxlength' => 255,
+     '#default_value' => variable_get('dummyimage_color', '000000'),
+   );
+   $form['dummyimage']['dummyimage_background'] = array(
+     '#type' => 'textfield',
+     '#title' => t('Background color'),
+     '#description' => t('Enter the hex code of the color you want for the background. Do not include the #. Defaults to CCCCCC.'),
+     '#size' => 12,
+     '#maxlength' => 255,
+     '#default_value' => variable_get('dummyimage_background', 'CCCCCC'),
+   );
+  $form['kittehs'] = array(
+     '#type' => 'fieldset',
+     '#title' => t('Kittehs'),
+     '#tree' => FALSE,
+     '#collapsible' => TRUE,
+     '#collapsed' => TRUE,
+   );
+   $form['kittehs']['dummyimage_kittens_color'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('I can haz kittehs wif color?'),
+      '#description' => t('Will use color fotos ov kittehs. Otherwize black an white will bees usd'),
+      '#default_value' => variable_get('dummyimage_kittens_color', 0),
+    );
+
+    $form['lorempixum'] = array(
+       '#type' => 'fieldset',
+       '#title' => t('Lorem Pixum'),
+       '#tree' => FALSE,
+       '#collapsible' => TRUE,
+       '#collapsed' => TRUE,
+     );
+
+    $form['lorempixum']['dummyimage_lorempixum_color'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Color Images?'),
+      '#default_value' => variable_get('dummyimage_lorempixum_color', 0),
+    );
+
+    $form['lorempixum']['dummyimages_lorempixum_category'] = array(
+      '#type' => 'select',
+      '#title' => t('Category'),
+      '#options' => array(
+        'random' => t('Random'),
+        'abstract' => t('Abstract'),
+        'food' => t('Food'),
+        'people' => t('People'),
+        'technics' => t('Technics'),
+        'animals' => t('Animals'),
+        'nightlife' => t('Nightlife'),
+        'nature' => t('Nature'),
+        'transport' => t('Transport'),
+        'city' => t('City'),
+        'fashion' => t('Fashion'),
+        'sports' => t('Sports'),
+      ),
+      '#default_value' => variable_get('dummyimages_lorempixum_category', 'random'),
+    );
+
+    $form['flickholdr'] = array(
+       '#type' => 'fieldset',
+       '#title' => t('Flickholdr'),
+       '#tree' => FALSE,
+       '#collapsible' => TRUE,
+       '#collapsed' => TRUE,
+     );
+     $form['flickholdr']['dummyimage_flickholdr_tags'] = array(
+       '#type' => 'textfield',
+       '#title' => t('Flickr tags'),
+       '#description' => t('Enter one or more tags. If you use more than one, separate them with commas.'),
+       '#size' => 40,
+       '#maxlength' => 255,
+       '#default_value' => variable_get('dummyimage_flickholdr_tags', 'tapir'),
+     );
+    $form['flickholdr']['dummyimage_flickholdr_color'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Color Images?'),
+      '#default_value' => variable_get('dummyimage_flickholdr_color', 1),
+    );
+  return system_settings_form($form);
+}
+
+
+function dummyimage_preprocess_image(&$variables) {
+  if (!isset($variables['style_name'])) {
+    return;
+  }
+  switch (variable_get('dummyimages_generate', DUMMYIMAGE_GENERATE_NONE)) {
+    case DUMMYIMAGE_GENERATE_MISSING:
+      if (is_file($variables['path'])) {
+        break;
+      }
+    case DUMMYIMAGE_GENERATE_ALL:
+      $variables['path'] = _dummyimage_get_style_url($variables['style_name']);
+      if (variable_get('dummyimages_service', 'dummyimage') == 'placekitten') {
+        $variables['path'] .= '?image=' . rand(1,16);
+      }
+      elseif (variable_get('dummyimages_service', 'dummyimage') == 'flickholdr') {
+        $variables['path'] .= '/' . rand(1, 25);
+      }
+      break;
+  }
+}
+
+function _dummyimage_get_style_url($style_name) {
+  static $dummy_url;
+  if (!isset($dummy_url[$style_name])) {
+    $style = image_style_load($style_name);
+    $size = '';
+    $width = '';
+    $height = '';
+    if (isset($style['effects'])) {
+      foreach ($style['effects'] as $effect) {
+        if (!empty($effect['data']['width'])) {
+          $width = $effect['data']['width'];
+        }
+        if (!empty($effect['data']['height'])) {
+          $height = $effect['data']['height'];
+        }
+      }
+    }
+    $size = '';
+    if (empty($width) && empty($height)) {
+      $size = variable_get('dummyimage_default_dimensions', '300x300');
+    }
+    else if (variable_get('dummyimages_service', 'dummyimage') && (empty($width) || empty($height))) {
+      $size = empty($width) ? $height . 'x' . $height : $width . 'x' . $width;
+    }
+    else {
+      // Height is optional for dummyimage.com, so make sure we never have
+      // [empty]x[height].
+      $size = empty($width) ? $height : $width . 'x' . $height;
+    }
+
+    switch (variable_get('dummyimages_service', 'dummyimage')) {
+      case 'dummyimage':
+        $color =  variable_get('dummyimage_color', '000000');
+        $background =  variable_get('dummyimage_background', 'cccccc');
+        $dummy_url[$style_name] = "http://dummyimage.com/{$size}/$background/$color.png";
+        break;
+      case 'placekitten':
+        $color = (variable_get('dummyimage_kittens_color', 0) == 1) ? '' : 'g/';
+        $size = strtr($size, 'x', '/');
+        $dummy_url[$style_name] = "http://placekitten.com/$color$size";
+        break;
+      case 'lorempixum':
+        $color = (variable_get('dummyimage_lorempixum_color', 0) == 1) ? '' : 'g/';
+        $size = strtr($size, 'x', '/');
+        $category = (variable_get('dummyimages_lorempixum_category', 'random') == 'random') ? '' : variable_get('dummyimages_lorempixum_category', 'random');
+        $dummy_url[$style_name] = "http://lorempixum.com/$color$size/$category";
+        break;
+      case 'flickholdr':
+        $color = (variable_get('dummyimage_flickholdr_color', 1) == 0) ? '/bw' : '';
+        $size = strtr($size, 'x', '/');
+        $tags = str_replace(' ', '', variable_get('dummyimage_flickholdr_tags', 'tapir'));
+        $dummy_url[$style_name] = "http://flickholdr.com/$size/$tags$color";
+        break;
+    }
+  }
+  return $dummy_url[$style_name];
+}

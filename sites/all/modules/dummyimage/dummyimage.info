@@ -1,0 +1,12 @@
+name = Dummy image
+description = Dummy image generator for imagecache presets.
+package = ImageCache
+core = 7.x
+files[] = dummyimage.module
+
+; Information added by drupal.org packaging script on 2011-05-14
+version = "7.x-1.2"
+core = "7.x"
+project = "dummyimage"
+datestamp = "1305391315"
+

@@ -1,0 +1,21 @@
+<?php
+/**
+ * @file dummyimage.install
+ * Contains install and update functions for Dummy image.
+ */
+
+/**
+ * Rename a system variable.
+ */
+function dummyimage_update_7000() {
+  // We changed the way how we select the service
+  $dummyimage_kittens = variable_get('dummyimage_kittens');
+  if (isset($dummyimage_kittens) && $dummyimage_kittens == 1) {
+    variable_set('dummyimages_service', 'placekitten');
+    variable_del('dummyimage_kittens');
+  }
+  else if (isset($dummyimage_kittens) && $dummyimage_kittens == 0) {
+    variable_set('dummyimages_service', 'dummyimage');
+    variable_del('dummyimage_kittens');
+  }
+}
