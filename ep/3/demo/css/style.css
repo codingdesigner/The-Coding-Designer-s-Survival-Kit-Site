@@ -1,0 +1,488 @@
+/* The Coding Designer's Survival Kit
+ * A framework for designing websites in the browser. 
+ *
+ * Much love to:
+ * Sass, Compass, HTML5 Boilerplate, Modernizr, Formalize, and more
+ *
+ * Available at http://thecodingdesigner.com
+ * twitter: http://twitter.com/canarymason */
+/* ------------------------------------------------------------------------------------
+ * ------------------------------------------------------------------------------------ */
+/* This CSS was authored using Sass & Compass
+ * Download the source files here: 
+ * https://github.com/canarymason/The-Coding-Designers-Survival-Kit
+ * Learn more about Sass & Compass at http://compass-style.org/   */
+/* ------------------------------------------------------------------------------------
+ * ------------------------------------------------------------------------------------ */
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Links -------------------------------------------------------------- */
+/* Typography -------------------------------------------------------------- */
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif, body {
+  font-family: Georgia, serif;
+}
+
+.sans {
+  font-family: sans-serif;
+}
+
+.mono, pre, code, tt {
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+}
+
+.caps, .allcaps, caption, .smallcaps {
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+}
+
+.headers, .h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 {
+  font-family: sans-serif;
+}
+
+.allcaps, caption {
+  text-transform: uppercase;
+}
+
+.amp {
+  font-family: Georgia, serif;
+}
+
+.smallcaps {
+  font-variant: small-caps;
+}
+
+.dquo {
+  margin-left: -0.5em;
+  font-family: Georgia, serif;
+}
+
+/* Only use the fancy ampersand in <h#> tags */
+h1 .amp, h2 .amp, h3 .amp, h4 .amp, h5 .amp, h6 .amp {
+  font-size: 1em;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+/* Establish baseline rhythm
+ * from compass/typography/_vertical_rhythm */
+body {
+  font-size: 87.5%;
+  line-height: 1.714em;
+}
+
+html > body {
+  font-size: 14px;
+}
+
+/* Body -------------------------------------------------------------- */
+body {
+  color: #1a1a1a;
+  background: #e6e6e6;
+}
+
+/* Selected Text -------------------------------------------------------------- */
+/* -moz- must be declared separately */
+::-moz-selection {
+  color: white;
+  background: #930000;
+  text-shadow: none;
+}
+
+::selection {
+  color: white;
+  background: #930000;
+  text-shadow: none;
+}
+
+/* Links -------------------------------------------------------------- */
+a {
+  color: #930000;
+}
+a:visited {
+  color: #930000;
+}
+a:hover {
+  color: #b80000;
+}
+a:active {
+  color: #b80000;
+}
+a {
+  text-decoration: none;
+  border-bottom: 1px solid #930000;
+}
+a:visited {
+  border-bottom-color: #930000;
+}
+a:hover {
+  border-bottom-color: #b80000;
+}
+a:active {
+  border-bottom-color: #b80000;
+}
+
+/* Headings -------------------------------------------------------------- */
+.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 {
+  font-weight: normal;
+}
+
+.h1, h1 {
+  font-size: 3.375em;
+  line-height: 1.524em;
+}
+
+.h2, h2 {
+  font-size: 2.963em;
+  line-height: 1.157em;
+}
+
+.h3, h3 {
+  font-size: 2.25em;
+  line-height: 1.524em;
+}
+
+.h4, h4 {
+  font-size: 1.975em;
+  line-height: 1.736em;
+}
+
+.h5, h5 {
+  font-size: 1.5em;
+  line-height: 2.286em;
+}
+
+.h6, h6 {
+  font-size: 1.317em;
+  line-height: 1.302em;
+}
+
+/* Inline -------------------------------------------------------------- */
+cite, em, dfn, address, i {
+  font-style: italic;
+}
+
+strong, dfn, b {
+  font-weight: bold;
+}
+
+sup, sub {
+  font-size: smaller;
+  line-height: 0;
+}
+
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+ins {
+  text-decoration: none;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+mark {
+  background: #b80000;
+  background-color: rgba(255, 255, 0, 0.5);
+  text-shadow: none;
+}
+
+small {
+  font-size: 0.878em;
+  line-height: 1.953em;
+}
+
+q {
+  font-style: italic;
+  quotes: "“" "”";
+}
+q:before {
+  content: open-quote;
+}
+q:after {
+  content: close-quote;
+}
+q em {
+  font-style: normal;
+}
+
+/* Block -------------------------------------------------------------- */
+p {
+  margin-bottom: 1.714em;
+}
+
+pre {
+  margin: 1.714em;
+  white-space: pre;
+}
+
+blockquote {
+  margin: 1.714em 24px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Lists -------------------------------------------------------------- */
+ol, ul, dl {
+  margin-bottom: 1.714em;
+  margin-left: 24px;
+}
+
+dl {
+  margin-left: 0;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: disc;
+}
+li ul {
+  list-style-type: circle;
+}
+
+dt {
+  margin-top: 1.714em;
+  font-style: italic;
+  color: #1a1a1a;
+}
+dt:first-of-type {
+  margin-top: 0em;
+}
+
+dd {
+  padding-left: 24px;
+}
+
+/* Tables -------------------------------------------------------------- */
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  margin-bottom: 1.714em;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table, td, th {
+  vertical-align: top;
+}
+
+th, thead th {
+  font-weight: bold;
+}
+
+th, td, caption {
+  padding: 0.857em;
+  text-align: left;
+}
+
+table, th {
+  border-bottom-style: solid;
+  border-bottom-width: 0.071em;
+  padding-bottom: 0.786em;
+  border-color: gray;
+  border-style: dotted;
+}
+
+tr.even td {
+  background-color: gray;
+}
+
+tfoot {
+  font-weight: bold;
+}
+
+/* Images -------------------------------------------------------------- */
+img {
+  vertical-align: text-bottom;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+img.left {
+  float: left;
+  margin: 12px 24px 12px 0;
+}
+img.right {
+  float: right;
+  margin: 12px 0 12px 24px;
+}
+
+/* LAYOUT -------------------------------------------------------------- */
+#page {
+  width: 95%;
+  margin: 0 auto;
+}
+#page .content {
+  width: 60.521%;
+  margin-right: 2.5%;
+  float: left;
+}
+#page aside {
+  width: 36.979%;
+  float: right;
+}
+#page footer {
+  clear: both;
+}
+
+/* SITE-WIDE DESIGN -------------------------------------------------------------- */
+h1 {
+  font-weight: bold;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.site-wide h1 {
+  color: #30829c;
+  font-size: 1.975em;
+  line-height: 1.736em;
+  text-shadow: white 1px 1px 0, rgba(0, 0, 0, 0.2) 2px 2px 2px;
+}
+
+nav {
+  background-color: white;
+  border-bottom: 1px dotted white;
+  padding-left: 9.218px;
+  margin-left: -9.218px;
+  font-size: 1.5em;
+  line-height: 2.286em;
+  -moz-border-radius-topleft: 18.436px 36.872px;
+  -webkit-border-top-left-radius: 18.436px 36.872px;
+  -o-border-top-left-radius: 18.436px 36.872px;
+  -ms-border-top-left-radius: 18.436px 36.872px;
+  -khtml-border-top-left-radius: 18.436px 36.872px;
+  border-top-left-radius: 18.436px 36.872px;
+  -moz-border-radius-bottomleft: 18.436px 36.872px;
+  -webkit-border-bottom-left-radius: 18.436px 36.872px;
+  -o-border-bottom-left-radius: 18.436px 36.872px;
+  -ms-border-bottom-left-radius: 18.436px 36.872px;
+  -khtml-border-bottom-left-radius: 18.436px 36.872px;
+  border-bottom-left-radius: 18.436px 36.872px;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(80%, #e6e6e6));
+  background-image: -webkit-linear-gradient(left, #ffffff, #e6e6e6 80%);
+  background-image: -moz-linear-gradient(left, #ffffff, #e6e6e6 80%);
+  background-image: -o-linear-gradient(left, #ffffff, #e6e6e6 80%);
+  background-image: -ms-linear-gradient(left, #ffffff, #e6e6e6 80%);
+  background-image: linear-gradient(left, #ffffff, #e6e6e6 80%);
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+nav ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+nav ul li:first-child, nav ul li.first {
+  padding-left: 0;
+}
+nav ul li:last-child {
+  padding-right: 0;
+}
+nav ul li.last {
+  padding-right: 0;
+}
+nav ul a {
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  text-transform: uppercase;
+  padding: 0 0.25em;
+}
+nav ul a {
+  text-decoration: none;
+  border-bottom: 1px solid #930000;
+}
+nav ul a:visited {
+  border-bottom-color: #930000;
+}
+nav ul a:hover {
+  border-bottom-color: #30829c;
+}
+nav ul a:active {
+  border-bottom-color: #30829c;
+}
+nav ul a:hover {
+  border-width: 4px;
+}
+
+article header {
+  margin-top: 1.714em;
+}
+article header h1 {
+  font-size: 7.594em;
+  line-height: 1.129em;
+  color: #30829c;
+}
+article .content p:first-of-type {
+  font-size: 1.317em;
+  line-height: 1.302em;
+  color: #0e272f;
+}
+
+aside h1 {
+  font-size: 21px;
+}
