@@ -23,8 +23,6 @@ function typekit_api_fontyourface_import() {
 
   $logging = variable_get('fontyourface_detailed_logging', FALSE);
 
-  fontyourface_provider_disable('typekit_api');
-
   $kits = typekit_api_get_kits();
 
   if ($logging) {
@@ -107,9 +105,15 @@ function typekit_api_preprocess_page(&$vars) {
 
     if (count($kits) > 0) {
 
+      $base = 'http://use.typekit.com/';
+
+      if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+        $base = 'https://use.typekit.com/';
+      } // if
+
       foreach (array_keys($kits) as $kit) {
 
-        drupal_add_js('http://use.typekit.com/' . $kit . '.js', array('type' => 'external'));
+        drupal_add_js($base . $kit . '.js', array('type' => 'external'));
         $variables['scripts'] = drupal_get_js();
 
       } // foreach
@@ -142,7 +146,7 @@ function typekit_api_form_alter(&$form, &$form_state, $form_id) {
       ),
       'typekit_api_save' => array(
         '#type' => 'submit',
-        '#value' => 'Update',
+        '#value' => 'Update TypeKit',
       ),
     );
 

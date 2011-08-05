@@ -1,6 +1,8 @@
-/css/.sass-cache/
-/coding_designer.tmproj
-*.livereload
-.DS_Store
-sites/all/themes/badge/css/.sass-cache/
-sites/default/files/
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
+
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
+
+.livereload
