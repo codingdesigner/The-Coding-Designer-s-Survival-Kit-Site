@@ -250,6 +250,7 @@ header#page-header
       .field-name-field-video
         margin-left: -0.5em
         margin-right: -0.5em
+        +box-shadow( rgba($white, 0.2) 0 0 30px)
         iframe
           width: 100%
       .author
@@ -655,6 +656,8 @@ $intro-width: 404px
     @extend h5
     font-style: italic
     +leader
+    clear: both
+    text-align: right
 .field-type-image
   a
     +remove-link-underlines

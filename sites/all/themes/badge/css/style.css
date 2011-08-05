@@ -517,7 +517,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #452d1c;
-  background-image: url('images/dirt-320x320.jpg?1310766511');
+  background-image: url('images/dirt-320x320.jpg?1311219001');
   background-position: top center;
   background-attachment: fixed;
 }
@@ -535,7 +535,7 @@ body {
 @media screen and (max-width: 500px) {
   body {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-500x500.jpg?1310766511');
+    background-image: url('images/dirt-500x500.jpg?1311219001');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -543,7 +543,7 @@ body {
 @media screen and (max-width: 900px) {
   body {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-920x776.jpg?1310766511');
+    background-image: url('images/dirt-920x776.jpg?1311219001');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -551,7 +551,7 @@ body {
 @media screen and (min-width: 901px) {
   body {
     /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-1200x776.jpg?1310766511');
+    background-image: url('images/dirt-1200x776.jpg?1311219000');
     background-size: cover;
     -moz-background-size: cover;
   }
@@ -595,7 +595,7 @@ header#page-header:before {
   }
 }
 header#page-header .wrapper {
-  background: transparent url('images/logo.png?1310766511') no-repeat 0 36px;
+  background: transparent url('images/logo.png?1311219001') no-repeat 0 36px;
   padding-top: 36px;
   top: -36px;
   position: relative;
@@ -894,6 +894,10 @@ header#page-header a:active {
 .not-front div[role=main] article.node .field-name-field-video {
   margin-left: -0.5em;
   margin-right: -0.5em;
+  -moz-box-shadow: rgba(255, 255, 255, 0.2) 0 0 30px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 0 30px;
+  -o-box-shadow: rgba(255, 255, 255, 0.2) 0 0 30px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0 0 30px;
 }
 .not-front div[role=main] article.node .field-name-field-video iframe {
   width: 100%;
@@ -1115,7 +1119,7 @@ header#page-header a:active {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('images/badges/color.png?1310766511');
+  background-image: url('images/badges/color.png?1311219000');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
@@ -1560,6 +1564,8 @@ header#page-header a:active {
 #learn .more-link {
   font-style: italic;
   margin-top: 1.714em;
+  clear: both;
+  text-align: right;
 }
 
 .field-type-image a {
