@@ -62,7 +62,7 @@ header#page-header
     z-index: 0
     top: 53px
     .front &
-      top: 362px
+      top: 376px
     @media screen and (max-width: 320px)
       /* move the stripe for small screens
       top: 94px
@@ -229,8 +229,10 @@ header#page-header
 .not-front
   div[role=main]
     h1.title
+      +trailer(0.5)
       @media screen and (max-width: 480px)
         +adjust-font-size-to($ms3)
+        +trailer(0)
     article.node
       // +full
       +columns(3, 5)
@@ -279,13 +281,35 @@ header#page-header
         background-color: change-color($white, $alpha:  0.9)
 
 
-.page-tutorials, .node-type-podcast-episode
+.page-tutorials, 
+.node-type-podcast-episode,
+.page-journal,
+.node-type-blog-post
   div[role=main]
     .inner
       #content
         background-color: transparent
         +reset-column
+        article
+          .content
+            a
+              +link-colors($blue, complement($blue), complement($blue), $blue-dark, false)
+              +better-links($blue, complement($blue), complement($blue), $blue-dark, false)
  
+.page-journal
+  .node-blog-post
+    header
+      background: $white
+      border-bottom: 1px solid $green
+      margin: 0 -0.5em
+      padding: 0 0.5em
+      +trailer(1)
+      h1
+        a
+          +remove-link-underlines
+    
+  
+  
         
 /* TEASERS
 /* define animations
@@ -512,12 +536,13 @@ $intro-width: 404px
       display: block
       visibility: visible
       
-      
+
+$panel-z-index: -51
      
 /* INTRODUCTION
 #intro
   position: relative
-  z-index: -51
+  z-index: $panel-z-index
   .inner
     @extend .container
     @media screen and (max-width: 320px)
@@ -558,7 +583,7 @@ $intro-width: 404px
 /* LEARN
 #learn
   position: relative
-  z-index: -52
+  z-index: $panel-z-index - 1
   border-top: 2px solid $black
   // START background pattern
   /* BACKGROUND PATTERN: http://leaverou.me/css3patterns/#carbon-fibre THANKS!
@@ -614,12 +639,12 @@ $intro-width: 404px
                 +adjust-font-size-to($ms3)
         .media-vimeo-outer-wrapper
           width: 558px
-          height: 376.65px
+          // height: 376.65px
           max-width: 100%
           @media screen and (max-width: 320px)
             /* resize iframe on small screens
             width: 308px
-            height: auto
+            // height: auto
       .view-content
         +full
         @media screen and (min-width: 500px)
@@ -652,21 +677,107 @@ $intro-width: 404px
               // clear: both
             .field-type-text-with-summary
               @extend .visuallyhidden
+.panel-pane
   .more-link
     @extend h5
     font-style: italic
-    +leader
+    +leader(2)
     clear: both
     text-align: right
+    margin-right: 2.414%
 .field-type-image
   a
     +remove-link-underlines
+
+
+/* JOURNAL
+#journal
+  position: relative
+  z-index: $panel-z-index - 2
+  border-top: 2px solid $black
+  // START background pattern
+  /* BACKGROUND PATTERN: http://leaverou.me/css3patterns/#cicada-stripes THANKS!
+  background-color: $brown
+  +background-image(linear-gradient(left, rgba($brown-dark, 0.07) 50%, rgba($black, 0) 50%), linear-gradient(left, rgba($brown-dark, 0.13) 50%, rgba($black, 0) 50%), linear-gradient(left, rgba($black, 0) 50%, rgba($brown-dark, 0.17) 50%), linear-gradient(left, rgba($black, 0) 50%, rgba($brown-dark, 0.19) 50%))
+  background-size: 13px, 29px, 37px, 53px
+  // END background pattern
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  .inner
+    @extend .container
+    +padding-leader(1)
+    +padding-trailer(2)
+    background-color: rgba($black, 0.2)
+    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+    color: $blue-ice
+    +clearfix
+    .pane-title
+      +full
+      text-align: center
+      font-weight: 300
+      margin-bottom: $kit-baseline
+      border-bottom: 1px dashed rgba($white, 0.2)
+    .view-blog
+      h1
+        a
+          +remove-link-underlines
+      .attachment
+        +full
+        @media screen and (min-width: 500px)
+          /* set to 3 columns wide on most screens
+          +columns(3)
+          +alpha
+        .view-content
+          margin-top: auto
+          display: auto
+          width: auto
+          float: none
+          margin-right: auto
+          margin-left: auto
+          .views-row 
+            h1
+              display: block
+              float: none
+              width: auto
+              +adjust-font-size-to($ms4)
+              @media screen and (max-width: 320px)
+                /* resize h1 for small screens
+                +adjust-font-size-to($ms3)        
+      .view-content
+        +full
+        @media screen and (min-width: 500px)
+          /* move these to a right column on most screens
+          +leader(1)
+          +columns(2)
+          +omega
+          clear: none
+          margin-left: 0
+        .item-list
+          ul
+            +no-bullets
+            .views-row
+              h1
+                +adjust-font-size-to($ms2)
+        > h2
+          +adjust-font-size-to($ms2)
+          text-align: right
+          +trailer
+        .views-row
+          +vertical-separation($kit-baseline, 3px, rgba($brown, 0.5), solid)
+          header
+            h1
+              @extend .h4
+              line-height: 1em
+          footer
+            ul
+              margin-left: 0
+              li.first
+                padding-left: 0
       
 
 /* TOOLS
 #tools
   position: relative
-  z-index: -53
+  z-index: $panel-z-index - 3
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   background-color: $blue-dark
   background-image: -webkit-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
@@ -761,39 +872,44 @@ $intro-width: 404px
   article
     max-width: 100%
     .example
-      border: 1px solid $blue-dark
-      +border-radius
+      // border: 1px solid $blue-dark
+      // +border-radius
       & + footer
         font-style: italic
         +adjust-font-size-to($ms1)
         opacity: 0.6
-    .syntaxhighlighter
-      white-space: nowrap
-      overflow: auto
-      th, td, caption
-        padding: 0
-        .line
-          padding: 0 0.5em
-      .toolbar
-        display: none
-      .gutter, .container
-        .line
-          height: 24px
-      .gutter
-        width: 2em
-        max-width: 3em
-        @extend .mono
-      .container
-        width: auto
-        code
-          @extend .mono
+.syntaxhighlighter
+  white-space: nowrap
+  overflow: auto
+  padding: 3px 0
+  +border-radius
+  border: 1px solid rgba($black, 0.15)
+  th, td, caption
+    padding: 0
+    .line
+      padding: 0 0.5em
+      &.alt1, &.alt2
+        background-color: rgba($black, 0) !important
+  .toolbar
+    display: none
+  .gutter, .container
+    .line
+      height: 24px
+  .gutter
+    width: 2em
+    max-width: 3em
+    @extend .mono
+  .container
+    width: auto
+    code
+      @extend .mono
           
           
           
 /* SURVIVORS
 #survivors
   position: relative
-  z-index: -54
+  z-index: $panel-z-index - 4
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
   background-color: $green
   border-bottom: 2px solid $black
@@ -872,7 +988,7 @@ $intro-width: 404px
 /* START
 #prepared
   position: relative
-  z-index: -55
+  z-index: $panel-z-index - 5
   color: $white
   +adjust-font-size-to($ms3)
   .inner
@@ -987,3 +1103,5 @@ $intro-width: 404px
         opacity: 0.9
 
 
+.feed-icon
+  @extend .visuallyhidden
