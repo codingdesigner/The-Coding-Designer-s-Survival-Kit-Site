@@ -160,7 +160,7 @@ html > body {
 
 /* Hide only visually, but have it available for screenreaders
  * www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
-.visuallyhidden, #main-nav h1, #intro .inner > h1, #learn .inner .pane-title, #learn .inner .view-podcast .view-content .views-row .content .field-type-text-with-summary, #tools-examples > h2, #prepared footer aside h2, .feed-icon {
+.visuallyhidden, #main-nav h1, #intro .inner > h1, #learn .inner .pane-title, #learn .inner .view-podcast .view-content .views-row .content .field-type-text-with-summary, #tools-examples > h2, #prepared footer aside h2 {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
@@ -1488,6 +1488,11 @@ header#page-header a:active {
   -o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4), 0px 8px 8px rgba(0, 0, 0, 0.2);
 }
+#learn div.feed-icon {
+  position: absolute;
+  top: 20px;
+  left: 54%;
+}
 #learn .inner {
   padding-top: 1.714em;
   padding-bottom: 3.429em;
@@ -2386,4 +2391,25 @@ header#page-header a:active {
 #prepared h2 span:nth-of-type(7n-7),
 #prepared h3 span:nth-of-type(7n-7) {
   opacity: 0.9;
+}
+
+.feed-icon a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('images/rss.png?1316581430');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 37px;
+  height: 37px;
+  display: block;
+}
+.feed-icon a {
+  border-bottom: none;
+}
+.feed-icon a:hover {
+  border-bottom: none;
+}
+.feed-icon a img {
+  display: none;
 }

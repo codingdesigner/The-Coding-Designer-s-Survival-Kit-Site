@@ -596,6 +596,10 @@ $panel-z-index: -51
   background-size: 16px 16px
   // END background pattern
   +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  div.feed-icon
+    position: absolute
+    top: 20px
+    left: 54%
   .inner
     @extend .container
     +padding-leader(1)
@@ -1104,4 +1108,10 @@ $panel-z-index: -51
 
 
 .feed-icon
-  @extend .visuallyhidden
+  // @extend .visuallyhidden
+  a
+    +remove-link-underlines
+    +replace-text-with-dimensions('rss.png')
+    display: block
+    img
+      display: none

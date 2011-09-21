@@ -7,3 +7,5 @@ sites/*/private
 
 .livereload
 .sass-cache
+.scssc
+*.scssc
