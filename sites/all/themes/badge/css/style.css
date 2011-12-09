@@ -517,35 +517,15 @@ body {
   width: 100%;
   height: 100%;
   background-color: #452d1c;
-  background-image: url('images/dirt-320x320.jpg?1311219001');
+  background-image: url('images/dirt-920x776.jpg?1311219001');
   background-position: top center;
   background-attachment: fixed;
 }
 @media screen and (max-width: 320px) {
   body {
-    /* set different backgrounds depending on the device width */
-    background-size: cover;
-    -moz-background-size: cover;
-    /* different padding < 320 */
     padding-top: 92px;
     padding-bottom: 600px;
     padding-bottom: 500px;
-  }
-}
-@media screen and (max-width: 500px) {
-  body {
-    /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-500x500.jpg?1311219001');
-    background-size: cover;
-    -moz-background-size: cover;
-  }
-}
-@media screen and (max-width: 900px) {
-  body {
-    /* set different backgrounds depending on the device width */
-    background-image: url('images/dirt-920x776.jpg?1311219001');
-    background-size: cover;
-    -moz-background-size: cover;
   }
 }
 @media screen and (min-width: 901px) {

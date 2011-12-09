@@ -7,45 +7,46 @@ html
   height: 100%
 body
   width: 100%
-  height: 100% 
+  height: 100%
   background:
     color: $brown
-    image: image_url('dirt-320x320.jpg')
+    // image: image_url('dirt-320x320.jpg')
+    image: image_url('dirt-920x776.jpg')
     position: top center
     attachment: fixed
   @media screen and (max-width: 320px)
-    /* set different backgrounds depending on the device width
-    background-size: cover
-    -moz-background-size: cover
-    /* different padding < 320
+    //   /* set different backgrounds depending on the device width
+    //   background-size: cover
+    //   -moz-background-size: cover
+    //   /* different padding < 320
     padding-top: 92px
     padding-bottom: 600px
     padding-bottom: 500px
-  @media screen and (max-width: 500px)
-    /* set different backgrounds depending on the device width
-    background-image: image_url('dirt-500x500.jpg')
-    background-size: cover
-    -moz-background-size: cover
-  @media screen and (max-width: 900px)
-    /* set different backgrounds depending on the device width
-    background-image: image_url('dirt-920x776.jpg')
-    background-size: cover
-    -moz-background-size: cover
+  // @media screen and (max-width: 500px)
+  //   /* set different backgrounds depending on the device width
+  //   background-image: image_url('dirt-500x500.jpg')
+  //   background-size: cover
+  //   -moz-background-size: cover
+  // @media screen and (max-width: 900px)
+  //   /* set different backgrounds depending on the device width
+  //   background-image: image_url('dirt-920x776.jpg')
+  //   background-size: cover
+  //   -moz-background-size: cover
   @media screen and (min-width: 901px)
     /* set different backgrounds depending on the device width
     background-image: image_url('dirt-1200x776.jpg')
     background-size: cover
     -moz-background-size: cover
-  
-  
-  
-/* PAGE HEADER    
+
+
+
+/* PAGE HEADER
 header#page-header
   position: relative
   padding-top: $kit-baseline * 2
   .front &
     padding-top: 372px
-    padding-bottom: 248px  
+    padding-bottom: 248px
   &:before
     /* add the little background stripe behind the logo
     content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈"
@@ -123,11 +124,11 @@ header#page-header
       top: -$kit-baseline-half
       @media screen and (max-width: 320px)
         /* adjust for small screens and active web fonts
-        font-size: $ms6 
+        font-size: $ms6
   a
     +link-colors($alt-color, $white, $white, $alt-color, false)
-        
-        
+
+
 /* MASTER NAVIGATION
 #main-nav
   position: fixed
@@ -173,14 +174,14 @@ header#page-header
       margin-bottom: 0
       margin-left: 0
       +no-bullets
-    
-  
-  
+
+
+
 #block-system-main
   .panel-panel
     position: relative
     z-index: 98
-    
+
 .not-front
   div[role=main]
     .inner
@@ -224,7 +225,7 @@ header#page-header
             +trailer(0.25)
             a
               +remove-link-underlines
-            
+
 
 .not-front
   div[role=main]
@@ -270,9 +271,9 @@ header#page-header
         +padding-trailer
 
 
-  
 
-.not-front  
+
+.not-front
   div[role=main]
     .inner
       #content
@@ -281,7 +282,7 @@ header#page-header
         background-color: change-color($white, $alpha:  0.9)
 
 
-.page-tutorials, 
+.page-tutorials,
 .node-type-podcast-episode,
 .page-journal,
 .node-type-blog-post
@@ -295,7 +296,7 @@ header#page-header
             a
               +link-colors($blue, complement($blue), complement($blue), $blue-dark, false)
               +better-links($blue, complement($blue), complement($blue), $blue-dark, false)
- 
+
 .page-journal
   .node-blog-post
     header
@@ -307,10 +308,10 @@ header#page-header
       h1
         a
           +remove-link-underlines
-    
-  
-  
-        
+
+
+
+
 /* TEASERS
 /* define animations
 @-webkit-keyframes spin
@@ -318,14 +319,14 @@ header#page-header
     +transform2d(rotate(0deg))
   100%
     +transform2d(rotate(360deg))
-      
+
 @-webkit-keyframes spin-back
   0%
     +transform2d(rotate(0deg))
   100%
     +transform2d(rotate(-360deg))
 
-// badge variables    
+// badge variables
 $badge-size: 115px
 $badge-size-neg-half: -$badge-size * 0.5
 $badge-total: 9
@@ -365,7 +366,7 @@ $intro-width: 404px
       @extend .hidden
     ul
       margin: 0 0 0 0
-      +no-bullets      
+      +no-bullets
       position: absolute
       // badges
       $badge-size: 115px
@@ -388,7 +389,7 @@ $intro-width: 404px
         left: 0
         width: 115px
         height: 115px
-        z-index: 4        
+        z-index: 4
         +border-radius($ms9)
         +background-clip(padding-box)
         +transition(all 0.5s)
@@ -443,8 +444,8 @@ $intro-width: 404px
             // @debug $radius * $cos + px
             $sin: sin($position * (pi() / 180))
             $y-position: $radius * $sin + px
-            &        
-              &:nth-of-type(#{$i}n-#{$i})      
+            &
+              &:nth-of-type(#{$i}n-#{$i})
                 top: $y-position
                 left: $x-position
       @media screen and (min-width: 901px)
@@ -465,8 +466,8 @@ $intro-width: 404px
               $x-position: $radius * $cos + px
               $sin: sin($position * (pi() / 180))
               $y-position: $radius * $sin + px
-              &        
-                &:nth-of-type(#{$i}n-#{$i})      
+              &
+                &:nth-of-type(#{$i}n-#{$i})
                   top: $y-position
                   left: $x-position
 #teasers
@@ -535,10 +536,10 @@ $intro-width: 404px
     &:target, &.selected
       display: block
       visibility: visible
-      
+
 
 $panel-z-index: -51
-     
+
 /* INTRODUCTION
 #intro
   position: relative
@@ -558,7 +559,7 @@ $panel-z-index: -51
       @extend .visuallyhidden
   article
     +full
-    
+
     h1
       text-align: center
       color: scale-color($green, $lightness:  50%)
@@ -632,7 +633,7 @@ $panel-z-index: -51
           float: none
           margin-right: auto
           margin-left: auto
-          .views-row 
+          .views-row
             h1
               display: block
               float: none
@@ -737,7 +738,7 @@ $panel-z-index: -51
           float: none
           margin-right: auto
           margin-left: auto
-          .views-row 
+          .views-row
             h1
               display: block
               float: none
@@ -745,7 +746,7 @@ $panel-z-index: -51
               +adjust-font-size-to($ms4)
               @media screen and (max-width: 320px)
                 /* resize h1 for small screens
-                +adjust-font-size-to($ms3)        
+                +adjust-font-size-to($ms3)
       .view-content
         +full
         @media screen and (min-width: 500px)
@@ -776,7 +777,7 @@ $panel-z-index: -51
               margin-left: 0
               li.first
                 padding-left: 0
-      
+
 
 /* TOOLS
 #tools
@@ -907,9 +908,9 @@ $panel-z-index: -51
     width: auto
     code
       @extend .mono
-          
-          
-          
+
+
+
 /* SURVIVORS
 #survivors
   position: relative
@@ -986,9 +987,9 @@ $panel-z-index: -51
           +transform-origin(top, left)
     &:last-child
       padding-bottom: 6px
-          
 
- 
+
+
 /* START
 #prepared
   position: relative
@@ -1041,7 +1042,7 @@ $panel-z-index: -51
           +transform-origin(50%, 50%)
           margin-right: 0
           text-align: center
-          padding: 6px 28px 
+          padding: 6px 28px
           +text-shadow(-2px 2px 2px rgba($black, 0.2), -8px 5px 8px rgba($black, 0.1))
       .word2
         @media screen and (min-width: 500px)
@@ -1084,11 +1085,11 @@ $panel-z-index: -51
         @extend .visuallyhidden
       ul
         +inline-list
-        
-        
- 
+
+
+
 // random letter opacity
-#teasers article, 
+#teasers article,
 #intro,
 #learn,
 #tools #tools-examples article,
