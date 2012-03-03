@@ -1,0 +1,101 @@
+// Create the design for your site below
+/* SITE-WIDE DESIGN --------------------------------------------------------------
+ 
+ 
+h1
+  font-weight: bold
+  font-family: $font-serifs
+  font-style: italic
+ 
+.site-wide
+  h1 
+    color: $blue
+    +adjust-font-size-to($ms3)
+    +text-shadow($white 1px 1px 0, rgba($black, 0.2) 2px 2px 2px)
+ 
+ 
+   
+nav
+  background-color: $white
+  border-bottom: 1px dotted $white
+  padding-left: $ms1 * 0.5
+  margin-left: -$ms1 * 0.5
+  +adjust-font-size-to($ms2)
+  +border-left-radius($ms1 ($ms1 * 2))
+  +background-image(linear-gradient(left, $white, $lightgray 80%))
+  ul
+    +horizontal-list(0.25em)
+    a
+      font-family: $font-mono
+      text-transform: uppercase
+      padding: 0 0.25em
+      +better-links($alt-color, $blue, $blue, $alt-color, false)
+      &:hover
+        border-width: 4px
+     
+aside
+  h1
+    font-size: $ms2
+    
+    
+
+article 
+  height: 220px
+  width: 100%
+  position: relative
+  background-color: $lightgray
+  +perspective(800)
+  z-index: 10
+  @for $i from 1 through 4
+    &:nth-of-type(#{$i}n+#{$i})
+      header
+        background-color: lighten($blue-dark, ($i * 3))
+    &:nth-of-type(#{$i}n+#{$i})
+      .body
+        background-color: darken($lightgray, ($i * 5))
+  header, .body
+    height: 100%
+    width: 100%
+    +backface-visibility
+    +transform-style(preserve-3d)
+    +transition-property(all)
+    +transition-duration(.4s)
+    +transition-timing-function(ease-in)
+  header 
+    background-color: $blue
+    position: relative
+    +transform3d( rotateX(0deg) )
+    z-index: 2
+    h1
+      +adjust-font-size-to($ms9)
+      color: $blue
+      +text-shadow(rgba($black, 0.4) 1px 1px 0)
+      padding: 0 0.25em
+  .body  
+    position: absolute
+    top: 0
+    +transform3d( rotateX(180deg) )
+    z-index: 1
+    figure
+      float: left
+      margin: 0 24px 0 0 
+      overflow: hidden
+      height: 100%
+    p:first-of-type
+      color: $blue-dark
+    .text
+      +column-count(3)
+      +column-rule(1px, solid, $lightgray)
+  &:hover
+    z-index: 20
+    header
+      +transform3d( rotateX(-180deg) )
+    .body
+      +transform3d( rotateX(0deg) )
+      z-index: 3
+
+
+
+
+
+

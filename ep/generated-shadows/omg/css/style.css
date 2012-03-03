@@ -1,0 +1,57 @@
+/* The Coding Designer's Survival Kit
+ * A framework for designing websites in the browser. 
+ *
+ * Much love to:
+ * Sass, Compass, HTML5 Boilerplate, Modernizr, Formalize, and more
+ *
+ * Available at http://thecodingdesigner.com
+ * twitter: http://twitter.com/canarymason */
+/* ------------------------------------------------------------------------------------
+ * ------------------------------------------------------------------------------------ */
+/* This CSS was authored using Sass & Compass
+ * Download the source files here: 
+ * https://github.com/canarymason/The-Coding-Designers-Survival-Kit
+ * Learn more about Sass & Compass at http://compass-style.org/   */
+/* Links -------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------
+ * ------------------------------------------------------------------------------------ */
+/* CSS RESET */
+/* SITE-WIDE DESIGN -------------------------------------------------------------- */
+
+body {
+  color: #999;
+}
+
+a {
+  color: #6a5acd;
+}
+a:visited {
+  color: #6a5acd;
+}
+a:hover {
+  color: #bdcd5a;
+}
+a:active {
+  color: #bdcd5a;
+}
+
+#main {
+  margin-top: 200px;
+}
+
+
+h1 {
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  color: #d3d3d3;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 50px;
+  letter-spacing: 84px;
+  line-height: 105px;
+  /*  @include text-shadow(rgba($red, 0.5) 1px 1px 2px)*/
+  /*  @include text-shadow(wtf());*/
+  text-shadow: rgba(255, 0, 0, 0.04) 38.743px 9.948px 2px, rgba(255, 0, 0, 0.08) 35.052px 19.27px 2px, rgba(255, 0, 0, 0.12) 29.159px 27.382px 2px, rgba(255, 0, 0, 0.16) 21.433px 33.773px 2px, rgba(255, 0, 0, 0.2) 12.361px 38.042px 2px, rgba(255, 0, 0, 0.24) 2.512px 39.921px 2px, rgba(255, 0, 0, 0.28) -7.495px 39.291px 2px, rgba(255, 0, 0, 0.32) -17.031px 36.193px 2px, rgba(255, 0, 0, 0.36) -25.497px 30.821px 2px, rgba(255, 0, 0, 0.4) -32.361px 23.511px 2px, rgba(255, 0, 0, 0.44) -37.191px 14.725px 2px, rgba(255, 0, 0, 0.48) -39.685px 5.013px 2px, rgba(255, 0, 0, 0.52) -39.685px -5.013px 2px, rgba(255, 0, 0, 0.56) -37.191px -14.725px 2px, rgba(255, 0, 0, 0.6) -32.361px -23.511px 2px, rgba(255, 0, 0, 0.64) -25.497px -30.821px 2px, rgba(255, 0, 0, 0.68) -17.031px -36.193px 2px, rgba(255, 0, 0, 0.72) -7.495px -39.291px 2px, rgba(255, 0, 0, 0.76) 2.512px -39.921px 2px, rgba(255, 0, 0, 0.8) 12.361px -38.042px 2px, rgba(255, 0, 0, 0.84) 21.433px -33.773px 2px, rgba(255, 0, 0, 0.88) 29.159px -27.382px 2px, rgba(255, 0, 0, 0.92) 35.052px -19.27px 2px, rgba(255, 0, 0, 0.96) 38.743px -9.948px 2px, red 40px 0.0px 2px;
+  /*  @include box-shadow(lmao());*/
+  /*  @include text-shadow(omgwtf());*/
+  /*  @include text-shadow(lmao());*/
+}
