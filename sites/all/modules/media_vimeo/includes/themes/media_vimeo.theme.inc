@@ -20,51 +20,40 @@ function media_vimeo_preprocess_media_vimeo_video(&$variables) {
   $variables['height'] = isset($variables['height']) ? $variables['height'] : media_vimeo_variable_get('height');
   $variables['autoplay'] = isset($variables['autoplay']) ? $variables['autoplay'] : media_vimeo_variable_get('autoplay');
   $variables['fullscreen'] = isset($variables['fullscreen']) ? $variables['fullscreen'] : media_vimeo_variable_get('fullscreen');
-  $variables['autoplay'] = $variables['autoplay'] ? 1 : 1;
+  $variables['autoplay'] = $variables['autoplay'] ? 1 : 0;
   $variables['fullscreen'] = $variables['fullscreen'] ? 'true' : 'false';
 
   $variables['wrapper_id'] = 'media_vimeo_' . $variables['video_id'] . '_' . $variables['id'];
-  
+
   // For users with JavaScript, these object and embed tags will be replaced
   // by an iframe, so that we can support users without Flash.
-  $variables['output'] = '<object width="' . $variables['width'] . '" height="' . $variables['height'] . '">';
-  $variables['output'] .= '<param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=' . $variables['video_id'] . '&autoplay=' . $variables['autoplay'] . '"></param>';
-  $variables['output'] .= '<param name="allowFullScreen" value="' . $variables['fullscreen'] . '"></param>';
-  $variables['output'] .= '<param name="wmode" value="transparent" />';
-  $variables['output'] .= '<embed src="http://vimeo.com/moogaloop.swf?clip_id=' . $variables['video_id'] .'" type="application/x-shockwave-flash" width="' . $variables['width'] . '" height="' . $variables['height'] . '" allowfullscreen="' . $variables['fullscreen'] . '"></embed>';
-  $variables['output'] .= '</object>';
-
   $variables['output'] = <<<OUTPUT
     <object width="{$variables['width']}" height="{$variables['height']}">
-      <param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id={$variables['video_id']}"></param>
+      <param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id={$variables['video_id']}">
       <param name="allowFullScreen" value="{$variables['fullscreen']}"></param>
       <param name="wmode" value="transparent" />
       <embed src="http://vimeo.com/moogaloop.swf?clip_id={$variables['video_id']}" type="application/x-shockwave-flash" width="{$variables['width']}" height="{$variables['height']}" allowfullscreen="{$variables['fullscreen']}"></embed>
     </object>
 OUTPUT;
 
-  // @todo Replace this inline JavaScript with at least calls to
-  //   drupal_add_js()/drupal_get_js(), and ideally, with a behavior. Keep
-  //   in mind that the solution needs to work when inside a colorbox or
-  //   otherwise in an AJAX response, but that should now be possible in D7.
-  $iframe_id = drupal_json_encode($variables['wrapper_id'] .'_iframe');
-  $wrapper_id = drupal_json_encode($variables['wrapper_id']);
-  $JSObject = 'Drupal.settings.media_vimeo[' . $wrapper_id . ']';
-  $variables['output'] .= <<<OUTPUT
-    <script type="text/javascript">
-      if (Drupal.settings && Drupal.media_vimeo) {
-        Drupal.settings.media_vimeo = Drupal.settings.media_vimeo || {};
-        $JSObject = {};
-        $JSObject.width = {$variables['width']};
-        $JSObject.height = {$variables['height']};
-        $JSObject.video_id = "{$variables['video_id']}";
-        $JSObject.fullscreen = {$variables['fullscreen']};
-        $JSObject.id = $iframe_id;
-        Drupal.media_vimeo.insertEmbed($wrapper_id);
-      }
-    </script>
-OUTPUT;
-
+  // Pass the settings to replace the object tag with an iframe.
+  $settings = array(
+    'media_vimeo' => array(
+      $variables['wrapper_id'] => array(
+        'width' => $variables['width'],
+        'height' => $variables['height'],
+        'video_id' => $variables['video_id'],
+        'fullscreen' => $variables['fullscreen'],
+        'id' => $variables['wrapper_id'] .'_iframe',
+      ),
+    ),
+  );
+  if ($variables['autoplay']) {
+    $settings['media_vimeo'][$variables['wrapper_id']]['options'] = array(
+      'autoplay' => $variables['autoplay'],
+    );
+  }
+  drupal_add_js($settings, 'setting');
   drupal_add_js(drupal_get_path('module', 'media_vimeo') . '/js/media_vimeo.js');
   drupal_add_css(drupal_get_path('module', 'media_vimeo') . '/css/media_vimeo.css');
   drupal_add_js(drupal_get_path('module', 'media_vimeo') . '/js/flash_detect_min.js');

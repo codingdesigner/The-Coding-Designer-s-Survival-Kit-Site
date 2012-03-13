@@ -1,7 +1,7 @@
 <?php
 
 /**
- *  @file media_vimeo/media_vimeo.module
+ * @file media_vimeo/media_vimeo.module
  *
  * Media: Vimeo provides a stream wrapper and formatters for videos provided
  * by Vimeo, available at http://vimeo.com/.
@@ -22,7 +22,6 @@ include_once DRUPAL_ROOT . '/' . drupal_get_path('module', 'media_vimeo') . '/in
 //   this inside a module_exists('styles'). However, is that safe to do in
 //   global context? If not, is there any down side to doing it in hook_init()?
 include_once DRUPAL_ROOT . '/' . drupal_get_path('module', 'media_vimeo') . '/includes/media_vimeo.styles.inc';
-
 
 // Hooks and callbacks for integrating with File Entity module for display.
 include_once DRUPAL_ROOT . '/' . drupal_get_path('module', 'media_vimeo') . '/includes/media_vimeo.formatters.inc';

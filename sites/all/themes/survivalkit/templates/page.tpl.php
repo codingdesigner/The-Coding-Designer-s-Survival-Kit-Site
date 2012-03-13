@@ -49,6 +49,8 @@
     <?php print $messages; ?>
 
     <div id="main-wrapper" class="clearfix">
+      
+      <?php print render($page['sidebar_first']); ?>
 
       <div role="main">
         <?php print render($page['highlighted']); ?>
@@ -62,8 +64,6 @@
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
       </div> <!-- /main -->
-
-      <?php print render($page['sidebar_first']); ?>
 
       <?php print render($page['sidebar_second']); ?>
 

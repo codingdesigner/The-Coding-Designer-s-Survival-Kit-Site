@@ -178,13 +178,13 @@
  * @endcode
  */
 $databases = array (
-  'default' => 
+  'default' =>
   array (
-    'default' => 
+    'default' =>
     array (
       'database' => 'kit_site',
-      'username' => 'root',
-      'password' => 'root',
+      'username' => 'dev',
+      'password' => 'kitdev',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',

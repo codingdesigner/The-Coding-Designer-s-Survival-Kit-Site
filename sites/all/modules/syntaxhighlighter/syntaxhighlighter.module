@@ -175,13 +175,34 @@ function syntaxhighlighter_filter_info() {
 
 function _syntaxhighlighter_filter_tips($filter, $format, $long = FALSE) {
   $tag_name = variable_get('syntaxhighlighter_tagname', 'pre');
-  $tip = t('Syntax highlight code surrounded by the <code>!ex0</code> tags.',
-           array('!ex0' => "&lt;$tag_name class=\"brush: LANG\"&gt;...&lt;/$tag_name&gt;"));
+  $tip = t('Syntax highlight code surrounded by the <code>!ex0</code> tags, where !lang is one of the following language brushes: %brushes.',
+           array('!ex0' => "&lt;$tag_name class=\"brush: <i>lang</i>\"&gt;...&lt;/$tag_name&gt;",
+                 '!lang' => '<i>lang</i>',
+                 '%brushes' => implode(', ', _syntaxhighlighter_get_enabled_language_brushes()),
+                )
+           );
   if ($long) {
     $tip .= ' ' . t('See <a href="!url0">the SyntaxHighlighter javascript library site</a> for additional helps.',
                        array('!url0' => 'http://alexgorbatchev.com/'));
   }
   return $tip;
+}
+
+
+/**
+ * @return an array of all enabled language brushes
+ */
+function _syntaxhighlighter_get_enabled_language_brushes() {
+  $brushes = &drupal_static(__FUNCTION__);
+  if (!isset($brushes)) {
+    $brushes = array();
+    foreach (variable_get('syntaxhighlighter_enabled_languages', array('shBrushPhp.js')) as $val) {
+      if ($val) {
+        $brushes[] = strtolower(substr(substr($val, 7),0,-3));
+      }
+    }
+  }
+  return $brushes;
 }
 
 

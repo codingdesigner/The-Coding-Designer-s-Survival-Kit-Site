@@ -34,151 +34,72 @@ function dummyimage_permission() {
  * Admin settings form.
  */
 function dummyimage_admin_form($form, &$form_state) {
+  $service_links = array();
+  $service_names = array();
+
+  $services = module_invoke_all('dummyimage_service');
+
+  foreach ($services as $key => $service) {
+    $service_links[] = l($service['title'], $service['url']);
+    $service_names[$key] = $service['title'];
+    $service_forms[$key] = $service['form builder'];
+  }
+
   $options = array(
     DUMMYIMAGE_GENERATE_NONE => t('For no images'),
     DUMMYIMAGE_GENERATE_MISSING => t('For missing images'),
     DUMMYIMAGE_GENERATE_ALL => t('For all images'),
   );
+
   $form['dummyimages_generate'] = array(
     '#type' => 'radios',
     '#title' => t('Use dummy images'),
     '#options' => $options,
     '#default_value' => variable_get('dummyimages_generate', DUMMYIMAGE_GENERATE_NONE),
   );
-  $form['dummyimage_default_dimensions'] = array(
-    '#type' => 'textfield',
+
+  $form['dimensions'] = array(
+    '#type' => 'fieldset',
     '#title' => t('Default dimensions'),
-    '#description' => t('Enter a dimension (preset size) in the format [width]x[height]. If the dummyimage module cannot determine a dimension to use, it will fall back to this dimension. Defaults to 300x300.'),
-    '#size' => 12,
-    '#default_value' => variable_get('dummyimage_default_dimensions', '300x300'),
+    '#description' => t('Enter fallback dimensions (preset size) of the image in case the module cannot determine a dimension to use.'),
+  );
+  $form['dimensions']['dummyimage_default_width'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Default width'),
+    '#description' => t('Enter a default image width. Defaults to 300.'),
+    '#size' => 8,
+    '#default_value' => variable_get('dummyimage_default_width', '300'),
+  );
+  $form['dimensions']['dummyimage_default_height'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Default height'),
+    '#description' => t('Enter a default image height. Defaults to 300.'),
+    '#size' => 8,
+    '#default_value' => variable_get('dummyimage_default_height', '300'),
   );
 
-  $form['dummyimages_service'] = array(
-     '#type' => 'select',
-     '#title' => t('Service'),
-     '#default_value' => variable_get('dummyimages_service', 'dummyimage'),
-     '#options' => array(
-       'dummyimage' => t('Dummy Image'),
-       'placekitten' => t('Placekitten'),
-       'lorempixum' => t('Lorem Pixum'),
-       'flickholdr' => t('Flickholdr'),
-       ),
-   );
-
-  $services[] = l('Dummy image', 'http://dummyimage.com');
-  $services[] = l('Placekitten', 'http://placekitten.com');
-  $services[] = l('Lorem Pixum', 'http://lorempixum.com');
-  $services[] = l('Flickholdr', 'http://flickholdr.com');
-
-  $form['dummyimages_service'] = array(
+  $form['services'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Service configuration'),
+    '#description' => t('Select and configure the dummy image service you would like to use. You can !enable on the modules page.', array('!enable' => l('enable more services', 'admin/modules/list', array('fragment' => 'edit-modules-dummy-image')))),
+  );
+  $form['services']['dummyimages_service'] = array(
     '#type' => 'select',
     '#title' => t('Service'),
-    '#description' => t('Select the service you would like to use for your dummy images. You can currently choose between these services: !services', array('!services' => theme('item_list', array('items' => $services)))),
+    '#description' => t('Select a dummy image service to use. Currently enabled services: !services', array('!services' => theme('item_list', array('items' => $service_links)))),
     '#default_value' => variable_get('dummyimages_service', 'dummyimage'),
-    '#options' => array(
-      'dummyimage' => t('Dummy Image'),
-      'placekitten' => t('Placekitten'),
-      'lorempixum' => t('Lorem Pixum'),
-      'flickholdr' => t('Flickholdr'),
-      ),
+    '#options' => $service_names,
   );
+  $form['services'] = $form['services'] + $service_forms;
 
-  $form['dummyimage'] = array(
-     '#type' => 'fieldset',
-     '#title' => t('Dummy Image'),
-     '#tree' => FALSE,
-     '#collapsible' => TRUE,
-     '#collapsed' => TRUE,
-     '#prefix' => '<h3>' . t('Configuration') . '</h3>',
-   );
-   $form['dummyimage']['dummyimage_color'] = array(
-     '#type' => 'textfield',
-     '#title' => t('Color'),
-     '#description' => t('Enter the hex code of the color you want for the foreground. Do not include the #. Defaults to 000000.'),
-     '#size' => 12,
-     '#maxlength' => 255,
-     '#default_value' => variable_get('dummyimage_color', '000000'),
-   );
-   $form['dummyimage']['dummyimage_background'] = array(
-     '#type' => 'textfield',
-     '#title' => t('Background color'),
-     '#description' => t('Enter the hex code of the color you want for the background. Do not include the #. Defaults to CCCCCC.'),
-     '#size' => 12,
-     '#maxlength' => 255,
-     '#default_value' => variable_get('dummyimage_background', 'CCCCCC'),
-   );
-  $form['kittehs'] = array(
-     '#type' => 'fieldset',
-     '#title' => t('Kittehs'),
-     '#tree' => FALSE,
-     '#collapsible' => TRUE,
-     '#collapsed' => TRUE,
-   );
-   $form['kittehs']['dummyimage_kittens_color'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('I can haz kittehs wif color?'),
-      '#description' => t('Will use color fotos ov kittehs. Otherwize black an white will bees usd'),
-      '#default_value' => variable_get('dummyimage_kittens_color', 0),
-    );
-
-    $form['lorempixum'] = array(
-       '#type' => 'fieldset',
-       '#title' => t('Lorem Pixum'),
-       '#tree' => FALSE,
-       '#collapsible' => TRUE,
-       '#collapsed' => TRUE,
-     );
-
-    $form['lorempixum']['dummyimage_lorempixum_color'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Color Images?'),
-      '#default_value' => variable_get('dummyimage_lorempixum_color', 0),
-    );
-
-    $form['lorempixum']['dummyimages_lorempixum_category'] = array(
-      '#type' => 'select',
-      '#title' => t('Category'),
-      '#options' => array(
-        'random' => t('Random'),
-        'abstract' => t('Abstract'),
-        'food' => t('Food'),
-        'people' => t('People'),
-        'technics' => t('Technics'),
-        'animals' => t('Animals'),
-        'nightlife' => t('Nightlife'),
-        'nature' => t('Nature'),
-        'transport' => t('Transport'),
-        'city' => t('City'),
-        'fashion' => t('Fashion'),
-        'sports' => t('Sports'),
-      ),
-      '#default_value' => variable_get('dummyimages_lorempixum_category', 'random'),
-    );
-
-    $form['flickholdr'] = array(
-       '#type' => 'fieldset',
-       '#title' => t('Flickholdr'),
-       '#tree' => FALSE,
-       '#collapsible' => TRUE,
-       '#collapsed' => TRUE,
-     );
-     $form['flickholdr']['dummyimage_flickholdr_tags'] = array(
-       '#type' => 'textfield',
-       '#title' => t('Flickr tags'),
-       '#description' => t('Enter one or more tags. If you use more than one, separate them with commas.'),
-       '#size' => 40,
-       '#maxlength' => 255,
-       '#default_value' => variable_get('dummyimage_flickholdr_tags', 'tapir'),
-     );
-    $form['flickholdr']['dummyimage_flickholdr_color'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Color Images?'),
-      '#default_value' => variable_get('dummyimage_flickholdr_color', 1),
-    );
   return system_settings_form($form);
 }
 
-
+/**
+ * Implements hook_preprocess_image().
+ *
+ * Replaces images with dummy images.
+ */
 function dummyimage_preprocess_image(&$variables) {
   if (!isset($variables['style_name'])) {
     return;
@@ -189,71 +110,171 @@ function dummyimage_preprocess_image(&$variables) {
         break;
       }
     case DUMMYIMAGE_GENERATE_ALL:
-      $variables['path'] = _dummyimage_get_style_url($variables['style_name']);
-      if (variable_get('dummyimages_service', 'dummyimage') == 'placekitten') {
-        $variables['path'] .= '?image=' . rand(1,16);
-      }
-      elseif (variable_get('dummyimages_service', 'dummyimage') == 'flickholdr') {
-        $variables['path'] .= '/' . rand(1, 25);
-      }
+      $service = variable_get('dummyimages_service', 'dummyimage');
+      $variables['path'] = dummyimage_url($service, $variables['style_name']);
       break;
   }
 }
 
-function _dummyimage_get_style_url($style_name) {
+/**
+ * Generates a dummy image URL.
+ *
+ * @param $service
+ *   The dummy image service for which to generate a URL.
+ * @param $style_name
+ *   The (optional) image style preset name.
+ * @param $dimensions
+ *   The (optional) dimensions for the image.
+ */
+function dummyimage_url($service, $style_name = NULL, $dimensions = array()) {
   static $dummy_url;
-  if (!isset($dummy_url[$style_name])) {
-    $style = image_style_load($style_name);
-    $size = '';
-    $width = '';
-    $height = '';
-    if (isset($style['effects'])) {
-      foreach ($style['effects'] as $effect) {
-        if (!empty($effect['data']['width'])) {
-          $width = $effect['data']['width'];
-        }
-        if (!empty($effect['data']['height'])) {
-          $height = $effect['data']['height'];
+
+  if (!isset($dummy_url)) {
+    // Load the options for any enabled services.
+    $services = module_invoke_all('dummyimage_service');
+    $options = $services[$service]['options'];
+
+    // Use dimensions if they are passed in as an argument.
+    if (!empty($dimensions)) {
+      $options['dimensions'] = $dimensions;
+    }
+    // Otherwise get image dimensions from the image style if either exist.
+    elseif ($style_name) {
+      $style = image_style_load($style_name);
+      if (isset($style['effects'])) {
+        foreach ($style['effects'] as $effect) {
+          if (!empty($effect['data']['width'])) {
+            $options['dimensions']['width'] = $effect['data']['width'];
+          }
+          if (!empty($effect['data']['height'])) {
+            $options['dimensions']['height'] = $effect['data']['height'];
+          }
         }
       }
     }
-    $size = '';
-    if (empty($width) && empty($height)) {
-      $size = variable_get('dummyimage_default_dimensions', '300x300');
-    }
-    else if (variable_get('dummyimages_service', 'dummyimage') && (empty($width) || empty($height))) {
-      $size = empty($width) ? $height . 'x' . $height : $width . 'x' . $width;
-    }
-    else {
-      // Height is optional for dummyimage.com, so make sure we never have
-      // [empty]x[height].
-      $size = empty($width) ? $height : $width . 'x' . $height;
+
+    // If no image style dimensions can be determined, use the fallback values.
+    if (empty($options['dimensions'])) {
+      $options['dimensions']['width'] = variable_get('dummyimage_default_width', '300');
+      $options['dimensions']['height'] = variable_get('dummyimage_default_height', '300');
     }
 
-    switch (variable_get('dummyimages_service', 'dummyimage')) {
-      case 'dummyimage':
-        $color =  variable_get('dummyimage_color', '000000');
-        $background =  variable_get('dummyimage_background', 'cccccc');
-        $dummy_url[$style_name] = "http://dummyimage.com/{$size}/$background/$color.png";
-        break;
-      case 'placekitten':
-        $color = (variable_get('dummyimage_kittens_color', 0) == 1) ? '' : 'g/';
-        $size = strtr($size, 'x', '/');
-        $dummy_url[$style_name] = "http://placekitten.com/$color$size";
-        break;
-      case 'lorempixum':
-        $color = (variable_get('dummyimage_lorempixum_color', 0) == 1) ? '' : 'g/';
-        $size = strtr($size, 'x', '/');
-        $category = (variable_get('dummyimages_lorempixum_category', 'random') == 'random') ? '' : variable_get('dummyimages_lorempixum_category', 'random');
-        $dummy_url[$style_name] = "http://lorempixum.com/$color$size/$category";
-        break;
-      case 'flickholdr':
-        $color = (variable_get('dummyimage_flickholdr_color', 1) == 0) ? '/bw' : '';
-        $size = strtr($size, 'x', '/');
-        $tags = str_replace(' ', '', variable_get('dummyimage_flickholdr_tags', 'tapir'));
-        $dummy_url[$style_name] = "http://flickholdr.com/$size/$tags$color";
-        break;
-    }
+    // Allow modules to alter the options array.
+    drupal_alter('dummyimage_options', $options);
+    // Filter empty items out of the dimensions array and implode using the
+    // separator.
+    $options['replacements']['%dimensions'] = implode($options['separator'], array_filter($options['dimensions']));
+
+    // Replace the placeholders in the pattern string with their corresponding
+    // values.
+    $dummy_url = str_replace(array_keys($options['replacements']), $options['replacements'], $options['pattern']);
   }
-  return $dummy_url[$style_name];
+
+  return $dummy_url;
+}
+
+/**
+ * Implements hook_hook_info().
+ *
+ * Allows modules to add additional dummy image services.
+ */
+function dummyimage_dummyimage_service_info() {
+  $hooks['dummyimage_service'] = array(
+    'group' => 'dummyimage',
+  );
+}
+
+/**
+ * Wraps the new dummyimage_url() function in the old legacy function name.
+ *
+ * Avoids potential issue where dummyimage_get_style_url() is called directly
+ * in PHP code in site that used an earlier version of this module.
+ *
+ * @see dummyimage_url()
+ */
+function _dummyimage_get_style_url($style_name) {
+  $service = variable_get('dummyimages_service', 'dummyimage');
+  dummyimage_url($service, $style_name);
+}
+
+/**
+ * Implements hook_dummyimage_service().
+ *
+ * Integrates the dummyimage service.
+ */
+function dummyimage_dummyimage_service() {
+  return array(
+    'dummyimage' => array(
+      'title' => t('Dummy image'),
+      'url' => 'http://dummyimage.com/',
+      'form builder' => dummyimage_dummyimage_form(),
+      'options' => dummyimage_dummyimage_options(),
+    ),
+  );
+}
+
+/**
+ * Form builder function for the dummyimage service.
+ */
+function dummyimage_dummyimage_form() {
+  $form = array();
+  $form['dummyimage'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Dummy Image'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['dummyimage']['dummyimage_color'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Color'),
+    '#description' => t('Enter the hex code of the color you want to use for the foreground. Defaults to #000000.'),
+    '#size' => 8,
+    '#maxlength' => 6,
+    '#default_value' => variable_get('dummyimage_color', '000000'),
+    '#field_prefix' => '#',
+  );
+  $form['dummyimage']['dummyimage_background'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Background color'),
+    '#description' => t('Enter the hex code of the color you want to use for the background. Defaults to #cccccc.'),
+    '#size' => 8,
+    '#maxlength' => 6,
+    '#default_value' => variable_get('dummyimage_background', 'cccccc'),
+    '#field_prefix' => '#',
+  );
+  return $form;
+}
+
+/**
+ * Provides the generate callback for the dummyimage service.
+ */
+function dummyimage_dummyimage_options() {
+  return array(
+    'pattern' => 'http://dummyimage.com/%dimensions/%background/%color.png',
+    'separator' => 'x',
+    'replacements' => array(
+      '%color' => variable_get('dummyimage_color', '000000'),
+      '%background' => variable_get('dummyimage_background', 'cccccc'),
+    ),
+  );
+}
+
+/**
+ * Alters the dummyimage options before URL generation occurs.
+ */
+function dummyimage_dummyimage_options_alter(&$options) {
+  // Only affect the dummyimage service.
+  $service = variable_get('dummyimages_service', 'dummyimage');
+  if ($service != 'dummyimage') {
+    return;
+  }
+
+  // Ensure hex color codes are 6 digits long as lorempixum can't handle
+  // shorthand values.
+  if (drupal_strlen($options['replacements']['%color']) == 3) {
+    $options['replacements']['%color'] = $options['replacements']['%color'] . $options['replacements']['%color'];
+  }
+  if (drupal_strlen($options['replacements']['%background']) == 3) {
+    $options['replacements']['%background'] = $options['replacements']['%background'] . $options['replacements']['%background'];
+  }
 }

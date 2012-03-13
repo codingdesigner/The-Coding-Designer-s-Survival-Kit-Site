@@ -20,7 +20,6 @@ class MediaVimeoStreamWrapper extends MediaReadOnlyStreamWrapper {
     return 'video/vimeo';
   }
 
-  //@TODO: Check Vimeo URL Path
   function getOriginalThumbnailPath() {
     $video_properties = array();
 
@@ -40,7 +39,7 @@ class MediaVimeoStreamWrapper extends MediaReadOnlyStreamWrapper {
     }
     return $local_path;
   }
-
+  
   /**
    *  Ref: http://vimeo.com/api/docs/simple-api
    *  Example of Vimeo simple API 2 request for video properties:
@@ -51,5 +50,4 @@ class MediaVimeoStreamWrapper extends MediaReadOnlyStreamWrapper {
     $response = drupal_http_request($this->base_url . '/api/v2/video/'. $video_id .'.php');
     return unserialize($response->data);
   }
-
 }

@@ -24,6 +24,13 @@ Drupal.behaviors.media_vimeo = {
     if (!FlashDetect.installed && !html5){
       $('.media-vimeo-preview-wrapper').each(Drupal.media_vimeo.needFlash);
     }
+
+    // Replace all object tags with iframes.
+    if (Drupal.settings && Drupal.settings.media_vimeo) {
+      for (video in Drupal.settings.media_vimeo) {
+        Drupal.media_vimeo.insertEmbed(video);
+      }
+    }
   }
 };
 
@@ -41,16 +48,14 @@ Drupal.media_vimeo.insertEmbed = function (embed_id) {
 
   // Calculate the ratio of the dimensions of the embed.
   settings.hw = settings.height / settings.width;
-  
-  // <iframe src="http://player.vimeo.com/video/21869117?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0"></iframe>
-  
+
   // Replace the object embed with Vimeo's iframe. This isn't done by the
   // theme function because Vimeo doesn't have a no-JS or no-Flash fallback.
   var video = $('<iframe class="vimeo-player" type="text/html" frameborder="0"></iframe>');
   var src = 'http://player.vimeo.com/video/' + settings.video_id;
 
   // Allow other modules to modify the video settings.
-  settings.options.wmode = 'opaque';
+  settings.options = settings.options || {};
   $(window).trigger('media_vimeo_load', settings);
 
   // Merge Vimeo options (such as autoplay) into the source URL.

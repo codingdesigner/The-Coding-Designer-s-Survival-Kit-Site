@@ -19,3 +19,17 @@ function dummyimage_update_7000() {
     variable_del('dummyimage_kittens');
   }
 }
+
+/**
+ * Implements hook_update_N().
+ *
+ * Convert the old string variable for dimensions to separate width and height
+ * variables.
+ */
+function dummyimage_update_7001() {
+  $dimensions = variable_get('dummyimage_default_dimensions', '300x300');
+  $dimensions_array = explode('x', $dimensions);
+  variable_set('dummyimage_default_width', $dimensions_array[0]);
+  variable_set('dummyimage_default_height', $dimensions_array[1]);
+  variable_del('dummyimage_default_dimensions');
+}

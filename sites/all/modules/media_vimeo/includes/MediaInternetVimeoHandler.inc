@@ -12,7 +12,7 @@ class MediaInternetVimeoHandler extends MediaInternetBaseHandler {
     );
     foreach ($patterns as $pattern) {
       preg_match($pattern, $embedCode, $matches);
-      if (isset($matches[1])) {
+      if (isset($matches[1])  && is_numeric($matches[1])) {
         return file_stream_wrapper_uri_normalize('vimeo://v/' . $matches[1]);
       }
     }
@@ -21,17 +21,6 @@ class MediaInternetVimeoHandler extends MediaInternetBaseHandler {
   public function claim($embedCode) {
     if ($this->parse($embedCode)) {
       return TRUE;
-    }
-  }
-
-  public function validate() {
-    // @todo Media module currently fails when two files try to have the same
-    //   URI, so catch that in the validation step. Some day, it would be nice
-    //   to allow it, however. See http://drupal.org/node/952422.
-    $uri = $this->parse($this->embedCode);
-    $existing_files = file_load_multiple(array(), array('uri' => $uri));
-    if (count($existing_files)) {
-      throw new MediaInternetValidationException(t('You have entered a URL for a video that is already in your library.'));
     }
   }
 

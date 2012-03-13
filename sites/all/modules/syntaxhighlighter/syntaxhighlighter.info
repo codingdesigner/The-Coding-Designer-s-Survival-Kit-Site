@@ -2,9 +2,9 @@ name = Syntax highlighter
 description = Integrates the Syntax Highlighter Javascript Library to your site.
 core = 7.x
 configure = admin/config/content/syntaxhighlighter
-; Information added by drupal.org packaging script on 2011-05-15
+; Information added by drupal.org packaging script on 2011-08-30
 version = "7.x-2.x-dev"
 core = "7.x"
 project = "syntaxhighlighter"
-datestamp = "1305420195"
+datestamp = "1314708215"
 

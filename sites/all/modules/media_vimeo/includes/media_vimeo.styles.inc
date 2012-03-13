@@ -53,7 +53,7 @@ function media_vimeo_styles_containers() {
 
 function media_vimeo_formatter_filter($variables) {
   if (isset($variables['object'])) {
-    $object = $variables['object'];
+    $object = isset($variables['object']->file) ? $variables['object']->file : $variables['object'];
     return (file_uri_scheme($object->uri) == 'vimeo') && ($object->filemime == 'video/vimeo');
   }
 }
@@ -62,7 +62,8 @@ function media_vimeo_formatter_filter($variables) {
  * Implementation of the File Styles module's hook_file_styles_filter().
  */
 function media_vimeo_file_styles_filter($object) {
-  if ((file_uri_scheme($object->uri) == 'vimeo') && ($object->filemime == 'video/vimeo')) {
+  $file = isset($object->file) ? $object->file : $object;
+  if ((file_uri_scheme($file->uri) == 'vimeo') && ($file->filemime == 'video/vimeo')) {
     return 'media_vimeo';
   }
 }
@@ -245,6 +246,20 @@ function media_vimeo_styles_default_presets() {
     );
     $presets['file']['containers']['media_vimeo']['presets']['unlinked_' . $style_name] = $presets['file']['containers']['media_vimeo']['presets']['linked_' . $style_name];
     array_shift($presets['file']['containers']['media_vimeo']['presets']['unlinked_' . $style_name]);
+    foreach ($image_style['effects'] as $effect) {
+      if (in_array($effect['name'], array('image_scale', 'image_scale_and_crop', 'image_resize', 'image_crop'))) {
+        $presets['file']['containers']['media_vimeo']['presets']['video_' . $style_name] = array(
+          array(
+            'name' => 'resize',
+            'settings' => $effect['data'],
+          ),
+          array(
+            'name' => 'video',
+            'settings' => array(),
+          ),
+        );
+      }
+    }
   }
   return $presets;
 }
