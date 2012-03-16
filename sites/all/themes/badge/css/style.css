@@ -299,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wireframe {
-  outline: 1px dashed red;
+  outline: 1px dashed #bf0000;
 }
 
 .serif {
@@ -321,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .headers, .h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 {
-  font-family: sans-serif;
+  font-family: futura-pt-1, futura-pt-2, sans-serif;
 }
 
 .allcaps {
@@ -367,9 +367,9 @@ html > body {
 }
 
 body {
-  font-family: Georgia, serif;
-  color: black;
-  background: white;
+  font-family: jubilat-1, jubilat-2, Georgia, serif;
+  color: white;
+  background: #452d1c;
 }
 
 @media screen and (-webkit-device-pixel-ratio: 1) and (device-width: 1024px) and (max-device-height: 600px) and (orientation: landscape), screen and (-webkit-device-pixel-ratio: 1) and (device-width: 600px) and (max-device-height: 1024px) and (orientation: portrait), screen and (-o-device-pixel-ratio: 1) and (device-width: 1024px) and (max-device-height: 600px) and (orientation: landscape), screen and (-o-device-pixel-ratio: 1) and (device-width: 600px) and (max-device-height: 1024px) and (orientation: portrait), screen and (device-pixel-ratio: 1) and (device-width: 1024px) and (max-device-height: 600px) and (orientation: landscape), screen and (device-pixel-ratio: 1) and (device-width: 600px) and (max-device-height: 1024px) and (orientation: portrait) {
@@ -386,41 +386,41 @@ body {
 /* -moz- must be declared separately */
 ::-moz-selection {
   color: white;
-  background: #bada55;
+  background: #9ab5cb;
   text-shadow: none;
 }
 
 ::selection {
   color: white;
-  background: #bada55;
+  background: #9ab5cb;
   text-shadow: none;
 }
 
 /* Links -------------------------------------------------------------- */
 a {
-  color: #bada55;
+  color: #9ab5cb;
 }
 a:visited {
-  color: #bada55;
+  color: #9ab5cb;
 }
 a:hover {
-  color: #7555da;
+  color: #cbb09a;
 }
 a:active {
-  color: #7555da;
+  color: #cbb09a;
 }
 a {
   text-decoration: none;
-  border-bottom: 1px solid #bada55;
+  border-bottom: 1px solid #9ab5cb;
 }
 a:visited {
-  border-bottom-color: #bada55;
+  border-bottom-color: #9ab5cb;
 }
 a:hover {
-  border-bottom-color: #7555da;
+  border-bottom-color: #cbb09a;
 }
 a:active {
-  border-bottom-color: #7555da;
+  border-bottom-color: #cbb09a;
 }
 
 /* import font files using @font-face, if not using a service such as typekit */
@@ -493,7 +493,7 @@ sub {
 }
 
 mark {
-  background: red;
+  background: #bf0000;
   background-color: rgba(255, 255, 0, 0.5);
   text-shadow: none;
 }
@@ -839,3 +839,21 @@ input[type="radio"], input[type="checkbox"] {
 
 /* LAYOUT -------------------------------------------------------------- */
 /* SITE-WIDE DESIGN -------------------------------------------------------------- */
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/dirt-320x320.jpg?1331913885');
+  background-position: top center;
+  background-attachment: fixed;
+}
+@media only screen and (max-width: 320px) {
+  body {
+    padding-top: 92px;
+    padding-bottom: 600px;
+    padding-bottom: 500px;
+  }
+}

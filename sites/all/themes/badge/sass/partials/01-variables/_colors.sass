@@ -4,6 +4,20 @@ $c-secondary: $black
 $c-tertiary:  $black
 $c-quadrary:  $black
 
+// PROJECT COLORS
+$red: #bf0000
+$red-dark: mix($red, $black, 75%)
+$blue: #366b97
+$blue-ice: #f6f8fb
+$blue-light: mix($blue, $white)
+$blue-dark: #113342
+$blue-darker: adjust-color($blue-dark, $lightness: -10)
+$blue-mid: mix($blue, $blue-dark)
+$brown: #452d1c
+$brown-dark: mix($brown, $black)
+$green: #aac93b
+
+
 // COLOR SCHEMES
 // use color-schemer if it's loaded
 @if $color-schemer-loaded
@@ -36,8 +50,8 @@ $color-tile1-5: $gray
 $color-tile1-6: $gray
 
 // Color variables expected by _defaults.sass ------------------
-$base-color: $c-primary
-$text-color: $black
-$alt-color: $badass
-$background-color: $white
+$base-color: $white
+$text-color: $white
+$alt-color: $blue-light
+$background-color: $brown
 $border-color: $gray

@@ -1,2 +1,30 @@
 // Create the design for your site below
 /* SITE-WIDE DESIGN --------------------------------------------------------------
+
+
+
+
+html
+  height: 100%
+body
+  width: 100%
+  height: 100%
+  background:
+    // color: $badass
+    image: image_url('dirt-320x320.jpg')
+    // image: image_url('dirt-920x776.jpg')
+    position: top center
+    attachment: fixed
+  +respond-to(handhelds)
+    //   /* set different backgrounds depending on the device width
+    //   background-size: cover
+    //   -moz-background-size: cover
+    //   /* different padding < 320
+    padding-top: 92px
+    padding-bottom: 600px
+    padding-bottom: 500px
+  // @media screen and (min-width: 901px)
+  //   /* set different backgrounds depending on the device width
+  //   background-image: image_url('dirt-1200x776.jpg')
+  //   background-size: cover
+  //   -moz-background-size: cover
