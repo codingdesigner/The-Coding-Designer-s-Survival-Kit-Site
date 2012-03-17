@@ -57,6 +57,7 @@ $intro-width: 404px
       @extend .hidden
     ul
       margin: 0 0 0 0
+      padding: 0 0 0 0
       +no-bullets
       // position: absolute
       // badges
@@ -115,6 +116,7 @@ $intro-width: 404px
           +replace-text-with-dimensions('badges/color.png')
           +border-radius($ms9)
           +box-shadow(rgba($black, 0.8) 2px 2px 2px, rgba($black, 0.5) 5px 8px 8px)
+          margin: 0 auto
           // @media screen and (max-width: 320px)
           //   /* shrink the badges a bit on small screens
           //   // +scale(0.7)
@@ -237,42 +239,43 @@ $intro-width: 404px
   //     visibility: visible
 
 
-  $panel-z-index: -51
+// $panel-z-index: -51
 
-  /* INTRODUCTION
-  #intro
-    position: relative
-    z-index: $panel-z-index
-    .inner
-      // @extend .container
-      // @media screen and (max-width: 320px)
-      //   /* adjust padding for small browsers
-      //   +padding-leader(1)
-      //   +padding-trailer(1)
-      +padding-leader(2)
-      +padding-trailer(2)
-      color: $blue-ice
-      background-color: $black
+/* INTRODUCTION
+#intro
+  position: relative
+  // z-index: $panel-z-index
+  color: $blue-ice
+  background-color: $black
+  background-color: change-color($black, $alpha:  0.5)
+  // +padding-leader(1)
+  +padding-trailer(1)
+  .inner
+    // @extend .container
+    // @media screen and (max-width: 320px)
+    //   /* adjust padding for small browsers
+    // +padding-leader(2)
+    // +padding-trailer(2)
+    // > h1
+      // @extend .visuallyhidden
+  article
+    // +full
+    h1
+      text-align: center
+      // color: scale-color($green, $lightness:  50%)
       background-color: change-color($black, $alpha:  0.5)
-      > h1
-        @extend .visuallyhidden
-    article
-      +full
-      h1
-        text-align: center
-        color: scale-color($green, $lightness:  50%)
-        +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
-        +adjust-leading-to(4, $ms6)
-        display: none
-      .content
-        +columns(4,5)
-        +prefix(0.5)
-        +text-shadow(rgba($black, 0.8) 1px 1px 2px)
-        // @media screen and (max-width: 320px)
-        //   /* full width for small screens
-        //   +columns(5,5)
-        //   +prefix(0)
-        // @media screen and (min-width: 500px)
-        //   /* 2 column text for most screens
-        //   +column-count(2)
-        //   +column-gap(24px)
+      +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+      +adjust-leading-to(4, $ms6)
+      // display: none
+    .content
+      // +columns(4,5)
+      // +prefix(0.5)
+      +text-shadow(rgba($black, 0.8) 1px 1px 2px)
+      // @media screen and (max-width: 320px)
+      //   /* full width for small screens
+      //   +columns(5,5)
+      //   +prefix(0)
+      // @media screen and (min-width: 500px)
+      //   /* 2 column text for most screens
+      //   +column-count(2)
+      //   +column-gap(24px)

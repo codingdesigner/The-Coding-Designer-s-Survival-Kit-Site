@@ -246,7 +246,7 @@ table {
   visibility: hidden;
 }
 
-.visuallyhidden, #main-nav h1, #teasers #intro .inner > h1 {
+.visuallyhidden, #main-nav h1 {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -257,7 +257,7 @@ table {
   width: 1px;
 }
 
-.visuallyhidden.focusable, #main-nav h1.focusable, #teasers #intro .inner > h1.focusable {
+.visuallyhidden.focusable, #main-nav h1.focusable {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -267,7 +267,7 @@ table {
   position: absolute;
   width: 1px;
 }
-.visuallyhidden.focusable:active, #main-nav h1.focusable:active, #teasers #intro .inner > h1.focusable:active, .visuallyhidden.focusable:focus, #main-nav h1.focusable:focus, #teasers #intro .inner > h1.focusable:focus {
+.visuallyhidden.focusable:active, #main-nav h1.focusable:active, .visuallyhidden.focusable:focus, #main-nav h1.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -1232,6 +1232,7 @@ header#page-header a:active {
 }
 #all-teasers nav.samples ul {
   margin: 0 0 0 0;
+  padding: 0 0 0 0;
   list-style: none;
 }
 #all-teasers nav.samples ul li {
@@ -1285,6 +1286,7 @@ header#page-header a:active {
   -webkit-box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 2px, rgba(0, 0, 0, 0.5) 5px 8px 8px;
   -moz-box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 2px, rgba(0, 0, 0, 0.5) 5px 8px 8px;
   box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 2px, rgba(0, 0, 0, 0.5) 5px 8px 8px;
+  margin: 0 auto;
 }
 #all-teasers nav.samples ul li a {
   border-bottom: none;
@@ -1293,37 +1295,20 @@ header#page-header a:active {
   border-bottom: none;
 }
 
-#teasers {
-  /* INTRODUCTION */
-}
-#teasers #intro {
+/* INTRODUCTION */
+#intro {
   position: relative;
-  z-index: -51;
-}
-#teasers #intro .inner {
-  padding-top: 3em;
-  padding-bottom: 3em;
   color: #f6f8fb;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 1.5em;
 }
-#teasers #intro article {
-  clear: both;
-  margin-left: 2.328%;
-  margin-right: 2.328%;
-}
-#teasers #intro article h1 {
+#intro article h1 {
   text-align: center;
-  color: #d4e49d;
+  background-color: rgba(0, 0, 0, 0.5);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), 5px 8px 8px rgba(0, 0, 0, 0.1);
   line-height: 2em;
-  display: none;
 }
-#teasers #intro article .content {
-  display: inline;
-  float: left;
-  width: 79.512%;
-  margin-right: 2.442%;
-  padding-left: 10.931%;
+#intro article .content {
   text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
 }
