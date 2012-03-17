@@ -232,16 +232,16 @@ table {
   border-spacing: 0;
 }
 
-.clearfix {
+.clearfix, #all-teasers nav.samples, #all-teasers nav.samples ul {
   zoom: 1;
 }
-.clearfix:after {
+.clearfix:after, #all-teasers nav.samples:after, #all-teasers nav.samples ul:after {
   content: "\0020";
   display: table;
   clear: both;
 }
 
-.hidden {
+.hidden, #all-teasers .pane-title, #all-teasers nav.samples h3, #teasers > h3, #teasers article {
   display: none !important;
   visibility: hidden;
 }
@@ -314,7 +314,7 @@ table {
   letter-spacing: 0.1em;
 }
 
-.headers, .h1, h1, .h2, h2, .h3, h3, [role=main] .view-display-id-page .views-row .video-content h1, .h4, h4, .h5, h5, #main-nav ul li, .h6, h6 {
+.headers, .h1, h1, .h2, h2, .h3, h3, [role=main] .view-display-id-page .views-row .video-content h1, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #main-nav ul li, .h6, h6 {
   font-family: futura-pt-1, futura-pt-2, sans-serif;
 }
 
@@ -419,7 +419,7 @@ a:active {
 
 /* import font files using @font-face, if not using a service such as typekit */
 /* Headings -------------------------------------------------------------- */
-.h1, h1, .h2, h2, .h3, h3, [role=main] .view-display-id-page .views-row .video-content h1, .h4, h4, .h5, h5, #main-nav ul li, .h6, h6 {
+.h1, h1, .h2, h2, .h3, h3, [role=main] .view-display-id-page .views-row .video-content h1, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #main-nav ul li, .h6, h6 {
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }
@@ -439,7 +439,7 @@ a:active {
   line-height: 1.714em;
 }
 
-.h4, h4 {
+.h4, h4, #teasers article h1, .wf-active #teasers article h1 {
   font-size: 1.438em;
   line-height: 2.087em;
 }
@@ -1089,4 +1089,303 @@ header#page-header a:active {
   padding-right: 0.5em;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
+}
+
+/* TEASERS */
+/* define animations */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin-back {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+.badges-sprite, .badges-clean-start-selected, #all-teasers nav.samples ul li#clean-start-badge a:hover, #all-teasers nav.samples ul li#clean-start-badge a.selected, .badges-clean-start, #all-teasers nav.samples ul li#clean-start-badge a, .badges-code-viewer-selected, #all-teasers nav.samples ul li#code-viewer-badge a:hover, #all-teasers nav.samples ul li#code-viewer-badge a.selected, .badges-code-viewer, #all-teasers nav.samples ul li#code-viewer-badge a, .badges-color-selected, #all-teasers nav.samples ul li#color-badge a:hover, #all-teasers nav.samples ul li#color-badge a.selected, .badges-color, #all-teasers nav.samples ul li#color-badge a, .badges-drupal-ui-patterns-selected, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a:hover, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a.selected, .badges-drupal-ui-patterns, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a, .badges-fonts-selected, #all-teasers nav.samples ul li#fonts-badge a:hover, #all-teasers nav.samples ul li#fonts-badge a.selected, .badges-fonts, #all-teasers nav.samples ul li#fonts-badge a, .badges-html5-selected, #all-teasers nav.samples ul li#html5-badge a:hover, #all-teasers nav.samples ul li#html5-badge a.selected, .badges-html5, #all-teasers nav.samples ul li#html5-badge a, .badges-jquery-plugins-selected, #all-teasers nav.samples ul li#jquery-plugins-badge a:hover, #all-teasers nav.samples ul li#jquery-plugins-badge a.selected, .badges-jquery-plugins, #all-teasers nav.samples ul li#jquery-plugins-badge a, .badges-sass-mixins-selected, #all-teasers nav.samples ul li#sass-mixins-badge a:hover, #all-teasers nav.samples ul li#sass-mixins-badge a.selected, .badges-sass-mixins, #all-teasers nav.samples ul li#sass-mixins-badge a, .badges-step-by-step-selected, #all-teasers nav.samples ul li#step-by-step-badge a:hover, #all-teasers nav.samples ul li#step-by-step-badge a.selected, .badges-step-by-step, #all-teasers nav.samples ul li#step-by-step-badge a, .badges-ui-patterns-selected, #all-teasers nav.samples ul li#ui-patterns-badge a:hover, #all-teasers nav.samples ul li#ui-patterns-badge a.selected, .badges-ui-patterns, #all-teasers nav.samples ul li#ui-patterns-badge a {
+  background: url('../images/badges-s54e061cc6f.png') no-repeat;
+}
+
+.badges-clean-start-selected, #all-teasers nav.samples ul li#clean-start-badge a:hover, #all-teasers nav.samples ul li#clean-start-badge a.selected {
+  background-position: 0 -1610px;
+}
+
+.badges-clean-start, #all-teasers nav.samples ul li#clean-start-badge a {
+  background-position: 0 -1035px;
+}
+
+.badges-code-viewer-selected, #all-teasers nav.samples ul li#code-viewer-badge a:hover, #all-teasers nav.samples ul li#code-viewer-badge a.selected {
+  background-position: 0 -1840px;
+}
+
+.badges-code-viewer, #all-teasers nav.samples ul li#code-viewer-badge a {
+  background-position: 0 -1380px;
+}
+
+.badges-color-selected, #all-teasers nav.samples ul li#color-badge a:hover, #all-teasers nav.samples ul li#color-badge a.selected {
+  background-position: 0 -230px;
+}
+
+.badges-color, #all-teasers nav.samples ul li#color-badge a {
+  background-position: 0 0;
+}
+
+.badges-drupal-ui-patterns-selected, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a:hover, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a.selected {
+  background-position: 0 -345px;
+}
+
+.badges-drupal-ui-patterns, #all-teasers nav.samples ul li#drupal-ui-patterns-badge a {
+  background-position: 0 -115px;
+}
+
+.badges-fonts-selected, #all-teasers nav.samples ul li#fonts-badge a:hover, #all-teasers nav.samples ul li#fonts-badge a.selected {
+  background-position: 0 -2185px;
+}
+
+.badges-fonts, #all-teasers nav.samples ul li#fonts-badge a {
+  background-position: 0 -1725px;
+}
+
+.badges-html5-selected, #all-teasers nav.samples ul li#html5-badge a:hover, #all-teasers nav.samples ul li#html5-badge a.selected {
+  background-position: 0 -920px;
+}
+
+.badges-html5, #all-teasers nav.samples ul li#html5-badge a {
+  background-position: 0 -690px;
+}
+
+.badges-jquery-plugins-selected, #all-teasers nav.samples ul li#jquery-plugins-badge a:hover, #all-teasers nav.samples ul li#jquery-plugins-badge a.selected {
+  background-position: 0 -1955px;
+}
+
+.badges-jquery-plugins, #all-teasers nav.samples ul li#jquery-plugins-badge a {
+  background-position: 0 -1265px;
+}
+
+.badges-sass-mixins-selected, #all-teasers nav.samples ul li#sass-mixins-badge a:hover, #all-teasers nav.samples ul li#sass-mixins-badge a.selected {
+  background-position: 0 -2070px;
+}
+
+.badges-sass-mixins, #all-teasers nav.samples ul li#sass-mixins-badge a {
+  background-position: 0 -1495px;
+}
+
+.badges-step-by-step-selected, #all-teasers nav.samples ul li#step-by-step-badge a:hover, #all-teasers nav.samples ul li#step-by-step-badge a.selected {
+  background-position: 0 -1150px;
+}
+
+.badges-step-by-step, #all-teasers nav.samples ul li#step-by-step-badge a {
+  background-position: 0 -805px;
+}
+
+.badges-ui-patterns-selected, #all-teasers nav.samples ul li#ui-patterns-badge a:hover, #all-teasers nav.samples ul li#ui-patterns-badge a.selected {
+  background-position: 0 -575px;
+}
+
+.badges-ui-patterns, #all-teasers nav.samples ul li#ui-patterns-badge a {
+  background-position: 0 -460px;
+}
+
+#all-teasers {
+  position: relative;
+  z-index: 3;
+}
+#all-teasers nav.samples {
+  position: relative;
+  z-index: 2;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#all-teasers nav.samples ul {
+  margin: 0 0 0 0;
+  list-style: none;
+}
+#all-teasers nav.samples ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+#all-teasers nav.samples ul li {
+  float: left;
+  top: 0;
+  left: 0;
+  width: 115px;
+  width: 33%;
+  height: 115px;
+  z-index: 4;
+  margin-bottom: 0.5em;
+  -webkit-border-radius: 83px;
+  -moz-border-radius: 83px;
+  -ms-border-radius: 83px;
+  -o-border-radius: 83px;
+  border-radius: 83px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#all-teasers nav.samples ul li a {
+  display: block;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url('../images/badges/color.png?1331913886');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 115px;
+  height: 115px;
+  -webkit-border-radius: 83px;
+  -moz-border-radius: 83px;
+  -ms-border-radius: 83px;
+  -o-border-radius: 83px;
+  border-radius: 83px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 2px, rgba(0, 0, 0, 0.5) 5px 8px 8px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 2px, rgba(0, 0, 0, 0.5) 5px 8px 8px;
+  box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 2px, rgba(0, 0, 0, 0.5) 5px 8px 8px;
+}
+#all-teasers nav.samples ul li a {
+  border-bottom: none;
+}
+#all-teasers nav.samples ul li a:hover {
+  border-bottom: none;
+}
+
+#teasers {
+  position: relative;
+  width: 404px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 320px) {
+  #teasers {
+    /* resize for smaller screens */
+    width: 320px;
+    top: 250px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+#teasers article {
+  position: absolute;
+  height: 190px;
+  width: 410px;
+  -moz-border-radius-bottomleft: 180px;
+  -webkit-border-bottom-left-radius: 180px;
+  -ms-border-bottom-left-radius: 180px;
+  -o-border-bottom-left-radius: 180px;
+  border-bottom-left-radius: 180px;
+  -moz-border-radius-bottomright: 180px;
+  -webkit-border-bottom-right-radius: 180px;
+  -ms-border-bottom-right-radius: 180px;
+  -o-border-bottom-right-radius: 180px;
+  border-bottom-right-radius: 180px;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: lightgrey;
+  text-align: center;
+  left: 0px;
+}
+@media screen and (max-width: 320px) {
+  #teasers article {
+    /* resize for small screens */
+    width: 320px;
+    -moz-border-radius-bottomleft: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -ms-border-bottom-left-radius: 0;
+    -o-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -ms-border-bottom-right-radius: 0;
+    -o-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 320px) {
+  #teasers article {
+    /* add a semi-trans background when not the smallest screens */
+  }
+  #teasers article:before {
+    content: "\0020";
+    position: absolute;
+    width: 410px;
+    height: 476px;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.5)));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    z-index: -10;
+    bottom: 190px;
+    left: 0;
+  }
+}
+#teasers article h1 {
+  border-bottom: 1px dashed #c7dbeb;
+  margin: 0 5px 0.25em;
+  color: #8fb6d7;
+  display: block;
+  visibility: visible;
+  font-size: 1.52em;
+  line-height: 1.973em;
+  padding-top: 6px;
+}
+.wf-active #teasers article h1 {
+  /* style for active webfonts */
+  padding-top: 0;
+}
+@media screen and (max-width: 320px) {
+  #teasers article h1 {
+    /* adjust for small screens */
+    margin: 0 0px 0.25em;
+  }
+}
+#teasers article p {
+  font-weight: bold;
+  padding: 0 45px;
+}
+@media screen and (max-width: 320px) {
+  #teasers article p {
+    /* no padding for small screens */
+    padding: 0 0;
+  }
+}
+#teasers article:target, #teasers article.selected {
+  display: block;
+  visibility: visible;
 }
