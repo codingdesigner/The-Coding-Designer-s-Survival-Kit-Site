@@ -100,8 +100,8 @@ $intro-width: 404px
         //   +scale(0.7)
         // @media screen and (max-width: 900px)
         //   /* show only nine badges when not large enough for a circle
-        //   &#code-viewer-badge
-        //     display: none
+        &#code-viewer-badge
+          display: none
         // @media screen and (min-width: 901px)
         //   /* reverse-spin the individual badges (so they appear to not spin) when there is a spinning circle
         //   -webkit-animation-name: spin-back
@@ -239,17 +239,18 @@ $intro-width: 404px
   //     visibility: visible
 
 
-// $panel-z-index: -51
+$panel-z-index: -51
 
 /* INTRODUCTION
 #intro
   position: relative
-  // z-index: $panel-z-index
+  z-index: $panel-z-index
   color: $blue-ice
   background-color: $black
   background-color: change-color($black, $alpha:  0.5)
   // +padding-leader(1)
   +padding-trailer(1)
+  +box-shadow(rgba($black, 0.4) 0px 2px 2px, rgba($black, 0.2) 0px 8px 8px)
   .inner
     // @extend .container
     // @media screen and (max-width: 320px)
@@ -260,17 +261,21 @@ $intro-width: 404px
       // @extend .visuallyhidden
   article
     // +full
+    padding: 0 0.5em
     h1
+      @extend .h3
       text-align: center
       // color: scale-color($green, $lightness:  50%)
       background-color: change-color($black, $alpha:  0.5)
       +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
-      +adjust-leading-to(4, $ms6)
+      margin-left: -0.5em
+      margin-right: -0.5em
+      // +adjust-leading-to(4, $ms6)
       // display: none
     .content
       // +columns(4,5)
       // +prefix(0.5)
-      +text-shadow(rgba($black, 0.8) 1px 1px 2px)
+      // +text-shadow(rgba($black, 0.8) 1px 1px 2px)
       // @media screen and (max-width: 320px)
       //   /* full width for small screens
       //   +columns(5,5)
@@ -279,3 +284,172 @@ $intro-width: 404px
       //   /* 2 column text for most screens
       //   +column-count(2)
       //   +column-gap(24px)
+
+
+/* SURVIVORS
+#survivors
+  position: relative
+  z-index: $panel-z-index - 4
+  +box-shadow(rgba($black, 0.4) 0px 2px 2px, rgba($black, 0.2) 0px 8px 8px)
+  background-color: $green
+  border-bottom: 2px solid $black
+  +padding-leader(1)
+  +padding-trailer(1)
+  // background-color: rgba($green, 0.12)
+  color: $blue-ice
+  +text-shadow(rgba($blue, 0.5) 1px 2px 4px)
+  +box-shadow(2px 0px 2px rgba($black, 0.1px), 8px 0px 8px rgba($black, 0.05), -2px 0px 2px rgba($black, 0.1), -8px 0px 8px rgba($black, 0.05))
+  .pane-title
+    text-align: center
+    font-weight: 300
+    margin-bottom: $kit-baseline
+  .views-row
+    +vertical-separation($kit-baseline * 2)
+    position: relative
+    background: adjust-color($green, $lightness: -10)
+    padding: 6px
+    +box-shadow(rgba($black, 0.1) 2px 1px 4px, rgba($black, 0.1) -4px 3px 8px)
+    h1
+      // +adjust-font-size-to($ms3)
+      @extend .h3
+      margin-top: 0
+      margin-bottom: 0
+      // line-height: 1em
+      // max-width: 240px
+      // @media screen and (min-width: 901px)
+      //   /* set font size for large screens
+      //   position: absolute
+      //   +adjust-font-size-to($ms4)
+      //   line-height: 1em
+    // &:nth-of-type(odd)
+    //   /* left side (odd) items
+    //   @media screen and (min-width: 500px)
+    //     /* adjust placement for mid screens
+    //     +alpha()
+    //   @media screen and (min-width: 901px)
+    //     /* adjust placement for large screens
+    //     padding-right: 9%
+    //   h1
+    //     @media screen and (min-width: 500px)
+    //       /* move text for most screens
+    //       text-align: right
+    //     top: 0
+    //     right: 0
+    //     @media screen and (min-width: 901px)
+    //       /* rotate titles on large screens
+    //       +transform2d(rotate(-90deg) translate(-6px, -72px))
+    //       +transform-origin(top, right)
+    // &:nth-of-type(even)
+    //   /* right side (even) items
+    //   @media screen and (min-width: 500px)
+    //     /* adjust placement for mid screens
+    //     +omega()
+    //   @media screen and (min-width: 901px)
+    //     /* adjust placement for large screens
+    //     padding-left: 9%
+    //   h1
+    //     top: 0
+    //     left: 0
+    //     @media screen and (min-width: 901px)
+    //       /* rotate titles on large screens
+    //       +transform2d(rotate(90deg) translate(6px, -72px))
+    //       +transform-origin(top, left)
+    // &:last-child
+    //   padding-bottom: 6px
+
+
+/* START
+#prepared
+  position: relative
+  z-index: $panel-z-index - 5
+  color: $white
+  +adjust-font-size-to($ms3)
+  +padding-leader(2)
+  +padding-trailer(2)
+  background-color: rgba($black, 0.25)
+  +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+  position: relative
+  .pane-title
+    @extend .hidden
+  header
+    position: relative
+    float: left
+    +box-shadow(2px 0px 2px rgba($black, 0.2), 8px 0px 8px rgba($black, 0.1))
+    h1
+      line-height: 1em
+      background: $green
+      display: inline-block
+      float: left
+      +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+      // @media screen and (max-width: 500px)
+      //   /* font size for most screens
+      //   +adjust-font-size-to($ms5)
+      // @media screen and (min-width: 500px)
+      //   /* faux left extension for most screens
+      //   position: relative
+      //   &:before
+      //     content: '\0020'
+      //     position: absolute
+      //     background: $green
+      //     top: 0
+      //     bottom: 0
+      //     width: 9999px
+      //     right: 100%
+      // @media screen and (max-width: 320px)
+      //   /* font size for small screens
+      //   font-size: $ms6
+      .word1
+        float: left
+        margin-right: 0.25em
+        // @media screen and (min-width: 500px)
+        //   /* lettering.js adjustment for most screens
+        //   +adjust-font-size-to($ms4, 1, $ms6)
+        //   +transform2d(rotate(-90deg) translate(-18px, 0))
+        //   +transform-origin(50%, 50%)
+        //   margin-right: 0
+        //   text-align: center
+        //   padding: 6px 28px
+        //   +text-shadow(-2px 2px 2px rgba($black, 0.2), -8px 5px 8px rgba($black, 0.1))
+      .word2
+        // @media screen and (min-width: 500px)
+        //   /* lettering.js adjustment for most screens
+        //   margin-left: -31px
+  p.download
+    float: left
+    padding: 12px 0 0 0
+    +adjust-font-size-to($ms3, 1, $ms3)
+    span
+      background-color: mix($green, $yellow)
+      float: left
+      clear: left
+      &.word1, &.word3, &.word5
+        padding-left: 0.5em
+        +transition(padding-left 0.5s)
+      &.word2, &.word4
+        clear: none
+        margin-left: 0.5em
+        background-color: transparent
+        color: $green
+    a
+      +remove-link-underlines
+      +link-colors($brown-dark, $blue, $brown-dark, $brown-dark, false)
+      // .no-js &
+      //   +link-colors($green, $blue, $brown-dark, $green, false)
+    &:hover
+      span
+        &.word1, &.word3, &.word5
+          padding-left: 1em
+  footer
+    +padding-leader(0.5)
+    clear: both
+    text-align: right
+    position: relative
+    .amp
+      +adjust-font-size-to($ms6, 1, $ms3)
+      position: relative
+      top: 0.2em
+    aside
+      h2
+        @extend .visuallyhidden
+      ul
+        +inline-list
