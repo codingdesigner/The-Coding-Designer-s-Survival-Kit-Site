@@ -49,9 +49,12 @@ header#page-header
     +text-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
     text-transform: uppercase
     width: 325px
+    max-width: 100%
     margin: 0 auto
     position: relative
     z-index: 100
+    .no-js &
+      width: 335px
   a
     +link-colors($white, $alt-color, $alt-color, $white, false)
 

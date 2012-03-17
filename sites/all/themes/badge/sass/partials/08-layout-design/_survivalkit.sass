@@ -89,7 +89,7 @@ $intro-width: 404px
         +background-clip(padding-box)
         +transition(all 0.5s)
         // +box-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
-        // +scale(0.7)
+        +scale(0.9)
         // @media screen and (max-width: 320px)
         //   /* keep from overflowing on small screens
         //   position: relative
@@ -169,68 +169,110 @@ $intro-width: 404px
       //             top: $y-position
       //             left: $x-position
 #teasers
-  position: relative
-  width: $intro-width
-  margin: 0 auto
-  @media screen and (max-width: 320px)
-    /* resize for smaller screens
-    width: 320px
-    // height: auto
-    top: 250px
-    margin-left: 0
-    margin-right: 0
-    // display: none
-  > h3
-    @extend .hidden
-  article
-    position: absolute
-    height: 190px
-    width: 410px
-    +border-bottom-radius(180px)
-    background-color: $black
-    background-color: change-color($black, $alpha:  0.5)
-    color: $lightgray
-    text-align: center
-    left: 0px
-    @media screen and (max-width: 320px)
-      /* resize for small screens
-      width: 320px
-      +border-bottom-radius(0)
-      overflow: hidden
-    @media screen and (min-width: 320px)
-      /* add a semi-trans background when not the smallest screens
-      &:before
-        content: '\0020'
-        position: absolute
-        width: 410px
-        height: 476px
-        +background-image(linear-gradient(top, change-color($black, $alpha:  0), change-color($black, $alpha:  0.5)))
-        z-index: -10
-        bottom: 190px
-        left: 0
-    h1
-      @extend .h4
-      border-bottom: 1px dashed adjust-color($blue, $lightness: +45 )
-      margin: 0 5px 0.25em
-      color: adjust-color($blue, $lightness: +30)
-      display: block
-      visibility: visible
-      +adjust-font-size-to(24.327px)
-      padding-top: 6px
-      .wf-active &
-        /* style for active webfonts
-        @extend .h4
-        padding-top: 0
-      @media screen and (max-width: 320px)
-        /* adjust for small screens
-        margin: 0 0px 0.25em
-    p
-      font-weight: bold
-      padding: 0 45px
-      @media screen and (max-width: 320px)
-        /* no padding for small screens
-        padding: 0 0
-    @extend .hidden
-    &:target, &.selected
-      display: block
-      visibility: visible
+  @extend .hidden
+  // position: relative
+  // // width: $intro-width
+  // // margin: 0 auto
+  // // @media screen and (max-width: 320px)
+  // //   /* resize for smaller screens
+  // //   width: 320px
+  // //   // height: auto
+  // //   top: 250px
+  // //   margin-left: 0
+  // //   margin-right: 0
+  // //   // display: none
+  // > h3
+  //   @extend .hidden
+  // article
+  //   // @extend .hiddens
+  //   // position: absolute
+  //   // height: 190px
+  //   // width: 410px
+  //   // +border-bottom-radius(180px)
+  //   background-color: $black
+  //   background-color: change-color($black, $alpha:  0.5)
+  //   color: $lightgray
+  //   text-align: center
+  //   // left: 0px
+  //   // @media screen and (max-width: 320px)
+  //   //   /* resize for small screens
+  //   //   width: 320px
+  //   //   +border-bottom-radius(0)
+  //   //   overflow: hidden
+  //   // @media screen and (min-width: 320px)
+  //   //   /* add a semi-trans background when not the smallest screens
+  //   //   &:before
+  //   //     content: '\0020'
+  //   //     position: absolute
+  //   //     width: 410px
+  //   //     height: 476px
+  //   //     +background-image(linear-gradient(top, change-color($black, $alpha:  0), change-color($black, $alpha:  0.5)))
+  //   //     z-index: -10
+  //   //     bottom: 190px
+  //   //     left: 0
+  //   h1
+  //     @extend .h4
+  //     border-bottom: 1px dashed adjust-color($blue, $lightness: +45 )
+  //     margin: 0 5px 0.25em
+  //     color: adjust-color($blue, $lightness: +30)
+  //     display: block
+  //     visibility: visible
+  //     +adjust-font-size-to(24.327px)
+  //     padding-top: 6px
+  //     .wf-active &
+  //       /* style for active webfonts
+  //       @extend .h4
+  //       padding-top: 0
+  //     // @media screen and (max-width: 320px)
+  //     //   /* adjust for small screens
+  //     //   margin: 0 0px 0.25em
+  //   p
+  //     font-weight: bold
+  //     padding: 0 45px
+  //     @media screen and (max-width: 320px)
+  //       /* no padding for small screens
+  //       padding: 0 0
+  //   &:target, &.selected
+  //     display: block
+  //     visibility: visible
+
+
+  $panel-z-index: -51
+
+  /* INTRODUCTION
+  #intro
+    position: relative
+    z-index: $panel-z-index
+    .inner
+      // @extend .container
+      // @media screen and (max-width: 320px)
+      //   /* adjust padding for small browsers
+      //   +padding-leader(1)
+      //   +padding-trailer(1)
+      +padding-leader(2)
+      +padding-trailer(2)
+      color: $blue-ice
+      background-color: $black
+      background-color: change-color($black, $alpha:  0.5)
+      > h1
+        @extend .visuallyhidden
+    article
+      +full
+      h1
+        text-align: center
+        color: scale-color($green, $lightness:  50%)
+        +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+        +adjust-leading-to(4, $ms6)
+        display: none
+      .content
+        +columns(4,5)
+        +prefix(0.5)
+        +text-shadow(rgba($black, 0.8) 1px 1px 2px)
+        // @media screen and (max-width: 320px)
+        //   /* full width for small screens
+        //   +columns(5,5)
+        //   +prefix(0)
+        // @media screen and (min-width: 500px)
+        //   /* 2 column text for most screens
+        //   +column-count(2)
+        //   +column-gap(24px)

@@ -241,12 +241,12 @@ table {
   clear: both;
 }
 
-.hidden, #all-teasers .pane-title, #all-teasers nav.samples h3, #teasers > h3, #teasers article {
+.hidden, #all-teasers .pane-title, #all-teasers nav.samples h3, #teasers {
   display: none !important;
   visibility: hidden;
 }
 
-.visuallyhidden, #main-nav h1 {
+.visuallyhidden, #main-nav h1, #teasers #intro .inner > h1 {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -257,7 +257,7 @@ table {
   width: 1px;
 }
 
-.visuallyhidden.focusable, #main-nav h1.focusable {
+.visuallyhidden.focusable, #main-nav h1.focusable, #teasers #intro .inner > h1.focusable {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -267,7 +267,7 @@ table {
   position: absolute;
   width: 1px;
 }
-.visuallyhidden.focusable:active, #main-nav h1.focusable:active, .visuallyhidden.focusable:focus, #main-nav h1.focusable:focus {
+.visuallyhidden.focusable:active, #main-nav h1.focusable:active, #teasers #intro .inner > h1.focusable:active, .visuallyhidden.focusable:focus, #main-nav h1.focusable:focus, #teasers #intro .inner > h1.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -314,7 +314,7 @@ table {
   letter-spacing: 0.1em;
 }
 
-.headers, .h1, h1, .h2, h2, .h3, h3, [role=main] .view-display-id-page .views-row .video-content h1, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #main-nav ul li, .h6, h6 {
+.headers, .h1, h1, .h2, h2, .h3, h3, [role=main] .view-display-id-page .views-row .video-content h1, .h4, h4, .h5, h5, #main-nav ul li, .h6, h6 {
   font-family: futura-pt-1, futura-pt-2, sans-serif;
 }
 
@@ -419,7 +419,7 @@ a:active {
 
 /* import font files using @font-face, if not using a service such as typekit */
 /* Headings -------------------------------------------------------------- */
-.h1, h1, .h2, h2, .h3, h3, [role=main] .view-display-id-page .views-row .video-content h1, .h4, h4, #teasers article h1, .wf-active #teasers article h1, .h5, h5, #main-nav ul li, .h6, h6 {
+.h1, h1, .h2, h2, .h3, h3, [role=main] .view-display-id-page .views-row .video-content h1, .h4, h4, .h5, h5, #main-nav ul li, .h6, h6 {
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }
@@ -439,7 +439,7 @@ a:active {
   line-height: 1.714em;
 }
 
-.h4, h4, #teasers article h1, .wf-active #teasers article h1 {
+.h4, h4 {
   font-size: 1.438em;
   line-height: 2.087em;
 }
@@ -937,9 +937,13 @@ header#page-header h1 {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   width: 325px;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
   z-index: 100;
+}
+.no-js header#page-header h1 {
+  width: 335px;
 }
 header#page-header a {
   color: white;
@@ -1257,6 +1261,11 @@ header#page-header a:active {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  -webkit-transform: scale(0.9, 0.9);
+  -moz-transform: scale(0.9, 0.9);
+  -ms-transform: scale(0.9, 0.9);
+  -o-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
 }
 #all-teasers nav.samples ul li a {
   display: block;
@@ -1285,107 +1294,36 @@ header#page-header a:active {
 }
 
 #teasers {
+  /* INTRODUCTION */
+}
+#teasers #intro {
   position: relative;
-  width: 404px;
-  margin: 0 auto;
+  z-index: -51;
 }
-@media screen and (max-width: 320px) {
-  #teasers {
-    /* resize for smaller screens */
-    width: 320px;
-    top: 250px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-#teasers article {
-  position: absolute;
-  height: 190px;
-  width: 410px;
-  -moz-border-radius-bottomleft: 180px;
-  -webkit-border-bottom-left-radius: 180px;
-  -ms-border-bottom-left-radius: 180px;
-  -o-border-bottom-left-radius: 180px;
-  border-bottom-left-radius: 180px;
-  -moz-border-radius-bottomright: 180px;
-  -webkit-border-bottom-right-radius: 180px;
-  -ms-border-bottom-right-radius: 180px;
-  -o-border-bottom-right-radius: 180px;
-  border-bottom-right-radius: 180px;
+#teasers #intro .inner {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  color: #f6f8fb;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.5);
-  color: lightgrey;
+}
+#teasers #intro article {
+  clear: both;
+  margin-left: 2.328%;
+  margin-right: 2.328%;
+}
+#teasers #intro article h1 {
   text-align: center;
-  left: 0px;
+  color: #d4e49d;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), 5px 8px 8px rgba(0, 0, 0, 0.1);
+  line-height: 2em;
+  display: none;
 }
-@media screen and (max-width: 320px) {
-  #teasers article {
-    /* resize for small screens */
-    width: 320px;
-    -moz-border-radius-bottomleft: 0;
-    -webkit-border-bottom-left-radius: 0;
-    -ms-border-bottom-left-radius: 0;
-    -o-border-bottom-left-radius: 0;
-    border-bottom-left-radius: 0;
-    -moz-border-radius-bottomright: 0;
-    -webkit-border-bottom-right-radius: 0;
-    -ms-border-bottom-right-radius: 0;
-    -o-border-bottom-right-radius: 0;
-    border-bottom-right-radius: 0;
-    overflow: hidden;
-  }
-}
-@media screen and (min-width: 320px) {
-  #teasers article {
-    /* add a semi-trans background when not the smallest screens */
-  }
-  #teasers article:before {
-    content: "\0020";
-    position: absolute;
-    width: 410px;
-    height: 476px;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.5)));
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    z-index: -10;
-    bottom: 190px;
-    left: 0;
-  }
-}
-#teasers article h1 {
-  border-bottom: 1px dashed #c7dbeb;
-  margin: 0 5px 0.25em;
-  color: #8fb6d7;
-  display: block;
-  visibility: visible;
-  font-size: 1.52em;
-  line-height: 1.973em;
-  padding-top: 6px;
-}
-.wf-active #teasers article h1 {
-  /* style for active webfonts */
-  padding-top: 0;
-}
-@media screen and (max-width: 320px) {
-  #teasers article h1 {
-    /* adjust for small screens */
-    margin: 0 0px 0.25em;
-  }
-}
-#teasers article p {
-  font-weight: bold;
-  padding: 0 45px;
-}
-@media screen and (max-width: 320px) {
-  #teasers article p {
-    /* no padding for small screens */
-    padding: 0 0;
-  }
-}
-#teasers article:target, #teasers article.selected {
-  display: block;
-  visibility: visible;
+#teasers #intro article .content {
+  display: inline;
+  float: left;
+  width: 79.512%;
+  margin-right: 2.442%;
+  padding-left: 10.931%;
+  text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
 }
