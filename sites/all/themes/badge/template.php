@@ -7,9 +7,9 @@ function badge_preprocess_page(&$variables) {
   // drupal_add_js(drupal_get_path('theme', 'badge') . '/js/jquery.lettering.js');
   drupal_add_js(drupal_get_path('theme', 'badge') . '/js/sources/Lettering.js/jquery.lettering.js');
   drupal_add_js(drupal_get_path('theme', 'badge') . '/js/script.js');
-  drupal_add_js("<script>document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')</script>",
-    array('type' => 'inline', 'scope' => 'footer')
-  );
+  // drupal_add_js("<script>document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')</script>",
+  //   array('type' => 'inline', 'scope' => 'footer')
+  // );
 
 
   // $variables['site_name_a'] = "The Coding Designer&rsquo;s";

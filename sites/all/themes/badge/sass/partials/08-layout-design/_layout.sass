@@ -2,7 +2,40 @@
 /* LAYOUT --------------------------------------------------------------
 
 
-#page
-  @extend .container
-  // uncomment this line for fluid layout
-  // width: 95%
+// #page
+//   @extend .container
+//   // uncomment this line for fluid layout
+//   // width: 95%
+
+// Font Sizes --------------------------------------------------------------
+// $base-font-size: 16px !default
+// $base-line-height: $kit-baseline
+// Grid Variables --------------------------------------------------------------
+// $total-cols: $kit-total-cols
+// $col-width: $kit-col-width
+// $gutter-width: $kit-gutter-width
+// $side-gutter-width: $kit-side-gutter-width
+
+@import susy
+// uncomment to output the full container width to the terminal
+// @debug columns-width()
+
+// body
+//   +baseline-grid-background($kit-baseline, $black)
+
+/* DEFINE THE GRID CONTAINER --------------------------------------------------------------
+// BUILD THE GRID FOR YOUR SITE
+// HELPER CLASSES INTENDED FOR USE IN @EXTEND
+.container
+  width: 100%
+  +respond-to(not-handhelds)
+    $total-cols: $kit-total-cols
+    $col-width: $kit-col-width
+    $gutter-width: $kit-gutter-width
+    $side-gutter-width: $kit-side-gutter-width
+    +container
+    // uncomment to show grid background
+    @if $show-grid == true
+      +susy-grid-background
+
+

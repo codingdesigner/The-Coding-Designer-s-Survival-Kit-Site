@@ -14,6 +14,9 @@
   @if $media == handhelds
     @media only screen and (max-width: 320px)
       @content
+  @if $media == not-handhelds
+    @media only screen and (min-width: 480px)
+      @content
   // @else if $media == medium-screens
   //   @media only screen and (min-width: 321px) and (max-width: 1024px)
   //     @content

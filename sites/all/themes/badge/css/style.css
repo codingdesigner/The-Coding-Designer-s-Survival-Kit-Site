@@ -232,12 +232,6 @@ table {
   border-spacing: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .clearfix {
   zoom: 1;
 }
@@ -320,7 +314,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.1em;
 }
 
-.headers, .h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, #main-nav ul li, .h6, h6 {
+.headers, .h1, h1, .h2, h2, .h3, h3, [role=main] .view-display-id-page .views-row .video-content h1, .h4, h4, .h5, h5, #main-nav ul li, .h6, h6 {
   font-family: futura-pt-1, futura-pt-2, sans-serif;
 }
 
@@ -425,7 +419,7 @@ a:active {
 
 /* import font files using @font-face, if not using a service such as typekit */
 /* Headings -------------------------------------------------------------- */
-.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, #main-nav ul li, .h6, h6 {
+.h1, h1, .h2, h2, .h3, h3, [role=main] .view-display-id-page .views-row .video-content h1, .h4, h4, .h5, h5, #main-nav ul li, .h6, h6 {
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }
@@ -437,10 +431,10 @@ a:active {
 
 .h2, h2 {
   font-size: 2.063em;
-  line-height: 1.455em;
+  line-height: 1.091em;
 }
 
-.h3, h3 {
+.h3, h3, [role=main] .view-display-id-page .views-row .video-content h1 {
   font-size: 1.75em;
   line-height: 1.714em;
 }
@@ -476,6 +470,8 @@ ol {
 }
 
 ul {
+  margin-top: 0;
+  margin-bottom: 0;
   list-style: disc;
 }
 li ul {
@@ -862,20 +858,32 @@ input[type="radio"], input[type="checkbox"] {
   margin-right: 0.25em;
 }
 
+/* LAYOUT -------------------------------------------------------------- */
 /* DEFINE THE GRID CONTAINER -------------------------------------------------------------- */
-.container, #page {
-  *zoom: 1;
-  margin: auto;
-  width: 988px;
-  max-width: 100%;
+.container {
+  width: 100%;
 }
-.container:after, #page:after {
-  content: "";
-  display: table;
-  clear: both;
+@media only screen and (min-width: 480px) {
+  .container {
+    *zoom: 1;
+    margin: auto;
+    width: 988px;
+    max-width: 100%;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(2.328%, rgba(0, 0, 0, 0)), color-stop(2.328%, rgba(100, 100, 225, 0.25)), color-stop(19.534%, rgba(100, 100, 225, 0.25)), color-stop(19.534%, rgba(0, 0, 0, 0)), color-stop(21.862%, rgba(0, 0, 0, 0)), color-stop(21.862%, rgba(100, 100, 225, 0.25)), color-stop(39.069%, rgba(100, 100, 225, 0.25)), color-stop(39.069%, rgba(0, 0, 0, 0)), color-stop(41.397%, rgba(0, 0, 0, 0)), color-stop(41.397%, rgba(100, 100, 225, 0.25)), color-stop(58.603%, rgba(100, 100, 225, 0.25)), color-stop(58.603%, rgba(0, 0, 0, 0)), color-stop(60.931%, rgba(0, 0, 0, 0)), color-stop(60.931%, rgba(100, 100, 225, 0.25)), color-stop(78.138%, rgba(100, 100, 225, 0.25)), color-stop(78.138%, rgba(0, 0, 0, 0)), color-stop(80.466%, rgba(0, 0, 0, 0)), color-stop(80.466%, rgba(100, 100, 225, 0.25)), color-stop(97.672%, rgba(100, 100, 225, 0.25)), color-stop(97.672%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 2.328%, rgba(100, 100, 225, 0.25) 2.328%, rgba(100, 100, 225, 0.25) 19.534%, rgba(0, 0, 0, 0) 19.534%, rgba(0, 0, 0, 0) 21.862%, rgba(100, 100, 225, 0.25) 21.862%, rgba(100, 100, 225, 0.25) 39.069%, rgba(0, 0, 0, 0) 39.069%, rgba(0, 0, 0, 0) 41.397%, rgba(100, 100, 225, 0.25) 41.397%, rgba(100, 100, 225, 0.25) 58.603%, rgba(0, 0, 0, 0) 58.603%, rgba(0, 0, 0, 0) 60.931%, rgba(100, 100, 225, 0.25) 60.931%, rgba(100, 100, 225, 0.25) 78.138%, rgba(0, 0, 0, 0) 78.138%, rgba(0, 0, 0, 0) 80.466%, rgba(100, 100, 225, 0.25) 80.466%, rgba(100, 100, 225, 0.25) 97.672%, rgba(0, 0, 0, 0) 97.672%, rgba(0, 0, 0, 0) 100%);
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 2.328%, rgba(100, 100, 225, 0.25) 2.328%, rgba(100, 100, 225, 0.25) 19.534%, rgba(0, 0, 0, 0) 19.534%, rgba(0, 0, 0, 0) 21.862%, rgba(100, 100, 225, 0.25) 21.862%, rgba(100, 100, 225, 0.25) 39.069%, rgba(0, 0, 0, 0) 39.069%, rgba(0, 0, 0, 0) 41.397%, rgba(100, 100, 225, 0.25) 41.397%, rgba(100, 100, 225, 0.25) 58.603%, rgba(0, 0, 0, 0) 58.603%, rgba(0, 0, 0, 0) 60.931%, rgba(100, 100, 225, 0.25) 60.931%, rgba(100, 100, 225, 0.25) 78.138%, rgba(0, 0, 0, 0) 78.138%, rgba(0, 0, 0, 0) 80.466%, rgba(100, 100, 225, 0.25) 80.466%, rgba(100, 100, 225, 0.25) 97.672%, rgba(0, 0, 0, 0) 97.672%, rgba(0, 0, 0, 0) 100%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 2.328%, rgba(100, 100, 225, 0.25) 2.328%, rgba(100, 100, 225, 0.25) 19.534%, rgba(0, 0, 0, 0) 19.534%, rgba(0, 0, 0, 0) 21.862%, rgba(100, 100, 225, 0.25) 21.862%, rgba(100, 100, 225, 0.25) 39.069%, rgba(0, 0, 0, 0) 39.069%, rgba(0, 0, 0, 0) 41.397%, rgba(100, 100, 225, 0.25) 41.397%, rgba(100, 100, 225, 0.25) 58.603%, rgba(0, 0, 0, 0) 58.603%, rgba(0, 0, 0, 0) 60.931%, rgba(100, 100, 225, 0.25) 60.931%, rgba(100, 100, 225, 0.25) 78.138%, rgba(0, 0, 0, 0) 78.138%, rgba(0, 0, 0, 0) 80.466%, rgba(100, 100, 225, 0.25) 80.466%, rgba(100, 100, 225, 0.25) 97.672%, rgba(0, 0, 0, 0) 97.672%, rgba(0, 0, 0, 0) 100%);
+    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 2.328%, rgba(100, 100, 225, 0.25) 2.328%, rgba(100, 100, 225, 0.25) 19.534%, rgba(0, 0, 0, 0) 19.534%, rgba(0, 0, 0, 0) 21.862%, rgba(100, 100, 225, 0.25) 21.862%, rgba(100, 100, 225, 0.25) 39.069%, rgba(0, 0, 0, 0) 39.069%, rgba(0, 0, 0, 0) 41.397%, rgba(100, 100, 225, 0.25) 41.397%, rgba(100, 100, 225, 0.25) 58.603%, rgba(0, 0, 0, 0) 58.603%, rgba(0, 0, 0, 0) 60.931%, rgba(100, 100, 225, 0.25) 60.931%, rgba(100, 100, 225, 0.25) 78.138%, rgba(0, 0, 0, 0) 78.138%, rgba(0, 0, 0, 0) 80.466%, rgba(100, 100, 225, 0.25) 80.466%, rgba(100, 100, 225, 0.25) 97.672%, rgba(0, 0, 0, 0) 97.672%, rgba(0, 0, 0, 0) 100%);
+    background-image: linear-gradient(left, rgba(0, 0, 0, 0) 2.328%, rgba(100, 100, 225, 0.25) 2.328%, rgba(100, 100, 225, 0.25) 19.534%, rgba(0, 0, 0, 0) 19.534%, rgba(0, 0, 0, 0) 21.862%, rgba(100, 100, 225, 0.25) 21.862%, rgba(100, 100, 225, 0.25) 39.069%, rgba(0, 0, 0, 0) 39.069%, rgba(0, 0, 0, 0) 41.397%, rgba(100, 100, 225, 0.25) 41.397%, rgba(100, 100, 225, 0.25) 58.603%, rgba(0, 0, 0, 0) 58.603%, rgba(0, 0, 0, 0) 60.931%, rgba(100, 100, 225, 0.25) 60.931%, rgba(100, 100, 225, 0.25) 78.138%, rgba(0, 0, 0, 0) 78.138%, rgba(0, 0, 0, 0) 80.466%, rgba(100, 100, 225, 0.25) 80.466%, rgba(100, 100, 225, 0.25) 97.672%, rgba(0, 0, 0, 0) 97.672%, rgba(0, 0, 0, 0) 100%);
+    background-position: left top;
+  }
+  .container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
-/* LAYOUT -------------------------------------------------------------- */
 /* SITE-WIDE DESIGN -------------------------------------------------------------- */
 html {
   height: 100%;
@@ -900,8 +908,8 @@ body {
 /* PAGE HEADER */
 header#page-header {
   position: relative;
-  margin-top: 3em;
-  margin-bottom: 4.5em;
+  margin-top: 4.5em;
+  margin-bottom: 3em;
 }
 header#page-header:before {
   /* add the little background stripe behind the logo */
@@ -1006,16 +1014,54 @@ header#page-header a:active {
 }
 
 /* Main content */
-[role=main] h1.title {
-  margin-bottom: 0.75em;
+[role=main] #page-title {
+  text-align: center;
 }
+[role=main] .view-display-id-page .views-row {
+  *zoom: 1;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+  margin-bottom: 36px;
+  padding-bottom: 35px;
+}
+[role=main] .view-display-id-page .views-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+[role=main] .view-display-id-page .views-row:last-child {
+  padding-bottom: 0;
+  border-bottom-width: 0;
+  margin-bottom: 0;
+}
+[role=main] .view-display-id-page .views-row .media-vimeo-outer-wrapper iframe {
+  width: 100%;
+}
+[role=main] .view-display-id-page .views-row .video-content {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #22160e;
+}
+[role=main] .view-display-id-page .views-row .video-content h1 {
+  margin-top: 0.375em;
+  border-bottom: 1px solid #9ab5cb;
+}
+[role=main] .view-display-id-page .views-row .video-content h1 a {
+  border-bottom: none;
+}
+[role=main] .view-display-id-page .views-row .video-content h1 a:hover {
+  border-bottom: none;
+}
+
 [role=main] article.node {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.4);
   color: #22160e;
   padding-left: 0.5em;
   padding-right: 0.5em;
   padding-bottom: 0.75em;
+  margin-top: -12px;
+  padding-top: 12px;
 }
 [role=main] article.node .field-name-field-video {
   margin-left: -0.5em;
