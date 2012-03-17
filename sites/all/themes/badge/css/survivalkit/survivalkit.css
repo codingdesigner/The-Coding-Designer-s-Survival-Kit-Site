@@ -173,11 +173,11 @@ body.survival-kit header a:active {
   border-bottom-color: #aaada0;
 }
 body.survival-kit header h1 {
-  font-size: 1.25em;
-  line-height: 1.2em;
+  font-size: 1.188em;
+  line-height: 1.263em;
   float: left;
-  padding-right: 25px;
-  margin-right: 25px;
+  padding-right: 23px;
+  margin-right: 23px;
   border-right: 1px solid white;
   font-family: futura, sans-serif;
 }
@@ -200,19 +200,19 @@ body.survival-kit header h1 a:hover {
   border-bottom: none;
 }
 body.survival-kit header h2 {
-  font-size: 1.563em;
-  line-height: 1.92em;
+  font-size: 1.438em;
+  line-height: 2.087em;
   font-family: futura, sans-serif;
 }
 body.survival-kit header .intro {
   margin-left: 16.563em;
 }
 body.survival-kit h1.section-title {
-  font-size: 1.625em;
-  line-height: 1.846em;
+  font-size: 1.75em;
+  line-height: 1.714em;
   background-color: #d0d3c6;
   text-transform: uppercase;
-  padding-left: 12.5px;
+  padding-left: 11.5px;
 }
 body.survival-kit h1.section-title a {
   color: black;
@@ -352,7 +352,7 @@ body.survival-kit article.element h2.element-title {
   background-color: #85897b;
   color: white;
   text-transform: uppercase;
-  padding-left: 12.5px;
+  padding-left: 11.5px;
 }
 body.survival-kit article.element h2.element-title a {
   color: white;
