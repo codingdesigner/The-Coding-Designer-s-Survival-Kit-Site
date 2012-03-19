@@ -13,6 +13,11 @@
  * Download the source files here:
  * https://github.com/canarymason/The-Coding-Designers-Survival-Kit
  * Learn more about Sass & Compass at http://compass-style.org/ */
+@font-face {
+  font-family: "goudybookletter";
+  src: url('../../fonts/goudy_bookletter_1911-webfont.woff') format('woff'), url('../../fonts/goudy_bookletter_1911-webfont.ttf') format('truetype'), url('../../fonts/goudy_bookletter_1911-webfont.svg') format('svg'), url('../../fonts/goudy_bookletter_1911-webfont.eot') format('embedded-opentype');
+}
+
 .clearfix, body.survival-kit header hgroup {
   zoom: 1;
 }
@@ -123,7 +128,7 @@
 }
 
 .amp {
-  font-family: Georgia, serif;
+  font-family: "goudybookletter", Georgia, serif;
 }
 
 .smallcaps {
@@ -132,13 +137,13 @@
 
 .dquo {
   margin-left: -0.5em;
-  font-family: Georgia, serif;
+  font-family: "goudybookletter", Georgia, serif;
 }
 
 /* Only use the fancy ampersand in <h#> tags */
 h1 .amp, h2 .amp, h3 .amp, h4 .amp, h5 .amp, h6 .amp {
   font-size: 1em;
-  font-family: Georgia, serif;
+  font-family: "goudybookletter", Georgia, serif;
   font-style: italic;
 }
 

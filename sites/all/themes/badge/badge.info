@@ -7,7 +7,7 @@ base theme = survivalkit
 
 ; stylesheets
 stylesheets[all][] = css/style.css
-stylesheets[all][] = css/type/font_face.css
+; stylesheets[all][] = css/fonts/font_face.css
 
 fonts[typekit_api][] = "futura-pt#n7"
 fonts[typekit_api][] = "futura-pt#i7"

@@ -19,8 +19,12 @@ $font-body: $font-jubilat
 $font-headline: $font-futura-pt
 $font-logo: $font-proxima-nova
 
+@import compass/css3
++font-face("goudybookletter", font-files("goudy_bookletter_1911-webfont.woff", "goudy_bookletter_1911-webfont.ttf", "goudy_bookletter_1911-webfont.svg", "goudy_bookletter_1911-webfont.eot"))
+
+
 // special use font stacks
 // ampersands
-$font-amp: $font-serifs
+$font-amp: "goudybookletter", $font-serifs
 // CAPS
 $font_cap: $font-sans
