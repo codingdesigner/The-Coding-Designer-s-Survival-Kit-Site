@@ -144,19 +144,20 @@ header#page-header
   article.node
     background-color: $white
     background-color: rgba($white, 0.9)
-    background-color: rgba($white, 0.4)
     color: $brown-dark
     padding-left: 0.5em
     padding-right: 0.5em
     +padding-trailer(0.5)
     margin-top: -$kit-baseline-half
-    padding-top: $kit-baseline-half
+    // padding-top: $kit-baseline-half
     .field-name-field-video
       margin-left: -0.5em
       margin-right: -0.5em
       +box-shadow( rgba($white, 0.2) 0 0 30px)
       iframe
         width: 100%
+    .field-name-field-image
+      text-align: center
     .author
       font-style: italic
       color: change-color($black, $lightness:  30%)
@@ -170,3 +171,4 @@ header#page-header
       padding-right: 0.5em
       +padding-leader
       +padding-trailer
+
