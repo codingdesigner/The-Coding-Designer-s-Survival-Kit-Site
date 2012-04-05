@@ -7,6 +7,11 @@
  */
 ?>
 
+<nav id='main-nav' role="navigation">
+  <h1>Navigation</h1>
+  <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
+</nav>
+
 <header id="page-header">
   <div class="wrapper">
     <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
@@ -17,20 +22,6 @@
     <?php print render($page['header']); ?>
   </div>
 </header>
-
-<nav id='main-nav' role="navigation">
-  <h1>Navigation</h1>
-  <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
-  <!-- <ul>
-      <li><a href="#page-header">Top</a></li>
-      <li><a href="#intro">Intro</a></li>
-      <li><a href="#learn">Learn</a></li>
-      <li><a href="#tools">Tools</a></li>
-      <li><a href="#survivors">Survivors</a></li>
-      <li><a href="#prepared">Be Prepared</a></li>
-    </ul> -->
-</nav>
-
 
 <div class="container">
   <div id="page-tools">

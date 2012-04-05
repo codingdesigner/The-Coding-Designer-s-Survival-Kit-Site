@@ -2,7 +2,7 @@
 /* SITE-WIDE DESIGN --------------------------------------------------------------
 
 
-
+// NEW, MOBILE-FIRST DESIGN
 
 html
   height: 100%
@@ -12,18 +12,51 @@ body
   background:
     image: image_url('dirt-320x320.jpg')
     // image: image_url('dirt-920x776.jpg')
-    position: top center
+    position: 25% top
     attachment: fixed
   margin: 0 auto
-  +respond-to(handhelds)
-    padding-top: 92px
-    padding-bottom: 600px
-    padding-bottom: 500px
+  +respond-to(monochrome)
+    background-image: none
+
+
+/* MASTER NAVIGATION
+#main-nav
+  // position: absolute
+  // top: 0
+  background-color: $white
+  background-color: change-color($white, $alpha:  0.9)
+  width: 100%
+  text-align: center
+  // z-index: 100
+  border-bottom: 1px solid $brown
+  +respond-to(not-handhelds)
+    +trailer
+  h1
+    @extend .visuallyhidden
+  ul
+    +inline-list
+    li
+      padding: 0 0.5em
+      display: inline-block
+      @extend .h5
+      line-height: 1.143em
+      @media screen and (max-width: 480px)
+        +adjust-font-size-to($ms0)
+      a
+        +link-colors($red, $red-dark, $red-dark, $red, false)
+        +remove-link-underlines
+      &:before, &:after
+        font-weight: 300
+        color: $lightgray
+      &:before
+        content: '<'
+      &:after
+        content: '>'
 
 /* PAGE HEADER
 header#page-header
   position: relative
-  +leader(3)
+  // +leader(3)
   // +trailer(2)
   &:before
     /* add the little background stripe behind the logo
@@ -58,38 +91,6 @@ header#page-header
   a
     +link-colors($white, $alt-color, $alt-color, $white, false)
 
-/* MASTER NAVIGATION
-#main-nav
-  position: absolute
-  top: 0
-  background-color: $white
-  background-color: change-color($white, $alpha:  0.9)
-  width: 100%
-  text-align: center
-  z-index: 100
-  border-bottom: 1px solid $brown
-  h1
-    @extend .visuallyhidden
-  ul
-    +inline-list
-    li
-      padding: 0 0.5em
-      display: inline-block
-      @extend .h5
-      line-height: 1.143em
-      @media screen and (max-width: 480px)
-        +adjust-font-size-to($ms0)
-      a
-        +link-colors($red, $red-dark, $red-dark, $red, false)
-        +remove-link-underlines
-      &:before, &:after
-        font-weight: 300
-        color: $lightgray
-      &:before
-        content: '<'
-      &:after
-        content: '>'
-
 
 /* Main content
 [role=main]
@@ -99,6 +100,8 @@ header#page-header
     // color: $white
     text-align: center
     // +full
+    +respond-to(handhelds)
+      -webkit-margin-before: 0
   .view-display-id-page
     .views-row
       +vertical-separation($kit-baseline * 3, 1px, change-color($white, $alpha:  0.5), dashed)

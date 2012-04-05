@@ -11,6 +11,9 @@
       color: green
 
 =respond-to($media)
+  @if $media == monochrome
+    @media all and (monochrome)
+      @content
   @if $media == handhelds
     @media only screen and (max-width: 320px)
       @content

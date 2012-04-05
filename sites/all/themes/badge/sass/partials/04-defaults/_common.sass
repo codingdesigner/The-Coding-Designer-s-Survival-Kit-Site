@@ -49,6 +49,8 @@ a
   +link-colors($alt-color, complement($alt-color), complement($alt-color), $alt-color, false)
   +better-links($alt-color, complement($alt-color), complement($alt-color), $alt-color, false)
   // +link-transitions
+  +respond-to(monochrome)
+    +link-colors($alt-gray, darken($alt-gray, 20%), darken($alt-gray, 20%), $alt-gray, false)
 
 em
   @extend .italic
