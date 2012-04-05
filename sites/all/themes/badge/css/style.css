@@ -891,7 +891,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-image: url('../images/dirt-320x320.jpg?1332137321');
+  background-image: url('../images/dirt-320x320.jpg?1333609424');
   background-position: top center;
   background-attachment: fixed;
   margin: 0 auto;
@@ -908,7 +908,6 @@ body {
 header#page-header {
   position: relative;
   margin-top: 4.5em;
-  margin-bottom: 3em;
 }
 header#page-header:before {
   /* add the little background stripe behind the logo */
@@ -929,7 +928,7 @@ header#page-header:before {
 header#page-header h1 {
   font-size: 1.438em;
   line-height: 2.087em;
-  background: transparent url('../images/logo.png?1332137321') no-repeat 0 8px;
+  background: transparent url('../images/logo.png?1333609424') no-repeat 0 8px;
   min-width: 52px;
   min-height: 32px;
   padding-left: 63.5px;
@@ -1276,7 +1275,7 @@ header#page-header a:active {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  background-image: url('../images/badges/color.png?1332137320');
+  background-image: url('../images/badges/color.png?1333609424');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 115px;
