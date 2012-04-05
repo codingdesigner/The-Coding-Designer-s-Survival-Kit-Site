@@ -1,0 +1,1118 @@
+// Create the design for your site below
+/* SITE-WIDE DESIGN --------------------------------------------------------------
+
+
+/* Non-grid Layout and styling --------------------------------------------------------------
+html
+  height: 100%
+body
+  width: 100%
+  height: 100%
+  background:
+    // color: $brown
+    // image: image_url('dirt-320x320.jpg')
+    image: image_url('dirt-920x776.jpg')
+    position: top center
+    attachment: fixed
+  @media screen and (max-width: 320px)
+    //   /* set different backgrounds depending on the device width
+    //   background-size: cover
+    //   -moz-background-size: cover
+    //   /* different padding < 320
+    padding-top: 92px
+    padding-bottom: 600px
+    padding-bottom: 500px
+  // @media screen and (max-width: 500px)
+  //   /* set different backgrounds depending on the device width
+  //   background-image: image_url('dirt-500x500.jpg')
+  //   background-size: cover
+  //   -moz-background-size: cover
+  // @media screen and (max-width: 900px)
+  //   /* set different backgrounds depending on the device width
+  //   background-image: image_url('dirt-920x776.jpg')
+  //   background-size: cover
+  //   -moz-background-size: cover
+  @media screen and (min-width: 901px)
+    /* set different backgrounds depending on the device width
+    background-image: image_url('dirt-1200x776.jpg')
+    background-size: cover
+    -moz-background-size: cover
+
+
+
+/* PAGE HEADER
+header#page-header
+  position: relative
+  padding-top: $kit-baseline * 2
+  .front &
+    padding-top: 372px
+    padding-bottom: 248px
+  &:before
+    /* add the little background stripe behind the logo
+    content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈"
+    @extend .logo-type
+    letter-spacing: -4px
+    +adjust-font-size-to($ms6)
+    color: mix($red, $black)
+    color: change-color($red, $alpha: 0.2)
+    +text-shadow(rgba($black, 0.6) 1px 1px)
+    position: absolute
+    left: 0
+    width: 100%
+    overflow: hidden
+    z-index: 0
+    top: 53px
+    .front &
+      top: 376px
+    @media screen and (max-width: 320px)
+      /* move the stripe for small screens
+      top: 94px
+      .front &
+        top: 10px
+  .wrapper
+    background: transparent image_url('logo.png') no-repeat 0 ($kit-baseline * 1.5)
+    padding-top: $kit-baseline * 1.5
+    top: -$kit-baseline * 1.5
+    position: relative
+    z-index: 99
+    @media screen and (max-width: 320px)
+      /* set the width of the wrapper for smaller screeens
+      width: 320px
+      top: -400px
+    width: 480px
+    margin: 0 auto
+    color: $white
+    color: change-color($white, $alpha: 0.8)
+    +text-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
+  #{headers(1, 2)}
+    @extend .logo-type
+    font-weight: 700
+    font-family: $font-proxima-nova-condensed
+  h1
+    margin-bottom: 0
+    position: relative
+    @media screen and (max-width: 320px)
+      /* change the font size for small screens
+      font-size: $ms2
+      padding-right: 2px
+      top: 3px
+    font-size: 32.8px
+    top: 0px
+    text-align: right
+    padding-right: 6px
+    .wf-active &
+      /* adjust for active webfonts
+      +adjust-font-size-to($ms5)
+      top: -9px
+      @media screen and (max-width: 320px)
+        /* adjust for small screens and active web fonts
+        font-size: $ms3
+        top: 3px
+  h2
+    font-family: $font-proxima-nova
+    font-weight: 800
+    +adjust-font-size-to(69px)
+    position: relative
+    top: 0px
+    @media screen and (max-width: 320px)
+      /* change the font size for small screens
+      +adjust-font-size-to(46px)
+      top: 9px
+    .wf-active &
+      /* adjust for active webfonts
+      +adjust-font-size-to($ms8)
+      top: -$kit-baseline-half
+      @media screen and (max-width: 320px)
+        /* adjust for small screens and active web fonts
+        font-size: $ms6
+  a
+    +link-colors($alt-color, $white, $white, $alt-color, false)
+
+
+/* MASTER NAVIGATION
+#main-nav
+  position: fixed
+  top: 0
+  background-color: $white
+  background-color: change-color($white, $alpha:  0.9)
+  width: 100%
+  text-align: center
+  z-index: 100
+  border-bottom: 1px solid $brown
+  h1
+    @extend .visuallyhidden
+  ul
+    +inline-list
+    li
+      padding: 0 0.5em
+      display: inline-block
+      @extend .h5
+      line-height: 1.143em
+      @media screen and (max-width: 480px)
+        +adjust-font-size-to($ms0)
+      a
+        +link-colors($red, $red-dark, $red-dark, $red, false)
+        +remove-link-underlines
+      &:before, &:after
+        font-weight: 300
+        color: $lightgray
+      &:before
+        content: '<'
+      &:after
+        content: '>'
+
+.logged-in
+  #page-tools
+    position: fixed
+    bottom: 0
+    background-color: $white
+    background-color: change-color($white, $alpha:  0.9)
+    width: auto
+    padding: 0.25em
+    z-index: 101
+    ul
+      margin-bottom: 0
+      margin-left: 0
+      +no-bullets
+
+
+
+#block-system-main
+  .panel-panel
+    position: relative
+    z-index: 98
+
+.not-front
+  div[role=main]
+    .inner
+      @extend .container
+    #page-title
+      color: $white
+      text-align: center
+      +full
+    .view-display-id-page
+      .views-row
+        +vertical-separation($kit-baseline * 3, 1px, change-color($white, $alpha:  0.5), dashed)
+        +full
+        .media-vimeo-outer-wrapper
+          +columns(3, 5)
+          @media screen and (max-width: 768px)
+            // reposition for smaller screens
+            +reset-column
+          iframe
+            width: 100%
+        .video-content
+          +columns(2, 5)
+          +omega(5)
+          width: 38.478% + 2.537%
+          margin-left: -2.537%
+          padding-left: 2.537%
+          padding-right: 0.5em
+          +padding-trailer(0.5)
+          +box-sizing(border-box)
+          background-color: $white
+          background-color: change-color($white, $alpha:  0.9)
+          @media screen and (max-width: 768px)
+            // reposition for smaller screens
+            +reset-column
+            margin-left: 0
+            padding-left: 0.5em
+          h1
+            +leader(0.25)
+            @extend .h3
+            line-height: 1
+            border-bottom: 1px solid $alt-color
+            +trailer(0.25)
+            a
+              +remove-link-underlines
+
+
+.not-front
+  div[role=main]
+    h1.title
+      +trailer(0.5)
+      @media screen and (max-width: 480px)
+        +adjust-font-size-to($ms3)
+        +trailer(0)
+    article.node
+      // +full
+      +columns(3, 5)
+      +prefix(1, 5)
+      display: block
+      float: none
+      margin: 0 auto
+      @media screen and (max-width: 768px)
+        // reposition for smaller screens
+        +reset-column
+      background-color: $white
+      background-color: change-color($white, $alpha:  0.9)
+      padding-left: 0.5em
+      padding-right: 0.5em
+      +padding-trailer(0.5)
+      +box-sizing(border-box)
+      .field-name-field-video
+        margin-left: -0.5em
+        margin-right: -0.5em
+        +box-shadow( rgba($white, 0.2) 0 0 30px)
+        iframe
+          width: 100%
+      .author
+        font-style: italic
+        color: change-color($black, $lightness:  30%)
+      #comments
+        border-top: $kit-baseline-half double $green
+        +background-clip
+        background-color: change-color($green, $lightness:  85%)
+        margin-left: -0.5em
+        margin-right: -0.5em
+        padding-left: 0.5em
+        padding-right: 0.5em
+        +padding-leader
+        +padding-trailer
+
+
+
+
+.not-front
+  div[role=main]
+    .inner
+      #content
+        +full
+        background-color: $white
+        background-color: change-color($white, $alpha:  0.9)
+
+
+.page-tutorials,
+.node-type-podcast-episode,
+.page-journal,
+.node-type-blog-post
+  div[role=main]
+    .inner
+      #content
+        background-color: transparent
+        +reset-column
+        article
+          .content
+            a
+              +link-colors($blue, complement($blue), complement($blue), $blue-dark, false)
+              +better-links($blue, complement($blue), complement($blue), $blue-dark, false)
+
+.page-journal
+  .node-blog-post
+    header
+      background: $white
+      border-bottom: 1px solid $green
+      margin: 0 -0.5em
+      padding: 0 0.5em
+      +trailer(1)
+      h1
+        a
+          +remove-link-underlines
+
+
+
+
+/* TEASERS
+/* define animations
+@-webkit-keyframes spin
+  0%
+    +transform2d(rotate(0deg))
+  100%
+    +transform2d(rotate(360deg))
+
+@-webkit-keyframes spin-back
+  0%
+    +transform2d(rotate(0deg))
+  100%
+    +transform2d(rotate(-360deg))
+
+// badge variables
+$badge-size: 115px
+$badge-size-neg-half: -$badge-size * 0.5
+$badge-total: 9
+$intro-width: 404px
+#all-teasers
+  position: relative
+  z-index: 3
+  display: block
+  margin: 0 auto
+  width: $intro-width
+  max-width: $intro-width
+  top: -300px
+  @media screen and (max-width: 320px)
+    /* adjust for small screens
+    width: 320px
+    max-width: 320px
+    top: -590px
+  .pane-title
+    @extend .hidden
+  nav.samples
+    position: absolute
+    z-index: 2
+    top: $badge-size-neg-half
+    left: $intro-width * 0.5
+    @media screen and (max-width: 320px)
+      /* move to the far left on small screens
+      left: 0
+    @media screen and (min-width: 901px)
+      /* allow animations on large screens
+      -webkit-animation-name: spin
+      -webkit-animation-duration: 80s
+      -webkit-animation-timing-function: linear
+      -webkit-animation-iteration-count: infinite
+    +transform2d(scale(0.9))
+    +transition(all 0.5s)
+    h3
+      @extend .hidden
+    ul
+      margin: 0 0 0 0
+      +no-bullets
+      position: absolute
+      // badges
+      $badge-size: 115px
+      top: -$badge-size * 3.66
+      left: -160px
+      width: 400px
+      @media screen and (max-width: 320px)
+        /* move and size for small screens
+        top: 0
+        left: 0px
+        max-width: 300px
+        overflow: hidden
+      @media screen and (min-width: 901px)
+        /* place the center of the circle on large screens
+        top: $badge-size-neg-half
+        left: $badge-size-neg-half
+      li
+        float: left
+        top: 0
+        left: 0
+        width: 115px
+        height: 115px
+        z-index: 4
+        +border-radius($ms9)
+        +background-clip(padding-box)
+        +transition(all 0.5s)
+        +box-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
+        @media screen and (max-width: 320px)
+          /* keep from overflowing on small screens
+          position: relative
+          left: 0px
+          width: 100px
+          height: 100px
+          +scale(0.7)
+        @media screen and (max-width: 900px)
+          /* show only nine badges when not large enough for a circle
+          &#code-viewer-badge
+            display: none
+        @media screen and (min-width: 901px)
+          /* reverse-spin the individual badges (so they appear to not spin) when there is a spinning circle
+          -webkit-animation-name: spin-back
+          -webkit-animation-duration: 80s
+          -webkit-animation-timing-function: linear
+          -webkit-animation-iteration-count: infinite
+          position: absolute
+          float: none
+        a
+          +remove-link-underlines
+          display: block
+          +replace-text-with-dimensions('badges/color.png')
+          @media screen and (max-width: 320px)
+            /* shrink the badges a bit on small screens
+            // +scale(0.7)
+        @each $badge in color, clean-start, step-by-step, html5, fonts, jquery-plugins, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
+          &##{$badge}-badge
+            a
+              @extend .badges-#{$badge}
+              &:hover, &.selected
+                @extend .badges-#{$badge}-selected
+        @media screen and (min-width: 901px)
+          /* lay out the badges in a circle on large screens
+          // calculate circle of badges
+          @for $i from 1 through ($badge-total + 1)
+            $radius: 320
+            $position: 360 / ($badge-total + 1) * $i
+            $rotation: $position
+            @if $rotation > 180
+              $rotation: -360 + $rotation
+            @if $rotation == 0
+              $rotation: $rotation + 20
+            $rotation: $rotation
+            $cos: cos($position * (pi() / 180))
+            $x-position: $radius * $cos + px
+            // @debug $radius * $cos + '%'
+            // @debug $radius * $cos + px
+            $sin: sin($position * (pi() / 180))
+            $y-position: $radius * $sin + px
+            &
+              &:nth-of-type(#{$i}n-#{$i})
+                top: $y-position
+                left: $x-position
+      @media screen and (min-width: 901px)
+        /* expand the circle when you mouse-over the nav (large screens)
+        &:hover
+          li
+
+            @for $i from 1 through ($badge-total + 1)
+              $radius: 330
+              $position: 360 / ($badge-total + 1) * $i
+              $rotation: $position
+              @if $rotation > 180
+                $rotation: -360 + $rotation
+              @if $rotation == 0
+                $rotation: $rotation + 20
+              $rotation: $rotation
+              $cos: cos($position * (pi() / 180))
+              $x-position: $radius * $cos + px
+              $sin: sin($position * (pi() / 180))
+              $y-position: $radius * $sin + px
+              &
+                &:nth-of-type(#{$i}n-#{$i})
+                  top: $y-position
+                  left: $x-position
+#teasers
+  position: relative
+  width: $intro-width
+  margin: 0 auto
+  @media screen and (max-width: 320px)
+    /* resize for smaller screens
+    width: 320px
+    // height: auto
+    top: 250px
+    margin-left: 0
+    margin-right: 0
+    // display: none
+  > h3
+    @extend .hidden
+  article
+    position: absolute
+    height: 190px
+    width: 410px
+    +border-bottom-radius(180px)
+    background-color: $black
+    background-color: change-color($black, $alpha:  0.5)
+    color: $lightgray
+    text-align: center
+    left: 0px
+    @media screen and (max-width: 320px)
+      /* resize for small screens
+      width: 320px
+      +border-bottom-radius(0)
+      overflow: hidden
+    @media screen and (min-width: 320px)
+      /* add a semi-trans background when not the smallest screens
+      &:before
+        content: '\0020'
+        position: absolute
+        width: 410px
+        height: 476px
+        +background-image(linear-gradient(top, change-color($black, $alpha:  0), change-color($black, $alpha:  0.5)))
+        z-index: -10
+        bottom: 190px
+        left: 0
+    h1
+      @extend .h4
+      border-bottom: 1px dashed adjust-color($blue, $lightness: +45 )
+      margin: 0 5px 0.25em
+      color: adjust-color($blue, $lightness: +30)
+      display: block
+      visibility: visible
+      +adjust-font-size-to(24.327px)
+      padding-top: 6px
+      .wf-active &
+        /* style for active webfonts
+        @extend .h4
+        padding-top: 0
+      @media screen and (max-width: 320px)
+        /* adjust for small screens
+        margin: 0 0px 0.25em
+    p
+      font-weight: bold
+      padding: 0 45px
+      @media screen and (max-width: 320px)
+        /* no padding for small screens
+        padding: 0 0
+    @extend .hidden
+    &:target, &.selected
+      display: block
+      visibility: visible
+
+
+$panel-z-index: -51
+
+/* INTRODUCTION
+#intro
+  position: relative
+  z-index: $panel-z-index
+  .inner
+    @extend .container
+    @media screen and (max-width: 320px)
+      /* adjust padding for small browsers
+      +padding-leader(1)
+      +padding-trailer(1)
+    +padding-leader(2)
+    +padding-trailer(2)
+    color: $blue-ice
+    background-color: $black
+    background-color: change-color($black, $alpha:  0.5)
+    > h1
+      @extend .visuallyhidden
+  article
+    +full
+
+    h1
+      text-align: center
+      color: scale-color($green, $lightness:  50%)
+      +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+      +adjust-leading-to(4, $ms6)
+      display: none
+    .content
+      +columns(4,5)
+      +prefix(0.5)
+      +text-shadow(rgba($black, 0.8) 1px 1px 2px)
+      @media screen and (max-width: 320px)
+        /* full width for small screens
+        +columns(5,5)
+        +prefix(0)
+      @media screen and (min-width: 500px)
+        /* 2 column text for most screens
+        +column-count(2)
+        +column-gap(24px)
+
+
+
+/* LEARN
+#learn
+  position: relative
+  z-index: $panel-z-index - 1
+  border-top: 2px solid $black
+  // START background pattern
+  /* BACKGROUND PATTERN: http://leaverou.me/css3patterns/#carbon-fibre THANKS!
+  background: -webkit-gradient(radial, 0 0, 0, 0 0, 16, color-stop(15%, $brown-dark), color-stop(16%, rgba($black, 0))), -webkit-gradient(radial, 8px 8px, 0, 8px 8px, 16, color-stop(15%, $brown-dark), color-stop(16%, rgba($black, 0))), -webkit-gradient(radial, 0 1px, 0, 0 1px, 20, color-stop(15%, rgba($white, 0.1)), color-stop(20%, rgba($black, 0))), -webkit-gradient(radial, 8px 9px, 0, 8px 9px, 20, color-stop(15%, rgba($white, 0.1)), color-stop(20%, rgba($black, 0)))
+  background: -webkit-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 0 0, -webkit-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 8px 8px, -webkit-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 0 1px, -webkit-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 8px 9px
+  background: -moz-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 0 0, -moz-radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 8px 8px, -moz-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 0 1px, -moz-radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 8px 9px
+  background: -o-radial-gradient(0 0, $brown-dark 15%, rgba($black, 0) 16%), -o-radial-gradient(8px 8px, $brown-dark 15%, rgba($black, 0) 16%), -o-radial-gradient(0 1px, rgba($white, 0.1) 15%, rgba($black, 0) 20%), -o-radial-gradient(8px 9px, rgba($white, 0.1) 15%, rgba($black, 0) 20%)
+  background: radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 0 0, radial-gradient($brown-dark 15%, rgba($black, 0) 16%) 8px 8px, radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 0 1px, radial-gradient(rgba($white, 0.1) 15%, rgba($black, 0) 20%) 8px 9px
+  background-color: $brown
+  background-size: 16px 16px
+  // END background pattern
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  div.feed-icon
+    position: absolute
+    top: 20px
+    left: 54%
+  .inner
+    @extend .container
+    +padding-leader(1)
+    +padding-trailer(2)
+    background-color: rgba($black, 0.4)
+    +background-image(linear-gradient(left center, rgba($black, 0), rgba($black, 0) 59.7585%, rgba($brown, 0.5) 59.7585%, rgba($brown, 0.5) 79.2755%, rgba($black, 0) 79.2755%, rgba($black, 0)))
+    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+    color: $blue-ice
+    +clearfix
+    .pane-title
+      +full
+      text-align: center
+      font-weight: 300
+      margin-bottom: $kit-baseline
+      @extend .visuallyhidden
+    .view-podcast
+      h1
+        a
+          +remove-link-underlines
+      .attachment
+        +full
+        @media screen and (min-width: 500px)
+          /* set to 3 columns wide on most screens
+          +columns(3)
+          +alpha
+        .view-content
+          margin-top: auto
+          display: auto
+          width: auto
+          float: none
+          margin-right: auto
+          margin-left: auto
+          .views-row
+            h1
+              display: block
+              float: none
+              width: auto
+              +adjust-font-size-to($ms4)
+              @media screen and (max-width: 320px)
+                /* resize h1 for small screens
+                +adjust-font-size-to($ms3)
+        .media-vimeo-outer-wrapper
+          width: 558px
+          // height: 376.65px
+          max-width: 100%
+          @media screen and (max-width: 320px)
+            /* resize iframe on small screens
+            width: 308px
+            // height: auto
+      .view-content
+        +full
+        @media screen and (min-width: 500px)
+          /* move these to a right column on most screens
+          +leader(1)
+          +columns(2)
+          +omega
+          clear: none
+          margin-left: 0
+        > h2
+          +adjust-font-size-to($ms2)
+          text-align: right
+          +trailer
+        .views-row
+          +vertical-separation($kit-baseline, 3px, rgba($brown, 0.5), solid)
+          // margin-left: -12px
+          // padding-left: 12px
+          // margin-right: -26px
+          // padding-right: 26px
+          header
+            +columns(1, 2)
+            h1
+              @extend .h4
+              line-height: 1em
+          .content
+            +columns(1, 2)
+            +omega(2)
+            // margin: 3px 0
+            // p
+              // clear: both
+            .field-type-text-with-summary
+              @extend .visuallyhidden
+.panel-pane
+  .more-link
+    @extend h5
+    font-style: italic
+    +leader(2)
+    clear: both
+    text-align: right
+    margin-right: 2.414%
+.field-type-image
+  a
+    +remove-link-underlines
+
+
+/* JOURNAL
+#journal
+  position: relative
+  z-index: $panel-z-index - 2
+  border-top: 2px solid $black
+  // START background pattern
+  /* BACKGROUND PATTERN: http://leaverou.me/css3patterns/#cicada-stripes THANKS!
+  background-color: $brown
+  +background-image(linear-gradient(left, rgba($brown-dark, 0.07) 50%, rgba($black, 0) 50%), linear-gradient(left, rgba($brown-dark, 0.13) 50%, rgba($black, 0) 50%), linear-gradient(left, rgba($black, 0) 50%, rgba($brown-dark, 0.17) 50%), linear-gradient(left, rgba($black, 0) 50%, rgba($brown-dark, 0.19) 50%))
+  background-size: 13px, 29px, 37px, 53px
+  // END background pattern
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  .inner
+    @extend .container
+    +padding-leader(1)
+    +padding-trailer(2)
+    background-color: rgba($black, 0.2)
+    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+    color: $blue-ice
+    +clearfix
+    .pane-title
+      +full
+      text-align: center
+      font-weight: 300
+      margin-bottom: $kit-baseline
+      border-bottom: 1px dashed rgba($white, 0.2)
+    .view-blog
+      h1
+        a
+          +remove-link-underlines
+      .attachment
+        +full
+        @media screen and (min-width: 500px)
+          /* set to 3 columns wide on most screens
+          +columns(3)
+          +alpha
+        .view-content
+          margin-top: auto
+          display: auto
+          width: auto
+          float: none
+          margin-right: auto
+          margin-left: auto
+          .views-row
+            h1
+              display: block
+              float: none
+              width: auto
+              +adjust-font-size-to($ms4)
+              @media screen and (max-width: 320px)
+                /* resize h1 for small screens
+                +adjust-font-size-to($ms3)
+      .view-content
+        +full
+        @media screen and (min-width: 500px)
+          /* move these to a right column on most screens
+          +leader(1)
+          +columns(2)
+          +omega
+          clear: none
+          margin-left: 0
+        .item-list
+          ul
+            +no-bullets
+            .views-row
+              h1
+                +adjust-font-size-to($ms2)
+        > h2
+          +adjust-font-size-to($ms2)
+          text-align: right
+          +trailer
+        .views-row
+          +vertical-separation($kit-baseline, 3px, rgba($brown, 0.5), solid)
+          header
+            h1
+              @extend .h4
+              line-height: 1em
+          footer
+            ul
+              margin-left: 0
+              li.first
+                padding-left: 0
+
+
+/* TOOLS
+#tools
+  position: relative
+  z-index: $panel-z-index - 3
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  background-color: $blue-dark
+  background-image: -webkit-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
+  background-image: -moz-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
+  background-image: -o-linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
+  background-image: linear-gradient(165deg, rgba($blue,.2), rgba($blue,.2) 33%, $blue-dark 33%, $blue-dark 66%, rgba($blue,.2) 66%, rgba($blue,.2) 100%)
+  .inner
+    @extend .container
+    +padding-leader(1)
+    +padding-trailer(1)
+    background-color: rgba($white, 0.25)
+    color: $white
+    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+    .pane-title
+      display: none
+    header
+      +full
+      +trailer
+      h1
+        text-align: center
+        font-weight: 300
+        margin-bottom: $kit-baseline
+#all-examples
+  +full
+  position: relative
+#tools-nav
+  @media screen and (min-width: 500px)
+    /* set to 1 column for most screens
+    +columns(1,5)
+  position: relative
+  h2
+    @extend .h3
+  ul
+    +no-bullets
+    margin-left: 0
+    li
+      background-color: rgba($blue-dark, 0.1)
+      margin-left: -$side-gutter-width
+      padding-left: $side-gutter-width
+      position: relative
+      z-index: 75
+      background-repeat: no-repeat
+      background: -webkit-linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
+      background: -moz-linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
+      background: -o-linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
+      background: linear-gradient(165deg, change-color($white, $alpha:  0) 8px, rgba($white, 0.4) 0, rgba($white, 0.8) 100%) bottom right
+      +background-clip("padding-box")
+      +transition(all 0.5s)
+      @media screen and (max-width: 320px)
+        /* recolor for small screens
+        background-color: rgba($white, 0.8)
+      &:hover
+        background: -webkit-linear-gradient(165deg, rgba($black, 0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+        background: -moz-linear-gradient(165deg, rgba($black, 0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+        background: -o-linear-gradient(165deg, rgba($black, 0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+        background: linear-gradient(165deg, rgba($black, 0) 8px, rgba($blue-dark, 0.1) 0, rgba(adjust-color($blue-darker, $lightness: +5), 0.8) 100%) bottom right
+        @media screen and (max-width: 320px)
+          /* recolor :hover for small screens
+          background-color: rgba($blue-dark, 0.1)
+        a
+          +link-colors($green, $green, $green, $green, false)
+      &:not(:first-child)
+        border-top: 1px solid $blue-dark
+        &:after
+          position: absolute
+          z-index: 74
+          display: block
+          content: "\0020"
+          width: 18px
+          height: 12px
+          bottom: 19px
+          right: -2px
+          background: -webkit-linear-gradient(-140deg, change-color($black, $alpha:  0) 7px, rgba($blue-dark, 0.8) 0) top right
+          background: -mox-linear-gradient(-140deg, change-color($black, $alpha:  0) 7px, rgba($blue-dark, 0.8) 0) top right
+          background: -o-linear-gradient(-140deg, change-color($black, $alpha:  0) 7px, rgba($blue-dark, 0.8) 0) top right
+          background: linear-gradient(-140deg, change-color($black, $alpha:  0) 7px, rgba($blue-dark, 0.8) 0) top right
+          background-size: 50%
+          background-repeat: no-repeat
+      a
+        +transition(all 0.5s)
+        +remove-link-underlines
+        +link-colors($brown, $green, $green, $brown, false)
+        font-weight: 700
+#tools-examples
+  @media screen and (min-width: 500px)
+    /* 4 columns wide on most screens
+    +columns(4,5)
+    +omega(5)
+  position: relative
+  > h2
+    @extend .visuallyhidden
+  article
+    max-width: 100%
+    .example
+      // border: 1px solid $blue-dark
+      // +border-radius
+      & + footer
+        font-style: italic
+        +adjust-font-size-to($ms1)
+        opacity: 0.6
+.syntaxhighlighter
+  white-space: nowrap
+  overflow: auto
+  padding: 3px 0
+  +border-radius
+  border: 1px solid rgba($black, 0.15)
+  th, td, caption
+    padding: 0
+    .line
+      padding: 0 0.5em
+      &.alt1, &.alt2
+        background-color: rgba($black, 0) !important
+  .toolbar
+    display: none
+  .gutter, .container
+    .line
+      height: 24px
+  .gutter
+    width: 2em
+    max-width: 3em
+    @extend .mono
+  .container
+    width: auto
+    code
+      @extend .mono
+
+
+
+/* SURVIVORS
+#survivors
+  position: relative
+  z-index: $panel-z-index - 4
+  +box-shadow(0px 2px 2px rgba($black, 0.4), 0px 8px 8px rgba($black, 0.2))
+  background-color: $green
+  border-bottom: 2px solid $black
+  .inner
+    @extend .container
+    +padding-leader(1)
+    +padding-trailer(1)
+    background-color: rgba($black, 0.12)
+    color: $blue-ice
+    +text-shadow(rgba($blue, 0.5) 1px 2px 4px)
+    +box-shadow(2px 0px 2px rgba($black, 0.1px), 8px 0px 8px rgba($black, 0.05), -2px 0px 2px rgba($black, 0.1), -8px 0px 8px rgba($black, 0.05))
+    // > header
+    //   +full
+    //   +trailer
+    .pane-title
+      text-align: center
+      font-weight: 300
+      margin-bottom: $kit-baseline
+  .views-row
+    @media screen and (min-width: 500px)
+      /* each item 2 columns on most screens
+      +columns(2)
+      max-height: 240px
+    +vertical-separation($kit-baseline * 2)
+    position: relative
+    background: adjust-color($green, $lightness: -10)
+    padding: 6px
+    +box-shadow(rgba($black, 0.1) 2px 1px 4px, rgba($black, 0.1) -4px 3px 8px)
+    h1
+      +adjust-font-size-to($ms3)
+      line-height: 1em
+      max-width: 240px
+      @media screen and (min-width: 901px)
+        /* set font size for large screens
+        position: absolute
+        +adjust-font-size-to($ms4)
+        line-height: 1em
+    &:nth-of-type(odd)
+      /* left side (odd) items
+      @media screen and (min-width: 500px)
+        /* adjust placement for mid screens
+        +alpha()
+      @media screen and (min-width: 901px)
+        /* adjust placement for large screens
+        padding-right: 9%
+      h1
+        @media screen and (min-width: 500px)
+          /* move text for most screens
+          text-align: right
+        top: 0
+        right: 0
+        @media screen and (min-width: 901px)
+          /* rotate titles on large screens
+          +transform2d(rotate(-90deg) translate(-6px, -72px))
+          +transform-origin(top, right)
+    &:nth-of-type(even)
+      /* right side (even) items
+      @media screen and (min-width: 500px)
+        /* adjust placement for mid screens
+        +omega()
+      @media screen and (min-width: 901px)
+        /* adjust placement for large screens
+        padding-left: 9%
+      h1
+        top: 0
+        left: 0
+        @media screen and (min-width: 901px)
+          /* rotate titles on large screens
+          +transform2d(rotate(90deg) translate(6px, -72px))
+          +transform-origin(top, left)
+    &:last-child
+      padding-bottom: 6px
+
+
+
+/* START
+#prepared
+  position: relative
+  z-index: $panel-z-index - 5
+  color: $white
+  +adjust-font-size-to($ms3)
+  .inner
+    @extend .container
+    +padding-leader(2)
+    +padding-trailer(2)
+    background-color: rgba($black, 0.25)
+    +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+    position: relative
+    .pane-title
+      display: none
+  header
+    position: relative
+    float: left
+    +box-shadow(2px 0px 2px rgba($black, 0.2), 8px 0px 8px rgba($black, 0.1))
+    h1
+      line-height: 1em
+      background: $green
+      display: inline-block
+      float: left
+      +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+      @media screen and (max-width: 500px)
+        /* font size for most screens
+        +adjust-font-size-to($ms5)
+      @media screen and (min-width: 500px)
+        /* faux left extension for most screens
+        position: relative
+        &:before
+          content: '\0020'
+          position: absolute
+          background: $green
+          top: 0
+          bottom: 0
+          width: 9999px
+          right: 100%
+      @media screen and (max-width: 320px)
+        /* font size for small screens
+        font-size: $ms6
+      .word1
+        float: left
+        margin-right: 0.25em
+        @media screen and (min-width: 500px)
+          /* lettering.js adjustment for most screens
+          +adjust-font-size-to($ms4-5, 1, $ms6)
+          +transform2d(rotate(-90deg) translate(-18px, 0))
+          +transform-origin(50%, 50%)
+          margin-right: 0
+          text-align: center
+          padding: 6px 28px
+          +text-shadow(-2px 2px 2px rgba($black, 0.2), -8px 5px 8px rgba($black, 0.1))
+      .word2
+        @media screen and (min-width: 500px)
+          /* lettering.js adjustment for most screens
+          margin-left: -31px
+  p.download
+    float: left
+    padding: 12px 0 0 0
+    +adjust-font-size-to($ms3, 1, $ms3)
+    span
+      background-color: mix($green, $yellow)
+      float: left
+      clear: left
+      &.word1, &.word3, &.word5
+        padding-left: 0.5em
+        +transition(padding-left 0.5s)
+      &.word2, &.word4
+        clear: none
+        margin-left: 0.5em
+        background-color: transparent
+        color: $green
+    a
+      +remove-link-underlines
+      +link-colors($brown-dark, $blue, $brown-dark, $brown-dark, false)
+    &:hover
+      span
+        &.word1, &.word3, &.word5
+          padding-left: 1em
+  footer
+    +padding-leader(0.5)
+    clear: both
+    text-align: right
+    position: relative
+    .amp
+      +adjust-font-size-to($ms6, 1, $ms3)
+      position: relative
+      top: 0.2em
+    aside
+      h2
+        @extend .visuallyhidden
+      ul
+        +inline-list
+
+
+
+// random letter opacity
+#teasers article,
+#intro,
+#learn,
+#tools #tools-examples article,
+#survivors .survivor,
+#prepared,
+  h1, h2, h3
+    // position: relative
+    span
+      // position: relative
+      // &:nth-of-type(2n-2)
+      &:nth-of-type(3n-3)
+        opacity: 0.7
+      &:nth-of-type(5n-5)
+        opacity: 0.8
+      &:nth-of-type(7n-7)
+        opacity: 0.9
+
+
+.feed-icon
+  // @extend .visuallyhidden
+  a
+    +remove-link-underlines
+    +replace-text-with-dimensions('rss.png')
+    display: block
+    img
+      display: none

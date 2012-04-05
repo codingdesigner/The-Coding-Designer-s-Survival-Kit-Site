@@ -1,10 +1,35 @@
 name = Badge
-description = The main theme for this site. Deal with it, other themes. 
-package = The Coding Designer's Survival Kit 
+description = The main theme for this site. Deal with it, other themes.
+package = The Coding Designer's Survival Kit
 version = 1.x-dev
 core = 7.x
 base theme = survivalkit
 
 ; stylesheets
 stylesheets[all][] = css/style.css
-stylesheets[all][] = css/type/font_face.css
+; stylesheets[all][] = css/fonts/font_face.css
+
+fonts[typekit_api][] = "futura-pt#n7"
+fonts[typekit_api][] = "futura-pt#i7"
+fonts[typekit_api][] = "futura-pt#n4"
+fonts[typekit_api][] = "futura-pt#i4"
+fonts[typekit_api][] = "futura-pt#n8"
+fonts[typekit_api][] = "futura-pt#i8"
+fonts[typekit_api][] = "futura-pt#n3"
+fonts[typekit_api][] = "futura-pt#i3"
+fonts[typekit_api][] = "futura-pt#n5"
+fonts[typekit_api][] = "futura-pt#i5"
+fonts[typekit_api][] = "museo-slab#n1"
+fonts[typekit_api][] = "museo-slab#i1"
+fonts[typekit_api][] = "museo-slab#n9"
+fonts[typekit_api][] = "museo-slab#i9"
+fonts[typekit_api][] = "museo-slab#n3"
+fonts[typekit_api][] = "museo-slab#i3"
+fonts[typekit_api][] = "museo-slab#n5"
+fonts[typekit_api][] = "museo-slab#i5"
+fonts[typekit_api][] = "museo-slab#n7"
+fonts[typekit_api][] = "museo-slab#i7"
+fonts[typekit_api][] = "museo-slab#n8"
+fonts[typekit_api][] = "museo-slab#i8"
+fonts[typekit_api][] = "proxima-nova-condensed#n7"
+fonts[typekit_api][] = "proxima-nova#n8"

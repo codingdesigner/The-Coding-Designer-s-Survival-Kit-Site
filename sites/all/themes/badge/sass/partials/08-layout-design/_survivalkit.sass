@@ -1,0 +1,455 @@
+/* TEASERS
+/* define animations
+@-webkit-keyframes spin
+  0%
+    +transform2d(rotate(0deg))
+  100%
+    +transform2d(rotate(360deg))
+
+@-webkit-keyframes spin-back
+  0%
+    +transform2d(rotate(0deg))
+  100%
+    +transform2d(rotate(-360deg))
+
+@import "badges/*.png"
+@include all-badges-sprites
+
+// badge variables
+$badge-size: 115px
+$badge-size-neg-half: -$badge-size * 0.5
+$badge-total: 9
+$intro-width: 404px
+#all-teasers
+  position: relative
+  z-index: 3
+  // display: block
+  // margin: 0 auto
+  // width: $intro-width
+  // max-width: $intro-width
+  // top: -300px
+  // @media screen and (max-width: 320px)
+  //   /* adjust for small screens
+  //   width: 320px
+  //   max-width: 320px
+  //   top: -590px
+  .pane-title
+    @extend .hidden
+  nav.samples
+    // position: absolute
+    position: relative
+    z-index: 2
+    @extend .clearfix
+    // top: $badge-size-neg-half
+    // left: $intro-width * 0.5
+    // @media screen and (max-width: 320px)
+    //   /* move to the far left on small screens
+    //   left: 0
+    // @media screen and (min-width: 901px)
+    //   /* allow animations on large screens
+    //   -webkit-animation-name: spin
+    //   -webkit-animation-duration: 80s
+    //   -webkit-animation-timing-function: linear
+    //   -webkit-animation-iteration-count: infinite
+    // +transform2d(scale(0.9))
+    +transition(all 0.5s)
+    h3
+      @extend .hidden
+    ul
+      margin: 0 0 0 0
+      padding: 0 0 0 0
+      +no-bullets
+      // position: absolute
+      // badges
+      // $badge-size: 115px
+      $badge-size: image-width('badges/clean-start.png')
+      // top: -$badge-size * 3.66
+      // left: -160px
+      // width: 400px
+      @extend .clearfix
+      // @media screen and (max-width: 320px)
+      //   /* move and size for small screens
+      //   top: 0
+      //   left: 0px
+      //   max-width: 300px
+      //   overflow: hidden
+      // @media screen and (min-width: 901px)
+      //   /* place the center of the circle on large screens
+      //   top: $badge-size-neg-half
+      //   left: $badge-size-neg-half
+      li
+        float: left
+        top: 0
+        left: 0
+        width: $badge-size
+        width: 33%
+        height: $badge-size
+        z-index: 4
+        margin-bottom: 0.5em
+        +border-radius($ms9)
+        +background-clip(padding-box)
+        +transition(all 0.5s)
+        // +box-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
+        +scale(0.9)
+        // @media screen and (max-width: 320px)
+        //   /* keep from overflowing on small screens
+        //   position: relative
+        //   left: 0px
+        //   width: 100px
+        //   height: 100px
+        //   +scale(0.7)
+        // @media screen and (max-width: 900px)
+        //   /* show only nine badges when not large enough for a circle
+        &#code-viewer-badge
+          display: none
+        // @media screen and (min-width: 901px)
+        //   /* reverse-spin the individual badges (so they appear to not spin) when there is a spinning circle
+        //   -webkit-animation-name: spin-back
+        //   -webkit-animation-duration: 80s
+        //   -webkit-animation-timing-function: linear
+        //   -webkit-animation-iteration-count: infinite
+        //   position: absolute
+        //   float: none
+        a
+          +remove-link-underlines
+          display: block
+          +replace-text-with-dimensions('badges/color.png')
+          +border-radius($ms9)
+          +box-shadow(rgba($black, 0.8) 2px 2px 2px, rgba($black, 0.5) 5px 8px 8px)
+          margin: 0 auto
+          // @media screen and (max-width: 320px)
+          //   /* shrink the badges a bit on small screens
+          //   // +scale(0.7)
+        @each $badge in color, clean-start, step-by-step, html5, fonts, jquery-plugins, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
+          &##{$badge}-badge
+            a
+              @extend .badges-#{$badge}
+              &:hover, &.selected
+                @extend .badges-#{$badge}-selected
+        // @media screen and (min-width: 901px)
+        //   /* lay out the badges in a circle on large screens
+        //   // calculate circle of badges
+        //   @for $i from 1 through ($badge-total + 1)
+        //     $radius: 320
+        //     $position: 360 / ($badge-total + 1) * $i
+        //     $rotation: $position
+        //     @if $rotation > 180
+        //       $rotation: -360 + $rotation
+        //     @if $rotation == 0
+        //       $rotation: $rotation + 20
+        //     $rotation: $rotation
+        //     $cos: cos($position * (pi() / 180))
+        //     $x-position: $radius * $cos + px
+        //     // @debug $radius * $cos + '%'
+        //     // @debug $radius * $cos + px
+        //     $sin: sin($position * (pi() / 180))
+        //     $y-position: $radius * $sin + px
+        //     &
+        //       &:nth-of-type(#{$i}n-#{$i})
+        //         top: $y-position
+        //         left: $x-position
+      // @media screen and (min-width: 901px)
+      //   /* expand the circle when you mouse-over the nav (large screens)
+      //   &:hover
+      //     li
+
+      //       @for $i from 1 through ($badge-total + 1)
+      //         $radius: 330
+      //         $position: 360 / ($badge-total + 1) * $i
+      //         $rotation: $position
+      //         @if $rotation > 180
+      //           $rotation: -360 + $rotation
+      //         @if $rotation == 0
+      //           $rotation: $rotation + 20
+      //         $rotation: $rotation
+      //         $cos: cos($position * (pi() / 180))
+      //         $x-position: $radius * $cos + px
+      //         $sin: sin($position * (pi() / 180))
+      //         $y-position: $radius * $sin + px
+      //         &
+      //           &:nth-of-type(#{$i}n-#{$i})
+      //             top: $y-position
+      //             left: $x-position
+#teasers
+  @extend .hidden
+  // position: relative
+  // // width: $intro-width
+  // // margin: 0 auto
+  // // @media screen and (max-width: 320px)
+  // //   /* resize for smaller screens
+  // //   width: 320px
+  // //   // height: auto
+  // //   top: 250px
+  // //   margin-left: 0
+  // //   margin-right: 0
+  // //   // display: none
+  // > h3
+  //   @extend .hidden
+  // article
+  //   // @extend .hiddens
+  //   // position: absolute
+  //   // height: 190px
+  //   // width: 410px
+  //   // +border-bottom-radius(180px)
+  //   background-color: $black
+  //   background-color: change-color($black, $alpha:  0.5)
+  //   color: $lightgray
+  //   text-align: center
+  //   // left: 0px
+  //   // @media screen and (max-width: 320px)
+  //   //   /* resize for small screens
+  //   //   width: 320px
+  //   //   +border-bottom-radius(0)
+  //   //   overflow: hidden
+  //   // @media screen and (min-width: 320px)
+  //   //   /* add a semi-trans background when not the smallest screens
+  //   //   &:before
+  //   //     content: '\0020'
+  //   //     position: absolute
+  //   //     width: 410px
+  //   //     height: 476px
+  //   //     +background-image(linear-gradient(top, change-color($black, $alpha:  0), change-color($black, $alpha:  0.5)))
+  //   //     z-index: -10
+  //   //     bottom: 190px
+  //   //     left: 0
+  //   h1
+  //     @extend .h4
+  //     border-bottom: 1px dashed adjust-color($blue, $lightness: +45 )
+  //     margin: 0 5px 0.25em
+  //     color: adjust-color($blue, $lightness: +30)
+  //     display: block
+  //     visibility: visible
+  //     +adjust-font-size-to(24.327px)
+  //     padding-top: 6px
+  //     .wf-active &
+  //       /* style for active webfonts
+  //       @extend .h4
+  //       padding-top: 0
+  //     // @media screen and (max-width: 320px)
+  //     //   /* adjust for small screens
+  //     //   margin: 0 0px 0.25em
+  //   p
+  //     font-weight: bold
+  //     padding: 0 45px
+  //     @media screen and (max-width: 320px)
+  //       /* no padding for small screens
+  //       padding: 0 0
+  //   &:target, &.selected
+  //     display: block
+  //     visibility: visible
+
+
+// $panel-z-index: -51
+
+/* INTRODUCTION
+#intro
+  // position: relative
+  // z-index: $panel-z-index
+  color: $blue-ice
+  background-color: $black
+  background-color: change-color($black, $alpha:  0.5)
+  // +padding-leader(1)
+  +padding-trailer(1)
+  +box-shadow(rgba($black, 0.4) 0px 2px 2px, rgba($black, 0.2) 0px 8px 8px)
+  .inner
+    // @extend .container
+    // @media screen and (max-width: 320px)
+    //   /* adjust padding for small browsers
+    // +padding-leader(2)
+    // +padding-trailer(2)
+    // > h1
+      // @extend .visuallyhidden
+  article
+    // +full
+    padding: 0 0.5em
+    h1
+      @extend .h3
+      text-align: center
+      // color: scale-color($green, $lightness:  50%)
+      background-color: change-color($black, $alpha:  0.5)
+      +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+      margin-left: -0.5em
+      margin-right: -0.5em
+      // +adjust-leading-to(4, $ms6)
+      // display: none
+    .content
+      // +columns(4,5)
+      // +prefix(0.5)
+      // +text-shadow(rgba($black, 0.8) 1px 1px 2px)
+      // @media screen and (max-width: 320px)
+      //   /* full width for small screens
+      //   +columns(5,5)
+      //   +prefix(0)
+      // @media screen and (min-width: 500px)
+      //   /* 2 column text for most screens
+      //   +column-count(2)
+      //   +column-gap(24px)
+
+
+/* SURVIVORS
+#survivors
+  // position: relative
+  // z-index: $panel-z-index - 4
+  +box-shadow(rgba($black, 0.4) 0px 2px 2px, rgba($black, 0.2) 0px 8px 8px)
+  background-color: $green
+  border-bottom: 2px solid $black
+  +padding-leader(1)
+  +padding-trailer(1)
+  // background-color: rgba($green, 0.12)
+  color: $blue-ice
+  +text-shadow(rgba($blue, 0.5) 1px 2px 4px)
+  +box-shadow(2px 0px 2px rgba($black, 0.1px), 8px 0px 8px rgba($black, 0.05), -2px 0px 2px rgba($black, 0.1), -8px 0px 8px rgba($black, 0.05))
+  .pane-title
+    text-align: center
+    font-weight: 300
+    margin-bottom: $kit-baseline
+  .views-row
+    +vertical-separation($kit-baseline * 2)
+    position: relative
+    background: adjust-color($green, $lightness: -10)
+    padding: 6px
+    +box-shadow(rgba($black, 0.1) 2px 1px 4px, rgba($black, 0.1) -4px 3px 8px)
+    h1
+      // +adjust-font-size-to($ms3)
+      @extend .h3
+      margin-top: 0
+      margin-bottom: 0
+      // line-height: 1em
+      // max-width: 240px
+      // @media screen and (min-width: 901px)
+      //   /* set font size for large screens
+      //   position: absolute
+      //   +adjust-font-size-to($ms4)
+      //   line-height: 1em
+    // &:nth-of-type(odd)
+    //   /* left side (odd) items
+    //   @media screen and (min-width: 500px)
+    //     /* adjust placement for mid screens
+    //     +alpha()
+    //   @media screen and (min-width: 901px)
+    //     /* adjust placement for large screens
+    //     padding-right: 9%
+    //   h1
+    //     @media screen and (min-width: 500px)
+    //       /* move text for most screens
+    //       text-align: right
+    //     top: 0
+    //     right: 0
+    //     @media screen and (min-width: 901px)
+    //       /* rotate titles on large screens
+    //       +transform2d(rotate(-90deg) translate(-6px, -72px))
+    //       +transform-origin(top, right)
+    // &:nth-of-type(even)
+    //   /* right side (even) items
+    //   @media screen and (min-width: 500px)
+    //     /* adjust placement for mid screens
+    //     +omega()
+    //   @media screen and (min-width: 901px)
+    //     /* adjust placement for large screens
+    //     padding-left: 9%
+    //   h1
+    //     top: 0
+    //     left: 0
+    //     @media screen and (min-width: 901px)
+    //       /* rotate titles on large screens
+    //       +transform2d(rotate(90deg) translate(6px, -72px))
+    //       +transform-origin(top, left)
+    // &:last-child
+    //   padding-bottom: 6px
+
+
+/* START
+#prepared
+  // position: relative
+  // z-index: $panel-z-index - 5
+  color: $white
+  +adjust-font-size-to($ms3)
+  +padding-leader(2)
+  +padding-trailer(2)
+  background-color: rgba($black, 0.25)
+  +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
+  position: relative
+  .pane-title
+    @extend .hidden
+  header
+    position: relative
+    float: left
+    +box-shadow(2px 0px 2px rgba($black, 0.2), 8px 0px 8px rgba($black, 0.1))
+    h1
+      line-height: 1em
+      background: $green
+      display: inline-block
+      float: left
+      +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+      // @media screen and (max-width: 500px)
+      //   /* font size for most screens
+      //   +adjust-font-size-to($ms5)
+      // @media screen and (min-width: 500px)
+      //   /* faux left extension for most screens
+      //   position: relative
+      //   &:before
+      //     content: '\0020'
+      //     position: absolute
+      //     background: $green
+      //     top: 0
+      //     bottom: 0
+      //     width: 9999px
+      //     right: 100%
+      // @media screen and (max-width: 320px)
+      //   /* font size for small screens
+      //   font-size: $ms6
+      .word1
+        float: left
+        margin-right: 0.25em
+        // @media screen and (min-width: 500px)
+        //   /* lettering.js adjustment for most screens
+        //   +adjust-font-size-to($ms4, 1, $ms6)
+        //   +transform2d(rotate(-90deg) translate(-18px, 0))
+        //   +transform-origin(50%, 50%)
+        //   margin-right: 0
+        //   text-align: center
+        //   padding: 6px 28px
+        //   +text-shadow(-2px 2px 2px rgba($black, 0.2), -8px 5px 8px rgba($black, 0.1))
+      .word2
+        // @media screen and (min-width: 500px)
+        //   /* lettering.js adjustment for most screens
+        //   margin-left: -31px
+  p.download
+    float: left
+    padding: 12px 0 0 0
+    +adjust-font-size-to($ms3, 1, $ms3)
+    span
+      background-color: mix($green, $yellow)
+      float: left
+      clear: left
+      &.word1, &.word3, &.word5
+        padding-left: 0.5em
+        +transition(padding-left 0.5s)
+      &.word2, &.word4
+        clear: none
+        margin-left: 0.5em
+        background-color: transparent
+        color: $green
+    a
+      +remove-link-underlines
+      +link-colors($brown-dark, $blue, $brown-dark, $brown-dark, false)
+      // .no-js &
+      //   +link-colors($green, $blue, $brown-dark, $green, false)
+    &:hover
+      span
+        &.word1, &.word3, &.word5
+          padding-left: 1em
+  footer
+    +padding-leader(0.5)
+    clear: both
+    text-align: right
+    position: relative
+    .amp
+      +adjust-font-size-to($ms6, 1, $ms3)
+      position: relative
+      top: 0.2em
+    aside
+      h2
+        @extend .visuallyhidden
+      ul
+        +inline-list

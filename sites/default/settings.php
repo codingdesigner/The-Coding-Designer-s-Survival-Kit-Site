@@ -178,13 +178,13 @@
  * @endcode
  */
 $databases = array (
-  'default' =>
+  'default' => 
   array (
-    'default' =>
+    'default' => 
     array (
-      'database' => 'kit_site',
-      'username' => 'dev',
-      'password' => 'kitdev',
+      'database' => 'canarypr_tcd',
+      'username' => 'canarypr_canaryp',
+      'password' => '6K(vZ2#5',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',

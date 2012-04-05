@@ -1,0 +1,34 @@
+// HOW TO USE THIS FILE: 
+  The Coding Designer's Survival Kit includes many default font variables over in 
+  "kit_partials/variables/_fonts.sass"
+  You should leave that file active and add your own font-related variables here.
+  
+
+// UNCOMMENT BELOW TO USE CUSTOM WEBFONTS (TODO)
+// @import font_face
+
+// UNCOMMENT BELOW TO ALTER THE DEFAULT FONT STACKS
+// $font-sans: sans-serif
+// $font-serifs: Georgia, serif
+// $font-mono: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif
+
+// DECLARE TYPEKIT FONTS
+$font-museo-slab: museo-slab-1, museo-slab-2, $font-serifs
+$font-proxima-nova: proxima-nova-1,proxima-nova-2, $font-sans
+$font-proxima-nova-condensed: proxima-nova-condensed-1,proxima-nova-condensed-2, $font-sans
+$font-futura-pt: futura-pt-1, futura-pt-2, $font-sans
+
+// ASSIGN FONT STACK VARIABLES TO MORE USEFUL FONT VARIABLES
+$font-sans: $font-futura-pt
+$font-serifs: $font-museo-slab
+$font-headline: $font-futura-pt
+$font-logo: $font-proxima-nova , $font-headline
+$font-mono: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif
+
+// SPECIAL USE FONT STACKS
+// AMPERSANDS
+$font-amp: GoudyBookletter1911Regular, Goudy Old Style, Baskerville, Palatino,  $font-serifs
+// CAPS
+$font_cap: $font-sans
+
+

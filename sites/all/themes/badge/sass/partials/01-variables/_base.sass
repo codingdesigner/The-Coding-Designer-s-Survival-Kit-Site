@@ -1,0 +1,47 @@
+// SET VARIABLES FOR USE BY DEFAULTS, MIXINS, AND FRAMEWORKS
+// value used in compass typography
+// see: basic/default/typography
+// and: http://compass-style.org/reference/compass/typography/vertical_rhythm/
+$base-font-size: 16px
+
+
+// --- Modular SCALE (used by _defaults.sass) -----------
+// values used to determine modular scale values
+// see: src/common/mixins/_modular-scale.sass
+// and http://modularscale.com/
+$ratio: $minor-third
+$base-size: $base-font-size
+
+$ms0: ms(0)
+$ms1: ms(1)
+$ms2: ms(2)
+$ms3: ms(3)
+$ms4: ms(4)
+$ms5: ms(5)
+$ms6: ms(6)
+// $ms7: ms(7)
+$ms8: ms(8)
+$ms9: ms(9)
+// $ms10: ms(10)
+
+
+// Dimensions
+// basic values, independant of any css framework
+$kit-baseline: $base-font-size * 1.5
+$kit-baseline-half: $kit-baseline * 0.5
+$kit-baseline-neg: $kit-baseline * -1
+$kit-gutter: ms(2)
+$kit-gutter-half: $kit-gutter * 0.5
+$kit-gutter-neg: $kit-gutter * -1
+
+// use the Compass baseline system
+$establish-baseline: true
+
+// pixel-normalize
+// http://www.alistapart.com/articles/a-pixel-identity-crisis/
+$pixel-normalize: true
+
+// pick a reset of normalization
+// accepted values: 'meyer', 'normalize'
+$init-type: normalize
+$init-headers: false

@@ -1,0 +1,30 @@
+// This file establishes simple clean default font stacks
+
+$font-sans: sans-serif
+$font-serifs: Georgia, serif
+$font-mono: Consolas, Menlo, 'Courier New', monospace, monospace
+
+// uncomment to integrate typekit or similar
+// $font-typekit-FONTNAME: fontname
+// $font-typekit-FONTNAME: fontname
+//
+// $font-sans: $font-typekit-FONTNAME, $font-sans
+// $font-serifs: $font-typekit-FONTNAME, $font-serifs
+$font-jubilat: jubilat-1, jubilat-2, $font-serifs
+$font-proxima-nova: proxima-nova-1,proxima-nova-2, $font-sans
+$font-proxima-nova-condensed: proxima-nova-condensed-1,proxima-nova-condensed-2, $font-sans
+$font-futura-pt: futura-pt-1, futura-pt-2, $font-sans
+
+$font-body: $font-jubilat
+$font-headline: $font-futura-pt
+$font-logo: $font-proxima-nova
+
+@import compass/css3
++font-face("goudybookletter", font-files("goudy_bookletter_1911-webfont.woff", "goudy_bookletter_1911-webfont.ttf", "goudy_bookletter_1911-webfont.svg", "goudy_bookletter_1911-webfont.eot"))
+
+
+// special use font stacks
+// ampersands
+$font-amp: "goudybookletter", $font-serifs
+// CAPS
+$font_cap: $font-sans
