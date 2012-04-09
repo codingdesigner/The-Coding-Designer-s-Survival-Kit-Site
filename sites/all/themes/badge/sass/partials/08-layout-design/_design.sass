@@ -81,13 +81,18 @@ header#page-header
     padding-left: image-width('logo.png') + $kit-gutter-half
     +text-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
     text-transform: uppercase
-    width: 325px
+    width: 304px
     max-width: 100%
     margin: 0 auto
-    position: relative
+    // position: relative
+    // text-align: center
+    // text-indent: image-width('logo.png')
+    // margin-top: 0
+    // margin-bottom: 0
+    // outline: 1px dashed white
     z-index: 100
-    .no-js &
-      width: 335px
+    // .no-js &
+    //   width: 335px
   a
     +link-colors($white, $alt-color, $alt-color, $white, false)
 
@@ -153,6 +158,10 @@ header#page-header
     +padding-trailer(0.5)
     margin-top: -$kit-baseline-half
     // padding-top: $kit-baseline-half
+    header
+      h1
+        text-align: center
+        margin-bottom: 0.25em
     .field-name-field-video
       margin-left: -0.5em
       margin-right: -0.5em
@@ -161,6 +170,8 @@ header#page-header
         width: 100%
     .field-name-field-image
       text-align: center
+      margin-left: -0.5em
+      margin-right: -0.5em
     .author
       font-style: italic
       color: change-color($black, $lightness:  30%)
@@ -175,3 +186,12 @@ header#page-header
       +padding-leader
       +padding-trailer
 
+
+.content-wrapper
+  position: relative
+  .feed-icon
+    position: absolute
+    right: 0
+    top: -13px
+    border-bottom: none
+    +rotate(45deg)
