@@ -78,19 +78,20 @@ $intro-width: 404px
       //   top: $badge-size-neg-half
       //   left: $badge-size-neg-half
       li
-        float: left
+        position: relative
         top: 0
-        left: 0
-        width: $badge-size
-        width: 33%
-        height: $badge-size
+        left: -12px
+        float: left
+        // width: $badge-size / 2
+        width: 20%
+        height: $badge-size / 2
         z-index: 4
         margin-bottom: 0.5em
         +border-radius($ms9)
         +background-clip(padding-box)
         +transition(all 0.5s)
         // +box-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
-        +scale(0.9)
+        +scale(0.5)
         // @media screen and (max-width: 320px)
         //   /* keep from overflowing on small screens
         //   position: relative
@@ -100,8 +101,8 @@ $intro-width: 404px
         //   +scale(0.7)
         // @media screen and (max-width: 900px)
         //   /* show only nine badges when not large enough for a circle
-        &#code-viewer-badge
-          display: none
+        // &#code-viewer-badge
+        //   display: none
         // @media screen and (min-width: 901px)
         //   /* reverse-spin the individual badges (so they appear to not spin) when there is a spinning circle
         //   -webkit-animation-name: spin-back
@@ -114,6 +115,7 @@ $intro-width: 404px
           +remove-link-underlines
           display: block
           +replace-text-with-dimensions('badges/color.png')
+          text-indent: 200%
           +border-radius($ms9)
           +box-shadow(rgba($black, 0.8) 2px 2px 2px, rgba($black, 0.5) 5px 8px 8px)
           margin: 0 auto
