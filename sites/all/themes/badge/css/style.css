@@ -1374,6 +1374,7 @@ header#page-header a:active {
   position: relative;
   background: #8aa42d;
   padding: 6px;
+  text-align: center;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 1px 4px, rgba(0, 0, 0, 0.1) -4px 3px 8px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 1px 4px, rgba(0, 0, 0, 0.1) -4px 3px 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 2px 1px 4px, rgba(0, 0, 0, 0.1) -4px 3px 8px;
