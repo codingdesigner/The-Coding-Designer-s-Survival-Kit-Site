@@ -92,6 +92,13 @@ $intro-width: 404px
         +transition(all 0.5s)
         // +box-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
         +scale(0.5)
+        +respond-to(not-handhelds)
+          left: 0
+          width: 33%
+          height: $badge-size
+          +scale(0.9)
+          &#code-viewer-badge
+            display: none
         // @media screen and (max-width: 320px)
         //   /* keep from overflowing on small screens
         //   position: relative
