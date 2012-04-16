@@ -144,20 +144,26 @@ header#page-header
           a
             +remove-link-underlines
 
+%standard-page-background
+  background-color: $white
+  background-color: rgba($white, 0.9)
+  color: $brown-dark
+  padding-left: 0.5em
+  padding-right: 0.5em
+  +padding-trailer(0.5)
+  margin-top: -$kit-baseline-half
+
+[role=main]
+  .view-projects
+    @extend %standard-page-background
+
 [role=main]
   // max-width: 500px
   // margin: 0 auto
   h1.title
     // +trailer(0.5)
   article.node
-    background-color: $white
-    background-color: rgba($white, 0.9)
-    color: $brown-dark
-    padding-left: 0.5em
-    padding-right: 0.5em
-    +padding-trailer(0.5)
-    margin-top: -$kit-baseline-half
-    // padding-top: $kit-baseline-half
+    @extend %standard-page-background
     header
       h1
         text-align: center

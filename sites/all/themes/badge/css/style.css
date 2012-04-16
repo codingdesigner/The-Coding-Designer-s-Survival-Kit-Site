@@ -1061,7 +1061,7 @@ header#page-header a:active {
   border-bottom: none;
 }
 
-[role=main] article.node {
+[role=main] .view-projects, [role=main] article.node {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.9);
   color: #22160e;
@@ -1070,6 +1070,7 @@ header#page-header a:active {
   padding-bottom: 0.75em;
   margin-top: -12px;
 }
+
 [role=main] article.node header h1 {
   text-align: center;
   margin-bottom: 0.25em;
