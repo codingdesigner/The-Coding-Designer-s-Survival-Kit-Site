@@ -1071,6 +1071,13 @@ header#page-header a:active {
   margin-top: -12px;
 }
 
+[role=main] .view-projects .views-row {
+  text-align: center;
+}
+[role=main] .view-projects .views-row > a img {
+  text-align: center;
+}
+
 [role=main] article.node header h1 {
   text-align: center;
   margin-bottom: 0.25em;
