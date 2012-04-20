@@ -31,6 +31,7 @@ function cd_articles_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'article-external';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
@@ -197,7 +198,8 @@ function cd_articles_views_default_views() {
   $handler->display->display_options['fields']['field_tags']['element_type'] = '0';
   $handler->display->display_options['fields']['field_tags']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_tags']['element_label_colon'] = 1;
-  $handler->display->display_options['fields']['field_tags']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_tags']['element_wrapper_type'] = 'footer';
+  $handler->display->display_options['fields']['field_tags']['element_wrapper_class'] = 'tags';
   $handler->display->display_options['fields']['field_tags']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['field_tags']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_tags']['empty_zero'] = 0;
@@ -400,7 +402,8 @@ function cd_articles_views_default_views() {
   $handler->display->display_options['fields']['field_tags']['element_type'] = '0';
   $handler->display->display_options['fields']['field_tags']['element_label_type'] = '0';
   $handler->display->display_options['fields']['field_tags']['element_label_colon'] = 1;
-  $handler->display->display_options['fields']['field_tags']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_tags']['element_wrapper_type'] = 'footer';
+  $handler->display->display_options['fields']['field_tags']['element_wrapper_class'] = 'tags';
   $handler->display->display_options['fields']['field_tags']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['field_tags']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_tags']['empty_zero'] = 0;
