@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the cd_front feature.
+ */
+
+include_once('cd_front.features.inc');
