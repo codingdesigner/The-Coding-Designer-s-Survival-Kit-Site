@@ -5,10 +5,13 @@ version = 1.x-dev
 core = 7.x
 base theme = survivalkit
 
-; stylesheets
+; STYLESHEETS
 stylesheets[all][] = css/style.css
 ; stylesheets[all][] = css/fonts/font_face.css
+; Remove These
+stylesheets[all][] = twocol.css
 
+; FONTS
 fonts[typekit_api][] = "futura-pt#n7"
 fonts[typekit_api][] = "futura-pt#i7"
 fonts[typekit_api][] = "futura-pt#n4"
