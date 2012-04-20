@@ -223,6 +223,22 @@ header#page-header
 .pane-block-6
   ul
     +no-bullets
-
+.view-articles
+  .attachment-before
+    +padding-trailer(1)
+    border-bottom: 1px solid $blue-ice
+    +trailer(1)
+.article-external
+  +vertical-separation($kit-baseline * 2, 1px, $blue-ice)
+  .publication
+    @extend .h5
+    margin: 0
+  .title
+    @extend .h3
+    margin: 0
+  .tags
+    +leader(0.5)
+    // opacity: 0.8
+    color: $alt-gray
 
 
