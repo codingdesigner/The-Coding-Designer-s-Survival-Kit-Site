@@ -1,5 +1,6 @@
 require 'survivalkit'
 require 'susy'
+require 'zocial'
 # Require any additional compass plugins here.
 
 
