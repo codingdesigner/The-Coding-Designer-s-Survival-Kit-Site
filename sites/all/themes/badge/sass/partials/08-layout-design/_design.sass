@@ -241,18 +241,27 @@ header#page-header
     // opacity: 0.8
     color: $alt-gray
 
-
+////////////////////////////
+// zocial icons for social links
+////////////////////////////
 .pane-block-6
   a
     position: relative
     &:before
-      color: $white
+      // color: $white
+      background-color: $white
+      +border-radius(50px)
       font-family: zocial
+      // font-size: ms(1)
+      font-size: ms(-1)
       position: absolute
       left: -1.5em
       width: 1.25em
+      width: 1.5em
+      height: 1.5em
       text-align: right
-      +text-shadow(rgba($alt-gray, 0.5) 1px 1px)
+      text-align: center
+      // +text-shadow(rgba($white, 0.5) 1px 1px)
   a[href*=twitter]
     &:before
       content: "t"
