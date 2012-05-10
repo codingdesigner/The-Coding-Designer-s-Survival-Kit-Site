@@ -158,7 +158,7 @@ header#page-header
     @extend %standard-page-background
     .views-row
       & > h2
-      text-align: center
+        text-align: center
       & > a img
         text-align: center
 
@@ -201,7 +201,7 @@ header#page-header
 
 .content-wrapper
   position: relative
-  .feed-icon
+  a.feed-icon
     position: absolute
     right: 0
     top: -13px
@@ -220,19 +220,35 @@ header#page-header
     padding-left: 0
     padding-right: 0
 
+////////////////////////////
+// WRITE ON OTHER SITES
+////////////////////////////
+// %side-gutters
+//   padding-left: 8px
+//   padding-right: 8px
+%un-side-gutters
+  margin-left: -8px
+  margin-right: -8px
+
 .pane-block-6
   ul
     +no-bullets
 .view-articles
   .attachment-before
     +padding-trailer(1)
-    border-bottom: 1px solid $blue-ice
+    // border-bottom: 1px solid $blue-ice
     +trailer(1)
 .article-external
-  +vertical-separation($kit-baseline * 2, 1px, $blue-ice)
+  +vertical-separation($kit-baseline * 2)
   .publication
     @extend .h5
-    margin: 0
+    // margin: 0 calc-em(-8px, ms(3))
+    @extend %un-side-gutters
+    margin-bottom: 0
+    padding: 0 8px
+    @extend .italic
+    background-color: $blue-ice
+    +box-shadow(rgba($brown, 0.1) 0 -2px 4px -2px, rgba($brown, 0.1) 0 2px 4px -2px)
   .title
     @extend .h3
     margin: 0
@@ -240,6 +256,7 @@ header#page-header
     +leader(0.5)
     // opacity: 0.8
     color: $alt-gray
+    font-size: ms(-1)
 
 ////////////////////////////
 // zocial icons for social links
@@ -248,20 +265,17 @@ header#page-header
   a
     position: relative
     &:before
-      // color: $white
-      background-color: $white
+      background-color: rgba($white, 0.6)
       +border-radius(50px)
       font-family: zocial
-      // font-size: ms(1)
       font-size: ms(-1)
       position: absolute
-      left: -1.5em
-      width: 1.25em
+      left: -2em
+      top: 2px
       width: 1.5em
       height: 1.5em
-      text-align: right
+      line-height: 1.5em
       text-align: center
-      // +text-shadow(rgba($white, 0.5) 1px 1px)
   a[href*=twitter]
     &:before
       content: "t"
@@ -280,3 +294,11 @@ header#page-header
   a[href*=linkedin]
     &:before
       content: "L"
+
+////////////////////////////
+// PANELS
+////////////////////////////
+.pane-title
+  margin-bottom: 0
+  opacity: 0.3
+
