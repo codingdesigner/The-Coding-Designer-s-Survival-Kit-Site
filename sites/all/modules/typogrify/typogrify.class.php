@@ -57,9 +57,9 @@ class Typogrify {
   /**
    * Stylable capitals
    *
-   * Wraps multiple capital letters in ``<span class="caps">`` 
-   * so they can be styled with CSS. 
-   * 
+   * Wraps multiple capital letters in ``<span class="caps">``
+   * so they can be styled with CSS.
+   *
    * Uses the smartypants tokenizer to not screw with HTML or with tags it shouldn't.
    */
   public static function caps($text) {
@@ -71,22 +71,22 @@ class Typogrify {
     $tokens = _TokenizeHTML($text);
     $result = array();
     $in_skipped_tag = false;
-    
+
     $cap_finder = "/(
-            (\b[A-Z\d]*        # Group 2: Any amount of caps and digits
+            (\b[A-Z=\d]*       # Group 2: Any amount of caps and digits
             [A-Z]\d*[A-Z]      # A cap string much at least include two caps (but they can have digits between them)
             [A-Z\d]*\b)        # Any amount of caps and digits
             | (\b[A-Z]+\.\s?   # OR: Group 3: Some caps, followed by a '.' and an optional space
             (?:[A-Z]+\.\s?)+)  # Followed by the same thing at least once more
             (?:\s|\b|$))/x";
-    
+
     $tags_to_skip_regex = "/<(\/)?(?:pre|code|kbd|script|math)[^>]*>/i";
-    
+
     foreach ($tokens as $token) {
       if ( $token[0] == "tag" ) {
         // Don't mess with tags.
         $result[] = $token[1];
-        $close_match = preg_match($tags_to_skip_regex, $token[1]);            
+        $close_match = preg_match($tags_to_skip_regex, $token[1]);
         if ($close_match) {
           $in_skipped_tag = true;
         }
@@ -102,8 +102,8 @@ class Typogrify {
           $result[] = preg_replace_callback($cap_finder, array('Typogrify', '_cap_wrapper'), $token[1]);
         }
       }
-    }        
-    return join("", $result);    
+    }
+    return join("", $result);
   }
 
   /**

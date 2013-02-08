@@ -15,6 +15,11 @@
  *   The file contains the html5shiv, innerShiv, an a modified version of
  *   Drupal.ajax.prototype.commands.insert to process html5 elements added on the
  *   page via drupal ajax.
+ * - $html_attributes: String of attributes for the html element. It can be
+ *   manipulated through the variable $html_attributes_array from preprocess
+ *   functions.
+ * - $html_attributes_array: Array of html attribute values. It is flattened
+ *   into a string within the variable $html_attributes.
  *
  * Core Variables:
  * - $css: An array of CSS files for the current page.
@@ -50,12 +55,11 @@
  * @see html5_tools_process_html()
  */
 ?><!doctype html<?php print $rdf_header; ?>>
-<html lang="<?php print $language->language; ?>"<?php print $rdf_namespaces; ?>>
+<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?><?php print $html_attributes; ?>>
 <head<?php print $rdf_profile?>>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
-  <?php print $html5shiv; ?>
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>

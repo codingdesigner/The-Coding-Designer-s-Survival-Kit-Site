@@ -53,8 +53,8 @@ function html5_tools_admin_settings() {
   $form['html5_tools_head_markup']['html5_tools_override_doctype'] = array(
     '#type' => 'checkbox',
     '#default_value' => variable_get('html5_tools_override_doctype', 1),
-    '#title' => t('Simplify doctype and add html5shiv'),
-    '#description' => t('Replaces html.tpl.php with a custom html.tpl.php which has the proper html5 doctype. This also includes the html5shiv script. This settings will not take effect if your theme has its own html.tpl.php.'),
+    '#title' => t('Simplify doctype'),
+    '#description' => t('Replaces html.tpl.php with a custom html.tpl.php which has the proper html5 doctype. This settings will not take effect if your theme has its own html.tpl.php.'),
   );
   $form['html5_tools_head_markup']['html5_tools_override_style_tags'] = array(
     '#type' => 'checkbox',

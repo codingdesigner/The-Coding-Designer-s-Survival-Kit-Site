@@ -1,20 +1,10 @@
 <?php
- 
+
 /**
  * Implements hook_menu().
  */
 function html5_tools_menu() {
-  $items['admin/config/markup'] = array(
-    'title' => 'Markup',
-    'description' => 'Site markup.',
-    'position' => 'right',
-    'weight' => 0,
-    'page callback' => 'system_admin_menu_block_page',
-    'access arguments' => array('access administration pages'),
-    'file' => 'system.admin.inc',
-    'file path' => drupal_get_path('module', 'system'),
-  );
-  $items['admin/config/markup/html5-tools'] = array(
+  $items['admin/config/development/html5-tools'] = array(
     'title' => 'HTML5 Tools',
     'description' => 'Configure how HTML5 markup is applied to your site.',
     'page callback' => 'drupal_get_form',
@@ -32,53 +22,23 @@ function html5_tools_menu() {
  */
 function html5_tools_element_info_alter(&$type) {
   if (module_exists('link') && !empty($type['link_field'])) {
-    // This can possibly be problamatic if another module is also adding
-    // to the link_field #process.
-    array_pop($type['link_field']['#process']);
-    array_push($type['link_field']['#process'], '_html5_tools_link_field_process');
+    $type['link_field']['#process'][] = '_html5_tools_link_field_process';
   }
 }
 
 /**
- * Our own process function for the link field.
+ * Link fields process function to modified the regular 'text' input field
+ * to a 'url' input type.
  */
-if (module_exists('link')) {
-  function _html5_tools_link_field_process($element, $form_state, $complete_form) {
-    $settings = &$form_state['field'][$element['#field_name']][$element['#language']]['instance']['settings'];
-    $element['url'] = array(
-      '#type' => (isset($element['#extra']) && $element['#extra'] == 'urlwidget') ? 'urlfield' : 'textfield',
-      '#maxlength' => LINK_URL_MAX_LENGTH,
-      '#title' => t('URL'),
-      '#required' => ($element['#delta'] == 0 && $settings['url'] !== 'optional') ? $element['#required'] : FALSE,
-      '#default_value' => isset($element['#value']['url']) ? $element['#value']['url'] : NULL,
-    );
-    if ($settings['title'] !== 'none' && $settings['title'] !== 'value') {
-      $element['title'] = array(
-        '#type' => 'textfield',
-        '#maxlength' => '255',
-        '#title' => t('Title'),
-        '#required' => ($settings['title'] == 'required' && !empty($element['#value']['url'])) ? TRUE : FALSE,
-        '#default_value' => isset($element['#value']['title']) ? $element['#value']['title'] : NULL,
-      );
-    }
-
-    // Initialize field attributes as an array if it is not an array yet.
-    if (!is_array($settings['attributes'])) {
-      $settings['attributes'] = array();
-    }
-    // Add default atrributes.
-    $settings['attributes'] += _link_default_attributes();
-    $attributes = isset($element['#value']['attributes']) ? $element['#value']['attributes'] : $settings['attributes'];
-    if (!empty($settings['attributes']['target']) && $settings['attributes']['target'] == LINK_TARGET_USER) {
-      $element['attributes']['target'] = array(
-        '#type' => 'checkbox',
-        '#title' => t('Open URL in a New Window'),
-        '#return_value' => LINK_TARGET_NEW_WINDOW,
-        '#default_value' => isset($attributes['target']) ? $attributes['target'] : FALSE,
-      );
-    }
-    return $element;
+function _html5_tools_link_field_process($element, $form_state, $complete_form) {
+  $instance = field_widget_instance($element, $form_state);
+  // Lets make sure the urlwidget widget is selected.
+  if (!empty($instance['widget']['type']) && $instance['widget']['type'] == 'urlwidget') {
+    // If so, then lets switch the tyle to a urlfield.
+    $element['url']['#type'] = 'urlfield';
   }
+
+  return $element;
 }
 
 /**
@@ -86,7 +46,7 @@ if (module_exists('link')) {
  */
 function html5_tools_help($path, $arg) {
   switch ($path) {
-    case 'admin/config/markup/html5-tools':
+    case 'admin/config/development/html5-tools':
       return t("HTML5 simplifies many things about HTML. Some of these new standards are a bit tricky to implement in Drupal, because they are hardcoded into Drupal core. You can alter some of them by using theme override functions in your theme's template.php file, but this module provides tools for accomplishing these changes more easily.");
       break;
   }
@@ -138,7 +98,9 @@ function html5_tools_field_widget_form(&$form, &$form_state, $field, $instance, 
       break;
     case 'urlwidget':
       _urlwidget_html5_tools_field_widget_forms($form, $form_state, $field, $instance, $langcode, $items, $delta, $element, $value);
-      return $element;
+      if ($field['type'] == 'link_field') {
+        return $element;
+      }
       break;
     case 'emailwidget':
       _emailwidget_html5_tools_field_widget_forms($form, $form_state, $field, $instance, $langcode, $items, $delta, $element, $value);
@@ -243,8 +205,15 @@ function html5_tools_theme_registry_alter(&$theme_registry) {
  * Implements hook_process_HOOK().
  */
 function html5_tools_process_html(&$variables) {
+  // Remove cdata in inline css/js files.
+  $cdata = array("\n<!--//--><![CDATA[//><!--","//--><!]]>\n");
+  $variables['scripts'] = str_replace($cdata,'', $variables['scripts']);
+  $variables['page_bottom'] = str_replace($cdata,'', $variables['page_bottom']);
+  $variables['styles'] = str_replace($cdata,'', $variables['styles']);
+
   $variables['rdf_header'] = '';
   $variables['rdf_profile'] = '';
+  $variables['html_attributes'] = '';
   // Support RDF is it's enabled.
   if (module_exists('rdf')) {
     $variables['rdf_header'] = ' PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN"';
@@ -255,20 +224,10 @@ function html5_tools_process_html(&$variables) {
     drupal_add_http_header('X-UA-Compatible', 'IE=Edge,chrome=1');
   }
 
-  // We do not check for the html5_tools_override_doctype to allow other themes to also
-  // use the $html5shiv variable in their html.tpl.php
-  $element = array(
-    'element' => array(
-      '#tag' => 'script',
-      '#value' => '',
-      '#attributes' => array(
-        'src' => file_create_url(drupal_get_path('module', 'html5_tools') . '/html5.js'),
-      ),
-    ),
-  );
-  $script = theme('html_tag', $element);
-  // I really want to keep the mark-up clean, which is why I added the \n
-  $variables['html5shiv'] = "\n<!--[if lt IE 9]>\n" . $script . "<![endif]-->\n";
+  // Add support for multiple extra html attributes.
+  if (!empty($variables['html_attributes_array'])) {
+    $variables['html_attributes'] = drupal_attributes($variables['html_attributes_array']);
+  }
 }
 
 /**
@@ -374,7 +333,7 @@ function _numberfield_html5_tools_field_widget_forms(&$form, &$form_state, $fiel
   );
 
   // Add min attribute.
-  if (!empty($instance['settings']['min'])) {
+  if (!empty($instance['settings']['min']) || $instance['settings']['min'] === '0') {
     $element['#min'] = $instance['settings']['min'];
   }
 
@@ -393,6 +352,12 @@ function _numberfield_html5_tools_field_widget_forms(&$form, &$form_state, $fiel
     $element['#field_suffix'] = field_filter_xss(array_pop($suffixes));
   }
 
+  if ($field['type'] == 'number_decimal') {
+    // Convert scale (e.g. 10) to the resulting smallest step
+    // (e.g. 0.0000000001).
+    $element['#step'] = pow(10, -$field['settings']['scale']);
+  }
+
   // We'll leave the validate to the number_field_widget since it'll validate our form.
   $element['#element_validate'][] = 'number_field_widget_validate';
 }
@@ -405,6 +370,16 @@ function _rangewidget_html5_tools_field_widget_forms(&$form, &$form_state, $fiel
     '#type' => 'rangefield',
     '#default_value' => $value,
   );
+
+  // Add prefix.
+  if (!empty($instance['settings']['prefix'])) {
+    $element['#field_prefix'] = $instance['settings']['prefix'];
+  }
+
+  // Add suffix.
+  if (!empty($instance['settings']['suffix'])) {
+    $element['#field_suffix'] = $instance['settings']['suffix'];
+  }
 
   // Add min attribute.
   if (!empty($instance['settings']['min'])) {
@@ -447,7 +422,7 @@ function _urlwidget_html5_tools_field_widget_forms(&$form, &$form_state, $field,
     $element += array(
       '#type' => 'urlfield',
       '#default_value' => $value,
-    );    
+    );
   }
 }
 

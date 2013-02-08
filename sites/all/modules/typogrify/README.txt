@@ -7,23 +7,32 @@ Typogrify.module brings the typographic refinements of Typogrify to Drupal.
 
 * Wraps ampersands (the "&" character) with <span class="amp">&amp</span>.
 
-* Prevents single words from wrapping onto their own line using Shaun Inman's Widont technique.
+* Prevents single words from wrapping onto their own line using Shaun Inman's
+  Widont technique.
 
-* Converts straight quotation marks to typographer's quotation marks, using SmartyPants.
+* Converts straight quotation marks to typographer's quotation marks, using
+  SmartyPants.
 
-* Converts multiple hyphens to en dashes and em dashes (according to your preferences), using SmartyPants.
+* Converts multiple hyphens to en dashes and em dashes (according to your
+  preferences), using SmartyPants.
 
 * Wraps multiple capital letters with <span class="caps">CAPS</span>.
 
-* Wraps initial quotation marks with <span class="quo"></span> or <span class="dquo"></span>.
+* Wraps abbreviations with <span class="abbr">t.l.a.</span>.
 
-* Adds a css style sheet that uses the <span> tags to substitute a showy ampersand in headlines, switch caps to small caps, and hang initial quotation marks.
+* Wraps initial quotation marks with <span class="quo"></span> or
+  <span class="dquo"></span>.
+
+* Adds a css style sheet that uses the <span> tags to substitute a showy
+  ampersand in headlines, switch caps to small caps, and hang initial quotation
+  marks.
 
 
 Learn more about Typogrify
 ==========================
 
-Typogrify originated as Python code by Christian Metts. Typogrify.module uses Hamish Macpherson's port, php-typogrify.
+Typogrify originated as Python code by Christian Metts. Typogrify.module uses
+Hamish Macpherson's port, php-typogrify.
 
 Announcement:
 http://www2.jeffcroft.com/sidenotes/2007/may/29/typogrify-easily-produce-web-typography-doesnt-suc/
@@ -58,3 +67,4 @@ http://www.thinkingwithtype.com/
 
 And if you're going to buy one book...
 http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326
+

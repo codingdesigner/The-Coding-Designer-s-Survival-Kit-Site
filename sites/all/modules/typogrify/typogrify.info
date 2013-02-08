@@ -1,18 +1,13 @@
-
 name = Typogrify
 description = Adds typographic refinements.
 package = "Input filters"
-project = "typogrify"
 core = 7.x
-files[] = typogrify.module
 files[] = typogrify.class.php
-files[] = smartypants.php
-files[] = unicode-conversion.php
+files[] = tests/typogrify-smartypants.test
 
-
-; Information added by drupal.org packaging script on 2011-04-16
-version = "7.x-1.0-rc2"
+; Information added by drupal.org packaging script on 2012-09-19
+version = "7.x-1.0-rc5"
 core = "7.x"
 project = "typogrify"
-datestamp = "1302963716"
+datestamp = "1348061418"
 
