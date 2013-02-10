@@ -646,7 +646,7 @@ header#page-header {
       [role=main] .view-portfolio .views-row > .images a:active {
         border-bottom: none; }
   [role=main] .view-portfolio .views-row > .images img {
-    height: 300px;
+    max-height: 300px;
     margin-bottom: 1.5em;
     border: 1px solid white;
     -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 8px;
