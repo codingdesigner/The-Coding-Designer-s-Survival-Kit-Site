@@ -598,7 +598,7 @@ header#page-header {
         [role=main] .view-display-id-page .views-row .video-content h1 a:active {
           border-bottom: none; }
 
-[role=main] .view-projects, [role=main] article.node, .panel-2col {
+[role=main] .view-projects, [role=main] .view-portfolio .views-row > *:not(.images):not(h2), [role=main] article.node, .panel-2col {
   background-color: white;
   background-color: rgba(255, 255, 255, 0.9);
   color: #22160e;
@@ -611,6 +611,54 @@ header#page-header {
   text-align: center; }
 [role=main] .view-projects .views-row > a img {
   text-align: center; }
+
+.page-portfolio .container {
+  width: auto;
+  max-width: initial; }
+
+[role=main] .view-portfolio .views-row > h2 {
+  text-align: center;
+  text-transform: uppercase; }
+[role=main] .view-portfolio .views-row > a img {
+  text-align: center; }
+[role=main] .view-portfolio .views-row > *:not(.images):not(h2) {
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0; }
+  @media (min-width: 480px) {
+    [role=main] .view-portfolio .views-row > *:not(.images):not(h2) {
+      width: 95%;
+      margin: 0 auto;
+      max-width: 600px; } }
+[role=main] .view-portfolio .views-row > .images {
+  text-align: center; }
+  [role=main] .view-portfolio .views-row > .images a {
+    padding: 0 0.5em; }
+    [role=main] .view-portfolio .views-row > .images a {
+      text-decoration: none;
+      border-bottom: none; }
+      [role=main] .view-portfolio .views-row > .images a:visited {
+        border-bottom: none; }
+      [role=main] .view-portfolio .views-row > .images a:focus {
+        border-bottom: none; }
+      [role=main] .view-portfolio .views-row > .images a:hover {
+        border-bottom: none; }
+      [role=main] .view-portfolio .views-row > .images a:active {
+        border-bottom: none; }
+  [role=main] .view-portfolio .views-row > .images img {
+    height: 300px;
+    margin-bottom: 1.5em;
+    border: 1px solid white;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 8px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 8px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 8px; }
+[role=main] .view-portfolio .views-row > .body > :first-child {
+  margin-top: 0; }
+[role=main] .view-portfolio .views-row > .body > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 1.5em; }
+[role=main] .view-portfolio .views-row > .agency {
+  padding-bottom: 1.5em !important; }
 
 [role=main] article.node header h1 {
   text-align: center;

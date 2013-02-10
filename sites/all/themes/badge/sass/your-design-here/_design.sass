@@ -162,6 +162,51 @@ header#page-header
       & > a img
         text-align: center
 
+.page-portfolio
+  .container
+    width: auto
+    max-width: initial
+[role=main]
+  .view-portfolio
+    .views-row
+      & > h2
+        text-align: center
+        text-transform: uppercase
+      & > a img
+        text-align: center
+      & > *:not(.images):not(h2)
+        +breakpoint($not-handhelds)
+          width: 95%
+          margin: 0 auto
+          max-width: 600px
+        @extend %standard-page-background
+        padding-bottom: 0
+        margin-top: 0
+        margin-bottom: 0
+      & > .images
+        text-align: center
+        a
+          +undo-border-links
+          padding: 0 0.5em
+        img
+          height: 300px
+          margin-bottom: 1.5em
+          border: 1px solid $white
+          +box-shadow(rgba($white, 0.3) 0 0 0 8px)
+      & > .body
+        > :first-child
+          margin-top: 0
+        > :last-child
+          margin-bottom: 0
+          padding-bottom: 1.5em
+      & > .agency
+        padding-bottom: 1.5em !important
+
+// .view-portfolio
+//   .images
+//     outline: 1px solid red
+//     max-height: 300px
+//     overflow: hidden
 
 [role=main]
   // max-width: 500px
