@@ -1,0 +1,304 @@
+// Create the design for your site below
+/* SITE-WIDE DESIGN --------------------------------------------------------------
+
+
+// NEW, MOBILE-FIRST DESIGN
+
+html
+  height: 100%
+body
+  width: 100%
+  height: 100%
+  background:
+    image: image_url('dirt-320x320.jpg')
+    // image: image_url('dirt-920x776.jpg')
+    position: 25% top
+    attachment: fixed
+  margin: 0 auto
+  +breakpoint($monochrome)
+    background-image: none
+
+
+/* MASTER NAVIGATION
+#main-nav
+  // position: absolute
+  // top: 0
+  background-color: $white
+  background-color: change-color($white, $alpha:  0.9)
+  width: 100%
+  text-align: center
+  // z-index: 100
+  border-bottom: 1px solid $brown
+  +breakpoint($not-handhelds)
+    +trailer
+  h1
+    @extend %visuallyhidden
+  ul
+    +inline-list
+    li
+      padding: 0 0.5em
+      display: inline-block
+      @extend %h5
+      line-height: 1.143em
+      @media screen and (max-width: 480px)
+        +adjust-font-size-to(ms(0))
+      a
+        +link-colors($red, $red-dark, $red-dark, $red, false)
+        +undo-border-links
+      &:before, &:after
+        font-weight: 300
+        color: $lightgray
+      &:before
+        content: '<'
+      &:after
+        content: '>'
+
+/* PAGE HEADER
+header#page-header
+  position: relative
+  // +leader(3)
+  // +trailer(2)
+  &:before
+    /* add the little background stripe behind the logo
+    content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈"
+    // @extend .logo-type
+    letter-spacing: -3px
+    +adjust-font-size-to(ms(1))
+    color: mix($red, $black)
+    color: change-color($red, $alpha: 0.2)
+    +text-shadow(rgba($black, 0.6) 1px 1px)
+    position: absolute
+    left: 0
+    width: 100%
+    overflow: hidden
+    z-index: 0
+    top: 24px
+  h1
+    +adjust-font-size-to(ms(2))
+    background: transparent image_url('logo.png') no-repeat 0 8px
+    min-width: image-width('logo.png')
+    min-height: image-height('logo.png')
+    padding-left: image-width('logo.png') + $kit-gutter-half
+    +text-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
+    text-transform: uppercase
+    width: 304px
+    max-width: 100%
+    margin: 0 auto
+    // position: relative
+    // text-align: center
+    // text-indent: image-width('logo.png')
+    // margin-top: 0
+    // margin-bottom: 0
+    // outline: 1px dashed white
+    z-index: 100
+    // .no-js &
+    //   width: 335px
+  a
+    +link-colors($white, $alt-color, $alt-color, $white, false)
+
+
+/* Main content
+[role=main]
+  // .inner
+  //   @extend .container
+  #page-title
+    // color: $white
+    text-align: center
+    // +full
+    +breakpoint($handhelds)
+      -webkit-margin-before: 0
+  .view-display-id-page
+    .views-row
+      +vertical-separation($kit-baseline * 3, 1px, change-color($white, $alpha:  0.5), dashed)
+      // +full
+      .media-vimeo-outer-wrapper
+        // +columns(3, 5)
+        // @media screen and (max-width: 768px)
+          // reposition for smaller screens
+          // +reset-column
+        iframe
+          width: 100%
+      .video-content
+        // +columns(2, 5)
+        // +omega(5)
+        // width: 38.478% + 2.537%
+        // margin-left: -2.537%
+        // padding-left: 2.537%
+        // padding-right: 0.5em
+        // +padding-trailer(0.5)
+        // +box-sizing(border-box)
+        background-color: $white
+        background-color: change-color($white, $alpha:  0.9)
+        color: $brown-dark
+        // @media screen and (max-width: 768px)
+        //   // reposition for smaller screens
+        //   +reset-column
+        //   margin-left: 0
+        //   padding-left: 0.5em
+        h1
+          +leader(0.25)
+          @extend %h3
+          // line-height: 1
+          border-bottom: 1px solid $alt-color
+          // +trailer(0.25)
+          a
+            +undo-border-links
+
+%standard-page-background
+  background-color: $white
+  background-color: rgba($white, 0.9)
+  color: $brown-dark
+  padding-left: 0.5em
+  padding-right: 0.5em
+  +padding-trailer(0.5)
+  margin-top: -$kit-baseline-half
+
+[role=main]
+  .view-projects
+    @extend %standard-page-background
+    .views-row
+      & > h2
+        text-align: center
+      & > a img
+        text-align: center
+
+
+[role=main]
+  // max-width: 500px
+  // margin: 0 auto
+  h1.title
+    // +trailer(0.5)
+  article.node
+    @extend %standard-page-background
+    header
+      h1
+        text-align: center
+        margin-bottom: 0.25em
+    .field-name-field-video
+      margin-left: -0.5em
+      margin-right: -0.5em
+      +box-shadow( rgba($white, 0.2) 0 0 30px)
+      iframe
+        width: 100%
+    .field-name-field-image
+      text-align: center
+      margin-left: -0.5em
+      margin-right: -0.5em
+    .author
+      font-style: italic
+      color: change-color($black, $lightness:  30%)
+    #comments
+      border-top: $kit-baseline-half double $green
+      +background-clip
+      background-color: change-color($green, $lightness:  85%)
+      margin-left: -0.5em
+      margin-right: -0.5em
+      padding-left: 0.5em
+      padding-right: 0.5em
+      +padding-leader
+      +padding-trailer
+
+
+.content-wrapper
+  position: relative
+  a.feed-icon
+    position: absolute
+    right: 0
+    top: -13px
+    border-bottom: none
+    +rotate(45deg)
+
+.panel-2col
+  @extend %standard-page-background
+
+.pane-blog-panel-pane-1
+  .pane-title
+    @extend %visuallyhidden
+  article.node
+    background-color: transparent
+    // color: $text-color
+    padding-left: 0
+    padding-right: 0
+
+////////////////////////////
+// WRITE ON OTHER SITES
+////////////////////////////
+// %side-gutters
+//   padding-left: 8px
+//   padding-right: 8px
+%un-side-gutters
+  margin-left: -8px
+  margin-right: -8px
+
+.pane-block-6
+  ul
+    +no-bullets
+.view-articles
+  .attachment-before
+    +padding-trailer(1)
+    // border-bottom: 1px solid $blue-ice
+    +trailer(1)
+.article-external
+  +vertical-separation($kit-baseline * 2)
+  .publication
+    @extend %h5
+    // margin: 0 calc-em(-8px, ms(3))
+    @extend %un-side-gutters
+    margin-bottom: 0
+    padding: 0 8px
+    @extend %italic
+    background-color: $blue-ice
+    +box-shadow(rgba($brown, 0.1) 0 -2px 4px -2px, rgba($brown, 0.1) 0 2px 4px -2px)
+  .title
+    @extend %h3
+    margin: 0
+  .tags
+    +leader(0.5)
+    // opacity: 0.8
+    color: $alt-gray
+    font-size: ms(-1)
+
+////////////////////////////
+// zocial icons for social links
+////////////////////////////
+.pane-block-6
+  a
+    position: relative
+    &:before
+      background-color: rgba($white, 0.6)
+      +border-radius(50px)
+      font-family: zocial
+      font-size: ms(-1)
+      position: absolute
+      left: -2em
+      top: 2px
+      width: 1.5em
+      height: 1.5em
+      line-height: 1.5em
+      text-align: center
+  a[href*=twitter]
+    &:before
+      content: "t"
+  a[href*=github]
+    &:before
+      content: "g"
+  a[href*=dribbble]
+    &:before
+      content: "D"
+  a[href*=rdio]
+    &:before
+      content: "r"
+  a[href*=last]
+    &:before
+      content: "l"
+  a[href*=linkedin]
+    &:before
+      content: "L"
+
+////////////////////////////
+// PANELS
+////////////////////////////
+.pane-title
+  margin-bottom: 0
+  opacity: 0.3
+

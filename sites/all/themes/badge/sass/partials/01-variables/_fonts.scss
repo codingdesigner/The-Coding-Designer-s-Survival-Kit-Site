@@ -1,0 +1,112 @@
+// This file establishes simple clean default font stacks
+
+// Default font stacks
+$font-sans: sans-serif;
+$font-serifs: Georgia, serif;
+$font-mono: Consolas, Menlo, "Courier New", monospace, monospace;
+
+$font-jubilat: jubilat-1, jubilat-2, $font-serifs;
+$font-proxima-nova: proxima-nova-1,proxima-nova-2, $font-sans;
+$font-proxima-nova-condensed: proxima-nova-condensed-1,proxima-nova-condensed-2, $font-sans;
+$font-futura-pt: futura-pt-1, futura-pt-2, $font-sans;
+
+// General font variables
+$font-body: $font-jubilat;
+$font-headline: $font-futura-pt;
+$font-logo: $font-proxima-nova;
+
+@import 'compass/css3';
+@include font-face(
+  "goudybookletter",
+  font-files(
+    "goudy_bookletter_1911-webfont.woff",
+    "goudy_bookletter_1911-webfont.ttf",
+    "goudy_bookletter_1911-webfont.svg"),
+  "goudy_bookletter_1911-webfont.eot"
+  );
+@include font-face(
+  "zocial",
+  font-files(
+    "zocial-regular-webfont.woff",
+    "zocial-regular-webfont.ttf",
+    "zocial-regular-webfont.svg"),
+  "zocial-regular-webfont.eot"
+  );
+@include font-face(
+  "Blooming Grove",
+  font-files(
+    "examples/bgrove.ttf",
+    "examples/bgrove.otf")
+  );
+
+// Special use font variables
+// ampersands
+$font-amp: "goudybookletter", $font-serifs;
+// caps
+$font-cap: $font-sans;
+
+////////////////////////////
+// CUSTOM FONTS
+// uncomment and customize with your own fonts
+// place fonts in your fonts directory
+////////////////////////////
+// @include font-face(
+//   myfont,
+//   font-files(
+//     'myfont-bold-webfont.woff',
+//     'myfont-bold-webfont.ttf',
+//     'myfont-bold-webfont.svg'),
+//   'myfont-bold-webfont.eot',
+//   'bold',
+//   'normal');
+
+// Encode custom fonts in the compiled css (data uri)
+$inline-fonts: false;
+
+////////////////////////////
+// FONT-AWESOME
+// uncomment to include
+// http://fortawesome.github.com/Font-Awesome/
+////////////////////////////
+// @import 'survivalkit/fonts/font-awesome';
+// @include font-awesome-font-face;
+
+////////////////////////////
+// SYMBOLSET - STANDARD
+// uncomment to include
+// http://symbolset.com/
+// NOTE: mixin only includes sass/css
+// purchase the font and place in your fonts directory
+////////////////////////////
+// @import 'survivalkit/fonts/ss-standard';
+// @include ss-standard-font-face;
+// @include ss-standard-classes;
+
+////////////////////////////
+// SYMBOLSET - SOCIAL
+// uncomment to include
+// http://symbolset.com/
+// NOTE: mixin only includes sass/css
+// purchase the font and place in your fonts directory
+////////////////////////////
+// @import 'survivalkit/fonts/ss-social';
+// @include ss-social-font-face;
+// @include ss-social-classes;
+
+////////////////////////////
+// League Gothic
+// uncomment to include
+// http://www.theleagueofmoveabletype.com/league-gothic
+////////////////////////////
+// @import 'survivalkit/fonts/league-gothic';
+// @include league-gothic-font-face;
+
+////////////////////////////
+// OSTRICH SANS
+// uncomment to include
+// http://www.theleagueofmoveabletype.com/ostrich-sans
+////////////////////////////
+// @import 'survivalkit/fonts/ostrich-sans';
+// @include ostrich-sans-font-face;
+// @include ostrich-dashed-font-face;
+// @include ostrich-rounded-font-face;
