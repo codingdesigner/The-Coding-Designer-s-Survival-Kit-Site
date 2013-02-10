@@ -1,0 +1,12 @@
+source :rubygems
+
+# Use Compass and Sass
+# gem 'compass', '>=0.12'
+# gem 'susy', '>=1'
+# gem 'susy', '=1.0.6'
+gem 'survivalkit', '=1.0.beta.15'
+# gem 'survivalkit', '=0.2'
+# gem 'color-schemer'
+# gem 'modular-scale', '=0.0.5'
+# gem 'modular-scale', '>=1'
+gem 'zocial'
