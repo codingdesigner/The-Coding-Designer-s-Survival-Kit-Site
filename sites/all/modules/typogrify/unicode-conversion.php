@@ -38,6 +38,23 @@ function unicode_conversion_map($type = 'all') {
       '---'   => '&mdash;',
       '--'    => '&ndash;',
     ),
+    'fraction' => array(
+      '1/4'   => '&frac14;',
+      '1/2'   => '&frac12;',
+      '3/4'   => '&frac34;',
+      '1/3'   => '&#8531;',
+      '2/3'   => '&#8532;',
+      '1/5'   => '&#8533;',
+      '2/5'   => '&#8534;',
+      '3/5'   => '&#8535;',
+      '4/5'   => '&#8536;',
+      '1/6'   => '&#8537;',
+      '5/6'   => '&#8538;',
+      '1/8'   => '&#8539;',
+      '3/8'   => '&#8540;',
+      '5/8'   => '&#8541;',
+      '7/8'   => '&#8542;',
+    ),
     'quotes' => array(
       ',,'    => '&bdquo;',
       '\'\''  => '&rdquo;',
@@ -60,7 +77,7 @@ function unicode_conversion_map($type = 'all') {
   );
 
   if ($type == 'all') {
-    return array_merge($map['ligature'], $map['arrow'], $map['punctuation'], $map['quotes']);
+    return array_merge($map['ligature'], $map['arrow'], $map['punctuation'], $map['quotes'], $map['fraction']);
   }
   elseif ($type == 'nested') {
     return $map;

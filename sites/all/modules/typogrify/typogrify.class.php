@@ -8,10 +8,10 @@ class Typogrify {
   /**
    * Enable custom styling of ampersands.
    *
-   * Wraps apersands in html with '<span class="amp">', so they can be 
-   * styled with CSS. Ampersands are also normalized to '&amp;. Requires 
+   * Wraps apersands in html with '<span class="amp">', so they can be
+   * styled with CSS. Ampersands are also normalized to '&amp;. Requires
    * ampersands to have whitespace or an '&nbsp;' on both sides.
-   * 
+   *
    * It won't mess up & that are already wrapped, in entities or URLs
    * @param string
    * @return string
@@ -49,7 +49,7 @@ class Typogrify {
       else {
         $caps = $mthree;
         $tail = '';
-      }            
+      }
       return sprintf('<span class="caps">%s</span>%s', $caps, $tail);
     }
   }
@@ -74,19 +74,18 @@ class Typogrify {
 
     $cap_finder = "/(
             (\b[A-Z=\d]*       # Group 2: Any amount of caps and digits
-            [A-Z]\d*[A-Z]      # A cap string much at least include two caps (but they can have digits between them)
-            [A-Z\d]*\b)        # Any amount of caps and digits
+            [A-Z][A-Z\d]*      # A cap string much at least include two caps (but they can have digits between them)
+            (?:&amp;)?         # allowing ampersand in caps.
+            [A-Z'\d]*[A-Z])    # Any amount of caps and digits
             | (\b[A-Z]+\.\s?   # OR: Group 3: Some caps, followed by a '.' and an optional space
             (?:[A-Z]+\.\s?)+)  # Followed by the same thing at least once more
             (?:\s|\b|$))/x";
-
-    $tags_to_skip_regex = "/<(\/)?(?:pre|code|kbd|script|math)[^>]*>/i";
 
     foreach ($tokens as $token) {
       if ( $token[0] == "tag" ) {
         // Don't mess with tags.
         $result[] = $token[1];
-        $close_match = preg_match($tags_to_skip_regex, $token[1]);
+        $close_match = preg_match(SMARTYPANTS_TAGS_TO_SKIP, $token[1]);
         if ($close_match) {
           $in_skipped_tag = true;
         }
@@ -95,7 +94,7 @@ class Typogrify {
         }
       }
       else {
-        if ( $in_skipped_tag ) {
+        if ($in_skipped_tag) {
           $result[] = $token[1];
         }
         else {
@@ -124,22 +123,22 @@ class Typogrify {
   /**
    * initial_quotes
    *
-   * Wraps initial quotes in ``class="dquo"`` for double quotes or  
+   * Wraps initial quotes in ``class="dquo"`` for double quotes or
    * ``class="quo"`` for single quotes. Works in these block tags ``(h1-h6, p, li)``
    * and also accounts for potential opening inline elements ``a, em, strong, span, b, i``
    * Optionally choose to apply quote span tags to Gullemets as well.
    */
   public static function initial_quotes($text, $do_guillemets = false) {
     $quote_finder = "/((<(p|h[1-6]|li)[^>]*>|^)                     # start with an opening p, h1-6, li or the start of the string
-                    \s*                                             # optional white space! 
+                    \s*                                             # optional white space!
                     (<(a|em|span|strong|i|b)[^>]*>\s*)*)            # optional opening inline tags, with more optional white space for each.
                     ((\"|&ldquo;|&\#8220;)|('|&lsquo;|&\#8216;))    # Find me a quote! (only need to find the left quotes and the primes)
                                                                     # double quotes are in group 7, singles in group 8
                     /ix";
-    
+
     if ($do_guillemets) {
     	$quote_finder = "/((<(p|h[1-6]|li)[^>]*>|^)                     					# start with an opening p, h1-6, li or the start of the string
-	                    \s*                                             					# optional white space! 
+	                    \s*                                             					# optional white space!
 	                    (<(a|em|span|strong|i|b)[^>]*>\s*)*)            					# optional opening inline tags, with more optional white space for each.
 	                    ((\"|&ldquo;|&\#8220;|\xAE|&\#171;|&laquo;)|('|&lsquo;|&\#8216;))    # Find me a quote! (only need to find the left quotes and the primes) - also look for guillemets (>> and << characters))
 	                                                                    					# double quotes are in group 7, singles in group 8
@@ -170,8 +169,8 @@ class Typogrify {
 
   /**
    * typogrify
-   * 
-   * The super typography filter.   
+   *
+   * The super typography filter.
    * Applies the following filters: widont, smartypants, caps, amp, initial_quotes
    * Optionally choose to apply quote span tags to Gullemets as well.
    */

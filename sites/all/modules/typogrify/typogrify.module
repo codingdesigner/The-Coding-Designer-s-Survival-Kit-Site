@@ -31,6 +31,7 @@ function typogrify_filter_info() {
         'wrap_numbers' => 0,
         'ligatures' => array(),
         'arrows' => array(),
+        'fractions' => array(),
         'quotes' => array(),
       ),
       'tips callback' => '_typogrify_filter_tips',
@@ -129,6 +130,44 @@ function _typogrify_process($text, $filter, $format, $langcode, $cache, $cache_i
   module_load_include('php', 'typogrify', 'unicode-conversion');
   module_load_include('php', 'typogrify', 'smartypants');
 
+  // Build a list of ligatures to convert.
+  foreach (unicode_conversion_map('ligature') as $ascii => $unicode) {
+    if (isset($filter->settings['ligatures'][$ascii]) && $filter->settings['ligatures'][$ascii]) {
+      $characters_to_convert[] = $ascii;
+    }
+  }
+
+  // Wrap caps.
+  if ($filter->settings['wrap_caps']) {
+    $text = Typogrify::caps($text);
+  }
+
+  // Build a list of arrows to convert.
+  foreach (unicode_conversion_map('arrow') as $ascii => $unicode) {
+    if (isset($filter->settings['arrows'][$ascii]) && $filter->settings['arrows'][$ascii]) {
+      $characters_to_convert[] = $ascii;
+    }
+  }
+
+  // Build a list of fractions to convert.
+  foreach (unicode_conversion_map('fraction') as $ascii => $unicode) {
+    if (isset($filter->settings['fractions'][$ascii]) && $filter->settings['fractions'][$ascii]) {
+      $characters_to_convert[] = $ascii;
+    }
+  }
+
+  // Build a list of quotation marks to convert.
+  foreach (unicode_conversion_map('quotes') as $ascii => $unicode) {
+    if (isset($filter->settings['quotes'][$ascii]) && $filter->settings['quotes'][$ascii]) {
+      $characters_to_convert[] = $ascii;
+    }
+  }
+
+  // Convert ligatures and arrows.
+  if (count($characters_to_convert) > 0) {
+    $text = convert_characters($text, $characters_to_convert);
+  }
+
   // Wrap ampersands.
   if ($filter->settings['wrap_ampersand']) {
     $text = SmartAmpersand($text);
@@ -149,11 +188,6 @@ function _typogrify_process($text, $filter, $format, $langcode, $cache, $cache_i
     $text = typogrify_smart_numbers($text, $filter->settings['wrap_numbers']);
   }
 
-  // Wrap caps.
-  if ($filter->settings['wrap_caps']) {
-    $text = Typogrify::caps($text);
-  }
-
   // Wrap initial quotes.
   if ($filter->settings['wrap_initial_quotes']) {
     $text = Typogrify::initial_quotes($text);
@@ -167,32 +201,6 @@ function _typogrify_process($text, $filter, $format, $langcode, $cache, $cache_i
   // Remove widows.
   if ($filter->settings['widont_enabled']) {
     $text = Typogrify::widont($text);
-  }
-
-  // Build a list of ligatures to convert.
-  foreach (unicode_conversion_map('ligature') as $ascii => $unicode) {
-    if (isset($filter->settings['ligatures'][$ascii]) && $filter->settings['ligatures'][$ascii]) {
-      $characters_to_convert[] = $ascii;
-    }
-  }
-
-  // Build a list of arrows to convert.
-  foreach (unicode_conversion_map('arrow') as $ascii => $unicode) {
-    if (isset($filter->settings['arrows'][$ascii]) && $filter->settings['arrows'][$ascii]) {
-      $characters_to_convert[] = $ascii;
-    }
-  }
-
-  // Build a list of quotation marks to convert.
-  foreach (unicode_conversion_map('quotes') as $ascii => $unicode) {
-    if (isset($filter->settings['quotes'][$ascii]) && $filter->settings['quotes'][$ascii]) {
-      $characters_to_convert[] = $ascii;
-    }
-  }
-
-  // Convert ligatures and arrows.
-  if (count($characters_to_convert) > 0) {
-    $text = convert_characters($text, $characters_to_convert);
   }
 
   return $text;
@@ -233,6 +241,7 @@ function _typogrify_settings($form, &$form_state, $filter, $format, $defaults, $
     'wrap_numbers' => 0,
     'ligatures' => array(),
     'arrows' => array(),
+    'fractions' => array(),
     'quotes' => array(),
   );
 
@@ -360,6 +369,24 @@ function _typogrify_settings($form, &$form_state, $filter, $format, $defaults, $
     '#title' => t('Arrows'),
     '#options' => $arrow_options,
     '#default_value' => $filter->settings['arrows'],
+  );
+
+
+  // Fraction conversion settings.
+  $fraction_options = array();
+  foreach (unicode_conversion_map('fraction') as $ascii => $unicode) {
+    $fraction_options[$ascii] = t('Convert <code>@ascii</code> to !unicode', array(
+      '@ascii' => $ascii,
+      '!unicode' => $unicode,
+    ));
+
+  }
+
+  $form['fractions'] = array(
+    '#type' => 'checkboxes',
+    '#title' => t('Fractions'),
+    '#options' => $fraction_options,
+    '#default_value' => $filter->settings['fractions'],
   );
 
   // Quotes conversion settings.

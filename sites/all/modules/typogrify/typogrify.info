@@ -5,9 +5,9 @@ core = 7.x
 files[] = typogrify.class.php
 files[] = tests/typogrify-smartypants.test
 
-; Information added by drupal.org packaging script on 2012-09-19
-version = "7.x-1.0-rc5"
+; Information added by drupal.org packaging script on 2013-02-21
+version = "7.x-1.0-rc6"
 core = "7.x"
 project = "typogrify"
-datestamp = "1348061418"
+datestamp = "1361489247"
 
