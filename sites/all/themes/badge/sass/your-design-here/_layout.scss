@@ -26,20 +26,17 @@
 /* DEFINE THE GRID CONTAINER -------------------------------------------------------------- */
 // BUILD THE GRID FOR YOUR SITE
 // HELPER CLASSES INTENDED FOR USE IN @EXTEND
+
+%constrain-600 {
+  max-width: 600px;
+}
+
 .container {
   width: 100%;
   @include breakpoint($not-handhelds) {
-    // $total-cols: $kit-total-cols
-    // $col-width: $kit-col-width
-    // $gutter-width: $kit-gutter-width
-    // $side-gutter-width: $kit-side-gutter-width
-    // +container
-    // width: 95%;
     margin: 0 auto;
-    // max-width: 600px;
-    // uncomment to show grid background
-    @if $show-grid == true {
-      @include susy-grid-background;
-    }
+  }
+  .page-tutorials & {
+    @extend %constrain-600;
   }
 }
