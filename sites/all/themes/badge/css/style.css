@@ -63,7 +63,7 @@ strong, dfn, b {
 pre, code, kbd, tt {
   font-family: Consolas, Menlo, "Courier New", monospace, monospace; }
 
-h1, h2, h3, [role=main] .view-display-id-page .views-row .video-content h1, .article-external .title, #intro article h1, #survivors .views-row h1, h4, h5, #main-nav ul li, .article-external .publication, h6 {
+h1, h2, h3, [role=main] .view-display-id-page .views-row .video-content h1, .article-external .title, #intro article h1, #survivors .views-row h1, h4, #main-nav ul li, h5, .article-external .publication, h6 {
   font-family: futura-pt-1, futura-pt-2, sans-serif; }
 
 article,
@@ -370,7 +370,7 @@ ul {
   li ul {
     list-style-type: circle; }
 
-h1, h2, h3, [role=main] .view-display-id-page .views-row .video-content h1, .article-external .title, #intro article h1, #survivors .views-row h1, h4, h5, #main-nav ul li, .article-external .publication, h6 {
+h1, h2, h3, [role=main] .view-display-id-page .views-row .video-content h1, .article-external .title, #intro article h1, #survivors .views-row h1, h4, #main-nav ul li, h5, .article-external .publication, h6 {
   font-weight: normal;
   text-rendering: optimizeLegibility; }
 
@@ -398,19 +398,19 @@ h3, [role=main] .view-display-id-page .views-row .video-content h1, .article-ext
       font-size: 1.4375em;
       line-height: 1.56522em; } }
 
-h4 {
+h4, #main-nav ul li {
   font-size: 1.4375em;
   line-height: 2.08696em; }
   @media (max-width: 320px) {
-    h4 {
+    h4, #main-nav ul li {
       font-size: 1.1875em;
       line-height: 1.26316em; } }
 
-h5, #main-nav ul li, .article-external .publication {
+h5, .article-external .publication {
   font-size: 1.1875em;
   line-height: 1.26316em; }
   @media (max-width: 320px) {
-    h5, #main-nav ul li, .article-external .publication {
+    h5, .article-external .publication {
       font-size: 1.1875em;
       line-height: 1.26316em; } }
 
@@ -469,6 +469,9 @@ mark {
 
 /* LAYOUT -------------------------------------------------------------- */
 /* DEFINE THE GRID CONTAINER -------------------------------------------------------------- */
+.page-tutorials .container {
+  max-width: 600px; }
+
 .container {
   width: 100%; }
   @media (min-width: 750px) {
@@ -510,7 +513,7 @@ body {
       padding: 0 0.5em;
       display: inline-block;
       line-height: 1.143em; }
-      @media screen and (max-width: 480px) {
+      @media (max-width: 320px) {
         #main-nav ul li {
           font-size: 1em;
           line-height: 1.5em; } }
@@ -546,7 +549,7 @@ header#page-header {
   position: relative; }
   header#page-header:before {
     /* add the little background stripe behind the logo */
-    content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
+    content: "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
     letter-spacing: -3px;
     font-size: 1.1875em;
     line-height: 1.26316em;
@@ -562,16 +565,23 @@ header#page-header {
   header#page-header h1 {
     font-size: 1.4375em;
     line-height: 2.08696em;
-    background: transparent url('../images/logo.png?1360215754') no-repeat 0 8px;
-    min-width: 52px;
-    min-height: 32px;
-    padding-left: 63.5px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8), 5px 8px 8px rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
-    width: 304px;
-    max-width: 100%;
+    position: relative;
+    z-index: 100;
     margin: 0 auto;
-    z-index: 100; }
+    padding-left: 63.5px;
+    min-width: 52px;
+    min-height: 3em;
+    max-width: 100%;
+    width: 304px;
+    background: transparent url('../images/logo.png?1360215754') no-repeat 0 8px;
+    text-transform: uppercase; }
+    @media (min-width: 750px) {
+      header#page-header h1 {
+        font-size: 2.5em;
+        line-height: 1.2em;
+        min-width: 12em;
+        min-height: 3em; } }
   header#page-header a {
     color: white; }
     header#page-header a:visited {
@@ -687,8 +697,10 @@ header#page-header {
   padding-bottom: 1.5em !important; }
 
 [role=main] article.node header h1 {
-  text-align: center;
   margin-bottom: 0.25em; }
+  @media (max-width: 320px) {
+    [role=main] article.node header h1 {
+      text-align: center; } }
 [role=main] article.node .field-name-field-video {
   margin-left: -0.5em;
   margin-right: -0.5em;
@@ -697,10 +709,11 @@ header#page-header {
   box-shadow: rgba(255, 255, 255, 0.2) 0 0 30px; }
   [role=main] article.node .field-name-field-video iframe {
     width: 100%; }
-[role=main] article.node .field-name-field-image {
-  text-align: center;
-  margin-left: -0.5em;
-  margin-right: -0.5em; }
+@media (max-width: 320px) {
+  [role=main] article.node .field-name-field-image {
+    text-align: center;
+    margin-left: -0.5em;
+    margin-right: -0.5em; } }
 [role=main] article.node .author {
   font-style: italic;
   color: #4d4d4d; }
@@ -741,6 +754,11 @@ header#page-header {
     position: absolute;
     width: 100%;
     border-bottom: 1px solid #cccccc; }
+.pane-blog-panel-pane-1 .views-row-first {
+  padding-top: 0.5em; }
+  @media (min-width: 750px) {
+    .pane-blog-panel-pane-1 .views-row-first {
+      padding-top: 2em; } }
 @media (min-width: 750px) {
   .pane-blog-panel-pane-1 .views-row-odd {
     -webkit-transform: translateX(-4em);
@@ -847,6 +865,27 @@ header#page-header {
 .pane-title {
   margin-bottom: 0;
   opacity: 0.3; }
+
+.node-page {
+  padding-top: 2em; }
+  .node-page .field-name-field-image img {
+    border: 1px solid #666666; }
+    @media (min-width: 480px) {
+      .node-page .field-name-field-image img {
+        float: right;
+        margin-left: 1em; } }
+    @media (min-width: 750px) {
+      .node-page .field-name-field-image img {
+        margin-right: -33%; } }
+    @media (min-width: 480px) {
+      .node-page .field-name-field-image img {
+        max-width: 33%; } }
+    @media (min-width: 750px) {
+      .node-page .field-name-field-image img {
+        max-width: 66%; } }
+    @media (min-width: 1000px) {
+      .node-page .field-name-field-image img {
+        max-width: 100%; } }
 
 /* TEASERS */
 /* define animations */
