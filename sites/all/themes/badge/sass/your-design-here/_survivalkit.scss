@@ -1,28 +1,38 @@
-/* TEASERS
-/* define animations
-@-webkit-keyframes spin
-  0%
-    +transform2d(rotate(0deg))
-  100%
-    +transform2d(rotate(360deg))
+/* TEASERS */
+/* define animations */
+@-webkit-keyframes spin {
+  0% {
+    @include transform2d(rotate(0deg));
+  }
+  100% {
+    @include transform2d(rotate(360deg));
+  }
+}
 
-@-webkit-keyframes spin-back
-  0%
-    +transform2d(rotate(0deg))
-  100%
-    +transform2d(rotate(-360deg))
 
-@import "badges/*.png"
-@include all-badges-sprites
+@-webkit-keyframes spin-back {
+  0% {
+    @include transform2d(rotate(0deg));
+  }
+  100% {
+    @include transform2d(rotate(-360deg));
+  }
+}
+
+
+@import "badges/*.png";
+
+@include all-badges-sprites;
 
 // badge variables
-$badge-size: 115px
-$badge-size-neg-half: -$badge-size * 0.5
-$badge-total: 9
-$intro-width: 404px
-#all-teasers
-  position: relative
-  z-index: 3
+$badge-size: 115px;
+$badge-size-neg-half: -$badge-size * 0.5;
+$badge-total: 9;
+$intro-width: 404px;
+
+#all-teasers {
+  position: relative;
+  z-index: 3;
   // display: block
   // margin: 0 auto
   // width: $intro-width
@@ -33,13 +43,14 @@ $intro-width: 404px
   //   width: 320px
   //   max-width: 320px
   //   top: -590px
-  .pane-title
-    @extend %hidden
-  nav.samples
+  .pane-title {
+    @extend %hidden;
+  }
+  nav.samples {
     // position: absolute
-    position: relative
-    z-index: 2
-    @extend %clearfix
+    position: relative;
+    z-index: 2;
+    @extend %clearfix;
     // top: $badge-size-neg-half
     // left: $intro-width * 0.5
     // @media screen and (max-width: 320px)
@@ -52,21 +63,22 @@ $intro-width: 404px
     //   -webkit-animation-timing-function: linear
     //   -webkit-animation-iteration-count: infinite
     // +transform2d(scale(0.9))
-    +transition(all 0.5s)
-    h3
-      @extend %hidden
-    ul
-      margin: 0 0 0 0
-      padding: 0 0 0 0
-      +no-bullets
+    @include transition(all 0.5s);
+    h3 {
+      @extend %hidden;
+    }
+    ul {
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+      @include no-bullets;
       // position: absolute
       // badges
       // $badge-size: 115px
-      $badge-size: image-width('badges/clean-start.png')
+      $badge-size: image-width("badges/clean-start.png");
       // top: -$badge-size * 3.66
       // left: -160px
       // width: 400px
-      @extend %clearfix
+      @extend %clearfix;
       // @media screen and (max-width: 320px)
       //   /* move and size for small screens
       //   top: 0
@@ -77,28 +89,31 @@ $intro-width: 404px
       //   /* place the center of the circle on large screens
       //   top: $badge-size-neg-half
       //   left: $badge-size-neg-half
-      li
-        position: relative
-        top: 0
-        left: -12px
-        float: left
+      li {
+        position: relative;
+        top: 0;
+        left: -12px;
+        float: left;
         // width: $badge-size / 2
-        width: 20%
-        height: $badge-size / 2
-        z-index: 4
-        margin-bottom: 0.5em
-        +border-radius(ms(9))
-        +background-clip(padding-box)
-        +transition(all 0.5s)
+        width: 20%;
+        height: $badge-size / 2;
+        z-index: 4;
+        margin-bottom: 0.5em;
+        @include border-radius(ms(9));
+        @include background-clip(padding-box);
+        @include transition(all 0.5s);
         // +box-shadow(2px 2px 2px rgba($black, 0.8), 5px 8px 8px rgba($black, 0.5))
-        +scale(0.5)
-        +breakpoint($not-handhelds)
-          left: 0
-          width: 33%
-          height: $badge-size
-          +scale(0.9)
-          &#code-viewer-badge
-            display: none
+        @include scale(0.5);
+        @include breakpoint($not-handhelds) {
+          left: 0;
+          width: 33%;
+          height: $badge-size;
+          @include scale(0.9);
+          &#code-viewer-badge {
+            display: none;
+          }
+        }
+
         // @media screen and (max-width: 320px)
         //   /* keep from overflowing on small screens
         //   position: relative
@@ -118,23 +133,29 @@ $intro-width: 404px
         //   -webkit-animation-iteration-count: infinite
         //   position: absolute
         //   float: none
-        a
-          +undo-border-links
-          display: block
-          +replace-text-with-dimensions('badges/color.png')
-          text-indent: 200%
-          +border-radius(ms(9))
-          +box-shadow(rgba($black, 0.8) 2px 2px 2px, rgba($black, 0.5) 5px 8px 8px)
-          margin: 0 auto
+        a {
+          @include undo-border-links;
+          display: block;
+          @include replace-text-with-dimensions("badges/color.png");
+          text-indent: 200%;
+          @include border-radius(ms(9));
+          @include box-shadow(rgba($black, 0.8) 2px 2px 2px, rgba($black, 0.5) 5px 8px 8px);
+          margin: 0 auto;
           // @media screen and (max-width: 320px)
           //   /* shrink the badges a bit on small screens
           //   // +scale(0.7)
-        @each $badge in color, clean-start, step-by-step, html5, fonts, jquery-plugins, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer
-          &##{$badge}-badge
-            a
-              @extend .badges-#{$badge}
-              &:hover, &.selected
-                @extend .badges-#{$badge}-selected
+       
+        }
+        @each $badge in color, clean-start, step-by-step, html5, fonts, jquery-plugins, sass-mixins, ui-patterns, drupal-ui-patterns, code-viewer {
+          &##{$badge}-badge {
+            a {
+              @extend .badges-#{$badge};
+              &:hover, &.selected {
+                @extend .badges-#{$badge}-selected;
+              }
+            }
+          }
+        }
         // @media screen and (min-width: 901px)
         //   /* lay out the badges in a circle on large screens
         //   // calculate circle of badges
@@ -157,11 +178,12 @@ $intro-width: 404px
         //       &:nth-of-type(#{$i}n-#{$i})
         //         top: $y-position
         //         left: $x-position
+     
+      }
       // @media screen and (min-width: 901px)
       //   /* expand the circle when you mouse-over the nav (large screens)
       //   &:hover
       //     li
-
       //       @for $i from 1 through ($badge-total + 1)
       //         $radius: 330
       //         $position: 360 / ($badge-total + 1) * $i
@@ -179,8 +201,13 @@ $intro-width: 404px
       //           &:nth-of-type(#{$i}n-#{$i})
       //             top: $y-position
       //             left: $x-position
-#teasers
-  @extend %hidden
+   
+    }
+  }
+}
+
+#teasers {
+  @extend %hidden;
   // position: relative
   // // width: $intro-width
   // // margin: 0 auto
@@ -246,42 +273,46 @@ $intro-width: 404px
   //   &:target, &.selected
   //     display: block
   //     visibility: visible
-
+}
 
 // $panel-z-index: -51
 
-/* INTRODUCTION
-#intro
+/* INTRODUCTION */
+#intro {
   // position: relative
   // z-index: $panel-z-index
-  color: $blue-ice
-  background-color: $black
-  background-color: change-color($black, $alpha:  0.5)
+  color: $blue-ice;
+  background-color: $black;
+  background-color: change-color($black, $alpha: 0.5);
   // +padding-leader(1)
-  +padding-trailer(1)
-  +box-shadow(rgba($black, 0.4) 0px 2px 2px, rgba($black, 0.2) 0px 8px 8px)
-  .inner
+  @include padding-trailer(1);
+  @include box-shadow(rgba($black, 0.4) 0px 2px 2px, rgba($black, 0.2) 0px 8px 8px);
+  .inner {
     // @extend .container
     // @media screen and (max-width: 320px)
     //   /* adjust padding for small browsers
     // +padding-leader(2)
     // +padding-trailer(2)
     // > h1
-      // @extend .visuallyhidden
-  article
+    // // @extend .visuallyhidden
+ 
+  }
+  article {
     // +full
-    padding: 0 0.5em
-    h1
-      @extend %h3
-      text-align: center
+    padding: 0 0.5em;
+    h1 {
+      @extend %h3;
+      text-align: center;
       // color: scale-color($green, $lightness:  50%)
-      background-color: change-color($black, $alpha:  0.5)
-      +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
-      margin-left: -0.5em
-      margin-right: -0.5em
+      background-color: change-color($black, $alpha: 0.5);
+      @include text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1));
+      margin-left: -0.5em;
+      margin-right: -0.5em;
       // +adjust-leading-to(4, $ms6)
       // display: none
-    .content
+   
+    }
+    .content {
       // +columns(4,5)
       // +prefix(0.5)
       // +text-shadow(rgba($black, 0.8) 1px 1px 2px)
@@ -293,37 +324,41 @@ $intro-width: 404px
       //   /* 2 column text for most screens
       //   +column-count(2)
       //   +column-gap(24px)
+   
+    }
+  }
+}
 
-
-/* SURVIVORS
-#survivors
+/* SURVIVORS */
+#survivors {
   // position: relative
   // z-index: $panel-z-index - 4
-  +box-shadow(rgba($black, 0.4) 0px 2px 2px, rgba($black, 0.2) 0px 8px 8px)
-  background-color: $green
-  border-bottom: 2px solid $black
-  +padding-leader(1)
-  +padding-trailer(1)
+  @include box-shadow(rgba($black, 0.4) 0px 2px 2px, rgba($black, 0.2) 0px 8px 8px);
+  background-color: $green;
+  border-bottom: 2px solid $black;
+  @include padding-leader(1);
+  @include padding-trailer(1);
   // background-color: rgba($green, 0.12)
-  color: $blue-ice
-  +text-shadow(rgba($blue, 0.5) 1px 2px 4px)
-  +box-shadow(2px 0px 2px rgba($black, 0.1px), 8px 0px 8px rgba($black, 0.05), -2px 0px 2px rgba($black, 0.1), -8px 0px 8px rgba($black, 0.05))
-  .pane-title
-    text-align: center
-    font-weight: 300
-    margin-bottom: $kit-baseline
-  .views-row
-    +vertical-separation($kit-baseline * 2)
-    position: relative
-    background: adjust-color($green, $lightness: -10)
-    padding: 6px
-    text-align: center
-    +box-shadow(rgba($black, 0.1) 2px 1px 4px, rgba($black, 0.1) -4px 3px 8px)
-    h1
+  color: $blue-ice;
+  @include text-shadow(rgba($blue, 0.5) 1px 2px 4px);
+  @include box-shadow(2px 0px 2px rgba($black, 0.1px), 8px 0px 8px rgba($black, 0.05), -2px 0px 2px rgba($black, 0.1), -8px 0px 8px rgba($black, 0.05));
+  .pane-title {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: $kit-baseline;
+  }
+  .views-row {
+    @include vertical-separation($kit-baseline * 2);
+    position: relative;
+    background: adjust-color($green, $lightness: -10);
+    padding: 6px;
+    text-align: center;
+    @include box-shadow(rgba($black, 0.1) 2px 1px 4px, rgba($black, 0.1) -4px 3px 8px);
+    h1 {
       // +adjust-font-size-to($ms3)
-      @extend %h3
-      margin-top: 0
-      margin-bottom: 0
+      @extend %h3;
+      margin-top: 0;
+      margin-bottom: 0;
       // line-height: 1em
       // max-width: 240px
       // @media screen and (min-width: 901px)
@@ -331,6 +366,8 @@ $intro-width: 404px
       //   position: absolute
       //   +adjust-font-size-to($ms4)
       //   line-height: 1em
+   
+    }
     // &:nth-of-type(odd)
     //   /* left side (odd) items
     //   @media screen and (min-width: 500px)
@@ -366,31 +403,34 @@ $intro-width: 404px
     //       +transform-origin(top, left)
     // &:last-child
     //   padding-bottom: 6px
+ 
+  }
+}
 
-
-/* START
-#prepared
+/* START */
+#prepared {
   // position: relative
   // z-index: $panel-z-index - 5
-  color: $white
-  +adjust-font-size-to(ms(3))
-  +padding-leader(2)
-  +padding-trailer(2)
-  background-color: rgba($black, 0.25)
-  +box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2))
-  position: relative
-  .pane-title
-    @extend %hidden
-  header
-    position: relative
-    float: left
-    +box-shadow(2px 0px 2px rgba($black, 0.2), 8px 0px 8px rgba($black, 0.1))
-    h1
-      line-height: 1em
-      background: $green
-      display: inline-block
-      float: left
-      +text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1))
+  color: $white;
+  @include adjust-font-size-to(ms(3));
+  @include padding-leader(2);
+  @include padding-trailer(2);
+  background-color: rgba($black, 0.25);
+  @include box-shadow(2px 0px 2px rgba($black, 0.4), 8px 0px 8px rgba($black, 0.2), -2px 0px 2px rgba($black, 0.4), -8px 0px 8px rgba($black, 0.2));
+  position: relative;
+  .pane-title {
+    @extend %hidden;
+  }
+  header {
+    position: relative;
+    float: left;
+    @include box-shadow(2px 0px 2px rgba($black, 0.2), 8px 0px 8px rgba($black, 0.1));
+    h1 {
+      line-height: 1em;
+      background: $green;
+      display: inline-block;
+      float: left;
+      @include text-shadow(2px 2px 2px rgba($black, 0.2), 5px 8px 8px rgba($black, 0.1));
       // @media screen and (max-width: 500px)
       //   /* font size for most screens
       //   +adjust-font-size-to($ms5)
@@ -408,9 +448,9 @@ $intro-width: 404px
       // @media screen and (max-width: 320px)
       //   /* font size for small screens
       //   font-size: $ms6
-      .word1
-        float: left
-        margin-right: 0.25em
+      .word1 {
+        float: left;
+        margin-right: 0.25em;
         // @media screen and (min-width: 500px)
         //   /* lettering.js adjustment for most screens
         //   +adjust-font-size-to($ms4, 1, $ms6)
@@ -420,46 +460,67 @@ $intro-width: 404px
         //   text-align: center
         //   padding: 6px 28px
         //   +text-shadow(-2px 2px 2px rgba($black, 0.2), -8px 5px 8px rgba($black, 0.1))
-      .word2
+     
+      }
+      .word2 {
         // @media screen and (min-width: 500px)
         //   /* lettering.js adjustment for most screens
         //   margin-left: -31px
-  p.download
-    float: left
-    padding: 12px 0 0 0
-    +adjust-font-size-to(ms(3), 1, ms(3))
-    span
-      background-color: mix($green, $yellow)
-      float: left
-      clear: left
-      &.word1, &.word3, &.word5
-        padding-left: 0.5em
-        +transition(padding-left 0.5s)
-      &.word2, &.word4
-        clear: none
-        margin-left: 0.5em
-        background-color: transparent
-        color: $green
-    a
-      +undo-border-links
-      +link-colors($brown-dark, $blue, $brown-dark, $brown-dark, false)
+     
+      }
+    }
+  }
+  p.download {
+    float: left;
+    padding: 12px 0 0 0;
+    @include adjust-font-size-to(ms(3), 1, ms(3));
+    span {
+      background-color: mix($green, $yellow);
+      float: left;
+      clear: left;
+      &.word1, &.word3, &.word5 {
+        padding-left: 0.5em;
+        @include transition(padding-left 0.5s);
+      }
+      &.word2, &.word4 {
+        clear: none;
+        margin-left: 0.5em;
+        background-color: transparent;
+        color: $green;
+      }
+    }
+    a {
+      @include undo-border-links;
+      @include link-colors($brown-dark, $blue, $brown-dark, $brown-dark, false);
       // .no-js &
       //   +link-colors($green, $blue, $brown-dark, $green, false)
-    &:hover
-      span
-        &.word1, &.word3, &.word5
-          padding-left: 1em
-  footer
-    +padding-leader(0.5)
-    clear: both
-    text-align: right
-    position: relative
-    .amp
-      +adjust-font-size-to(ms(6), 1, ms(3))
-      position: relative
-      top: 0.2em
-    aside
-      h2
-        @extend %visuallyhidden
-      ul
-        +inline-list
+   
+    }
+    &:hover {
+      span {
+        &.word1, &.word3, &.word5 {
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+  footer {
+    @include padding-leader(0.5);
+    clear: both;
+    text-align: right;
+    position: relative;
+    .amp {
+      @include adjust-font-size-to(ms(6), 1, ms(3));
+      position: relative;
+      top: 0.2em;
+    }
+    aside {
+      h2 {
+        @extend %visuallyhidden;
+      }
+      ul {
+        @include inline-list;
+      }
+    }
+  }
+}
