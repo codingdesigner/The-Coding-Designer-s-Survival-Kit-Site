@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 # Use Compass and Sass
 # gem 'compass', '>=0.12'
