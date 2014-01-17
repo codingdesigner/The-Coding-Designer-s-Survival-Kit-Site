@@ -377,26 +377,50 @@ h1, h2, h3, [role=main] .view-display-id-page .views-row .video-content h1, .art
 h1 {
   font-size: 2.5em;
   line-height: 1.2em; }
+  @media (max-width: 320px) {
+    h1 {
+      font-size: 2.0625em;
+      line-height: 1.45455em; } }
 
 h2 {
   font-size: 2.0625em;
   line-height: 1.09091em; }
+  @media (max-width: 320px) {
+    h2 {
+      font-size: 1.75em;
+      line-height: 1.28571em; } }
 
 h3, [role=main] .view-display-id-page .views-row .video-content h1, .article-external .title, #intro article h1, #survivors .views-row h1 {
   font-size: 1.75em;
   line-height: 1.28571em; }
+  @media (max-width: 320px) {
+    h3, [role=main] .view-display-id-page .views-row .video-content h1, .article-external .title, #intro article h1, #survivors .views-row h1 {
+      font-size: 1.4375em;
+      line-height: 1.56522em; } }
 
 h4 {
   font-size: 1.4375em;
   line-height: 2.08696em; }
+  @media (max-width: 320px) {
+    h4 {
+      font-size: 1.1875em;
+      line-height: 1.26316em; } }
 
 h5, #main-nav ul li, .article-external .publication {
   font-size: 1.1875em;
   line-height: 1.26316em; }
+  @media (max-width: 320px) {
+    h5, #main-nav ul li, .article-external .publication {
+      font-size: 1.1875em;
+      line-height: 1.26316em; } }
 
 h6 {
   font-size: 1.1875em;
   line-height: 1.26316em; }
+  @media (max-width: 320px) {
+    h6 {
+      font-size: 1.1875em;
+      line-height: 1.26316em; } }
 
 img {
   height: auto;
@@ -447,11 +471,9 @@ mark {
 /* DEFINE THE GRID CONTAINER -------------------------------------------------------------- */
 .container {
   width: 100%; }
-  @media (min-width: 480px) {
+  @media (min-width: 750px) {
     .container {
-      width: 95%;
-      margin: 0 auto;
-      max-width: 600px; } }
+      margin: 0 auto; } }
 
 /* SITE-WIDE DESIGN -------------------------------------------------------------- */
 html {
@@ -475,7 +497,7 @@ body {
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #452d1c; }
-  @media (min-width: 480px) {
+  @media (min-width: 750px) {
     #main-nav {
       margin-bottom: 1.5em; } }
   #main-nav ul {
@@ -607,6 +629,9 @@ header#page-header {
   padding-right: 0.5em;
   padding-bottom: 0.75em;
   margin-top: -12px; }
+  [role=main] .view-projects > *, [role=main] .view-portfolio .views-row > *:not(.images):not(h2) > *, [role=main] article.node > *, .panel-2col > * {
+    max-width: 600px;
+    margin: 0 auto; }
 
 [role=main] .view-projects .views-row > h2 {
   text-align: center; }
@@ -626,7 +651,7 @@ header#page-header {
   padding-bottom: 0;
   margin-top: 0;
   margin-bottom: 0; }
-  @media (min-width: 480px) {
+  @media (min-width: 750px) {
     [role=main] .view-portfolio .views-row > *:not(.images):not(h2) {
       width: 95%;
       margin: 0 auto;
@@ -705,6 +730,42 @@ header#page-header {
     -o-transform: rotate(45deg);
     transform: rotate(45deg); }
 
+.pane-blog-panel-pane-1 .views-row {
+  position: relative;
+  margin-bottom: 2em; }
+  @media (min-width: 750px) {
+    .pane-blog-panel-pane-1 .views-row {
+      margin-bottom: 4em; } }
+  .pane-blog-panel-pane-1 .views-row:after {
+    content: "\0020";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #cccccc; }
+@media (min-width: 750px) {
+  .pane-blog-panel-pane-1 .views-row-odd {
+    -webkit-transform: translateX(-4em);
+    -moz-transform: translateX(-4em);
+    -ms-transform: translateX(-4em);
+    -o-transform: translateX(-4em);
+    transform: translateX(-4em); }
+    .pane-blog-panel-pane-1 .views-row-odd:after {
+      -webkit-transform: rotate(-5deg);
+      -moz-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      -o-transform: rotate(-5deg);
+      transform: rotate(-5deg); }
+  .pane-blog-panel-pane-1 .views-row-even {
+    -webkit-transform: translateX(4em);
+    -moz-transform: translateX(4em);
+    -ms-transform: translateX(4em);
+    -o-transform: translateX(4em);
+    transform: translateX(4em); }
+    .pane-blog-panel-pane-1 .views-row-even:after {
+      -webkit-transform: rotate(5deg) translateY(2em);
+      -moz-transform: rotate(5deg) translateY(2em);
+      -ms-transform: rotate(5deg) translateY(2em);
+      -o-transform: rotate(5deg) translateY(2em);
+      transform: rotate(5deg) translateY(2em); } }
 .pane-blog-panel-pane-1 article.node {
   background-color: transparent;
   padding-left: 0;
@@ -926,7 +987,7 @@ header#page-header {
         -ms-transform: scale(0.5, 0.5);
         -o-transform: scale(0.5, 0.5);
         transform: scale(0.5, 0.5); }
-        @media (min-width: 480px) {
+        @media (min-width: 750px) {
           #all-teasers nav.samples ul li {
             left: 0;
             width: 33%;
