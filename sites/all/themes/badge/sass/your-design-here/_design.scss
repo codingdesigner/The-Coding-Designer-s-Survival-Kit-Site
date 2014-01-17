@@ -108,7 +108,7 @@ header#page-header {
     z-index: 100;
     // .no-js &
     //   width: 335px
- 
+
   }
   a {
     @include link-colors($white, $alt-color, $alt-color, $white, false);
@@ -180,6 +180,10 @@ header#page-header {
   padding-right: 0.5em;
   @include padding-trailer(0.5);
   margin-top: -$kit-baseline-half;
+  > * {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 [role=main] {
@@ -265,7 +269,7 @@ header#page-header {
   // margin: 0 auto
   h1.title {
     // +trailer(0.5)
- 
+
   }
   article.node {
     @extend %standard-page-background;
@@ -324,6 +328,33 @@ header#page-header {
 .pane-blog-panel-pane-1 {
   .pane-title {
     @extend %visuallyhidden;
+  }
+  .views-row {
+    position: relative;
+    margin-bottom: 2em;
+    @include breakpoint($not-handhelds) {
+      margin-bottom: 4em;
+    }
+    &:after {
+      content: $space;
+      position: absolute;
+      width: 100%;
+      border-bottom: 1px solid $light-gray;
+    }
+  }
+  @include breakpoint($not-handhelds) {
+    .views-row-odd {
+      @include transform( translateX(-4em) );
+      &:after {
+        @include transform( rotate(-5deg) );
+      }
+    }
+    .views-row-even {
+      @include transform( translateX(4em) );
+      &:after {
+        @include transform( rotate(5deg) translateY(2em) );
+      }
+    }
   }
   article.node {
     background-color: transparent;

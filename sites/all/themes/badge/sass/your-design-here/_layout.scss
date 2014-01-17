@@ -34,9 +34,9 @@
     // $gutter-width: $kit-gutter-width
     // $side-gutter-width: $kit-side-gutter-width
     // +container
-    width: 95%;
+    // width: 95%;
     margin: 0 auto;
-    max-width: 600px;
+    // max-width: 600px;
     // uncomment to show grid background
     @if $show-grid == true {
       @include susy-grid-background;
