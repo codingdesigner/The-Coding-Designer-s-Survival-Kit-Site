@@ -70,7 +70,7 @@ function typogrify_i18n_quotes($langcode = NULL) {
     'lv' => array('„', '“', '„', '“'), // Latvian
     'nl' => array('„', '“', '‘', '’'), // Dutch
     'no' => array('„', '“', '„', '“'), // Norwegian
-    'pl' => array('„', '“', '«', '»'), // Polish
+    'pl' => array('„', '”', '«', '»'), // Polish
     'pt' => array('“', '”', '‘', '’'), // Portuguese
     'ro' => array('„', '“', '«', '»'), // Romanian
     'ru' => array('«', '»', '„', '“'), // Russian
@@ -845,7 +845,7 @@ function EducateQuotes($_, $quotes) {
   $_ = preg_replace("/'(?=\\d{2}s)/", '&#8217;', $_);
 
   // Special case for apostroph.
-  $_ = preg_replace("/(\\p{L})(')(?=\\p{L})/", '\1&#8217;', $_);
+  $_ = preg_replace("/(\\p{L})(')(?=\\p{L}|$)/", '\1&#8217;', $_);
 
   $close_class = '[^\ \t\r\n\[\{\(\-]';
   $dec_dashes = '&\#8211;|&\#8212;';
@@ -1069,8 +1069,10 @@ function StupefyEntities($_) {
 function ProcessEscapes($_) {
 
   $_ = str_replace(
-    array('\\\\',  '\"',    "\'",      '\.',    '\-',    '\`',    '\,',     '&lt;', '&gt;'),
-    array('&#92;', '&#34;', '&#8217;', '&#46;', '&#45;', '&#96;', '&#x2c;', '<',    '>'), $_);
+    array('\\\\',  '\"',    "\'",      '\.',    '\-',    '\`',    '\,',     '<',    '>'   , '&quot;', '&#039;'),
+    array('&#92;', '&#34;', '&#8217;', '&#46;', '&#45;', '&#96;', '&#x2c;', '&lt;', '&gt;', '"',      '\''    ),
+    $_
+  );
 
   return $_;
 }

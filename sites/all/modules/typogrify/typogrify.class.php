@@ -168,6 +168,17 @@ class Typogrify {
   }
 
   /**
+   * space_to_nbsp
+   *
+   * Replaces the space before a "double punctuation mark" (!?:;) with
+   * ``&nbsp;``
+   * Especially useful in french.
+   */
+  public static function space_to_nbsp($text) {
+    return preg_replace("/\s([\!\?\:;])/", '&nbsp;$1', $text);
+  }
+
+  /**
    * typogrify
    *
    * The super typography filter.
